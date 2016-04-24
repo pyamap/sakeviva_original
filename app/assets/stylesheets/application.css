@@ -1,3 +1,14 @@
+body{
+	margin:0;
+}
+#header{
+	width:100%;
+	height:70px;
+	margin:0;
+	border-bottom:solid 0.5px #ff5a5f;
+	text-align:center;
+}
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
