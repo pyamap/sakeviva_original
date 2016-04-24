@@ -1,7 +1,5 @@
-== README
+This is the heroku app tentative address. https://git.heroku.com/agile-lowlands-26599.git
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
 Things you may want to cover:
 
