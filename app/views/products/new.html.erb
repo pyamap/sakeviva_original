@@ -1,0 +1,12 @@
+<%= stylesheet_link_tag "products", :media => "all" %>
+
+<%= form_for @product do |form| %>
+	<div class="product_form">
+		<%= render "form", form: form %>
+	</div>
+
+	<div class="form_action">
+		<%= form.submit %>
+	</div>
+<% end %>
+

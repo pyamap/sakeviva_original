@@ -1,10 +1,8 @@
 <%= stylesheet_link_tag "static_pages", :media => "all" %>
 <div id="top_page_main">
-
-<ul>
-	<%= @product.name %>
-	<%= @product.price %>
-	<%= @product.description %>
-</ul>
-
+	<div class="top_picture">ここに写真を入れます。</div>
+	<h2>
+		<%= @product.name %>
+	</h2>
+	<p><%= @product.description %></p>
 </div>
