@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root 'static_pages#index'
+  devise_for :users, path_names: { sign_in: "login", sign_out: "logout"}
+  root to: 'static_pages#index'
 
   resources :products do
     collection {get "search"}
