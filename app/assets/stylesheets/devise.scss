@@ -1,0 +1,78 @@
+$theme_color:#ff5a5f;
+
+#signup_form{
+	background-color:#eeeeee;
+	width:480px;
+	height:450px;
+	text-align:center;
+	margin:80px auto;
+
+	h2{
+		padding:30px;
+		margin:0 auto;
+	}
+
+	input{
+		height:40px;
+		width:380px;
+		margin:5px auto;
+		font-size:120%;
+		border-radius:5px;
+		border-style:solid 0.1px gray;
+	}
+	.actions input{
+		color:white;
+		height:50px;
+		width:386px;
+		background-color:$theme_color;
+		margin:20px auto;
+		border-style:none;
+	}
+}
+
+#login_form{
+	background-color:#eeeeee;
+	width:480px;
+	height:400px;
+	text-align:center;
+	margin:80px auto;
+
+	h2{
+		padding:30px;
+		margin:0 auto;
+	}
+
+	input{
+		height:40px;
+		width:380px;
+		margin:5px auto;
+		font-size:120%;
+		border-radius:5px;
+		border-style:solid 0.1px gray;
+	}
+
+	input#user_remember_me{
+		height:16px;
+		width:16px;
+		margin:5px auto;
+		font-size:120%;
+		border-radius:5px;
+		border-style:solid 0.1px gray;
+
+	}
+
+	.password_remember_box{
+		width:380px;
+		margin:7px auto;
+		text-align:left;
+	}
+
+	.actions input{
+		color:white;
+		height:50px;
+		width:386px;
+		background-color:$theme_color;
+		margin:20px auto;
+		border-style:none;
+	}
+}

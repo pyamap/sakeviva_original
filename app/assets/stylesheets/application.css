@@ -4,10 +4,37 @@ body{
 #header{
 	width:100%;
 	height:70px;
-	margin:0;
+	margin:0　auto;
 	border-bottom:solid 0.5px #ff5a5f;
-	text-align:center;
+	position:relative;
+	overflow:hidden;
 }
+
+.logo_image{
+	width:200px;
+	float:left;
+	position:relative;
+	left:42%;
+}
+
+#header nav{
+	width:180px;
+	height:70px;
+	line-height:70px;
+	float:right;
+	position:relative;
+	right:5%;
+}
+
+#header:after{
+  content: "";
+  display: block; 
+  height: 0; 
+  font-size:0;	
+  clear: both; 
+  visibility:hidden;
+}
+
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
