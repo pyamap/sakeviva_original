@@ -11,6 +11,10 @@
     </div>
 
     <div class="field">
+      <%= f.text_field :username, placeholder:"ユーザー名", autocomplete: "off" %>
+    </div>
+
+    <div class="field">
       <!--
       <% if @minimum_password_length %>
       <em>(<%= @minimum_password_length %> characters minimum)</em>
@@ -26,7 +30,9 @@
       <%= f.submit "サインアップ" %>
     </div>
 
-    <%= render "devise/shared/links" %>
+    <div class="nav_btn">
+      <%= render "devise/shared/links" %>
+    </div>
 
   <% end %>
 </div>
