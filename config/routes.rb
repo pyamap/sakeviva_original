@@ -2,12 +2,8 @@ Rails.application.routes.draw do
   devise_for :users, path_names: { sign_in: "login", sign_out: "logout"}
   root to: 'static_pages#index'
 
-  resources :products do
-    collection {get "search"}
-  end
-
   namespace :admin do
-    root to: "top#index"
+    root to: "products#index"
     resources :products do
       collection {get "search"}
     end

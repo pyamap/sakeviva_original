@@ -1,0 +1,28 @@
+<%= stylesheet_link_tag "products", :media => "all" %>
+
+<div id="products_list">
+	<% if @products.present? %>
+		<table class="product_list">
+			<tr>
+				<th>商品名</th>
+				<th>価格(円)</th>
+				<th>商品説明</th>
+			</tr>
+		<% @products.each do |product| %>
+			<tr>
+				<td><%= product.name %></td>
+				<td><%= product.price %>円</td>
+				<td><%= product.description %></td>
+				<td>
+					<%= link_to "詳細", [:admin, product] %>
+					<%= link_to "編集", [:edit, :admin, product] %>
+				</td>
+			</tr>
+		<% end %>
+		</table>
+
+	<% else %>
+		<p>商品が登録されていません。</p>
+	<% end %>
+	<p class="new_product"><%= link_to "商品の新規登録", :new_admin_product, :class=> "new_product" %></p>
+</div>
