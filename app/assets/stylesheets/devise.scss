@@ -1,4 +1,4 @@
-$theme_color:#ff5a5f;
+$theme-color:#ff5a5f;
 
 #signup_form{
 	background-color:#eeeeee;
@@ -24,7 +24,7 @@ $theme_color:#ff5a5f;
 		color:white;
 		height:50px;
 		width:386px;
-		background-color:$theme_color;
+		background-color:$theme-color;
 		margin:20px auto;
 		border-style:none;
 	}
@@ -71,7 +71,7 @@ $theme_color:#ff5a5f;
 		color:white;
 		height:50px;
 		width:386px;
-		background-color:$theme_color;
+		background-color:$theme-color;
 		margin:20px auto;
 		border-style:none;
 	}
@@ -102,7 +102,7 @@ $theme_color:#ff5a5f;
 		color:white;
 		height:50px;
 		width:386px;
-		background-color:$theme_color;
+		background-color:$theme-color;
 		margin:20px auto;
 		border-style:none;
 	}

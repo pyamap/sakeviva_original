@@ -1,0 +1,22 @@
+<%= stylesheet_link_tag "products", :media => "all" %>
+
+<div id="product_details">
+	<div class="product_img">
+		<%= image_tag @product.image.url, :height =>"400", :width =>"550"%>
+	</div>
+	<div class="product_info">
+		<h1><%= @product.name %></h1>
+		<p><%= @product.description %></p>
+		<p class="price"><%= @product.price %>円 (税込)</p>
+		<p class="purchase_process_btn">購入手続きへ</p>
+	</div>
+</div>
+
+<div id="product_story">
+商品のストーリーを伝えるワイヤーをここに書く。
+</div>
+
+<p class="purchase_process_btn">購入手続きへ</p>
+
+
+

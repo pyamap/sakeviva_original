@@ -2,29 +2,98 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#top_page_main{
-	background-color:yellow;
-	width:750px;
-	height:400px;
-	margin:30px auto;
+#top_box:after{
+  content: "";
+  display: block; 
+  height: 0; 
+  font-size:0;	
+  clear: both; 
+  visibility:hidden;
 }
 
-.top_picture{
-	width:720px;
-	height:300px;
-	margin:auto;
-	padding:10px;
-	background-color:pink;
+#top_page_main{
+	background-color:yellow;
+	width:780px;
+	height:100%;
+	margin:30px auto 10px auto;
 }
 
 h2{
 	font-size:16px;
-	width:740px;
 	margin:10px 20px 5px 20px;
 }
 
 p{
 	font-size:16px;
-	width:740px;
-	margin:5px 20px 5px 20px;
+	margin:5px 20px 10px 20px;
 }
+
+#top_page_second{
+	width:800px;
+	height:100%;
+	margin:auto;
+}
+
+#top_page_second:after{
+  content: "";
+  display: block; 
+  height: 0; 
+  font-size:0;	
+  clear: both; 
+  visibility:hidden;
+}
+
+.item_left{
+	background-color:pink;
+	width:380px;
+	height:100%;
+	float:left;
+	margin:10px 0 10px 15px;
+	border-radius:5px;
+}
+
+.item_right{
+	background-color:pink;
+	width:380px;
+	height:100%;
+	float:right;
+	margin:10px 15px 10px 0;
+}
+
+#top_page_third{
+	width:780px;
+	margin:auto;
+}
+
+#top_page_third:after{
+  content: "";
+  display: block; 
+  height: 0; 
+  font-size:0;	
+  clear: both; 
+  visibility:hidden;
+}
+
+.small_item{
+	width:185px;
+	float:left;
+	background-color:pink;
+	margin:0 5px;
+}
+
+#top_page_fourth{
+	width:800px;
+	height:100%;
+	margin:auto;
+}
+
+#top_page_fourth:after{
+  content: "";
+  display: block; 
+  height: 0; 
+  font-size:0;	
+  clear: both; 
+  visibility:hidden;
+}
+
+

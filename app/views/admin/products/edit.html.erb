@@ -1,7 +1,10 @@
-<p><%= link_to "商品の詳細に戻る", [:admin, @product] %></p>
+<%= stylesheet_link_tag "products", :media => "all" %>
 
-<%= form_for [:admin, @product] do |form| %>
-<%= render "form", form: form %>
-<%= form.submit %>
-<% end %>
+<div id="product_edit_form">
+	<%= form_for [:admin, @product] do |form| %>
+	<%= render "form", form: form %>
+	<%= form.submit %>
+	<% end %>
+	<p><%= link_to "商品の詳細に戻る", [:admin, @product] %></p>
+</div>
 
