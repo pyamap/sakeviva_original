@@ -1,5 +1,6 @@
 <%= stylesheet_link_tag "products", :media => "all" %>
 
+<!--
 <div id="products_list">
 	<table class="products_list">
 		<tr>
@@ -13,11 +14,44 @@
 			<td class="description"><%= @product.description %></td>
 		</tr>
 	</table>
-	<% if @product.image? %>
-		<div class="thumbnail">
-			<%= image_tag @product.image.url, :width => '300', :height => '180' %>
+-->
+<div id="individual_product">
+	<div id="products_list">
+		<div class="product_name">
+			<h1>商品名</h1>
+			<p><%= @product.name %></p>
 		</div>
-	<% end %>
-	<%= link_to "編集する", :edit_admin_product %>
-	<%= link_to "一覧に戻る", :admin_products %>
+
+		<div class="product_price">
+			<h2>商品価格</h2>
+			<p><%= @product.price %></p>
+		</div>
+
+		<div class="product_description">
+			<h3>商品詳細</h3>
+			<p><%= @product.description %></p>
+		</div>
+
+		<div class="product_pic">
+			<h4>商品イメージ</h4>
+			<p><%= image_tag @product.image.url, :width => '500', :height => '300' %></p>
+		</div>
+	</div>
+	<div id="products_story">
+		<div class="story_one">
+			<h5>商品ストーリー1</h5>
+			<p><%= @product.overview_one %></p>
+		</div>
+		<div class="story_two">
+			<h6>商品ストーリー2</h6>
+			<p><%= @product.overview_two %></p>
+		</div>
+
+		<% @images.each do |p| %>
+			<%= image_tag p.image_url, :width => '500', :height => '300' %>
+			<p><%= link_to "画像を編集", edit_image_path(p) %></p>
+		<% end %>
+		<%= link_to "編集する", :edit_admin_product %>
+		<%= link_to "一覧に戻る", :admin_products %>
+	</div>
 </div>

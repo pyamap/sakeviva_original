@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/*商品ページで統一すべきスタイルここから*/
+
 $light-gray:#eeeeee;
 $theme-color:#ff5a5f;
 
@@ -9,6 +11,21 @@ $theme-color:#ff5a5f;
 	height:300px;
 	background-color:yellow;
 }
+
+p.btn{
+		display:block;
+		line-height:40px;
+		width:120px;
+		height:40px;
+		background-color:$theme-color;
+		margin:0 auto 20px auto;
+		color:white;
+		text-align:center;
+		border-radius:5px;
+	}
+
+/*商品ページで統一すべきスタイルここから*/
+
 
 /*adminのproductフォームに関するスタイルここから*/
 #products_list{
@@ -28,7 +45,126 @@ $theme-color:#ff5a5f;
 
 /*adminのproductフォームに関するスタイルここまで*/
 
+/*adminのproducts/newページに関するスタイルここから*/
+#product_registration{
+	width:800px;
+	height:100%;
+	margin:auto;
+	background-color:$light-gray;
+}
+
+
+table.attr{
+	width:800px;
+
+	th{
+		width:205px;
+	}
+}
+
+.file input{
+	display:none;
+}
+
+p.btn{
+	margin:30px auto;
+}
+
+p.btn input{
+	line-height:40px;
+	width:120px;
+	height:40px;
+	background-color:$theme-color;
+	color:white;
+	border-radius:5px;
+	font-size:18px;
+}
+
+#product_registration{
+	#individual_product{
+		height:100%;
+		width:800px;
+		margin:50px auto;
+
+		input#product_name{
+			width:200px;
+			height:30px;
+			margin:20px auto;
+		}
+		input#product_price{
+			width:200px;
+			height:30px;
+			margin:10px auto;
+		}
+		input#product_description{
+			width:500px;
+			height:150px;
+			margin:10px auto;
+		}
+	}
+
+	#products_story{
+		h1{
+			font-size:22px;
+		}
+
+		h2{
+			font-size:22px;
+		}
+
+		input#product_overview_one{
+			font-size:20px;
+		}
+		input#product_overview_two{
+			width:600px;
+			height:250px;
+			font-size:20px;
+		}
+	}
+}
+
+
+
+/*adminのproducts/newページに関するスタイルここまで*/
+
 /*adminのproduct/showページに関するスタイルここから*/
+
+#individual_product{
+	height:100%;
+	width:800px;
+	margin:auto;
+}
+
+#products_list{
+	width:800px;
+	text-align:center;
+	background-color:$light-gray;
+
+	h1{
+		font-size:22px;
+		margin:5px;
+	}
+
+	h2{
+		font-size:22px;
+		margin:5px;
+	}
+
+	h3{
+		font-size:22px;
+		margin:5px;
+	}
+
+	h4{
+		font-size:22px;
+		margin:5px;
+	}
+
+	p{
+		margin:0;
+	}
+}
+
 .products_list th.description{
 	width:600px;
 }
@@ -36,11 +172,20 @@ $theme-color:#ff5a5f;
 .products_list td.description{
 	width:600px;
 }
+
+#products_story{
+	width:800px;
+	margin:0 auto;
+	text-align:center;
+	background-color:$light-gray;
+}
+
+
 /*adminのproduct/showページに関するスタイルここまで*/
 
 /*adminのproduct/editページに関するスタイルここから*/
 #product_edit_form{
-	width:600px;
+	width:800px;
 	height:100%;
 	margin:auto;
 	background-color:$light-gray;
@@ -81,17 +226,6 @@ $theme-color:#ff5a5f;
 		text-align:center;
 	}
 
-	p.purchase_process_btn{
-		display:block;
-		line-height:35px;
-		width:120px;
-		height:35px;
-		background-color:$theme-color;
-		margin:auto;
-		color:white;
-		text-align:center;
-		border-radius:5px;
-	}
 }
 
 #product_story{
@@ -101,17 +235,6 @@ $theme-color:#ff5a5f;
 	background-color:$light-gray;
 }
 
-p.purchase_process_btn{
-		display:block;
-		line-height:40px;
-		width:250px;
-		height:40px;
-		background-color:$theme-color;
-		margin:0 auto 20px auto;
-		color:white;
-		text-align:center;
-		border-radius:5px;
-	}
 /*products/idページに関するスタイルここまで*/
 
 
