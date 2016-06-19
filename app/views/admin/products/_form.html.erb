@@ -33,12 +33,16 @@
 	<!-- 追加箇所 終了 -->
 <div id="products_story">
 	<div class="story_one">
-		<h1><%= form.label :overview_one, "ストーリー1" %></h1>
-		<p><%= form.text_area :overview_one, :size => "80x20", :maxlength => "2000" %></p>
+		<h1><%= form.label :story_title, "ストーリー１タイトル"%></h1>
+			<%= form.text_field :story_title_one, :size => "60" %>
+		<h2><%= form.label :overview_one, "ストーリー1" %></h2>
+			<%= form.text_area :overview_one, :size => "80x20", :maxlength => "2000" %></p>
 	</div>
 	<div class="story_two">
-		<h2><%= form.label :overview_two, "ストーリー2" %></h2>
-		<p><%= form.text_area :overview_two, :size => "80x20", :maxlength => "2000" %></p>
+		<h3><%= form.label :story_title, "ストーリー２タイトル"%></h3>
+			<%= form.text_field :story_title_two, :size => "60" %>
+		<h4><%= form.label :overview_two, "ストーリー2" %></h4>
+		<%= form.text_area :overview_two, :size => "80x20", :maxlength => "2000" %></p>
 	</div>
 	<div class="photo_upload">
 		<%= form.fields_for :images do |p| %>

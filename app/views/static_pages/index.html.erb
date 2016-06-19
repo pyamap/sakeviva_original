@@ -1,94 +1,118 @@
 <%= stylesheet_link_tag "static_pages", :media => "all" %>
 
 <div id="top_box">
+	<div id="side_bar"><%= render "shared/side_bar"%></div>
 	<div id="top_page_main">
-		<a href="http://localhost:3000/products/8">
-		<%= image_tag Product.find(8).image.url, :height => "320", :width => "780" %>
-		<h2>
-			<%= Product.find(8).name %>
-		</h2>
-		</a>
-		<p><%= Product.find(8).description.truncate(25, separator: '。') %></p>
-	</div>
+		<div id="top_page_first">
+			<a href="http://localhost:3000/products/8">
+			<%= image_tag Product.find(8).image.url, :height => "320", :width => "780", :class => "image_style" %>
+			<h1>
+				<%= Product.find(8).name %>
+			</h1>
+			</a>
+			<p><%= Product.find(8).description.truncate(25, separator: '。') %></p>
+		</div>
 
-	<div id="top_page_second">
-		<div class="item_left">
-			<%= image_tag Product.find(8).image.url, :height => "200", :width => "380" %>
-			<h2>
-				<%= Product.find(8).name %>
-			</h2>
-			<p>
-				<%= Product.find(8).description.truncate(25, separator: '。') %>
-			</p>
+		<div id="top_page_second">
+			<div class="item_left">
+				<%= image_tag Product.find(8).image.url, :height => "200", :width => "365", :class => "image_style" %>
+				<h1>
+					<%= Product.find(8).name %>
+				</h1>
+				<p>
+					<%= Product.find(8).description.truncate(25, separator: '。') %>
+				</p>
+			</div>
+			<div class="item_right">
+				<%= image_tag Product.find(8).image.url, :height => "200", :width => "365", :class => "image_style" %>
+				<h1>
+					<%= Product.find(8).name %>
+				</h1>
+				<p>
+					<%= Product.find(8).description.truncate(25, separator: '。') %>
+				</p>
+			</div>
 		</div>
-		<div class="item_right">
-			<%= image_tag Product.find(8).image.url, :height => "200", :width => "380" %>
-			<h2>
-				<%= Product.find(8).name %>
-			</h2>
-			<p>
-				<%= Product.find(8).description.truncate(25, separator: '。') %>
-			</p>
-		</div>
-	</div>
 
-	<div id="top_page_third">
-		<div class="small_item">
-			<%= image_tag Product.find(8).image.url, :height => "160", :width => "185" %>
-			<h2>
-				<%= Product.find(8).name %>
-			</h2>
-			<p>
-				<%= Product.find(8).description.truncate(25, separator: '。') %>
-			</p>
+		<div id="top_page_third">
+			<div class="small_item">
+				<%= image_tag Product.find(8).image.url, :height => "160", :width => "170", :class => "image_style" %>
+				<h1>
+					<%= Product.find(8).name %>
+				</h1>
+				<p>
+					<%= Product.find(8).description.truncate(25, separator: '。') %>
+				</p>
+			</div>
+			<div class="small_item">
+				<%= image_tag Product.find(8).image.url, :height => "160", :width => "170", :class => "image_style" %>
+				<h1>
+					<%= Product.find(8).name %>
+				</h1>
+				<p>
+					<%= Product.find(8).description.truncate(25, separator: '。') %>
+				</p>
+			</div>
+			<div class="small_item">
+				<%= image_tag Product.find(8).image.url, :height => "160", :width => "170", :class => "image_style" %>
+				<h1>
+					<%= Product.find(8).name %>
+				</h1>
+				<p>
+					<%= Product.find(8).description.truncate(25, separator: '。') %>
+				</p>
+			</div>
+			<div class="small_item">
+				<%= image_tag Product.find(8).image.url, :height => "160", :width => "170", :class => "image_style" %>
+				<h1>
+					<%= Product.find(8).name %>
+				</h1>
+				<p>
+					<%= Product.find(8).description.truncate(25, separator: '。') %>
+				</p>
+			</div>
 		</div>
-		<div class="small_item">
-			<%= image_tag Product.find(8).image.url, :height => "160", :width => "185" %>
-			<h2>
-				<%= Product.find(8).name %>
-			</h2>
-			<p>
-				<%= Product.find(8).description.truncate(25, separator: '。') %>
-			</p>
-		</div>
-		<div class="small_item">
-			<%= image_tag Product.find(8).image.url, :height => "160", :width => "185" %>
-			<h2>
-				<%= Product.find(8).name %>
-			</h2>
-			<p>
-				<%= Product.find(8).description.truncate(25, separator: '。') %>
-			</p>
-		</div>
-		<div class="small_item">
-			<%= image_tag Product.find(8).image.url, :height => "160", :width => "185" %>
-			<h2>
-				<%= Product.find(8).name %>
-			</h2>
-			<p>
-				<%= Product.find(8).description.truncate(25, separator: '。') %>
-			</p>
-		</div>
-	</div>
 
-	<div id="top_page_fourth">
-		<div class="item_left">
-			<%= image_tag Product.find(8).image.url, :height => "200", :width => "380" %>
-			<h2>
-				<%= Product.find(8).name %>
-			</h2>
-			<p>
-				<%= Product.find(8).description.truncate(25, separator: '。') %>
-			</p>
-		</div>
-		<div class="item_right">
-			<%= image_tag Product.find(8).image.url, :height => "200", :width => "380" %>
-			<h2>
-				<%= Product.find(8).name %>
-			</h2>
-			<p>
-				<%= Product.find(8).description.truncate(25, separator: '。') %>
-			</p>
+		<div id="top_page_fourth">
+			<div class="item_left">
+				<%= image_tag Product.find(8).image.url, :height => "200", :width => "365", :class => "image_style" %>
+				<h1>
+					<%= Product.find(8).name %>
+				</h1>
+				<p>
+					<%= Product.find(8).description.truncate(25, separator: '。') %>
+				</p>
+			</div>
+			<div class="item_right">
+				<%= image_tag Product.find(8).image.url, :height => "200", :width => "365", :class => "image_style" %>
+				<h1>
+					<%= Product.find(8).name %>
+				</h1>
+				<p>
+					<%= Product.find(8).description.truncate(25, separator: '。') %>
+				</p>
+			</div>
 		</div>
 	</div>
 </div>
+	<div id="theme_box">
+		<h2>テーマから選ぶ</h2>
+		<ul class="theme_list_box">
+			<li class="theme_list">ギフトにぴったりな日本酒</li>
+			<li class="theme_list">自分へのごほうび日本酒</li>
+			<li class="theme_list">日本酒初心者への日本酒</li>
+			<li class="theme_list">おすすめから選ぶ日本酒</li>
+			<li class="theme_list">料理に合う日本酒</li>
+			<li class="theme_list">季節で選ぶ日本酒</li>
+		</ul>
+	</div>
+
+	<div id="category_box">
+		<h2>テーマから選ぶ</h2>
+		<ul class="category_list_box">
+			<li class="category_list">甘口日本酒</li>
+			<li class="category_list">辛口日本酒</li>
+			<li class="category_list">吟醸</li>
+			<li class="category_list">大吟醸</li>
+		</ul>
+	</div>

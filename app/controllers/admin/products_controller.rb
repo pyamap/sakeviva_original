@@ -44,7 +44,7 @@ class Admin::ProductsController < Admin::Base
 	def update
 		@product = Product.find(params[:id])
 
-		if @product.update(params.require(:product).permit(:name,:price,:description,:image))
+		if @product.update(params.require(:product).permit(:name,:price,:description,:image,:overview_one,:overview_two,:story_title_one,:story_title_two,images_attributes: [:id, :product_id, :image]))
 			redirect_to [:admin, @product], notice: "商品情報を更新しました"
 		else
 			render action: "edit"
@@ -56,7 +56,7 @@ class Admin::ProductsController < Admin::Base
 
 	private
 	def product_params
-		params.require(:product).permit(:name,:price,:description,:overview_one,:overview_two,images_attributes: [:id, :product_id, :image])
+		params.require(:product).permit(:name,:price,:description,:image,:overview_one,:overview_two,:story_title_one,:story_title_two,images_attributes: [:id, :product_id, :image])
 	end
 
 end

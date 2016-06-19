@@ -2,6 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$light-gray:#eeeeee;
+$theme-color:#ff5a5f;
+
+p.alert{
+	margin:0;
+}
+
+p.notice{
+	margin:0;
+}
+
 #top_box:after{
   content: "";
   display: block; 
@@ -11,11 +22,33 @@
   visibility:hidden;
 }
 
+#top_box{
+	width:100%;
+	background-color:rgb(247, 247, 247);
+}
+
 #top_page_main{
-	background-color:yellow;
-	width:780px;
+	float:right;
+	margin-right:14%;
+}
+
+.image_style{
+	border-radius:5px;
+}
+
+#top_page_first{
+	background-color:white;
+	text-align:center;
+	width:785px;
 	height:100%;
 	margin:30px auto 10px auto;
+	padding:10px;
+	border-radius:5px;
+}
+
+h1{
+	font-size:16px;
+	margin:10px 20px 5px 20px;
 }
 
 h2{
@@ -31,7 +64,7 @@ p{
 #top_page_second{
 	width:800px;
 	height:100%;
-	margin:auto;
+	margin:10px auto;
 }
 
 #top_page_second:after{
@@ -44,25 +77,29 @@ p{
 }
 
 .item_left{
-	background-color:pink;
-	width:380px;
+	background-color:white;
+	text-align:center;
+	width:373px;
 	height:100%;
 	float:left;
-	margin:10px 0 10px 15px;
+	padding:10px;
 	border-radius:5px;
 }
 
 .item_right{
-	background-color:pink;
-	width:380px;
+	background-color:white;
+	text-align:center;
+	width:373px;
 	height:100%;
 	float:right;
-	margin:10px 15px 10px 0;
+	padding:10px;
+	border-radius:5px;
 }
 
 #top_page_third{
-	width:780px;
-	margin:auto;
+	width:810px;
+	margin:10px auto;
+	border-radius:5px;
 }
 
 #top_page_third:after{
@@ -75,16 +112,17 @@ p{
 }
 
 .small_item{
-	width:185px;
+	width:170px;
 	float:left;
-	background-color:pink;
-	margin:0 5px;
+	background-color:white;
+	padding:10px;
+	margin:5px;
 }
 
 #top_page_fourth{
-	width:800px;
-	height:100%;
-	margin:auto;
+	width:810px;
+	margin:10px auto 80px auto;
+	border-radius:5px;
 }
 
 #top_page_fourth:after{
@@ -96,4 +134,128 @@ p{
   visibility:hidden;
 }
 
+/*テーマから探すのスタイルここから*/
 
+#theme_box{
+	background-color:white;
+	width:100%;
+	height:100%;
+
+	h2{
+		padding:20px;
+		text-align:center;
+		font-size:20px;
+	}
+
+	ul.theme_list_box{
+		width:950px;
+		margin-bottom:50px;
+	}
+
+	li.theme_list{
+		list-style-type:none;
+		display:inline-block;
+		background-color:blue;
+		width:280px;
+		height:200px;
+		margin:10px;
+	}
+
+}
+
+ul.theme_list_box{
+	padding:0;
+	margin:auto;
+}
+
+#category_box{
+	background-color:#f7f7f7;
+	width:100%;
+	height:100%;
+
+	h2{
+		padding:20px;
+		text-align:center;
+		font-size:20px;
+	}
+
+	ul.category_list_box{
+		width:950px;
+		text-align:center;
+	}
+
+	li.category_list{
+		list-style-type:none;
+		display:inline-block;
+		background-color:blue;
+		width:400px;
+		height:260px;
+		margin:10px;
+	}
+
+}
+
+ul.category_list_box{
+	padding:0;
+	margin:auto;
+}
+
+
+
+/*テーマから探すのスタイルここまで*/
+
+/*サイドバーのスタイルここから*/
+
+#side_bar{
+
+	background-color:white;
+	height:700px;
+	width:260px;
+	float:left;
+	margin-top:30px;
+	margin-left:9%;
+	margin-right:10px;
+	border-radius:5px;
+
+	h1{
+		margin:0 0 5px 0;
+		background-color:$light-gray;
+		height:35px;
+		line-height:35px;
+		padding:0 0 0 20px;
+		border-radius:5px;
+	}
+
+	h2{
+		margin:20px 0 5px 0;
+		background-color:$light-gray;
+		height:35px;
+		line-height:35px;
+		padding:0 0 0 20px;
+	}
+	h3{
+		margin:20px 0 5px 0;
+		font-size:16px;
+		background-color:$light-gray;
+		height:35px;
+		line-height:35px;
+		padding:0 0 0 20px;
+	}
+	ul{
+		list-style-type:none;
+	}
+
+	li.theme_list{
+		height:35px;
+	}
+
+	li.category_list{
+		height:35px;
+	}
+
+	li.side_bar_list{
+		height:35px;
+	}
+}
+
+/*サイドバーのスタイルここまで*/

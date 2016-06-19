@@ -6,17 +6,25 @@
 	</div>
 	<div class="product_info">
 		<h1><%= @product.name %></h1>
-		<p><%= @product.description %></p>
+		<p class="description"><%= @product.description %></p>
 		<p class="price"><%= @product.price %>円 (税込)</p>
 		<p class="btn">購入手続きへ</p>
 	</div>
 </div>
 
 <div id="product_story">
-商品のストーリーを伝えるワイヤーをここに書く。
+	<h1>商品ストーリー</h1>
+	<div class="first_story">
+		<span class="story_image"><%= image_tag @images.first.image_url, :width => '750', :height => '400' %></span>
+		<p class="story_title"><%= @product.story_title_one %></p>
+		<p><%= @product.overview_one %></p>
+	</div>
+	<div clas="second_story">
+		<span class="story_image"><%= image_tag @images.second.image_url, :width => '750', :height => '400' %></span>
+		<p class="story_title"><%= @product.story_title_two %></p>
+		<p><%= @product.overview_two %></p>
+	</div>
 </div>
 
 <p class="btn">購入手続きへ</p>
-
-
 

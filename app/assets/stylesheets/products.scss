@@ -120,6 +120,12 @@ p.btn input{
 			height:250px;
 			font-size:20px;
 		}
+		input#product_story_title_one{
+			font-size:20px;
+		}
+		input#product_story_title_two{
+			font-size:20px;
+		}
 	}
 }
 
@@ -215,11 +221,16 @@ p.btn input{
 
 .product_info{
 	width:400px;
+	height:370px;
 	margin:45px 15px 15px 0;
 	float:right;
 
 	h1{
 		text-align:center;
+	}
+
+	p.description{
+		height:150px;
 	}
 
 	p.price{
@@ -229,10 +240,20 @@ p.btn input{
 }
 
 #product_story{
-	height:600px;
+	height:100%;
+	text-align:center;
 	width:1000px;
 	margin:50px auto 20px auto;
 	background-color:$light-gray;
+
+	h1{
+		padding:15px;
+	}
+
+	p{
+		width:700px;
+		margin:35px auto;
+	}
 }
 
 /*products/idページに関するスタイルここまで*/
