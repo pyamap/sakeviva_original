@@ -48,7 +48,6 @@
 			<p class="story_title"><%= @product.story_title_two %></p>
 			<p><%= @product.overview_two %></p>
 		</div>
-
 		<% @images.each do |p| %>
 			<%= image_tag p.image_url, :width => '500', :height => '300' %>
 			<p><%= link_to "画像を編集", edit_image_path(p) %></p>

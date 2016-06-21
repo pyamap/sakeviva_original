@@ -6,14 +6,30 @@
 		</tr>
 
 		<tr>
-			<th><%= form.label :price, "価格" %></th>
-			<td><%= form.number_field :price %></td>
+			<th><%= form.label :value, "価格" %></th>
+			<td><%= form.number_field :value %></td>
 		</tr>
 		<tr>
 			<th><%= form.label :description, "商品詳細" %></th>
 			<td><%= form.text_area :description, :size => "60x15" %></td>
 		</tr>
 	</table>
+
+	<table class="theme_tag_list">
+		<%= form.label :theme_tag %>
+		<%= form.collection_select :theme_tag_id, ThemeTag.all, :id, :tag_name %>
+	</table>
+
+	<table class="type_tag_list">
+		<%= form.label :type %>
+		<%= form.collection_select :type_id, Type.all, :id, :type_name %>
+	</table>
+
+	<table class="price_tag_list">
+		<%= form.label :price %>
+		<%= form.collection_select :price_id, Price.all, :id, :price_range %>
+	</table>
+
 	<div class="field">
 	    <% if @product.image? %>
 		    <div class="thumbnail"><%= image_tag @product.image.url %></div>

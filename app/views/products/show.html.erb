@@ -5,9 +5,14 @@
 		<%= image_tag @product.image, :height =>"400", :width =>"550"%>
 	</div>
 	<div class="product_info">
+		<ul class="theme_tag">
+			<li><%= @product.theme_tag.tag_name %></li>
+			<li><%= @product.type.type_name %></li>
+			<li><%= @product.price.price_range %></li>
+		</ul>
 		<h1><%= @product.name %></h1>
 		<p class="description"><%= @product.description %></p>
-		<p class="price"><%= @product.price %>円 (税込)</p>
+		<p class="price"><%= @product.value %>円 (税込)</p>
 		<p class="btn">購入手続きへ</p>
 	</div>
 </div>

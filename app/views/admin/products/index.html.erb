@@ -11,7 +11,7 @@
 		<% @products.each do |product| %>
 			<tr>
 				<td><%= product.name %></td>
-				<td><%= product.price %>円</td>
+				<td><%= product.value %>円</td>
 				<td><%= product.description %></td>
 				<td>
 					<%= link_to "詳細", [:admin, product] %>

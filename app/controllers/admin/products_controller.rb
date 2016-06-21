@@ -15,12 +15,13 @@ class Admin::ProductsController < Admin::Base
 	def new
 		@product=Product.new
 		@image=@product.images.build
+		@theme_tag=@product.theme_tag
+		@type=@product.type
 	end
 
 	def edit
 		@product=Product.find(params[:id])
 	end
-
 
 	def create
 		@product = Product.new(product_params)
@@ -33,8 +34,6 @@ class Admin::ProductsController < Admin::Base
 			render "new"
 		end
 	end
-
-
 #		if @product.save
 #			redirect_to [:admin, @product], notice: "商品を登録しました"
 #		else

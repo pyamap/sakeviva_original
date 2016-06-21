@@ -6,5 +6,9 @@ class Product < ActiveRecord::Base
 	validates :name,:description, presence: true
 	validates :price, numericality: { only_integer: true, greater_than: 0}
 	validates :overview_one,:overview_two, presence: true
+
+	belongs_to :theme_tag
+	belongs_to :type
+	belongs_to :price
 end
 
