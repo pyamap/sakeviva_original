@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   devise_for :users, path_names: { sign_in: "login", sign_out: "logout"}
   root to: 'static_pages#index'
 
+  get "category_first" => "categories#category_one" #categoryの個別ページのルーティング
+
   namespace :admin do
     root to: "products#index"
     resources :products do

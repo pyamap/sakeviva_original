@@ -5,7 +5,9 @@ Rails.application.config.assets.version = '1.0'
 
 Rails.application.config.assets.precompile += %w( static_pages.css ) #static_pageのscssをプリコンパイルする。
 Rails.application.config.assets.precompile += %w( products.css )
+Rails.application.config.assets.precompile += %w( categories.css )
 Rails.application.config.assets.precompile += %w( devise.css )
+
 
 
 # Add additional assets to the asset load path

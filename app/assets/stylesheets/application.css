@@ -37,6 +37,13 @@ body{
   visibility:hidden;
 }
 
+p.alert{
+	margin:0;
+}
+
+p.notice{
+	margin:0;
+}
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
