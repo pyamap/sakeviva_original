@@ -1,0 +1,62 @@
+$light-gray:#eeeeee;
+$theme-color:#ff5a5f;
+
+#address_form{
+	width:500px;
+	height:100%;
+	margin:150px auto;
+	background-color:$light-gray;
+
+
+	h1{
+		font-size:26px;
+		text-align:center;
+		margin:0;
+		height:70px;
+		line-height:70px;
+	}
+
+	table.attr{
+
+		tr{
+			height:50px;
+		}
+
+		th{
+			width:205px;
+			font-size:20px;
+		}
+
+		td{
+			select#address_prefecture_id{
+				color:white;
+				font-size:16px;
+				height:30px;
+				width:200px;
+				background-color:$theme-color;
+				margin:10px auto 30px;
+				border-style:none;
+			}
+		}
+
+		td input{
+			font-size:22px;
+		}
+
+	}
+}
+
+.form_action{
+
+	text-align:center;
+
+	input{
+		color:white;
+		font-size:22px;
+		height:50px;
+		width:300px;
+		background-color:$theme-color;
+		margin:10px auto 30px;
+		border-style:none;
+	}
+}

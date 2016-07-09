@@ -7,7 +7,7 @@ class UsersController < ApplicationController
 	end
 
 	def new
-		@user = User.new
+		@user = User.find(params[:id])
 	end
 
 	def edit
@@ -20,6 +20,12 @@ class UsersController < ApplicationController
 	end
 
 	def update
+	end
+
+
+	private
+	def user_params
+		params.require(:user).permit(:addresses_attributes: [:address,:user_id])
 	end
 
 end

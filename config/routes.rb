@@ -12,6 +12,16 @@ Rails.application.routes.draw do
     end
   end
 
+  resource :user do
+    resources :addresses
+  end
+
+  resources :addresses do
+  end
+
+  resources :theme_tags do
+  end
+
   resources :products, only: [:show] do
 end
 

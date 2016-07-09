@@ -1,0 +1,2 @@
+class ThemeTagsController < ApplicationController
+end

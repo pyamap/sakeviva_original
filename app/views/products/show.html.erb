@@ -6,14 +6,14 @@
 	</div>
 	<div class="product_info">
 		<ul class="theme_tag">
-			<li><%= @product.theme_tag.tag_name %></li>
+			<li><%= link_to @product.theme_tag.tag_name, @product.theme_tag %></li>
 			<li><%= @product.type.type_name %></li>
 			<li><%= @product.price.price_range %></li>
 		</ul>
 		<h1><%= @product.name %></h1>
 		<p class="description"><%= @product.description %></p>
 		<p class="price"><%= @product.value %>円 (税込)</p>
-		<p class="btn">購入手続きへ</p>
+		<p class="btn"><%= link_to "購入手続きへ", new_address_path %></p>
 	</div>
 </div>
 
@@ -31,5 +31,5 @@
 	</div>
 </div>
 
-<p class="btn">購入手続きへ</p>
+<p class="btn"><%= link_to "購入手続きへ", new_user_address_path %></p>
 

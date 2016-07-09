@@ -9,4 +9,7 @@ class User < ActiveRecord::Base
   	uniqueness: {case_sensitive: :false},
   	length: {minimum: 4, maximum: 20},
   	format: { with: /\A[a-z0-9]+\z/, message: "ユーザー名は半角英数字です"}
+
+  	has_many :addresses, dependent: :destroy
+    accepts_nested_attributes_for :addresses, allow_destroy: true
 end

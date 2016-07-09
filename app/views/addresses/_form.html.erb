@@ -1,0 +1,30 @@
+<table class="attr">
+	<tr>
+		<th><%= form.label :postalcode, "郵便番号" %></th>
+		<td><%= form.text_field :postalcode %></td>
+	</tr>
+
+	<tr>
+		<th><%= form.label :prefecture_id, "都道府県" %></th>
+		<td><%= form.collection_select :prefecture_id, Prefecture.all, :id, :name, :prompt => "選択してください" %></td>
+	</tr>
+
+	<tr>
+		<th><%= form.label :address, "住所" %></th>
+		<td><%= form.text_field :address %></td>
+	</tr>
+
+	<tr>
+		<th><%= form.label :recipient, "受取人氏名" %></th>
+		<td><%= form.text_field :recipient %></td>
+	</tr>
+
+	<tr>
+		<th><%= form.label :tel, "電話番号" %></th>
+		<td><%= form.text_field :tel %></td>
+	</tr>
+	<tr>
+		<th><%= form.label :default_address, "この住所を使う" %></th>
+		<td><%= form.check_box :default_address, :class => "check_box_field" %></td>
+	</tr>
+</table>

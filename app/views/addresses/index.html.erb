@@ -1,0 +1,8 @@
+ここに登録した住所を出します。
+
+<% @current_addresses.all.each do |adrs| %>
+	<%= adrs.postalcode %>
+	<%= adrs.address %>
+	<%= adrs.prefecture&.name %>
+	<%= adrs.recipient %>
+<% end %>
