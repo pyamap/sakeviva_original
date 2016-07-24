@@ -1,8 +1,24 @@
-ここに登録した住所を出します。
+<%= stylesheet_link_tag "addresses", :media => "all" %>
 
-<% @current_addresses.all.each do |adrs| %>
-	<%= adrs.postalcode %>
-	<%= adrs.address %>
-	<%= adrs.prefecture&.name %>
-	<%= adrs.recipient %>
-<% end %>
+<div id="address_all">
+	<h1>登録住所一覧</h1>
+
+	<%= form_tag('/decide_address', :method => :patch) do %>
+		<% @current_addresses.all.each do |adrs| %>
+		<div class="each_address">
+			<ul class="address_detail">
+				<li class="radio_btn"><%= radio_button_tag 'address', adrs.id, adrs.default_address %>郵送先として使う</li>
+				<li><%= adrs.recipient %></li>
+				<li>〒<%= adrs.postalcode %></li>
+				<li><%= adrs.prefecture&.name %>県 <%= adrs.address %></li>
+			</ul>
+			<ul class="address_edit">
+			<li><%= link_to "編集", edit_user_address_path(id: adrs.id) %></li>
+			<li><%= link_to "削除", user_address_path(id: adrs.id), :method => :delete, confirm: "本当に削除しますか？" %></li>
+			</ul>
+		</div>
+		<% end %>
+		<div class="add_address"><%= link_to "新規住所登録", new_user_address_path %></div>
+		<div class="confirm_button"><%= submit_tag "次へ" %></div>
+	<% end %>
+</div>

@@ -11,9 +11,15 @@ ja:
   attributes:
     name: 名前
     price: 価格
+    theme_tag: テーマタグ
+    type: タイプ
     description: 商品詳細
     overview_one: ストーリー1
     overview_two: ストーリー2
+    postalcode: 郵便場号
+    address: 住所
+    recipient: 受取人名
+    tel: 電話番号
 
   date:
     abbr_day_names:

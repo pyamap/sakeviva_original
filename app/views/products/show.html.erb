@@ -13,7 +13,7 @@
 		<h1><%= @product.name %></h1>
 		<p class="description"><%= @product.description %></p>
 		<p class="price"><%= @product.value %>円 (税込)</p>
-		<p class="btn"><%= link_to "購入手続きへ", new_address_path %></p>
+		<p class="btn"><%= link_to "購入手続きへ", user_addresses_path %></p>
 	</div>
 </div>
 
@@ -31,5 +31,5 @@
 	</div>
 </div>
 
-<p class="btn"><%= link_to "購入手続きへ", new_user_address_path %></p>
+<p class="btn"><%= link_to "購入手続きへ", user_addresses_path %></p>
 

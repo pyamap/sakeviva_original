@@ -28,6 +28,8 @@ gem 'sprockets'
 gem 'devise'
 
 gem 'carrierwave'
+gem 'seed-fu', '~> 2.3'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

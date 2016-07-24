@@ -15,20 +15,22 @@
 		</tr>
 	</table>
 
-	<table class="theme_tag_list">
-		<%= form.label :theme_tag %>
-		<%= form.collection_select :theme_tag_id, ThemeTag.all, :id, :tag_name %>
-	</table>
+	<div class="tag_section">
+		<table class="theme_tag_list">
+			<%= form.label :theme_tag %>
+			<%= form.collection_select :theme_tag_id, ThemeTag.all, :id, :tag_name %>
+		</table>
 
-	<table class="type_tag_list">
-		<%= form.label :type %>
-		<%= form.collection_select :type_id, Type.all, :id, :type_name %>
-	</table>
+		<table class="type_tag_list">
+			<%= form.label :type %>
+			<%= form.collection_select :type_id, Type.all, :id, :type_name %>
+		</table>
 
-	<table class="price_tag_list">
-		<%= form.label :price %>
-		<%= form.collection_select :price_id, Price.all, :id, :price_range %>
-	</table>
+		<table class="price_tag_list">
+			<%= form.label :price %>
+			<%= form.collection_select :price_id, Price.all, :id, :price_range %>
+		</table>
+	</div>
 
 	<div class="field">
 	    <% if @product.image? %>

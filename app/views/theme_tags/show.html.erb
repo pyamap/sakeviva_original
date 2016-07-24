@@ -1,0 +1,24 @@
+<!--
+<%= image_tag  theme_tag_thumbnail_path(@theme_tag), :width => '500', :height => '300' %>
+-->
+
+<% if @theme_tag == ThemeTag.find(1) %>
+<%= image_tag 'theme_page_thumbnail_1.jpg', :width => '1450' , :height => '350' %>
+<%= @theme_tag.tag_name %>
+
+<% elsif @theme_tag == ThemeTag.find(2) %>
+<%= @theme_tag.tag_name %>
+
+<% elsif @theme_tag == ThemeTag.find(3) %>
+<%= @theme_tag.tag_name %>
+
+<% elsif @theme_tag == ThemeTag.find(4) %>
+<%= @theme_tag.tag_name %>
+
+<% elsif @theme_tag == ThemeTag.find(5) %>
+<%= @theme_tag.tag_name %>
+
+<% elsif @theme_tag == ThemeTag.find(6) %>
+<%= @theme_tag.tag_name %>
+
+<% end %>

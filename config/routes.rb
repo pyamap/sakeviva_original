@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root to: 'static_pages#index'
 
   get "category_first" => "categories#category_one" #categoryの個別ページのルーティング
+  patch "decide_address" => "addresses#decide_address" #複数住所から１つを選んでアドレスを更新する場合。
 
   namespace :admin do
     root to: "products#index"
@@ -20,6 +21,7 @@ Rails.application.routes.draw do
   end
 
   resources :theme_tags do
+      resource :thumbnail
   end
 
   resources :products, only: [:show] do

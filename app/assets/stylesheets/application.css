@@ -38,7 +38,8 @@ body{
 }
 
 p.alert{
-	margin:0;
+	font-size:18px;
+	text-align:center;
 }
 
 p.notice{

@@ -1,7 +1,7 @@
 <table class="attr">
 	<tr>
 		<th><%= form.label :postalcode, "郵便番号" %></th>
-		<td><%= form.text_field :postalcode %></td>
+		<td><%= form.text_field :postalcode, :placeholder => "1234567" %></td>
 	</tr>
 
 	<tr>
@@ -11,17 +11,17 @@
 
 	<tr>
 		<th><%= form.label :address, "住所" %></th>
-		<td><%= form.text_field :address %></td>
+		<td><%= form.text_field :address, :placeholder => "渋谷区渋谷1-1-1" %></td>
 	</tr>
 
 	<tr>
 		<th><%= form.label :recipient, "受取人氏名" %></th>
-		<td><%= form.text_field :recipient %></td>
+		<td><%= form.text_field :recipient, :placeholder => "山田 太郎" %></td>
 	</tr>
 
 	<tr>
 		<th><%= form.label :tel, "電話番号" %></th>
-		<td><%= form.text_field :tel %></td>
+		<td><%= form.text_field :tel, :placeholder => "07012121212" %></td>
 	</tr>
 	<tr>
 		<th><%= form.label :default_address, "この住所を使う" %></th>

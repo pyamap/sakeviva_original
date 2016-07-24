@@ -35,17 +35,33 @@ p.btn{
 /*adminのproductフォームに関するスタイルここから*/
 #products_list{
 	background-color:$light-gray;
-	width:800px;
+	width:1000px;
 	margin:50px auto;
 }
 
-.products_list th{
-	width:50px;
-}
+.product_list{
 
-.products_list td{
-	width:50px;
-	text-align:center;
+	width:800px;
+
+	tr:nth-child(odd) td{
+	}
+
+	tr:nth-child(even) td{
+		background-color:#FFDAB9;
+	}
+
+	 th{
+		width:100px;
+	}
+
+	th.description{
+		width:500px;
+		}
+
+	 td{
+		width:70px;
+		text-align:center;
+	}
 }
 
 /*adminのproductフォームに関するスタイルここまで*/
@@ -57,7 +73,6 @@ p.btn{
 	margin:auto;
 	background-color:$light-gray;
 }
-
 
 table.attr{
 	width:800px;
@@ -73,6 +88,7 @@ table.attr{
 
 p.btn{
 	margin:30px auto;
+	font-size:16px;
 }
 
 p.btn input{
@@ -91,6 +107,10 @@ p.btn input{
 		width:800px;
 		margin:50px auto;
 
+		label{
+			font-size:20px;
+		}
+
 		input#product_name{
 			width:200px;
 			height:30px;
@@ -106,7 +126,7 @@ p.btn input{
 			height:150px;
 			margin:10px auto;
 		}
-	}
+}
 
 	#products_story{
 		h1{
@@ -134,9 +154,42 @@ p.btn input{
 	}
 }
 
-
-
 /*adminのproducts/newページに関するスタイルここまで*/
+
+/*adminのproducts/newと/editに共通するスタイルここから*/
+select#product_theme_tag_id{
+			background-color:$theme-color;
+			color:white;
+			font-size:16px;
+			width:160px;
+			height:30px;
+			margin:10px 15px;
+		}
+
+		select#product_type_id{
+			background-color:$theme-color;
+			color:white;
+			font-size:16px;
+			width:70px;
+			height:30px;
+			margin:10px 15px;
+		}
+
+		select#product_price_id{
+			background-color:$theme-color;
+			color:white;
+			font-size:16px;
+			width:120px;
+			height:30px;
+			margin:10px 15px;
+		}
+
+.tag_section{
+		margin-left:7%;
+		margin-top:30px;
+}
+
+/*adminのproducts/newと/editに共通するスタイルここまで*/
 
 /*adminのproduct/showページに関するスタイルここから*/
 
