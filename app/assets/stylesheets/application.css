@@ -8,8 +8,18 @@ body{
 	height:70px;
 	margin:0　auto;
 	border-bottom:solid 0.5px #ff5a5f;
-	position:relative;
 	overflow:hidden;
+}
+
+.menu{
+	float:right;
+	width:200px;
+	margin:0 10% 0 0;
+	padding:19px 0;
+}
+
+#menu_bar.dropmenu{
+	margin:0;
 }
 
 .logo_image{
@@ -17,15 +27,6 @@ body{
 	float:left;
 	position:relative;
 	left:42%;
-}
-
-#header nav{
-	width:350px;
-	height:70px;
-	line-height:70px;
-	float:right;
-	position:relative;
-	right:5%;
 }
 
 #header:after{
@@ -45,6 +46,16 @@ p.alert{
 p.notice{
 	margin:0;
 }
+
+a{
+	text-decoration:none;
+	color:black;
+}
+
+a :hover{
+	text-decoration:underline;
+}
+
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

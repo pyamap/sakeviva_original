@@ -41,7 +41,14 @@ before_action :authenticate_user!
 		@current_address=Address.find(params[:address])
 		current_user.addresses.where.not(id: params[:id]).update_all(default_address: false)
 		@current_address.update_column(:default_address, true)
-		@current_address.save
+		if @current_address.save
+			redirect_to :action => "confirmation_address"
+		end
+	end
+
+	def confirmation_address
+		@current_address=current_user.addresses.find_by(:default_address => true)
+		@product=Product.find_by(params[:product_id])
 	end
 
 private
@@ -51,5 +58,4 @@ private
 	end
 
 end
-
 

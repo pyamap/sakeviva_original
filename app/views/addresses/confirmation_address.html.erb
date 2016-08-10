@@ -1,0 +1,26 @@
+<%= stylesheet_link_tag "addresses", :media => "all" %>
+
+<div id="confirmation_all">
+
+	<div class="product_section">
+		<section class="product_img">
+			<%= image_tag @product.image, :height =>"250", :width =>"400"%>
+		</section>
+		<section class="product_details">
+			<p><%= @product.name %></p>
+			<p><%= @product.value %>円</p>
+		</section>
+	</div>
+
+	<div class="address_section">
+		<h2>配送先住所</h2>
+		<ul class="address_detail">
+			<li><%= @current_address.recipient %></li>
+			<li>〒<%= @current_address.postalcode %></li>
+			<li><%= @current_address.prefecture&.name %>県 <%= @current_address.address %></li>
+		</ul>
+	</div>
+</div>
+
+<p class="purchase_button">購入を確定する</p>
+

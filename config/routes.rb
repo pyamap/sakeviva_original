@@ -3,8 +3,13 @@ Rails.application.routes.draw do
   devise_for :users, path_names: { sign_in: "login", sign_out: "logout"}
   root to: 'static_pages#index'
 
-  get "category_first" => "categories#category_one" #categoryの個別ページのルーティング
+  get "category_first" => "categories#category_first" #categoryの個別ページのルーティング
+  get "category_second" => "categories#category_second" #categoryの個別ページのルーティング
+  get "category_third" => "categories#category_third" #categoryの個別ページのルーティング
+  get "category_fourth" => "categories#category_fourth" #categoryの個別ページのルーティング
+
   patch "decide_address" => "addresses#decide_address" #複数住所から１つを選んでアドレスを更新する場合。
+  get "confirmation_address" => "addresses#confirmation_address" #上記Patchでは/decide_addressでリロードした後にRouting Errorになる為、GETでページ取得できるようにする。
 
   namespace :admin do
     root to: "products#index"
@@ -21,6 +26,10 @@ Rails.application.routes.draw do
   end
 
   resources :theme_tags do
+      resource :thumbnail
+  end
+
+  resources :types do
       resource :thumbnail
   end
 

@@ -1,5 +1,7 @@
 class ProductsController < ApplicationController
 
+	attr_accessor :product
+
 	def index
 		@products=Product.all
 	end

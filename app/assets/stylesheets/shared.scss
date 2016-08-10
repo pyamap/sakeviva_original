@@ -1,0 +1,116 @@
+$light-gray:#eeeeee;
+$theme-color:#ff5a5f;
+
+/*サイドメニューバーのスタイルここから*/
+ul.side_bar_theme_list{
+	padding-left:30px;
+
+	li a{
+		color:black;
+	}
+	a:hover{
+		color:$theme-color;
+	}
+
+}
+
+ul.side_bar_category_list{
+	padding-left:30px;
+
+	li a{
+		color:black;
+	}
+	a:hover{
+		color:$theme-color;
+	}
+}
+
+ul.side_bar_price_list{
+	padding-left:30px;
+
+	li a{
+		color:black;
+	}
+	a:hover{
+		color:$theme-color;
+	}
+}
+/*サイドメニューバーのスタイルここまで*/
+
+/*ヘッダーのメニューここから*/
+.menu{
+  height:51px;
+  padding:0px;
+  font-size:18px;
+}
+.dropmenu{
+  *zoom: 1;
+  list-style-type: none;
+  width: 960px;
+  margin: 5px auto 30px;
+  padding: 0;
+  height:71px;
+  line-height:71px;
+  position: absolute;
+  z-index: 9999;
+}
+.dropmenu:before, .dropmenu:after{
+  content: "";
+  display: table;
+}
+.dropmenu:after{
+  clear: both;
+}
+.dropmenu li{
+  position: relative;
+  width: 20%;
+  float: left;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.dropmenu li a{
+  display: block;
+  margin: 0;
+  padding: 15px 0 11px;
+  background: #8a9b0f;
+  color: $theme-color;
+  font-size: 14px;
+  line-height: 1;
+  text-decoration: none;
+}
+.dropmenu li ul{
+  list-style: none;
+  top: 100%;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+.dropmenu li ul li{
+  width: 100%;
+}
+.dropmenu li ul li a{
+  padding: 13px 15px;
+  border-top: 1px solid $light-gray;
+  background: white;
+  text-align: center;
+}
+.dropmenu li:hover > a{
+  background: whtie;
+}
+.dropmenu li a:hover{
+  background: $theme-color;
+  color:white;
+}
+
+.dropmenu li ul li{
+  overflow: hidden;
+  height: 0;
+  transition: .2s;
+}
+.dropmenu li:hover ul li{
+  overflow: visible;
+  height: 38px;
+}
+
+/*ヘッダーのメニューここまで*/

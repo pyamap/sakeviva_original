@@ -98,21 +98,21 @@
 	<div id="theme_box">
 		<h2>テーマから選ぶ</h2>
 		<ul class="theme_list_box">
-			<li class="theme_list"><%= link_to "ギフトにぴったりな日本酒", category_first_path %></li>
-			<li class="theme_list">自分へのごほうび日本酒</li>
-			<li class="theme_list">日本酒初心者への日本酒</li>
-			<li class="theme_list">おすすめから選ぶ日本酒</li>
-			<li class="theme_list">料理に合う日本酒</li>
-			<li class="theme_list">季節で選ぶ日本酒</li>
+			<li class="theme_list"><%= link_to "ギフトにぴったりな日本酒", 'http://localhost:3000/theme_tags/1' %></li>
+			<li class="theme_list"><%= link_to "自分へのごほうび日本酒",'http://localhost:3000/theme_tags/2' %></li>
+			<li class="theme_list"><%= link_to "日本酒初心者への日本酒",'http://localhost:3000/theme_tags/3' %></li>
+			<li class="theme_list"><%= link_to "おすすめから選ぶ日本酒",'http://localhost:3000/theme_tags/4' %></li>
+			<li class="theme_list"><%= link_to "料理に合う日本酒",'http://localhost:3000/theme_tags/5' %></li>
+			<li class="theme_list"><%= link_to "季節で選ぶ日本酒",'http://localhost:3000/theme_tags/6' %></li>
 		</ul>
 	</div>
 
 	<div id="category_box">
-		<h2>テーマから選ぶ</h2>
+		<h2>カテゴリーから選ぶ</h2>
 		<ul class="category_list_box">
-			<li class="category_list">甘口日本酒</li>
-			<li class="category_list">辛口日本酒</li>
-			<li class="category_list">吟醸</li>
-			<li class="category_list">大吟醸</li>
+			<li class="category_list"><%= link_to "甘口日本酒", category_first_path %></li>
+			<li class="category_list"><%= link_to "辛口日本酒", category_second_path %></li>
+			<li class="category_list"><%= link_to "吟醸", category_third_path %></li>
+			<li class="category_list"><%= link_to "大吟醸", category_fourth_path %></li>
 		</ul>
 	</div>
