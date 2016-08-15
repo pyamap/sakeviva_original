@@ -200,20 +200,35 @@ $theme-color:#ff5a5f;
 		}
 	}
 
-	p.purchase_button{
-		text-align:center;
-		display:block;
-		border:1px solid $theme-color;
-		width:250px;
-		height:50px;
-		line-height:50px;
-		margin:auto auto 100px auto;
-	}
+.webpay_button{
+	position:relative;
+	text-align:center;
+	border:1px solid $theme-color;
+	width:250px;
+	height:50px;
+	line-height:50px;
+	margin:auto;
+}
 
-	p.purchase_button:hover{
+.webpay_button:hover{
 		background-color:$theme-color;
 		color:white;
+}
+
+
+#WP-checkout-box{
+	opacity:0;
+	width:250px;
+	height:50px;
+	margin:auto auto 50px auto;
+	position:absolute;
+	top:0px;
+
+	input[type=button]{
+		width:220px;
+		height:33px;
 	}
+}
 
 /*Confirmaiton Pageのスタイルここまで*/
 
