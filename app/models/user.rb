@@ -11,5 +11,6 @@ class User < ActiveRecord::Base
   	format: { with: /\A[a-z0-9]+\z/, message: "ユーザー名は半角英数字です"}
 
   	has_many :addresses, dependent: :destroy
+    has_many :orders, dependent: :destroy
     accepts_nested_attributes_for :addresses, allow_destroy: true
 end

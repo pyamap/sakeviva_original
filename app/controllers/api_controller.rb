@@ -9,6 +9,15 @@ require 'webpay'
 		   currency: "jpy",
 		   card: params['webpay-token']
 		)
-		redirect_to "/purchased"
+		@order=Order.new
+		@order.user=current_user
+		@order.product=Product.find_by(params[:product_id])
+		if @order.save
+			redirect_to "/purchased"
+		end
+	end
+
+	def purchased
+		@product=Product.find_by(params[:product_id])
 	end
 end

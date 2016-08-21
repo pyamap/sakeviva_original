@@ -11,7 +11,6 @@
 				<li><%= adrs.recipient %></li>
 				<li>〒<%= adrs.postalcode %></li>
 				<li><%= adrs.prefecture&.name %>県 <%= adrs.address %></li>
-				<li><%= hidden_field_tag :product_id, "10" %></li>
 			</ul>
 			<ul class="address_edit">
 			<li><%= link_to "編集", edit_user_address_path(id: adrs.id) %></li>

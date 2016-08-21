@@ -13,15 +13,18 @@
 		        deviseにより自動で作成されてますので、rake routesで確認できます -->
 		      <li><%= current_user.username %>
 		      	<ul>
+		      		<li><%= link_to '注文履歴', user_orders_path %></li>
 			    	<li><%= link_to 'プロフィール変更', edit_user_registration_path %></li>
 			     	<li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
 			    </ul>
+			   </li>
 		    <% else %>
+		     <li>サインアップ
 		    	<ul>
 		      		<li><%= link_to "サインアップ", new_user_registration_path %></li>
 		      		<li><%= link_to "ログイン", new_user_session_path %></li>
-   		       </ul>
-		      </li>
+   		     	</ul>
+		     </li>
 		    <% end %>
 		</ul>
 	</div>

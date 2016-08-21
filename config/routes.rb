@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     root to: "products#index"
+    resources :orders
     resources :products do
       collection {get "search"}
     end
@@ -20,6 +21,7 @@ Rails.application.routes.draw do
 
   resource :user do
     resources :addresses
+    resources :orders
   end
 
   resources :addresses do

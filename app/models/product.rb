@@ -10,5 +10,7 @@ class Product < ActiveRecord::Base
 	belongs_to :theme_tag
 	belongs_to :type
 	belongs_to :price
+	has_one :order
+
 end
 

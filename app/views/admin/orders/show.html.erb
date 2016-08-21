@@ -1,0 +1,39 @@
+<%= stylesheet_link_tag "orders", :media => "all" %>
+
+<div id="order_info">
+	<section class="order_id">
+		<ul>
+			<li>Order ID : <%= @order.id %></li>
+			<li>注文日時 : <%= @order.created_at %></li>
+		</ul>
+	</section>
+	<section class="product_info">
+		<ul>
+			<li>商品名 : <%= link_to @order.product.name, product_path %></li>
+			<li>価格 : <%= @order.product.value %></li>
+		</ul>
+	</section>
+	<section class="user_info">
+		<ul>
+			<li>購入者 : <%= @order.user.username %></li>
+			<li>郵便番号 : <%= @current_address.postalcode %></li>
+			<li>配送先 : <%= @current_address.address %></li>
+		</ul>
+	</section>
+	<section class="delivery_status">
+		<p style="font-weight:bold; font-size:20px;"><%= @order.delivery.status %></p>
+		<% unless @order.delivery.id == 1 %>
+		<p>配送ステータス最終更新 : <%= @order.updated_at %></p>
+		<% end %>
+
+		<% if @order.delivery.id === 1 %>
+			<%= form_for [:admin, @order] do |form| %>
+				<%= form.submit %>
+			<% end %>
+		<% elsif @order.delivery.id === 2 %>
+			<%= form_for [:admin, @order] do |form| %>
+				<%= form.submit %>
+			<% end %>
+		<% end %>
+	</section>
+</div>

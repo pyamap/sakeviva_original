@@ -1,0 +1,28 @@
+<%= stylesheet_link_tag "orders", :media => "all" %>
+
+<% if @orders.present? %>
+<div id="orders_list">
+	<% @orders.each do |order| %>
+	<div class="order_items">
+		<section class="order_pic">
+			<%= image_tag order.product.image, :height =>"210", :width =>"200"%>
+		</section>
+		<section class="details_list">
+			<ul>
+				<li>注文日：<%= order.created_at %></li>
+				<li>配送予定日：11月11日 </li>
+				<li><%= order.product.name %></li>
+				<li><%= order.product.value %>円</li>
+			</ul>
+			<p class="repurchase_button"><%= link_to "再購入", product_path(order.product.id) %></p>
+		</section>
+	</div>
+	<div class="delivery_status">
+		<p><%= order.delivery.status %></p>
+	</div>
+	<% end %>
+</div>
+
+<% else %>
+	<p>まだご注文がありません。<%= link_to "商品一覧", root_path %>に戻る。</p>
+<% end %>

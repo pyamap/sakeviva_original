@@ -11,6 +11,7 @@ Rails.application.config.assets.precompile += %w( devise.css )
 Rails.application.config.assets.precompile += %w( errors.css )
 Rails.application.config.assets.precompile += %w( shared.css )
 Rails.application.config.assets.precompile += %w( api.css )
+Rails.application.config.assets.precompile += %w( orders.css )
 
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path
