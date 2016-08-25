@@ -25,7 +25,6 @@
 		<% unless @order.delivery.id == 1 %>
 		<p>配送ステータス最終更新 : <%= @order.updated_at %></p>
 		<% end %>
-
 		<% if @order.delivery.id === 1 %>
 			<%= form_for [:admin, @order] do |form| %>
 				<%= form.submit %>

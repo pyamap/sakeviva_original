@@ -1,7 +1,7 @@
 class Admin::OrdersController < Admin::Base
 
 	def index
-		@orders=Order.all
+		@orders=Order.order("id")
 	end
 
 	def show

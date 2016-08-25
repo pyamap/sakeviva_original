@@ -93,7 +93,7 @@ div.order_items:after{
 /*admin/ordersのスタイルここから*/
 #orders_list{
 	background-color:$light-gray;
-	width:1000px;
+	width:800px;
 	margin:50px auto;
 
 	h1{
@@ -155,11 +155,24 @@ div.order_items:after{
 
 		section.delivery_status{
 			border-top:solid 1px $theme-color;
+			text-align:center;
 
 			p{
 			color:#00FF3B;
 			letter-spacing:3px;
 			text-align:center;
+			}
+
+			input{
+			text-align:center;
+			border:solid 1px $theme-color;
+			background-color:$theme-color;
+			width:100px;
+			height:30px;
+			font-size:12px;
+			border-radius:5px;
+			color:white;
+			margin:10px auto 30px auto;
 			}
 		}
 	}

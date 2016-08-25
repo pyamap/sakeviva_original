@@ -36,7 +36,10 @@ Rails.application.routes.draw do
   end
 
   resources :products, only: [:show] do
-end
+  end
+
+  resources :prices, only: [:show] do
+  end
 
   post "purchase" => "api#purchase"
   get "purchased" => "api#purchased"
