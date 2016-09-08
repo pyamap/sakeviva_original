@@ -23,13 +23,14 @@ p.notice{
 }
 
 #top_box{
-	width:1410px;
-	background-color:rgb(247, 247, 247);
+	width:1440px;
+	margin:auto;
 }
 
 #top_page_main{
 	float:right;
-	margin-right:14%;
+	width:810px;
+	margin-right:12%;
 }
 
 .image_style{
@@ -137,7 +138,7 @@ p{
 /*テーマから探すのスタイルここから*/
 
 #theme_box{
-	background-color:white;
+	background-color:rgb(247, 247, 247);
 	width:100%;
 	height:100%;
 
@@ -168,7 +169,7 @@ ul.theme_list_box{
 }
 
 #category_box{
-	background-color:#f7f7f7;
+	background-color:white;
 	width:100%;
 	height:100%;
 
@@ -212,7 +213,7 @@ ul.category_list_box{
 	width:260px;
 	float:left;
 	margin-top:30px;
-	margin-left:9%;
+	margin-left:10%;
 	margin-right:10px;
 	border-radius:5px;
 

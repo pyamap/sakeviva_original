@@ -42,7 +42,7 @@ Rails.application.routes.draw do
   end
 
   post "purchase" => "api#purchase"
-  get "purchased" => "api#purchased"
+  get "thank_you" => "api#thank_you"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -13,11 +13,15 @@ require 'webpay'
 		@order.user=current_user
 		@order.product=Product.find_by(params[:product_id])
 		if @order.save
-			redirect_to "/purchased"
+
+			user=current_user
+			ConfirmMailer.confirm_email(user).deliver_now
+
+			redirect_to "/thank_you"
 		end
 	end
 
-	def purchased
+	def thank_you
 		@product=Product.find_by(params[:product_id])
 	end
 end
