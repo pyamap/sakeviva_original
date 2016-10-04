@@ -1,6 +1,6 @@
-<%= stylesheet_link_tag "devise", :media => "all" %>
+<%= stylesheet_link_tag "desktop/web/devise", :media => "all" %>
 
-<div id="password_change">
+<div id="form_notext">
     <h2>パスワード変更</h2>
     <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
       <%= devise_error_messages! %>
@@ -20,7 +20,7 @@
         <%= f.password_field :password_confirmation, placeholder:"パスワード再入力", autocomplete: "off" %>
       </div>
 
-      <div class="actions">
+      <div class="long_btn">
         <%= f.submit "パスワードを変更" %>
       </div>
     <% end %>

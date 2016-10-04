@@ -1,0 +1,228 @@
+@import "base/variable";
+
+p.alert {
+	margin: 0;
+}
+
+p.notice {
+	margin: 0;
+}
+
+#top_box {
+	width: 1440px;
+	margin: auto;
+	display:flex;
+	justify-content:space-around;
+}
+
+#top_page_main {
+	width: 810px;
+	margin-right: 10%;
+}
+
+.image_style {
+	border-radius: 5px;
+}
+
+#top_page_first {
+	background-color: white;
+	text-align: center;
+	width: 785px;
+	height: 400px;
+	margin: 30px auto 10px auto;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+h1 {
+	font-size: 16px;
+	margin: 10px 20px 5px 20px;
+}
+
+h2 {
+	font-size: 16px;
+	margin: 10px 20px 5px 20px;
+}
+
+p {
+	font-size: 16px;
+	margin: 5px 20px 10px 20px;
+}
+
+#top_page_second {
+	width: 800px;
+	height: 300px;
+	margin: 10px auto;
+	display:flex;
+	justify-content:space-around;
+}
+
+.item_left {
+	background-color: white;
+	text-align: center;
+	width: 373px;
+	height: 100%;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.item_right {
+	background-color: white;
+	text-align: center;
+	width: 373px;
+	height: 100%;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+#top_page_third {
+	width: 810px;
+	height: 300px;
+	margin: 10px auto;
+	border-radius: 5px;
+	display:flex;
+	justify-content:space-around;
+}
+
+.small_item {
+	width: 170px;
+	background-color: white;
+	padding: 10px;
+	margin: 5px;
+
+	p{
+		width:150px;
+	}
+}
+
+#top_page_fourth {
+	width: 810px;
+	margin: 10px auto 80px auto;
+	border-radius: 5px;
+	display:flex;
+	justify-content:space-around;
+}
+
+/*テーマから探すのスタイルここから*/
+
+#theme_box {
+	background-color: rgb(247, 247, 247);
+	width: 100%;
+	height: 100%;
+
+	h2 {
+		padding: 20px;
+		text-align: center;
+		font-size: 20px;
+	}
+
+	ul.theme_list_box {
+		width: 950px;
+		margin-bottom: 50px;
+	}
+
+	li.theme_list {
+		list-style-type: none;
+		display: inline-block;
+		background-color: pink;
+		width: 280px;
+		height: 200px;
+		margin: 10px;
+	}
+}
+
+ul.theme_list_box {
+	padding: 0;
+	margin: auto;
+}
+
+#category_box {
+	background-color: white;
+	width: 100%;
+	height: 100%;
+
+	h2 {
+		padding: 20px;
+		text-align: center;
+		font-size: 20px;
+	}
+
+	ul.category_list_box {
+		width: 950px;
+		text-align: center;
+	}
+
+	li.category_list {
+		list-style-type: none;
+		display: inline-block;
+		background-color: pink;
+		width: 400px;
+		height: 260px;
+		margin: 10px;
+	}
+
+}
+
+ul.category_list_box {
+	padding: 0;
+	margin: auto;
+}
+
+
+
+/*テーマから探すのスタイルここまで*/
+
+/*サイドバーのスタイルここから*/
+
+#side_bar {
+
+	background-color: white;
+	height: 700px;
+	width: 260px;
+	margin-top: 30px;
+	margin-left: 10%;
+	margin-right: 10px;
+	border-radius: 5px;
+
+	h1 {
+		margin: 0 0 5px 0;
+		background-color: $color-gray;
+		height: 35px;
+		line-height: 35px;
+		padding: 0 0 0 20px;
+		border-radius: 5px;
+	}
+
+	h2 {
+		margin: 20px 0 5px 0;
+		background-color: $color-gray;
+		height: 35px;
+		line-height: 35px;
+		padding: 0 0 0 20px;
+	}
+	h3 {
+		margin: 20px 0 5px 0;
+		font-size: 16px;
+		background-color: $color-gray;
+		height: 35px;
+		line-height: 35px;
+		padding: 0 0 0 20px;
+	}
+	ul {
+		list-style-type: none;
+	}
+
+	li.theme_list {
+		height: 35px;
+	}
+
+	li.category_list {
+		height: 35px;
+	}
+
+	li.side_bar_list {
+		height: 35px;
+	}
+}
+
+/*サイドバーのスタイルここまで*/

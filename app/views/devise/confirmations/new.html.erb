@@ -1,6 +1,6 @@
-<%= stylesheet_link_tag "devise", :media => "all" %>
+<%= stylesheet_link_tag "desktop/web/devise", :media => "all" %>
 
-<div id="confirmation_resend">
+<div id="form_notext">
 	<%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
 	  <%= devise_error_messages! %>
 

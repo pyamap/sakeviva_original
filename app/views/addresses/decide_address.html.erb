@@ -1,4 +1,4 @@
-<%= stylesheet_link_tag "addresses", :media => "all" %>
+<%= stylesheet_link_tag "desktop/web/addresses", :media => "all" %>
 
 <div id="confirmation_all">
 
@@ -8,7 +8,9 @@
 		</section>
 		<section class="product_details">
 			<p><%= @product.name %></p>
-			<p><%= @product.value %>円</p>
+			<p>単価 : <%= @product.value %>円</p>
+			<p>合計 : <%= @product.value*@quantity.to_i %>円</p>
+			<p>数量 : <%= @quantity %></p>
 		</section>
 	</div>
 
@@ -25,6 +27,6 @@
 購入を確定する
 	<form action="/purchase" method="post">
 		<script src="https://checkout.webpay.jp/v3/" class="webpay-button" data-key="test_public_fjDc7k6iEdBycAbgWpdoOazc" data-lang="ja"></script>
+		<%= hidden_field_tag :sum,@product.value*@quantity.to_i %>
 	</form>
 </div>
-

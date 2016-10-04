@@ -1,4 +1,4 @@
-<%= stylesheet_link_tag "products", :media => "all" %>
+<%= stylesheet_link_tag "desktop/web/products", :media => "all" %>
 
 <div id="product_details">
 	<div class="product_img">
@@ -13,7 +13,7 @@
 		<h1><%= @product.name %></h1>
 		<p class="description"><%= @product.description %></p>
 		<p class="price"><%= @product.value %>円 (税込)</p>
-		<p class="btn"><%= link_to "購入手続きへ", user_addresses_path(:product_id => @product.id) %></p>
+		<p class="small_btn_dummy"><%= link_to "購入手続きへ", user_addresses_path(:product_id => @product.id, :quantity => 2) %></p>
 	</div>
 </div>
 
@@ -31,5 +31,14 @@
 	</div>
 </div>
 
-<p class="btn"><%= link_to "購入手続きへ", user_addresses_path(:product_id => @product.id) %></p>
+<%= form_tag url_for(controller: :addresses, action: :index), :method => 'get' do %>
+	<%= select_tag 'quantity', options_for_select(["1", "2", "3", "4", "5"]) %>
+	<%= hidden_field_tag :product_id,@product.id %>
+	<%= submit_tag "決定" %>
+<% end %>
+
+<!--
+<p class="btn"><%= link_to "購入手続きへ", user_addresses_path(:product_id => @product.id, :order_quantity => params[:order_quantity]) %></p>
+-->
+
 

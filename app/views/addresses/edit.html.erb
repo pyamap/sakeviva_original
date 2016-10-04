@@ -1,10 +1,14 @@
-<%= form_for @address do %>
-	<div class="product_form">
-		<%= render "form", form:form %>
-	</div>
+<%= stylesheet_link_tag "desktop/web/addresses", :media => "all" %>
 
-	<div class="form_action">
-		<%= form.submit %>
-	</div>
-<% end %>
+<div id="address_all">
+	<%= form_for @address do |form| %>
+		<div class="product_form">
+			<%= render "form", form: form %>
+		</div>
+
+		<div class="middle_btn">
+			<%= form.submit %>
+		</div>
+	<% end %>
+</div>
 

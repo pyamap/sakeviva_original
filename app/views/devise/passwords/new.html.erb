@@ -1,6 +1,6 @@
-<%= stylesheet_link_tag "devise", :media => "all" %>
+<%= stylesheet_link_tag "desktop/web/devise", :media => "all" %>
 
-<div id="password_reset">
+<div id="form_notext">
 
 <h2>パスワードをお忘れですか？</h2>
 
@@ -11,7 +11,7 @@
     <%= f.email_field :email, placeholder:"メールアドレス",autofocus: true %>
   </div>
 
-  <div class="actions">
+  <div class="long_btn">
     <%= f.submit "パスワード変更方法を送信" %>
   </div>
 <% end %>

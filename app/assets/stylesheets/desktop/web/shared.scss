@@ -1,49 +1,48 @@
-$light-gray:#eeeeee;
-$theme-color:#ff5a5f;
+@import "base/variable";
 
 /*サイドメニューバーのスタイルここから*/
-ul.side_bar_theme_list{
+ul.side_bar_theme_list {
 	padding-left:30px;
 
-	li a{
+	li a {
 		color:black;
 	}
-	a:hover{
-		color:$theme-color;
+	a:hover {
+		color:$color-sakura;
 	}
 
 }
 
-ul.side_bar_category_list{
+ul.side_bar_category_list {
 	padding-left:30px;
 
-	li a{
+	li a {
 		color:black;
 	}
-	a:hover{
-		color:$theme-color;
+	a:hover {
+		color:$color-sakura;
 	}
 }
 
-ul.side_bar_price_list{
+ul.side_bar_price_list {
 	padding-left:30px;
 
-	li a{
+	li a {
 		color:black;
 	}
-	a:hover{
-		color:$theme-color;
+	a:hover {
+		color:$color-sakura;
 	}
 }
 /*サイドメニューバーのスタイルここまで*/
 
 /*ヘッダーのメニューここから*/
-.menu{
+.menu {
   height:51px;
   padding:0px;
   font-size:18px;
 }
-.dropmenu{
+.dropmenu {
   *zoom: 1;
   list-style-type: none;
   width: 200px;
@@ -53,62 +52,56 @@ ul.side_bar_price_list{
   line-height:71px;
   position: absolute;
   z-index: 9999;
+  display:flex;
 }
-.dropmenu:before, .dropmenu:after{
-  content: "";
-  display: table;
-}
-.dropmenu:after{
-  clear: both;
-}
-.dropmenu li{
+
+.dropmenu li {
   position: relative;
   width: 80%;
-  float: left;
   margin: 0;
   padding: 0;
   text-align: center;
 }
-.dropmenu li a{
+.dropmenu li a {
   display: block;
   margin: 0;
   padding: 15px 0 11px;
   background: #8a9b0f;
-  color: $theme-color;
+  color: $color-sakura;
   font-size: 14px;
   line-height: 1;
   text-decoration: none;
 }
-.dropmenu li ul{
+.dropmenu li ul {
   list-style: none;
   top: 100%;
   left: 0;
   margin: 0;
   padding: 0;
 }
-.dropmenu li ul li{
+.dropmenu li ul li {
   width: 100%;
 }
-.dropmenu li ul li a{
+.dropmenu li ul li a {
   padding: 13px 15px;
-  border-top: 1px solid $light-gray;
+  border-top: 1px solid $color-gray;
   background: white;
   text-align: center;
 }
-.dropmenu li:hover > a{
+.dropmenu li:hover > a {
   background: whtie;
 }
-.dropmenu li a:hover{
-  background: $theme-color;
+.dropmenu li a:hover {
+  background: $color-sakura;
   color:white;
 }
 
-.dropmenu li ul li{
+.dropmenu li ul li {
   overflow: hidden;
   height: 0;
   transition: .2s;
 }
-.dropmenu li:hover ul li{
+.dropmenu li:hover ul li {
   overflow: visible;
   height: 38px;
 }

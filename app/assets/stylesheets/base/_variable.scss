@@ -1,0 +1,150 @@
+/* color setting
+----------------------------------------------------*/
+$color-gray: #eeeeee;
+$color-sakura: #ff5a5f;
+
+/* small button setting
+----------------------------------------------------*/
+.small_btn{
+
+	text-align: center;
+
+		input {
+			background-color: $color-sakura;
+			font-size: 18px;
+			color: white;
+			width: 200px;
+			height: 40px;
+			border-radius: 8px;
+			margin: 30px auto;
+			border-style:none;
+		}
+
+	}
+
+.small_btn {
+
+		input:hover {
+			background-color: white;
+			color: $color-sakura;
+			border:solid 1px $color-sakura;
+		}
+}
+
+/* small button (created by link_to_path) setting
+----------------------------------------------------*/
+.small_btn_dummy {
+	margin: 30px auto;
+	font-size: 16px;
+	width: 120px;
+	background-color: $color-sakura;
+	text-align: center;
+
+	a {
+		line-height: 40px;
+		width: 120px;
+		height: 40px;
+		color: white;
+		border-radius: 5px;
+		font-size: 16px;
+	}
+}
+
+.small_btn_dummy:hover {
+	background-color: white;
+	a {
+		color: $color-sakura
+	}
+	border:solid 1px $color-sakura;
+}
+
+/* middle button setting
+----------------------------------------------------*/
+.middle_btn{
+
+	text-align: center;
+
+		input {
+			background-color: $color-sakura;
+			font-size: 18px;
+			color: white;
+			width: 200px;
+			height: 40px;
+			border-radius: 8px;
+			margin: 30px auto;
+			border-style:none;
+		}
+
+	}
+
+.middle_btn {
+
+		input:hover {
+			background-color: white;
+			color: $color-sakura;
+			border:solid 1px $color-sakura;
+		}
+}
+
+/* middle button (created by link_to_path) setting
+----------------------------------------------------*/
+.middle_btn_dummy {
+	text-align: center;
+	background-color: $color-sakura;
+	font-size: 18px;
+	width: 200px;
+	height: 40px;
+	border-radius: 8px;
+	margin: 30px auto 0 auto;
+
+		a {
+			color: white;
+			text-decoration: none;
+			line-height: 40px;
+		}
+}
+
+.middle_btn_dummy:hover {
+	background-color: white;
+	border:solid 1px $color-sakura;
+		a {
+			color: $color-sakura;
+		}
+}
+
+/* long button setting
+----------------------------------------------------*/
+.long_btn{
+
+	text-align: center;
+	height: 30px;
+
+		input {
+			background-color: $color-sakura;
+			font-size: 18px;
+			color: white;
+			width: 200px;
+			height: 40px;
+			border-radius: 8px;
+			margin-top: 5px auto;
+			border-style:none;
+		}
+
+	}
+
+.long_btn {
+
+		input:hover {
+			background-color: white;
+			color: $color-sakura;
+			border:solid 1px $color-sakura;
+		}
+}
+
+/* nav button setting
+----------------------------------------------------*/
+
+.nav_btn {
+		margin: 15px auto 15px auto;
+}
+

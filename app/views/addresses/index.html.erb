@@ -1,4 +1,4 @@
-<%= stylesheet_link_tag "addresses", :media => "all" %>
+<%= stylesheet_link_tag "desktop/web/addresses", :media => "all" %>
 
 <div id="address_all">
 	<h1>登録住所一覧</h1>
@@ -15,12 +15,13 @@
 
 			<ul class="address_edit">
 				<li><%= link_to "編集", edit_user_address_path(id: adrs.id) %></li>
-				<li><%= link_to "削除", user_address_path(id: adrs.id), :method => :delete, confirm: "本当に削除しますか？" %></li>
+				<li><%= link_to "削除", user_address_path(id: adrs.id), method: :delete, confirm: "本当に削除しますか？"%></li>
 			</ul>
-				<%= hidden_field_tag :product_id,params[:product_id] %>
 		</div>
 		<% end %>
-		<div class="add_address"><%= link_to "新規住所登録", new_user_address_path %></div>
-		<div class="confirm_button"><%= submit_tag "次へ" %></div>
+		<%= hidden_field_tag :product_id,params[:product_id] %>
+		<%= hidden_field_tag :quantity,params[:quantity] %>
+		<div class="middle_btn_dummy"><%= link_to "新規住所登録", new_user_address_path %></div>
+		<div class="middle_btn"><%= submit_tag "次へ" %></div>
 	<% end %>
 </div>
