@@ -1,0 +1,89 @@
+/*ユーザーの注文履歴ページのスタイルここから*/
+#orders_list {
+	width: 800px;
+	height: 100%;
+	margin: 100px auto;
+	background-color: $color-gray;
+
+	div.order_items {
+		width: 580px;
+		float: left;
+		border-bottom: solid 1px white;
+		border-right: solid 1px white;
+
+		section.order_pic {
+			float: left;
+			margin: 7px;
+			height: 210px;
+		}
+
+		section.details_list {
+			float: right;
+			width: 320px;
+			padding: 0 20px;
+			margin: 10px 0;
+		}
+
+		ul {
+			padding: 0;
+		}
+
+		ul li {
+			list-style-type: none;
+		}
+
+		p.repurchase_button {
+			text-align: center;
+			border: solid 1px $color-sakura;
+			color: $color-sakura;
+			width: 90px;
+			border-radius: 5px;
+		}
+
+		p.repurchase_button:hover {
+			text-align: center;
+			background-color: $color-sakura;
+			a {
+				color: white;
+			}
+		}
+
+	}
+
+	div.delivery_status {
+		width: 219px;
+		height: 231px;
+		float: right;
+
+		p {
+			background-color: #00FF3B;
+			color: white;
+			text-align: center;
+			height: 35px;
+			line-height: 35px;
+			width: 100px;
+			margin: 96px auto;
+			border-radius: 8px;
+		}
+	}
+}
+
+#orders_list:after {
+  content: "";
+  display: block;
+  height: 0;
+  font-size: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+div.order_items:after {
+  content: "";
+  display: block;
+  height: 0;
+  font-size: 0;
+  clear: both;
+  visibility: hidden;
+}
+/*ユーザーの注文履歴ページのスタイルここまで*/
+

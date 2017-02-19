@@ -1,0 +1,2 @@
+module PayjpHelper
+end

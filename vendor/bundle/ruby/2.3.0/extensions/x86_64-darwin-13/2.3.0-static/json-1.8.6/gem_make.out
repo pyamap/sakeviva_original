@@ -1,0 +1,13 @@
+current directory: /Users/pyamap/Documents/original/sakeviva_original/vendor/bundle/ruby/2.3.0/gems/json-1.8.6/ext/json
+/Users/pyamap/.rbenv/versions/2.3.1/bin/ruby -r ./siteconf20170129-28609-1y8ijmv.rb extconf.rb
+creating Makefile
+
+current directory: /Users/pyamap/Documents/original/sakeviva_original/vendor/bundle/ruby/2.3.0/gems/json-1.8.6/ext/json
+make "DESTDIR=" clean
+
+current directory: /Users/pyamap/Documents/original/sakeviva_original/vendor/bundle/ruby/2.3.0/gems/json-1.8.6/ext/json
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+current directory: /Users/pyamap/Documents/original/sakeviva_original/vendor/bundle/ruby/2.3.0/gems/json-1.8.6/ext/json
+make "DESTDIR=" install

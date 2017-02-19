@@ -1,0 +1,33 @@
+<%= stylesheet_link_tag "desktop/web/addresses", :media => "all" %>
+
+<div id="confirmation_all">
+
+	<div class="product_section">
+		<section class="product_img">
+			<%= image_tag @product.image, :height =>"250", :width =>"400"%>
+		</section>
+		<section class="product_details">
+			<p><%= @product.name %></p>
+			<p>単価 : <%= @product.value %>円</p>
+			<p>合計 : <%= @product.value*@quantity.to_i %>円</p>
+			<p>数量 : <%= @quantity %></p>
+		</section>
+	</div>
+
+	<div class="address_section">
+		<h2>配送先住所</h2>
+		<ul class="address_detail">
+			<li><%= @current_address.recipient %></li>
+			<li>〒<%= @current_address.postalcode %></li>
+			<li><%= @current_address.prefecture&.name %>県 <%= @current_address.address %></li>
+		</ul>
+	</div>
+</div>
+<div class="payjp_button">
+	購入を確定する
+	<%= form_tag(controller: :payjp, action: :pay, method: :post) do %>
+	   <script type="text/javascript" src="https://checkout.pay.jp" class="payjp-button" data-key="pk_test_881e6a718672d171e72ee9dc"></script>
+	   <%= hidden_field_tag :sum,@product.value*@quantity.to_i %>
+	<% end %>
+</div>
+

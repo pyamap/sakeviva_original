@@ -3,14 +3,16 @@ class AddressesController < ApplicationController
 before_action :authenticate_user!
 
 	def index
-		@current_address=current_user.addresses.where(default_address: true)
 		@current_addresses=current_user.addresses
-#		if @current_addresses.empty?
-#			redirect_to :action => "new"
-#		end
+		if @current_addresses.empty?
+			redirect_to :action => "new"
+		end
 	end
 
 	def show
+		@current_address=Address.find(params[:id])
+		@quantity=params[:quantity]
+		@product=Product.find(params[:product_id])
 	end
 
 	def new
@@ -33,27 +35,17 @@ before_action :authenticate_user!
 	end
 
 	def update
-		@current_address=Address.find(params[:address])
+		@current_address=Address.find(params[:id])
 		current_user.addresses.where.not(id: params[:id]).update_all(default_address: false)
 		@current_address.update_column(:default_address, true)
-		@quantity=params[:quantity]
-		@product=Product.find(params[:product_id])
 		@current_address.save
+		redirect_to :action => "show", :product_id => params[:product_id], :quantity => params[:quantity]
 	end
 
 	def destroy
 		@address=Address.find{params[:id]}
 		@address.destroy
 		redirect_to :addresses, notice:"住所を削除しました"
-	end
-
-	def decide_address
-		@current_address=Address.find(params[:address])
-		current_user.addresses.where.not(id: params[:id]).update_all(default_address: false)
-		@current_address.update_column(:default_address, true)
-		@quantity=params[:quantity]
-		@product=Product.find(params[:product_id])
-		@current_address.save
 	end
 
 private

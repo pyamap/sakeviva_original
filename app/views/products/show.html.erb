@@ -13,7 +13,15 @@
 		<h1><%= @product.name %></h1>
 		<p class="description"><%= @product.description %></p>
 		<p class="price"><%= @product.value %>円 (税込)</p>
-		<p class="small_btn_dummy"><%= link_to "購入手続きへ", user_addresses_path(:product_id => @product.id, :quantity => 2) %></p>
+			<%= form_tag url_for(controller: :addresses, action: :index), :method => 'get' do %>
+		<p class="quantity_select">
+			数量：<%= select_tag 'quantity', options_for_select(["1", "2", "3", "4", "5"]) %>
+		</p>
+			<%= hidden_field_tag :product_id,@product.id %>
+		<p class="purchase_btn">
+			<%= submit_tag "購入手続きへ" %>
+			<% end %>
+		</p>
 	</div>
 </div>
 
@@ -29,13 +37,18 @@
 		<p class="story_title"><%= @product.story_title_two %></p>
 		<p><%= @product.overview_two %></p>
 	</div>
-</div>
 
-<%= form_tag url_for(controller: :addresses, action: :index), :method => 'get' do %>
-	<%= select_tag 'quantity', options_for_select(["1", "2", "3", "4", "5"]) %>
+	<%= form_tag url_for(controller: :addresses, action: :index), :method => 'get' do %>
+	<p class="quantity_select">
+		数量：<%= select_tag 'quantity', options_for_select(["1", "2", "3", "4", "5"]) %>
+	</p>
 	<%= hidden_field_tag :product_id,@product.id %>
-	<%= submit_tag "決定" %>
-<% end %>
+	<p class="purchase_btn">
+		<%= submit_tag "購入手続きへ" %>
+	</p>
+	<% end %>
+
+</div>
 
 <!--
 <p class="btn"><%= link_to "購入手続きへ", user_addresses_path(:product_id => @product.id, :order_quantity => params[:order_quantity]) %></p>

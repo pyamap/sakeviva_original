@@ -3,6 +3,8 @@
 <div id="form_notext">
   <h2>ログイン</h2>
 
+  <%= link_to "Log in with Facebook", user_facebook_omniauth_authorize_path, class: "btn btn-facebook" %>
+
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="field">
       <!--<%= f.label :email %><br />-->
@@ -24,6 +26,7 @@
     <div class="long_btn">
       <%= f.submit "ログイン" %>
     </div>
+
   <% end %>
 
   <div class="nav_btn">

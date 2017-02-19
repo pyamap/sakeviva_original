@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
   resources :images
-  devise_for :users, path_names: { sign_in: "login", sign_out: "logout"}
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+=begin
+  devise_for :users, path_names: { sign_in: "login", sign_out: "logout"},
+  :controllers => {
+    sessions: 'users/sessions',
+    registrations: 'users/registrations',
+    omniauth_callbacks: 'users/omniauth_callbacks'
+  }
+=end
   root to: 'static_pages#index'
 
   get "category_first" => "categories#category_first" #categoryの個別ページのルーティング
@@ -10,6 +18,8 @@ Rails.application.routes.draw do
 
   patch "decide_address" => "addresses#decide_address" #複数住所から１つを選んでアドレスを更新する場合。
   get "confirmation_address" => "addresses#confirmation_address" #上記Patchでは/decide_addressでリロードした後にRouting Errorになる為、GETでページ取得できるようにする。
+
+  patch "reservation" => "reservations#new"
 
   namespace :admin do
     root to: "products#index"
@@ -41,8 +51,14 @@ Rails.application.routes.draw do
   resources :prices, only: [:show] do
   end
 
-  post "purchase" => "api#purchase"
-  get "thank_you" => "api#thank_you"
+  resources :reservations do
+  end
+
+ # post "purchase" => "api#purchase"
+  patch "new_order" => "payjp#new"
+  post "purchase" => "payjp#pay" #pay.jpルーティング
+  get "thank_you" => "payjp#thank_you"
+  #match '*path' => 'application#error404', via: :all #ルーティングで定義されていないURLが指定された場合のエラー表示。
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

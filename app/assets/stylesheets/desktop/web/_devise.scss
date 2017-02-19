@@ -1,0 +1,29 @@
+@import "desktop/web/parts/form";
+
+#form_notext {
+	input {
+		height: 30px;
+		width: 380px;
+		font-size: 120%;
+		border-radius: 5px;
+		border-style: solid 0.1px gray;
+	}
+}
+
+.long_btn_dummy {
+	background-color: #2F56A6;
+}
+
+.long_btn_dummy:hover{
+	a {
+		color: #2F56A6;
+	}
+	border-color: #2F56A6;
+}
+
+.btn-facebook{
+	color: #fff;
+	background-color: #4c66a4;
+	z-index: 10;
+}
+

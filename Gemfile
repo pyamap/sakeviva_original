@@ -8,7 +8,7 @@ gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier', '>= 3.0.4'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -22,15 +22,23 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'bootstrap-sass', '~> 3.3.6'
 
 gem 'sprockets'
 
-gem 'devise'
+gem 'devise', '4.1.1'
 
 gem 'carrierwave'
 gem 'seed-fu', '~> 2.3'
+gem 'toastr-rails'
 
-gem 'webpay'
+#gem 'webpay'
+gem 'omniauth-facebook'
+
+gem 'payjp'
+gem 'stripe'
+gem 'figaro'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -45,8 +53,14 @@ group :development, :test do
   gem 'byebug'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-
+  gem 'pry-rails', group: [:development, :test]
+  gem 'pry-byebug', group: [:development, :test]
+  gem 'hirb', group: [:development, :test]
+  gem 'hirb-unicode', group: [:development, :test]
+  gem 'better_errors', group: [:development, :test]
+  gem 'binding_of_caller', group: [:development, :test]
+  gem 'spring', group: [:development, :test]
+  gem 'rails-erd', group: [:development, :test]
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
 end
 

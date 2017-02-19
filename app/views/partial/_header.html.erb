@@ -1,0 +1,42 @@
+<%= stylesheet_link_tag "desktop/web/shared", :media => "all" %>
+
+<div id="wrapper">
+	<header class="Header">
+		<div class="Header__head">
+			<%= link_to image_tag("logo.jpg", size:"200x70", alt: "logo picture of sakeviva"), root_path %>
+		</div>
+		
+		<nav class="Header__body">
+			<ul id="Menu" class="dropmenu">
+			    <!-- user_signed_in? はユーザがログインしているか調べるdeviseのHelperメソッド -->
+			      <% if user_signed_in? %>
+			      <!-- current_user は現在ログインしているUserオブジェクトを返すdeviseのHelperメソッド -->
+			      <!-- *_path はUserモデルを作成したときに、
+			        deviseにより自動で作成されてますので、rake routesで確認できます -->
+			      <li>
+			      	<% if current_user.provider %>
+			      	<!-- facebookログインしているとき -->
+			      		<%= image_tag current_user.image, class: "img-circle profile-0" %>
+			      		<%= current_user.name %>
+			      	<% else %>
+			      	<!-- 通常ログインのとき -->
+			      	<%= current_user.name %>
+			      	<% end %>
+			      	<ul>
+			      		<li><%= link_to '注文履歴', user_orders_path, class: "Menu__item"%></li>
+				    	<li><%= link_to 'プロフィール変更', edit_user_registration_path, class: "Menu__item" %></li>
+				     	<li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "Menu__item" %></li>
+				    </ul>
+				   </li>
+			    <% else %>
+			     <li>サインアップ
+			    	<ul>
+			      		<li><%= link_to "サインアップ", new_user_registration_path, class: "Menu__item" %></li>
+			      		<li><%= link_to "ログイン", new_user_session_path, class: "Menu__item" %></li>
+	   		     	</ul>
+			     </li>
+			    <% end %>
+			</ul>
+		</nav>
+	</header>
+</div>

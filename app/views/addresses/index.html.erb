@@ -3,11 +3,11 @@
 <div id="address_all">
 	<h1>登録住所一覧</h1>
 
-	<%= form_tag('/decide_address', :method => :patch) do %>
 		<% @current_addresses.all.each do |adrs| %>
+		<%= form_for adrs, :url => new_order_path do |form| %>
 		<div class="each_address">
 			<ul class="address_detail">
-				<li class="radio_btn"><%= radio_button_tag 'address', adrs.id, adrs.default_address %>郵送先として使う</li>
+				<li class="radio_btn"><%= radio_button_tag :address, adrs.id %>郵送先として使う</li>
 				<li><%= adrs.recipient %></li>
 				<li>〒<%= adrs.postalcode %></li>
 				<li><%= adrs.prefecture&.name %>県 <%= adrs.address %></li>
@@ -18,10 +18,10 @@
 				<li><%= link_to "削除", user_address_path(id: adrs.id), method: :delete, confirm: "本当に削除しますか？"%></li>
 			</ul>
 		</div>
-		<% end %>
 		<%= hidden_field_tag :product_id,params[:product_id] %>
 		<%= hidden_field_tag :quantity,params[:quantity] %>
 		<div class="middle_btn_dummy"><%= link_to "新規住所登録", new_user_address_path %></div>
-		<div class="middle_btn"><%= submit_tag "次へ" %></div>
-	<% end %>
+		<div class="middle_btn"><%= form.submit "次へ" %></div>
+		<% end %>
+		<% end %>
 </div>
