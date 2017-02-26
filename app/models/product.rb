@@ -11,6 +11,7 @@ class Product < ActiveRecord::Base
 	belongs_to :type
 	belongs_to :price
 	has_one :order
+	belongs_to :shop
 
 end
 

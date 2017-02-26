@@ -18,6 +18,7 @@
 			数量：<%= select_tag 'quantity', options_for_select(["1", "2", "3", "4", "5"]) %>
 		</p>
 			<%= hidden_field_tag :product_id,@product.id %>
+			<%= hidden_field_tag :shop_id, @product.shop_id %>
 		<p class="purchase_btn">
 			<%= submit_tag "購入手続きへ" %>
 			<% end %>
@@ -43,6 +44,7 @@
 		数量：<%= select_tag 'quantity', options_for_select(["1", "2", "3", "4", "5"]) %>
 	</p>
 	<%= hidden_field_tag :product_id,@product.id %>
+	<%= hidden_field_tag :shop_id, @product.shop_id %>
 	<p class="purchase_btn">
 		<%= submit_tag "購入手続きへ" %>
 	</p>

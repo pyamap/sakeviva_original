@@ -14,7 +14,8 @@ class PayjpController < ApplicationController
 	def new
 		@current_address = Address.find(params[:address])
 		@quantity = params[:quantity]
-		@total_price = "#{@order.product.value*@quantity.to_i}"
+		@delivery_fee = Shipping.find_by("shop_id = ? and prefecture_id = ?", params[:shop_id], params[:prefecture_id]).fee
+		@total_price = @order.product.value*@quantity.to_i + @delivery_fee
 	end
 
 	def pay
