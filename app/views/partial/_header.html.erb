@@ -10,6 +10,7 @@
 			<ul id="Menu" class="dropmenu">
 			    <!-- user_signed_in? はユーザがログインしているか調べるdeviseのHelperメソッド -->
 			      <% if user_signed_in? %>
+
 			      <!-- current_user は現在ログインしているUserオブジェクトを返すdeviseのHelperメソッド -->
 			      <!-- *_path はUserモデルを作成したときに、
 			        deviseにより自動で作成されてますので、rake routesで確認できます -->
@@ -28,6 +29,11 @@
 				     	<li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "Menu__item" %></li>
 				    </ul>
 				   </li>
+
+				   <% unless @cart.blank? %>
+					   <%= @product.quantity %>
+				   <% end %>
+
 			    <% else %>
 			     <li>サインアップ
 			    	<ul>

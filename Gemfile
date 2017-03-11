@@ -38,6 +38,7 @@ gem 'omniauth-facebook'
 gem 'payjp'
 gem 'stripe'
 gem 'figaro'
+gem 'activerecord-session_store'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

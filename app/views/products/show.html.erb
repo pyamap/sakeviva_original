@@ -11,18 +11,19 @@
 			<li><%= link_to @product.price.price_range, @product.price %></li>
 		</ul>
 		<h1><%= @product.name %></h1>
+		
 		<p class="description"><%= @product.description %></p>
 		<p class="price"><%= @product.value %>円 (税込)</p>
-			<%= form_tag url_for(controller: :addresses, action: :index), :method => 'get' do %>
-		<p class="quantity_select">
-			数量：<%= select_tag 'quantity', options_for_select(["1", "2", "3", "4", "5"]) %>
-		</p>
-			<%= hidden_field_tag :product_id,@product.id %>
-			<%= hidden_field_tag :shop_id, @product.shop_id %>
-		<p class="purchase_btn">
-			<%= submit_tag "購入手続きへ" %>
-			<% end %>
-		</p>
+
+		<%= form_tag('/add_to_cart', :method => :post) do %>
+			<p class="quantity_select">
+				数量：<%= select_tag 'quantity', options_for_select(["1", "2", "3", "4", "5"]) %></p>
+				<%= hidden_field_tag :id,@product.id %>
+				<%= hidden_field_tag :shop_id, @product.shop_id %>
+			<p class="purchase_btn">
+				<%= submit_tag "カートに入れる" %>
+			</p>
+		<% end %>
 	</div>
 </div>
 

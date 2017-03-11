@@ -1,0 +1,78 @@
+/*Confirmaiton Pageのスタイルここから*/
+	#confirmation_all {
+		background-color: #eeeeee;
+		height: 100%;
+		width: 800px;
+		margin: 50px auto 30px auto;
+
+		.product_section {
+			height: 500px;
+			height: 100%;
+
+			.product_img {
+			text-align: center;
+			padding: 40px 40px 10px 40px;
+			}
+
+			.product_details {
+				margin: 0 auto 20px auto;
+				p {
+					text-align: center;
+					margin: 5px auto;
+					font-size: 18px;
+				}
+			}
+		}
+
+		.address_section {
+			height: 100%;
+			text-align: center;
+			border-top: dashed 0.5px black;
+			h2 {
+				margin: 0;
+				padding: 30px 10px 10px 10px;
+			}
+
+			ul.address_detail {
+				list-style-type: none;
+				padding: 0;
+				margin: 30px 0;
+
+				li {
+					font-size: 20px;
+				}
+			}
+		}
+	}
+
+.payjp_button {
+	position: relative;
+	text-align: center;
+	border: 1px solid $color-sakura;
+	width: 250px;
+	height: 50px;
+	line-height: 50px;
+	margin: auto;
+}
+
+.payjp_button:hover {
+		background-color: $color-sakura;
+		color: white;
+}
+
+
+#payjp_checkout_box {
+	opacity: 0;
+	width: 250px;
+	height: 50px;
+	margin: auto auto 50px auto;
+	position: absolute;
+	top: 0px;
+
+	input[type=button] {
+		width: 225px;
+		height: 40px;
+	}
+}
+
+/*Confirmaiton Pageのスタイルここまで*/

@@ -18,7 +18,7 @@ class PayjpController < ApplicationController
 		@total_price = @order.product.value*@quantity.to_i + @delivery_fee
 	end
 
-	def pay
+	def pay #payjpの決算がおりるメソッド
 		Payjp.api_key = 'sk_test_e3591175b23241e952c79a40'
 		charge = Payjp::Charge.create(
 		:amount => params[:total_price],

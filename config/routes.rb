@@ -21,6 +21,15 @@ Rails.application.routes.draw do
 
   patch "reservation" => "reservations#new"
 
+  # post "purchase" => "api#purchase"
+  patch "new_order" => "payjp#new"
+  post "purchase" => "payjp#pay" #pay.jpルーティング
+  get "thank_you" => "payjp#thank_you"
+  post "add_to_cart" => "products#add_to_cart"
+  post "delete_from_cart" =>"products#delete_from_cart"
+  post "empty_cart" => "products#empty_cart"
+  get "current_cart" => "products#current_cart"
+
   namespace :admin do
     root to: "products#index"
     resources :orders
@@ -54,10 +63,6 @@ Rails.application.routes.draw do
   resources :reservations do
   end
 
- # post "purchase" => "api#purchase"
-  patch "new_order" => "payjp#new"
-  post "purchase" => "payjp#pay" #pay.jpルーティング
-  get "thank_you" => "payjp#thank_you"
   #match '*path' => 'application#error404', via: :all #ルーティングで定義されていないURLが指定された場合のエラー表示。
 
   # The priority is based upon order of creation: first created -> highest priority.

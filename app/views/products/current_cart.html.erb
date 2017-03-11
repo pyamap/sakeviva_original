@@ -1,0 +1,27 @@
+<% unless @cart.items.empty? %>
+
+ <% for item in @cart.items %>
+
+ <h2>カート内の商品一覧</h2>
+
+  <ul>
+     <li>商品名：<%= item.name %></li>
+     <li>数量：<%= item.quantity %></li> 
+     <li>単価：<%= item.price %></li>
+
+     </li><%= button_to "＋",:action => 'add_to_cart', :id => item.id, :method => :post ,:class => 'increment_button' %><br>
+      <%= button_to "ー", :action => "delete_from_cart", :id => item.id, :method => :post, :class => 'decrement_button' %></li>
+  </ul>
+
+   <tr class="total-line">
+     <td colspan="2">Total</td>
+     <td class="total-cell"><%= number_to_currency(@cart.total_price) %>
+   </tr>
+
+   <%= button_to "カートを空にする", :action => "empty_cart" %>
+<% end %>
+
+  <% else %>
+  カートは空です。
+  <% end %>
+

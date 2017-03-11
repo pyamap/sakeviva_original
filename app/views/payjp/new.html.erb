@@ -7,9 +7,10 @@
     <section class="product_details">
       <p><%= @order.product.name %></p>
       <p>単価 : <%= @order.product.value %>円</p>
-      <p>合計 : <%= @total_price %>円</p>
-      <p>配送料 : <%= @delivery_fee %>円</p>
       <p>数量 : <%= @quantity %></p>
+      <p>>小計 : <%= @total_price %>円</p>
+      <p>配送料 : <%= @delivery_fee %>円</p>
+      <p>合計 : 
     </section>
   </div>
 
