@@ -1,5 +1,82 @@
 <%= stylesheet_link_tag "desktop/web/products", :media => "all" %>
 
+<section>
+	<div id="breadcrumb">ここにぱんくずが並びます / 並びます / ならびます</div>
+	<div class="ItemDetails">
+		<div class="ItemDetails__sub">
+			<%= image_tag @product.image, height: 480, width: 360, alt: "商品の写真" %>
+			<ul class="ItemDetails__sub--smallphoto">
+				<li><%= image_tag @product.image, height: 120, width: 100, alt: "商品の写真" %></li>
+				<li><%= image_tag @product.image, height: 120, width: 100, alt: "商品の写真" %></li>
+				<li><%= image_tag @product.image, height: 120, width: 100, alt: "商品の写真" %></li>
+			</ul>
+		</div>
+		<div class="ItemDetails__main">
+			<h1>社の蔵 採れたて純米吟醸 一の矢（うすにごり生)</h1>
+			<p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが</p>
+			<ul class="ItemDetails__review">
+				<li>☆☆☆☆☆</li>
+				<li><%= "10" %>件のレビュー</li>
+				<li>レビューを書く</li>
+			</ul>
+			<p class="ItemDetails__main--price"><%= @product.value %>円 (税込み)</p>
+			<div class="ItemDetails__main--size">
+				<p>サイズ</p>
+				<select>ここでサイズを選ばせるボックス</select>
+			</div>
+			<div class="ItemDetails__main--option">
+				<p>オプション</p>
+				<select>ここでオプションを選ばせるボックス</select>
+			</div>
+			<%= form_tag('/add_to_cart', :method => :post) do %>
+			<div class="ItemDetails__main--quantity">
+				<p>個数</p>		
+				<%= select_tag 'quantity', options_for_select(["1", "2", "3", "4", "5"]) %>
+			</div>
+				<%= hidden_field_tag :id,@product.id %>
+				<%= hidden_field_tag :shop_id, @product.shop_id %>			
+			<div class="middle_btn"><%= submit_tag "カートに入れる" %></div>				
+			<% end %>
+		</div>
+	</div>
+</section>
+
+<section>
+	<div class="RecommendedItems">
+		<h2>こちらもおすすめ</h2>
+		<ul class="RecommendedItems__main">
+	    <li class="RecommendedItems__item">
+	  	  <div class="RecommendedItems__item--photo">
+	  	  <%= image_tag Product.find(17).image.url, height: 240, width: 210, alt: "商品写真" %></div>
+	  	  <div class="RecommendedItems__item--title"><%= link_to Product.find(17).name, product_path(17) %></div>
+	  	  <div class="RecommendedItems__item--price">xxxx円</div>
+	    </li>
+
+	    <li class="RecommendedItems__item">
+	  	  <div class="RecommendedItems__item--photo">
+	  	  <%= image_tag Product.find(17).image.url, height: 240, width: 210, alt: "商品写真" %></div>
+	  	  <div class="RecommendedItems__item--title"><%= link_to Product.find(17).name, product_path(17) %></div>
+	  	  <div class="RecommendedItems__item--price">xxxx円</div>
+	    </li>
+
+	    <li class="RecommendedItems__item">
+	  	  <div class="RecommendedItems__item--photo">
+	  	  <%= image_tag Product.find(17).image.url, height: 240, width: 210, alt: "商品写真" %></div>
+	  	  <div class="RecommendedItems__item--title"><%= link_to Product.find(17).name, product_path(17) %></div>
+	  	  <div class="RecommendedItems__item--price">xxxx円</div>
+	    </li>
+
+	    <li class="RecommendedItems__item">
+	  	  <div class="RecommendedItems__item--photo">
+	  	  <%= image_tag Product.find(17).image.url, height: 240, width: 210, alt: "商品写真" %></div>
+	  	  <div class="RecommendedItems__item--title"><%= link_to Product.find(17).name, product_path(17) %></div>
+	  	  <div class="RecommendedItems__item--price">xxxx円</div>
+	    </li>
+    </ul>
+	</div>
+</section>
+
+
 <div id="product_details">
 	<div class="product_img">
 		<%= image_tag @product.image, :height =>"400", :width =>"550"%>

@@ -3,7 +3,7 @@ class CartItem
 
 	def initialize (product)
 		@product = product
-		@quantity = 1
+		@quantity = 1 
 	end
 
 	def name

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+		<title>SakevivaOriginal</title>
+		<%= stylesheet_link_tag    'smart_phone/application', media: 'all', 'data-turbolinks-track' => true %>
+		<%= javascript_include_tag 'smart_phone/application', 'data-turbolinks-track' => true %>
+		<%= csrf_meta_tags %>
+  	</meta>
+</head>
+<body>
+
+  <header>
+  	<%= render 'partial/header_smart_phone' %>
+  </header>
+
+	<% unless flash.empty? %>
+		<script type="text/javascript">
+			<% flash.each do |f| %>
+				<% type = f[0].to_s.gsub('alert','error').gsub('notice','info') %>
+				toastr['<%= type %>']('<%= f[1] %>');
+			<% end %>
+		</script>
+	<% end %>
+
+<%= yield %>
+
+	<%= render 'partial/footer_smart_phone' %>
+
+</body>
+</html>
+

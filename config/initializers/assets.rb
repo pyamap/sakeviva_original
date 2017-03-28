@@ -13,7 +13,6 @@ Rails.application.config.assets.precompile += %w( desktop/web/shared.css )
 Rails.application.config.assets.precompile += %w( desktop/web/api.css )
 Rails.application.config.assets.precompile += %w( desktop/web/orders.css )
 Rails.application.config.assets.precompile += %w( desktop/admin/orders.css )
-
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path
 

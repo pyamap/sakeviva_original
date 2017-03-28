@@ -1,118 +1,225 @@
+﻿
 <%= stylesheet_link_tag "desktop/web/static_pages", :media => "all" %>
 
-<div id="top_box">
-	<div id="side_bar"><%= render "partial/side_bar"%></div>
-	<div id="top_page_main">
-		<div id="top_page_first">
-			<a href="http://localhost:3000/products/17">
-			<%= image_tag Product.find(8).image.url, :height => "320", :width => "780", :class => "image_style" %>
-			<h1>
-				<%= Product.find(8).name %>
-			</h1>
-			</a>
-			<p><%= Product.find(8).description.truncate(25, separator: '。') %></p>
-		</div>
+<div id="jojima-top">
+  <section>
+    <div class="Intro">
+    	<div class="Intro__main">
+    	  <div class="Intro__sub">
+    	    <div class="Category"></div>
+    	  	  <ul class="Category__menu">
+    	  	    <li class="Category__item">
+    	  	      <p class="Category__title">日本酒</p>
+    	  	      <div class="Category__subtitle">城島町の地酒</div>
+    	  	    </li>
+    	  	    <li class="Category__item">
+    	  	      <p class="Category__title">日本酒</p>
+    	  	      <div class="Category__subtitle">城島町の地酒</div>
+    	  	    </li>
+    	  	    <li class="Category__item">
+    	  	      <p class="Category__title">日本酒</p>
+    	  	      <div class="Category__subtitle">城島町の地酒</div>  	  	    	
+    	  	    </li>
+    	  	    <li class="Category__item">
+    	  	      <p class="Category__title">日本酒</p>
+    	  	      <div class="Category__subtitle">城島町の地酒</div>
+    	  	    </li>
+    	  	  </ul>
+    	    </div>
+    	  </div>
+    	</div>
+    	<p class="Intro__news">お知らせが入ります。お知らせが入ります。お知らせが入ります。</p>
+    </div>
+  </div>
 
-		<div id="top_page_second">
-			<div class="item_left">
-				<%= image_tag Product.find(8).image.url, :height => "200", :width => "365", :class => "image_style" %>
-				<h1>
-					<%= Product.find(8).name %>
-				</h1>
-				<p>
-					<%= Product.find(8).description.truncate(25, separator: '。') %>
-				</p>
-			</div>
-			<div class="item_right">
-				<%= image_tag Product.find(8).image.url, :height => "200", :width => "365", :class => "image_style" %>
-				<h1>
-					<%= Product.find(8).name %>
-				</h1>
-				<p>
-					<%= Product.find(8).description.truncate(25, separator: '。') %>
-				</p>
-			</div>
-		</div>
+  <sectino>
+    <div class="NewArrival">
+      <h2 class="NewArrival__head">新入荷</h2>
+      <p class="NewArrival__text">テキストが入ります。テキストが入ります。</p>
+    	  <ul class="NewArrival__main">
 
-		<div id="top_page_third">
-			<div class="small_item">
-				<%= image_tag Product.find(8).image.url, :height => "160", :width => "170", :class => "image_style" %>
-				<h1>
-					<%= Product.find(8).name %>
-				</h1>
-				<p>
-					<%= Product.find(8).description.truncate(25, separator: '。') %>
-				</p>
-			</div>
-			<div class="small_item">
-				<%= image_tag Product.find(8).image.url, :height => "160", :width => "170", :class => "image_style" %>
-				<h1>
-					<%= Product.find(8).name %>
-				</h1>
-				<p>
-					<%= Product.find(8).description.truncate(25, separator: '。') %>
-				</p>
-			</div>
-			<div class="small_item">
-				<%= image_tag Product.find(8).image.url, :height => "160", :width => "170", :class => "image_style" %>
-				<h1>
-					<%= Product.find(8).name %>
-				</h1>
-				<p>
-					<%= Product.find(8).description.truncate(25, separator: '。') %>
-				</p>
-			</div>
-			<div class="small_item">
-				<%= image_tag Product.find(8).image.url, :height => "160", :width => "170", :class => "image_style" %>
-				<h1>
-					<%= Product.find(8).name %>
-				</h1>
-				<p>
-					<%= Product.find(8).description.truncate(25, separator: '。') %>
-				</p>
-			</div>
-		</div>
+    	    <li class="NewArrival__item">
+    	  	  <div class="NewArrival__item--photo">
+    	  	  <%= image_tag Product.find(17).image.url, height: 240, width: 210, alt: "商品写真" %></div>
+    	  	  <div class="NewArrival__item--title"><%= link_to Product.find(17).name, product_path(17) %></div>
+    	  	  <div class="NewArrival__item--price">xxxx円</div>
+    	    </li>
 
-		<div id="top_page_fourth">
-			<div class="item_left">
-				<%= image_tag Product.find(8).image.url, :height => "200", :width => "365", :class => "image_style" %>
-				<h1>
-					<%= Product.find(8).name %>
-				</h1>
-				<p>
-					<%= Product.find(8).description.truncate(25, separator: '。') %>
-				</p>
-			</div>
-			<div class="item_right">
-				<%= image_tag Product.find(8).image.url, :height => "200", :width => "365", :class => "image_style" %>
-				<h1>
-					<%= Product.find(8).name %>
-				</h1>
-				<p>
-					<%= Product.find(8).description.truncate(25, separator: '。') %>
-				</p>
-			</div>
-		</div>
-	</div>
+    	    <li class="NewArrival__item">
+    	  	  <div class="NewArrival__item--photo">
+    	  	  <%= image_tag Product.find(17).image.url, height: 240, width: 210, alt: "商品写真" %></div>
+    	  	  <div class="NewArrival__item--title"><%= link_to Product.find(17).name, product_path(17) %></div>
+    	  	  <div class="NewArrival__item--price">xxxx円</div>
+    	    </li>
+
+    	    <li class="NewArrival__item">
+    	  	  <div class="NewArrival__item--photo">
+    	  	  <%= image_tag Product.find(17).image.url, height: 240, width: 210, alt: "商品写真" %></div>
+    	  	  <div class="NewArrival__item--title"><%= link_to Product.find(17).name, product_path(17) %></div>
+    	  	  <div class="NewArrival__item--price">xxxx円</div>
+    	    </li>
+
+    	    <li class="NewArrival__item">
+    	  	  <div class="NewArrival__item--photo">
+    	  	  <%= image_tag Product.find(17).image.url, height: 240, width: 210, alt: "商品写真" %></div>
+    	  	  <div class="NewArrival__item--title"><%= link_to Product.find(17).name, product_path(17) %></div>
+    	  	  <div class="NewArrival__item--price">xxxx円</div>
+    	    </li>
+
+    	  </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="Ranking">
+  	<h2 class="Ranking__head">人気ランキング</h2>
+      <p class="Ranking__text">テキストが入ります。テキストが入ります。</p>
+    	
+    	<ul class="Ranking__all">
+    	  <li class="Ranking__item">
+    	  	<div class="Ranking__sub">
+    	      <img class="Ranking__sub--photo"><%= image_tag Product.find(17).image.url, height: 80, width: 68, alt: "商品写真" %>
+    	      </img>
+    	    </div>
+    	    <div class="Ranking__main">
+    	      <div class="Ranking__main--title"><%= link_to Product.find(17).name, product_path(17) %>。</div>
+    	      <div class="Ranking__main--price">xxxx円</div>
+    	    </div>
+    	  </li>
+
+    	  <li class="Ranking__item">
+    	  	<div class="Ranking__sub">
+    	      <img class="Ranking__main--photo"><%= image_tag Product.find(17).image.url, height: 80, width: 68, alt: "商品写真" %>
+    	      </img>
+    	    </div>
+    	    <div class="Ranking__main">
+    	      <div class="Ranking__main--title"><%= link_to Product.find(17).name, product_path(17) %></div>
+    	      <div class="Ranking__main--price">xxxx円</div>
+    	    </div>
+    	  </li>
+
+    	  <li class="Ranking__item">
+    	  	<div class="Ranking__sub">
+    	      <img class="Ranking__main--photo"><%= image_tag Product.find(17).image.url, height: 80, width: 68, alt: "商品写真" %>
+    	      </img>
+    	    </div>
+    	    <div class="Ranking__main">
+    	      <div class="Ranking__main--title"><%= link_to Product.find(17).name, product_path(17) %>。</div>
+    	      <div class="Ranking__main--price">xxxx円</div>
+    	    </div>
+    	  </li>
+
+    	  <li class="Ranking__item">
+    	  	<div class="Ranking__sub">
+    	      <img class="Ranking__sub--photo"><%= image_tag Product.find(17).image.url, height: 80, width: 68, alt: "商品写真" %>
+    	      </img>
+    	    </div>
+    	    <div class="Ranking__main">
+    	      <div class="Ranking__main--title"><%= link_to Product.find(17).name, product_path(17) %>。</div>
+    	      <div class="Ranking__main--price">xxxx円</div>
+    	    </div>
+    	  </li>
+
+    	  <li class="Ranking__item">
+    	  	<div class="Ranking__sub">
+    	      <img class="Ranking__main--photo"><%= image_tag Product.find(17).image.url, height: 80, width: 68, alt: "商品写真" %>
+    	      </img>
+    	    </div>
+    	    <div class="Ranking__main">
+    	      <div class="Ranking__main--title"><%= link_to Product.find(17).name, product_path(17) %>。</div>
+    	      <div class="Ranking__main--price">xxxx円</div>
+    	    </div>
+    	  </li>
+
+    	  <li class="Ranking__item">
+    	  	<div class="Ranking__sub">
+    	      <img class="Ranking__main--photo"><%= image_tag Product.find(17).image.url, height: 80, width: 68, alt: "商品写真" %>
+    	      </img>
+    	    </div>
+    	    <div class="Ranking__main">
+    	      <div class="Ranking__main--title"><%= link_to Product.find(17).name, product_path(17) %>。</div>
+    	      <div class="Ranking__main--price">xxxx円</div>
+    	    </div>
+    	  </li>
+
+
+    	  <li class="Ranking__item">
+    	  	<div class="Ranking__sub">
+    	      <img class="Ranking__sub--photo"><%= image_tag Product.find(17).image.url, height: 80, width: 68, alt: "商品写真" %>
+    	      </img>
+    	    </div>
+    	    <div class="Ranking__main">
+    	      <div class="Ranking__main--title"><%= link_to Product.find(17).name, product_path(17) %>。</div>
+    	      <div class="Ranking__main--price">xxxx円</div>
+    	    </div>
+    	  </li>
+
+    	  <li class="Ranking__item">
+    	  	<div class="Ranking__sub">
+    	      <img class="Ranking__main--photo"><%= image_tag Product.find(17).image.url, height: 80, width: 68, alt: "商品写真" %>
+    	      </img>
+    	    </div>
+    	    <div class="Ranking__main">
+    	      <div class="Ranking__main--title"><%= link_to Product.find(17).name, product_path(17) %>。</div>
+    	      <div class="Ranking__main--price">xxxx円</div>
+    	    </div>
+    	  </li>
+
+    	  <li class="Ranking__item">
+    	  	<div class="Ranking__sub">
+    	      <img class="Ranking__main--photo"><%= image_tag Product.find(17).image.url, height: 80, width: 68, alt: "商品写真" %>
+    	      </img>
+    	    </div>
+    	    <div class="Ranking__main">
+    	      <div class="Ranking__main--title"><%= link_to Product.find(17).name, product_path(17) %>。</div>
+    	      <div class="Ranking__main--price">xxxx円</div>
+    	    </div>
+    	  </li>
+    	</ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="JojimaMap"><%= image_tag 'pc/aboutjojima.png', height: 200, alt:"城島市についての写真" %></div>
+  </section>
+
+
+  <section>
+    <div class="Interview">
+      <h3 class="Interview__head">生産者インタビュー</h2>
+      <p class="Interview__text">テキストが入ります。テキストが入ります。</p>
+
+      <div class="Interview__section">
+
+        <div class="Interview__item">
+          <div class="Interview__sub">
+            <img class="Interview__sub--photo"><%= image_tag 'pc/interviewer1.png', height: 160 , width: 120, alt:'インタビュアーの写真' %></img>
+          </div>
+          <div class="Interview__main">
+            <div class="Interview__main--id">#01</div>
+            <div class="Interview__main--companyname">なんとか農園</div>
+            <div class="Interview__main--name">山下ゆうきさん</div>
+            <div class="Interview__main--summary">テキストはいるよテキストはいるよテキストはいるよ</div>
+            <div class="Interview__main--btn"><%= link_to 'もっと読む', "#" %></div>
+          </div>
+        </div>
+
+        <div class="Interview__item">    
+          <div class="Interview__sub">
+            <img class="Interview__sub--photo"><%= image_tag 'pc/interviewer2.png', height: 160 , width: 120, alt:'インタビュアーの写真'%></img>
+          </div>
+
+          <div class="Interview__main">
+            <div class="Interview__main--id">#01</div>
+            <div class="Interview__main--companyname">なんとか農園</div>
+            <div class="Interview__main--name">山下ゆうきさん</div>
+            <div class="Interview__main--summary">テキストはいるよテキストはいるよテキストはいるよ</div>
+            <div class="Interview__main--btn"><%= link_to 'もっと読む', "#" %></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
 </div>
-	<div id="theme_box">
-		<h2>テーマから選ぶ</h2>
-		<ul class="theme_list_box">
-			<li class="theme_list"><%= link_to "ギフトにぴったりな日本酒", 'http://localhost:3000/theme_tags/1' %></li>
-			<li class="theme_list"><%= link_to "自分へのごほうび日本酒",'http://localhost:3000/theme_tags/2' %></li>
-			<li class="theme_list"><%= link_to "日本酒初心者への日本酒",'http://localhost:3000/theme_tags/3' %></li>
-			<li class="theme_list"><%= link_to "おすすめから選ぶ日本酒",'http://localhost:3000/theme_tags/4' %></li>
-			<li class="theme_list"><%= link_to "料理に合う日本酒",'http://localhost:3000/theme_tags/5' %></li>
-			<li class="theme_list"><%= link_to "季節で選ぶ日本酒",'http://localhost:3000/theme_tags/6' %></li>
-		</ul>
-	</div>
-
-	<div id="category_box">
-		<h2>カテゴリーから選ぶ</h2>
-		<ul class="category_list_box">
-			<li class="category_list"><%= link_to "甘口日本酒", category_first_path %></li>
-			<li class="category_list"><%= link_to "辛口日本酒", category_second_path %></li>
-			<li class="category_list"><%= link_to "吟醸", category_third_path %></li>
-			<li class="category_list"><%= link_to "大吟醸", category_fourth_path %></li>
-		</ul>
-	</div>

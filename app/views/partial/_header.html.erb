@@ -31,8 +31,8 @@
 				   </li>
 
 				   <% unless @cart.blank? %>
-					   <%= @product.quantity %>
-				   <% end %>
+				   	(<%= @cart.items.inject(0) {|sum, product| sum + product.quantity} %>)
+        		   <% end %>
 
 			    <% else %>
 			     <li>サインアップ

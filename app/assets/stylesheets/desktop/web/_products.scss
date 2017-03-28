@@ -1,3 +1,167 @@
+/*かえさんデザインのCSSここから*/
+
+#breadcrumb {
+	width: 782px;
+	padding: 8px 0;
+	margin: 60px auto 0;
+	border-bottom: solid 1px #CCCCCC;
+}
+
+.ItemDetails {
+	width: 880px;
+	margin: 20px auto 40px;
+	display: flex;
+
+	&__sub {
+		margin: 30px 50px 50px;
+
+		&--smallphoto {
+			display: flex;
+			list-style: none;
+			padding: 0;
+
+			li {
+				margin:10px;
+				&:nth-child(-n+3) {
+					margin-left: 0;
+				}
+			}
+		}
+	}
+
+	&__main {
+		width: 370px;
+		margin: 20px 50px 50px 0;
+
+		p {
+			margin: 10px auto 0;
+		}
+
+		h1{
+			font-size: 24px;
+			margin: 10px auto 20px;
+		}
+
+		&--price {
+			height: 50px;
+			margin: 0;
+			line-height: 50px;
+			font-size: 18px;
+		}
+
+		&--size {
+
+			select {
+			-webkit-appearance:none;
+			width: 360px;
+			height: 30px;
+			}
+		}
+
+		&--option {
+			
+			select {
+			-webkit-appearance:none;
+			width: 360px;
+			height: 30px;
+			}
+		}
+
+		&--quantity {
+			
+			select {
+			-webkit-appearance:none;
+			width: 100px;
+			height: 30px;
+			padding-left: 10px;
+			}
+		}
+
+		.middle_btn {
+			text-align: left;
+			width: 200px;
+		}
+
+	}
+
+	&__review {
+			display: flex;
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			font-size: 11px;
+
+			li {
+				margin: 12px;
+				&:nth-child(-n+3) {
+					margin-left: 0;
+				}
+
+				&:nth-child(-n+2) {
+					padding-right: 10px;
+					border-right: 1px solid #CCCCCC;
+				}
+			}
+		}
+}
+
+.RecommendedItems {
+	width: 1080px;
+	margin: auto;
+
+	h2 {
+		width: 930px;
+		text-align: left;
+		font-size: 18px;
+		margin: auto;
+	}
+
+	&__head {
+		display: block;
+		text-align: center;
+		padding: 20px 0 10px;
+		margin: 0;
+	}
+
+	&__text {
+		text-align: center;
+	}
+
+	&__main {
+		list-style: none;
+		display: flex;
+		justify-content: space-around;
+		margin: 20px 200px;
+		padding: 0;
+	}
+
+	&__item {
+		text-align: center;
+		margin: 0 30px 30px;
+
+		&:nth-child(even) {
+			margin-left: 0;
+		}
+
+		&:nth-child(2) {
+			margin-right: 0;
+		}
+
+		&--title {
+			margin: 10px auto 5px;
+		}
+
+		&--price {
+			text-align: right;
+			font-size: 18px;
+		}
+	}
+}
+
+
+/*かえさんデザインのCSSここまで*/
+
+
 
 /*商品ページで統一すべきスタイルここから*/
 .product_form {

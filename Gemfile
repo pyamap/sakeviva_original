@@ -39,6 +39,7 @@ gem 'payjp'
 gem 'stripe'
 gem 'figaro'
 gem 'activerecord-session_store'
+gem 'jpmobile', '4.2.0'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
