@@ -24,9 +24,9 @@ class UsersController < ApplicationController
 	end
 
 
-	#private
-	#def user_params
-	#	params.require(:user).permit(:addresses_attributes:[:address,:user_id])
-	#end
+	private
+	def user_params
+		params.require(:user).permit(:addresses_attributes:[:address,:user_id])
+	end
 
 end
