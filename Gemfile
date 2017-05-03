@@ -43,6 +43,7 @@ gem 'activerecord-session_store'
 gem 'jpmobile', '4.2.0'
 gem "paperclip", "~> 5.0.0"
 gem 'font-awesome-rails'
+gem 'rails_12factor', group: :production
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
