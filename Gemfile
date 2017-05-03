@@ -33,7 +33,7 @@ gem 'seed-fu', '~> 2.3'
 gem 'toastr-rails'
 gem 'dropzonejs-rails'
 
-#gem 'webpay'
+gem 'webpay'
 gem 'omniauth-facebook'
 
 gem 'payjp'

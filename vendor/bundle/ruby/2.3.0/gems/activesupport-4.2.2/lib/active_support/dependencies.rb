@@ -269,11 +269,11 @@ module ActiveSupport #:nodoc:
         result
       end
 
-      #def require(file)
-      #  result = false
-      #  load_dependency(file) { result = super }
-      #  result
-      #end
+      def require(file)
+        result = false
+        load_dependency(file) { result = super }
+        result
+      end
     end
 
     # Exception file-blaming.
