@@ -14,12 +14,15 @@
 @import "desktop/web/theme_tags";
 @import "desktop/web/thumbnail";
 @import "desktop/web/payjp";
+@import "dropzone/dropzone";
+@import "font-awesome";
 
 
 
 body {
 	margin: 0;
-	font-family:  'Quicksand', "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", 'メイリオ' , Meiryo , Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	color: #333333;
+	font-family: ヒラギノ角ゴ ProN;
 }
 
 #wrapper {
@@ -39,6 +42,17 @@ nav.Header__body {
 
 #Menu.dropmenu {
 	margin: 0;
+	width: 270px;
+	height: 30px;
+
+	li {
+		width: 150px;
+	}
+
+	li.cart {
+		width: 70px;
+	}
+
 }
 
 .Header__head {
@@ -68,8 +82,8 @@ a :hover{
 
 // プロフィール画像
 .profile-0 {
-	width: 40px;
-	height: 40px;
+	width: 28px;
+	height: 28px;
 }
 
 .profile-1 {

@@ -1,24 +1,80 @@
-<% unless @cart.items.empty? %>
+<%= stylesheet_link_tag "desktop/web/products", :media => "all" %>
 
-  <% for item in @cart.items %>
+<section class="Cart">
 
-    <h2>カート内の商品一覧</h2>
-    <ul>
-      <li>商品名：<%= item.name %></li>
-      <li>数量：<%= item.quantity %></li> 
-      <li>単価：<%= item.price %></li>
-
-      </li><%= button_to "＋",:action => 'add_to_cart', :id => item.id, :method => :post ,:class => 'increment_button' %><br>
-      <%= button_to "ー", :action => "delete_from_cart", :id => item.id, :method => :post, :class => 'decrement_button' %></li>
+  <% unless @cart.items.empty? %>
+    <p>カートの中身</p>
+    <ul class="Cart__list">
+      <li class="Cart__list--name">商品名</li>
+      <li class="Cart__list--details">商品説明</li>
+      <li class="Cart__list--price">価格</li>
+      <li class="Cart__list--quantity">数量</li>
+      <li class="Cart__list--unitprice">小計</li>
     </ul>
-    <tr class="total-line">
+
+    <% for item in @cart.items %>
+
+    <ul class="Cart__item">
+      <li class="Cart__item--image"><%= image_tag 'pc/top/category_sake.jpg', height: 120, width: 100, alt: "酒の写真"%></li>
+      <li class="Cart__item--name"><%= item.name %></li>
+      <li class="Cart__item--description"><%= item.description %></li>
+      <li class="Cart__item--price"><%= item.price %></li>
+      <li class="Cart__item--quantity">
+        <div class="Cart__item--number"> 
+          <%= item.quantity %>
+        </div>
+        <div class="Cart__item--updown ">
+          <%= button_to :action => 'add_to_cart', :id => item.id, :method => :post ,:class => 'increment_button' do %>
+          <i class="fa fa-chevron-up"></i>
+          <% end %>
+          <%= button_to :action => "decrement_from_cart", :id => item.id, :method => :post, :class => 'decrement_button' do %>
+          <i class="fa fa-chevron-down"></i>
+          <% end %>
+        </div>
+      </li>
+      <%= button_to "x", :action => "delete_from_cart", :id => item.id, :method => :post %>
+    </ul>
+
       <td colspan="2">Total</td>
       <td class="total-cell"><%= number_to_currency(@cart.total_price) %>
     </tr>
-    <%= button_to "カートを空にする", :action => "empty_cart" %>
-  <% end %>
+    <% end %>
 
-<% else %>
-カートは空です。
-<% end %>
+  <% else %>
+  カートは空です。
+  <% end %>
+</section>
+
+<section class="CartAction">
+  <div class="CartAction__emptycart"><%= button_to "カートを空にする", :action => "empty_cart" %></div>
+  <div class="CartAction__continue"><%= link_to "買い物を続ける", root_path %></div>
+</section>
+
+<section class="CheckOut">
+  <div class="CheckOut__shipping">
+    <p>送料を計算</p>
+    <p>都道府県</p>
+    <div class="CheckOut__shipping--select">都道府県を選択</div>
+    <div>ここで送料を更新</div>
+  </div>
+  <div class="CheckOut__calculation">
+    <p>合計</p>
+    <table>
+      <tr>
+        <td>小計</td>
+        <td><%= item.subtotal_price %>円</td>
+      </tr>
+      <tr>
+        <td>送料</td>
+        <td>800円</td>
+      </tr>
+      <tr>
+        <td>合計</td>
+        <td>17000円</td>
+      </tr>
+    </table>
+    <div>チェッックアウト</div>
+  </div>
+</section>
+
 

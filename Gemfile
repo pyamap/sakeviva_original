@@ -31,6 +31,7 @@ gem 'devise', '4.1.1'
 gem 'carrierwave'
 gem 'seed-fu', '~> 2.3'
 gem 'toastr-rails'
+gem 'dropzonejs-rails'
 
 #gem 'webpay'
 gem 'omniauth-facebook'
@@ -40,6 +41,8 @@ gem 'stripe'
 gem 'figaro'
 gem 'activerecord-session_store'
 gem 'jpmobile', '4.2.0'
+gem "paperclip", "~> 5.0.0"
+gem 'font-awesome-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

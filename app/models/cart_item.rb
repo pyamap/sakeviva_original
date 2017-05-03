@@ -3,11 +3,15 @@ class CartItem
 
 	def initialize (product)
 		@product = product
-		@quantity = 1 
+		@quantity = 1
 	end
 
 	def name
 		@product.name
+	end
+
+	def description
+		@product.description
 	end
 
 	def id
@@ -22,15 +26,15 @@ class CartItem
 		@product.value
 	end 
 
-	def subtotal_price #ã‚¢ã‚¤ãƒ†ãƒ ã®å°è¨ˆã‚’å‡ºã™ãƒ¡ã‚½ãƒƒãƒ‰
+	def subtotal_price #¥¢¥¤¥Æ¥à¤ÎĞ¡Ó‹¤ò³ö¤¹¥á¥½¥Ã¥É
 		@product.value * @quantity
 	end
 
-	def increment_quantity #ã‚¢ã‚¤ãƒ†ãƒ ã®æ•°é‡ã‚’å¢—ã‚„ã™ãƒ¡ã‚½ãƒƒãƒ‰
+	def increment_quantity #¥¢¥¤¥Æ¥à¤ÎÊıÁ¿¤ò‰ˆ¤ä¤¹¥á¥½¥Ã¥É
 		@quantity += 1
 	end
 
-	def decrement_quantity #ã‚¢ã‚¤ãƒ†ãƒ ã®æ•°é‡ã‚’æ¸›ã‚‰ã™ãƒ¡ã‚½ãƒƒãƒ‰
+	def decrement_quantity #¥¢¥¤¥Æ¥à¤ÎÊıÁ¿¤òœp¤é¤¹¥á¥½¥Ã¥É
 		@quantity -= 1
 	end
 end

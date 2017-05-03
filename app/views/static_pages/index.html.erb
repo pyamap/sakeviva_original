@@ -5,24 +5,29 @@
   <section>
     <div class="Intro">
     	<div class="Intro__main">
+          <div class="Intro__main--logo"><%= image_tag 'pc/top/logo.png',size:"140x70", alt: "logo image of sakeviva" %></div>
     	  <div class="Intro__sub">
     	    <div class="Category"></div>
     	  	  <ul class="Category__menu">
     	  	    <li class="Category__item">
+                  <div class ="Category__picture"><%= image_tag 'pc/top/category_sake.jpg', height: 145, width: 148, alt: "酒の写真" %></div>
     	  	      <p class="Category__title">日本酒</p>
     	  	      <div class="Category__subtitle">城島町の地酒</div>
     	  	    </li>
     	  	    <li class="Category__item">
-    	  	      <p class="Category__title">日本酒</p>
-    	  	      <div class="Category__subtitle">城島町の地酒</div>
+                  <div class ="Category__picture"><%= image_tag 'pc/top/category_grocery.jpg', height: 145, width: 148, alt: "雑貨の写真" %></div>                
+    	  	      <p class="Category__title">雑貨</p>
+    	  	      <div class="Category__subtitle">城島町の雑貨</div>
     	  	    </li>
     	  	    <li class="Category__item">
-    	  	      <p class="Category__title">日本酒</p>
-    	  	      <div class="Category__subtitle">城島町の地酒</div>  	  	    	
+                  <div class ="Category__picture"><%= image_tag 'pc/top/category_food.jpg', height: 145, width: 148, alt: "特産品の写真" %></div> 
+    	  	      <p class="Category__title">特産品</p>
+    	  	      <div class="Category__subtitle">城島町の特産品</div>  	  	    	
     	  	    </li>
     	  	    <li class="Category__item">
-    	  	      <p class="Category__title">日本酒</p>
-    	  	      <div class="Category__subtitle">城島町の地酒</div>
+                  <div class ="Category__picture"><%= image_tag 'pc/top/category_craft.jpg', height: 145, width: 148, alt: "工芸品の写真" %></div>
+    	  	      <p class="Category__title">工芸品</p>
+    	  	      <div class="Category__subtitle">城島町の工芸品</div>
     	  	    </li>
     	  	  </ul>
     	    </div>
@@ -194,28 +199,28 @@
 
         <div class="Interview__item">
           <div class="Interview__sub">
-            <img class="Interview__sub--photo"><%= image_tag 'pc/interviewer1.png', height: 160 , width: 120, alt:'インタビュアーの写真' %></img>
+            <img class="Interview__sub--photo"><%= image_tag "pc/interview_tanaka_noodle/tanaka_pic.png", height: 240 , width: 200, alt:'インタビュアーの写真' %></img>
           </div>
           <div class="Interview__main">
             <div class="Interview__main--id">#01</div>
-            <div class="Interview__main--companyname">なんとか農園</div>
-            <div class="Interview__main--name">山下ゆうきさん</div>
+            <div class="Interview__main--companyname">田中製麺</div>
+            <div class="Interview__main--name">田中義眞さん</div>
             <div class="Interview__main--summary">テキストはいるよテキストはいるよテキストはいるよ</div>
-            <div class="Interview__main--btn"><%= link_to 'もっと読む', "#" %></div>
+            <div class="Interview__main--btn"><%= link_to 'もっと読む', interview_tanaka_noodle_path %></div>
           </div>
         </div>
 
         <div class="Interview__item">    
           <div class="Interview__sub">
-            <img class="Interview__sub--photo"><%= image_tag 'pc/interviewer2.png', height: 160 , width: 120, alt:'インタビュアーの写真'%></img>
+            <img class="Interview__sub--photo"><%= image_tag "pc/interview_souen_rush/shimosaka_pic.png", height: 240 , width: 200, alt:'インタビュアーの写真'%></img>
           </div>
 
           <div class="Interview__main">
-            <div class="Interview__main--id">#01</div>
-            <div class="Interview__main--companyname">なんとか農園</div>
-            <div class="Interview__main--name">山下ゆうきさん</div>
+            <div class="Interview__main--id">#02</div>
+            <div class="Interview__main--companyname">創筵 (そうえん)</div>
+            <div class="Interview__main--name">下坂美佳さん</div>
             <div class="Interview__main--summary">テキストはいるよテキストはいるよテキストはいるよ</div>
-            <div class="Interview__main--btn"><%= link_to 'もっと読む', "#" %></div>
+            <div class="Interview__main--btn"><%= link_to 'もっと読む', interview_souen_rush_path %></div>
           </div>
         </div>
 

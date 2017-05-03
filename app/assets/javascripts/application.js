@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require dropzone
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require toastr

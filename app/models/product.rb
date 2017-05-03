@@ -1,6 +1,8 @@
 class Product < ActiveRecord::Base
 	mount_uploader :image, ImageUploader #これはproductモデルから商品画像をあげる際に必要。
 	has_many :images
+
+	has_many :photos
 	accepts_nested_attributes_for :images
 
 	validates :name,:description, presence: true

@@ -37,6 +37,7 @@ before_action :authenticate_user!, only:[:add_to_cart]
 	def add_to_cart
 		product = Product.find(params[:id])
 		@cart = find_cart
+		@quantity = params[:quantity]
 		@cart.add_product(product)
 		redirect_to_current_cart("数量を１つ増やしました")
 	end
@@ -46,12 +47,20 @@ before_action :authenticate_user!, only:[:add_to_cart]
 		redirect_to_current_cart("カートは空にしました")
 	end
 
+	def decrement_from_cart
+		product = Product.find(params[:id])
+		@cart = find_cart
+		@cart.decrement_product(product)
+		redirect_to_current_cart("数量を１つ減らしました")
+	end
+
 	def delete_from_cart
 		product = Product.find(params[:id])
 		@cart = find_cart
 		@cart.delete_product(product)
-		redirect_to_current_cart("数量を１つ減らしました")
+		redirect_to_current_cart ("商品をカートから削除しました")
 	end
+
 
 	def current_cart
 		@cart = find_cart

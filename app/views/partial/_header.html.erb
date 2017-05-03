@@ -1,48 +1,66 @@
 <%= stylesheet_link_tag "desktop/web/shared", :media => "all" %>
 
-<div id="wrapper">
-	<header class="Header">
-		<div class="Header__head">
-			<%= link_to image_tag("logo.jpg", size:"200x70", alt: "logo picture of sakeviva"), root_path %>
+<header>
+	<div class="Header">
+		<div class="Header__account">
+<ul class="Header__account--menu">
+<ul id="Menu" class="dropmenu">
+    <!-- user_signed_in? はユーザがログインしているか調べるdeviseのHelperメソッド -->
+      	<% if user_signed_in? %>
+
+      <!-- current_user は現在ログインしているUserオブジェクトを返すdeviseのHelperメソッド -->
+      <!-- *_path はUserモデルを作成したときに、
+        deviseにより自動で作成されてますので、rake routesで確認できます -->
+      <li>
+      	<% if current_user.provider %>
+      	<!-- facebookログインしているとき -->
+      		<%= image_tag current_user.image, class: "img-circle profile-0" %>
+      		<%= current_user.name %>
+      	<% else %>
+      	<!-- 通常ログインのとき -->
+      		<%= current_user.name %>
+      	<% end %>
+      	<ul>
+	      	<li><%= link_to '注文履歴', user_orders_path, class: "Menu__item"%></li>
+		    	<li><%= link_to 'プロフィール変更', edit_user_registration_path, class: "Menu__item" %></li>
+		     	<li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "Menu__item" %></li>
+	    	</ul>
+	   </li>
+
+		<li class="cart"><%= fa_icon("shopping-cart 2x")%>
+			<% unless @cart.blank? %>
+	   	(<%= @cart.items.inject(0) {|sum, product| sum + product.quantity} %>)
+		  <% end %>
+		</li>
+
+    <% else %>
+     <li>サインアップ
+       <ul>
+  	     <li><%= link_to "サインアップ", new_user_registration_path, class: "Menu__item" %></li>
+  	     <li><%= link_to "ログイン", new_user_session_path, class: "Menu__item" %></li>
+       </ul>
+     </li>
+    <% end %>
+</ul>
+</ul>
+
+
 		</div>
-		
-		<nav class="Header__body">
-			<ul id="Menu" class="dropmenu">
-			    <!-- user_signed_in? はユーザがログインしているか調べるdeviseのHelperメソッド -->
-			      <% if user_signed_in? %>
-
-			      <!-- current_user は現在ログインしているUserオブジェクトを返すdeviseのHelperメソッド -->
-			      <!-- *_path はUserモデルを作成したときに、
-			        deviseにより自動で作成されてますので、rake routesで確認できます -->
-			      <li>
-			      	<% if current_user.provider %>
-			      	<!-- facebookログインしているとき -->
-			      		<%= image_tag current_user.image, class: "img-circle profile-0" %>
-			      		<%= current_user.name %>
-			      	<% else %>
-			      	<!-- 通常ログインのとき -->
-			      	<%= current_user.name %>
-			      	<% end %>
-			      	<ul>
-			      		<li><%= link_to '注文履歴', user_orders_path, class: "Menu__item"%></li>
-				    	<li><%= link_to 'プロフィール変更', edit_user_registration_path, class: "Menu__item" %></li>
-				     	<li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "Menu__item" %></li>
-				    </ul>
-				   </li>
-
-				   <% unless @cart.blank? %>
-				   	(<%= @cart.items.inject(0) {|sum, product| sum + product.quantity} %>)
-        		   <% end %>
-
-			    <% else %>
-			     <li>サインアップ
-			    	<ul>
-			      		<li><%= link_to "サインアップ", new_user_registration_path, class: "Menu__item" %></li>
-			      		<li><%= link_to "ログイン", new_user_session_path, class: "Menu__item" %></li>
-	   		     	</ul>
-			     </li>
-			    <% end %>
+		<div class="Header__main">
+			<div class=Header__main--logo>
+				<%= link_to image_tag("pc/top/logo.png", size:"100x45", alt: "logo image of sakeviva"), root_path %>
+			</div>
+			<ul class="Header__main--menu">
+					<li>TOP</li>
+					<li>メニュー</li>
+					<li>メニュー</li>
+					<li><%= link_to "城島について", about_us_path %></li>
+					<li>お問い合わせ</li>
+					<li>カートに入れる</li>
 			</ul>
-		</nav>
-	</header>
-</div>
+		</div>
+	</div>	
+</header>
+
+</div>	
+

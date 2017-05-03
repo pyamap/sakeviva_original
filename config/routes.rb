@@ -26,12 +26,17 @@ Rails.application.routes.draw do
   post "purchase" => "payjp#pay" #pay.jpルーティング
   get "thank_you" => "payjp#thank_you"
   post "add_to_cart" => "products#add_to_cart"
-  post "delete_from_cart" =>"products#delete_from_cart"
+  post "decrement_from_cart" =>"products#decrement_from_cart"
   post "empty_cart" => "products#empty_cart"
+  post "delete_from_cart" => "products#delete_from_cart"
   get "current_cart" => "products#current_cart"
+  get "interview_tanaka_noodle" => "static_pages#interview_tanaka_noodle"
+  get "interview_souen_rush" => "static_pages#interview_souen_rush"
+  get "about_us" => "static_pages#about_us"
 
   namespace :admin do
     root to: "products#index"
+    get "/manage-listing/:id/photos/" => "products#photos", as: "manage_listing_photos"
     resources :orders
     resources :products do
       collection {get "search"}
@@ -62,6 +67,8 @@ Rails.application.routes.draw do
 
   resources :reservations do
   end
+
+  resources :photos, only: [:create, :destroy]
 
   #match '*path' => 'application#error404', via: :all #ルーティングで定義されていないURLが指定された場合のエラー表示。
 

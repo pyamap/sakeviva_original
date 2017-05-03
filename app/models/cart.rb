@@ -15,11 +15,16 @@ class Cart
 		end
 	end
 
-	def delete_product(product)
+	def decrement_product(product)
 		current_item = @items.find {|item| item.product == product }
 		if current_item.decrement_quantity == 0
 			@items.delete(current_item)
 		end
+	end
+
+	def delete_product(product)
+		current_item = @items.find { |item| item.product == product }
+		@items.delete(current_item)
 	end
 
 	def total_price

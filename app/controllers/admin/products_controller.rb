@@ -23,7 +23,7 @@ before_action :authenticate_user!, except: #deviseによるログイン精査の
 	end
 
 	def edit
-		@product=Product.find(params[:id])
+		@product = Product.find(params[:id])
 	end
 
 	def create
@@ -54,6 +54,11 @@ before_action :authenticate_user!, except: #deviseによるログイン精査の
 	end
 
 	def destroy
+	end
+
+	def photos
+		@photo = Photo.new
+		@product = Product.find(params[:id])
 	end
 
 	private

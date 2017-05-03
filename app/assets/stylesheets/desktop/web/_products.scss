@@ -158,7 +158,175 @@
 	}
 }
 
+.Cart {
 
+	width: 1200px;
+	margin: auto;
+
+	p {
+		margin: 50px 0 10px 80px;
+		font-size: 20px;
+	}
+
+	&__list {
+		display: flex;
+		list-style-type: none;
+		height: 40px;
+		padding-left: 250px;
+
+		&--details {
+			margin-left: 150px;		
+		}
+
+		&--price {
+			width: 40px;
+			margin-left: 240px;		
+		}
+
+		&--quantity {
+			width: 100px;
+			margin-left: 20px;		
+			text-align: center;
+		}
+
+		&--unitprice {
+			margin-left: 60px;		
+		}
+	}
+
+	&__item {
+		display: flex;
+		list-style-type: none;
+		padding-left: 85px;
+		line-height: 85px;
+
+		&--name {
+			margin-left: 40px;
+		}
+
+		&--description {
+			margin-left: 130px;
+		}
+
+		&--price {
+			margin-left: 185px;
+		}
+
+		&--quantity {
+			width: 70px;
+			height: 40px;
+			display: flex;
+			margin: 25px 0 0 60px;
+			border: 1px solid $theme-color;
+		}
+
+		&--number {
+				width: 40px;
+				line-height: 40px;
+				text-align: center;
+			}
+
+		form.button_to{
+				height: 16px;
+				width: 20px;
+				margin: 0;
+				background-color: transparent;
+		}
+
+		button {
+			background-color: transparent;
+			height: 1px;
+			padding: 0px 6px;
+			border: 0;
+
+				i {
+					position: absolute;
+					margin-top: -43px;
+				}
+		}
+
+		&--subtotal {
+			text-align: center;
+			width: 100px;
+			margin-left: 25px;
+		}
+
+		input {
+			background-color: transparent;
+			border: 0;
+			width: 24px;
+			font-size: 22px;
+			font-weight: bold;
+			color: $theme-color;
+		}
+	}
+}
+
+.CartAction {
+	display: flex;
+	width: 300px;
+	margin: 50px 0 10px 925px;
+
+		&__continue {
+			height: 40px;
+			line-height: 40px;
+			width: 140px;
+			margin-left: 15px;
+			text-align: center;
+			background-color: $theme-color;
+				
+				a {
+					color: white;
+				}	
+		}
+
+		&__emptycart {
+			height: 40px;
+			width: 140px;
+			background-color: #404040;
+			text-align: center;
+
+				input {
+					line-height: 40px;
+					background-color: transparent;
+					border: 0;
+					color: white;
+				}
+		}
+}
+
+.CheckOut {
+	display: flex;
+	margin: 80px auto;
+	font-size: 16px;
+
+		&__shipping {
+			background-color: green;
+			width: 250px;
+			margin-left: 705px;
+		}
+
+		&__calculation {
+			background-color: pink;
+			width: 250px;
+			margin-left: 20px;
+
+				tr {
+					height: 35px;
+
+				}
+
+				tr td {
+					text-align: right;
+				}
+
+				tr td:first-child{
+					text-align: left;
+					width: 180px;
+				}
+
+		}
+}
 /*かえさんデザインのCSSここまで*/
 
 
