@@ -174,7 +174,6 @@
 
 .JojimaMap {
 	margin: 100px 30px 50px;
-	background-color: yellow;
 	
 	img {
 		width: 100%;
@@ -185,7 +184,7 @@
 
 
 .Interview {
-	width: 100%;
+	width: 1080px;
 	margin: auto;
 
 	&__head {
@@ -255,35 +254,51 @@
 	
 }
 
+
 .AboutUs{
 	width: 100%;
+	font-size: 20px;
+	color: $font-white;
 
-	&--first {
+	&__first {
+		
+		text-align: center;
 		height: 900px;
+		padding-top: 450px;
 		background-image: image-url("pc/about_us/about_us_1.jpg");
 		background-size: cover;
+
+			span{
+				margin-top: 20px;
+			}
 	}
 
-	&--second {
+	&__second {
 		height: 900px;
+		padding: 250px 0 0 50px;
+		text-align: left;
 		background-image: image-url("pc/about_us/about_us_2.jpg");
 		background-size: cover;
 	}
 
-	&--third {
+	&__third {
 		height: 900px;
+		padding: 200px 0 0 50px;
+		text-align: left;
 		background-image: image-url("pc/about_us/about_us_3.jpg");
 		background-size: cover;
 	}
 
-	&--fourth {
+	&__fourth {
 		height: 900px;
+		width: 100%;
+		padding: 300px 50px 0 0;
+		text-align: right;
 		background-image: image-url("pc/about_us/about_us_4.jpg");
 		background-size: cover;
 	}
-
-
 }
+
 
 /*ここまでトップページのデザイン*/
 

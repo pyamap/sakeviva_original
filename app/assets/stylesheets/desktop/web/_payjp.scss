@@ -1,71 +1,65 @@
 /*Confirmaiton Pageのスタイルここから*/
 	#confirmation_all {
-		background-color: #eeeeee;
-		height: 100%;
-		width: 800px;
-		margin: 50px auto 30px auto;
+		margin: 200px auto 30px auto;
 
-		.product_section {
-			height: 500px;
-			height: 100%;
+		.Cart{
+			width: 900px;
+			margin: auto;
 
-			.product_img {
-			text-align: center;
-			padding: 40px 40px 10px 40px;
-			}
+			&__item{
+				padding: 0;
 
-			.product_details {
-				margin: 0 auto 20px auto;
-				p {
-					text-align: center;
-					margin: 5px auto;
-					font-size: 18px;
+				li {
+					width: 180px;
+					margin: 0 20px;
 				}
+
+				&--quantity {
+					border: none;
+				}
+
 			}
 		}
 
-		.address_section {
-			height: 100%;
-			text-align: center;
-			border-top: dashed 0.5px black;
-			h2 {
-				margin: 0;
-				padding: 30px 10px 10px 10px;
-			}
+		.Address {
+			width: 900px;
+			margin: 50px auto;
 
-			ul.address_detail {
-				list-style-type: none;
-				padding: 0;
-				margin: 30px 0;
+			&__item{
+				width:600px;
+				margin: auto;
+				font-size: 18px;
 
-				li {
-					font-size: 20px;
+				tr {
+					padding: 50px auto;
 				}
 			}
+
 		}
 	}
 
-.payjp_button {
+.payjp-button {
 	position: relative;
 	text-align: center;
-	border: 1px solid $color-sakura;
+	border: 1px solid $theme-color;
 	width: 250px;
 	height: 50px;
 	line-height: 50px;
 	margin: auto;
 }
 
-.payjp_button:hover {
-		background-color: $color-sakura;
+.payjp-button:hover {
+		background-color: $theme-color;
 		color: white;
 }
 
 
 #payjp_checkout_box {
 	
+	opacity:0;
 	width: 250px;
 	height: 50px;
-	margin: auto auto 50px auto;
+	margin: auto auto 100px auto;
 	position: absolute;
 	top: 0px;
 
@@ -76,3 +70,33 @@
 }
 
 /*Confirmaiton Pageのスタイルここまで*/
+
+/*Thank you Pageのスタイルここから*/
+
+#purchased_notice {
+	width: 800px;
+	height: 100%;
+	margin: 200px auto;
+	border-color: 1px solid $theme-color;
+	text-align: center;
+
+	h1 {
+		font-size: 26px;
+		padding: 30px;
+	}
+
+	p {
+		text-align: center;
+		margin-top: 20px;
+
+		a {
+			color: $theme-color;
+		}
+
+		a: hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+/*Thank you Pageのスタイルここまで*/

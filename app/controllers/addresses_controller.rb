@@ -1,6 +1,6 @@
 class AddressesController < ApplicationController
 
-before_action :authenticate_user!
+before_action :current_cart, :authenticate_user!
 
 	def index
 		@current_addresses=current_user.addresses

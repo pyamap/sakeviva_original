@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
 
 before_action :authenticate_user!, only:[:add_to_cart]
+before_filter :current_cart
 
 	attr_accessor :product
 
@@ -61,9 +62,9 @@ before_action :authenticate_user!, only:[:add_to_cart]
 		redirect_to_current_cart ("商品をカートから削除しました")
 	end
 
-
 	def current_cart
-		@cart = find_cart
+		@total_shipping_fee = flash[:total_shipping_fee]
+    	@cart = find_cart
 	end
 
 	private

@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery :except => [:purchase]
-  before_filter :configure_permitted_parameters, if: :devise_controller?
+  before_filter :current_cart, :configure_permitted_parameters, if: :devise_controller?
 
   include Jpmobile::ViewSelector
 
@@ -18,6 +18,19 @@ class ApplicationController < ActionController::Base
     #logger.error [e, *backtrace].join("¥n")
     #render 'error500', status: 500, formats: [:html]
   #end
+
+  def current_cart
+      @cart = find_cart
+  end
+
+  private
+
+  def find_cart
+    unless session[:cart]
+      session[:cart] = Cart.new
+    end
+    session[:cart]
+  end
 
   protected
 	def configure_permitted_parameters

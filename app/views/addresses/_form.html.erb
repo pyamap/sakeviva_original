@@ -1,7 +1,13 @@
-<table class="attr">
+<table class="AddressForm__table">
+
+	<tr>
+		<th><%= form.label :recipient, "受取人氏名" %></th>
+		<td><%= form.text_field :recipient, :placeholder => "山田 太郎" %></td>
+	</tr>
+
 	<tr>
 		<th><%= form.label :postalcode, "郵便番号" %></th>
-		<td><%= form.text_field :postalcode, :placeholder => "1234567" %></td>
+		<td class ="AddressForm__table--postalcode"><%= form.text_field :postalcode, :placeholder => "1234567" %></td>
 	</tr>
 
 	<tr>
@@ -15,16 +21,19 @@
 	</tr>
 
 	<tr>
-		<th><%= form.label :recipient, "受取人氏名" %></th>
-		<td><%= form.text_field :recipient, :placeholder => "山田 太郎" %></td>
-	</tr>
-
-	<tr>
 		<th><%= form.label :tel, "電話番号" %></th>
 		<td><%= form.text_field :tel, :placeholder => "07012121212" %></td>
 	</tr>
+
+</table>
+
+<%
+=begin
+%>
 	<tr>
 		<th><%= form.label :default_address, "この住所を使う" %></th>
 		<td><%= form.check_box :default_address, :class => "check_box_field" %></td>
 	</tr>
-</table>
+<%
+=end
+%>

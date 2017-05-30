@@ -55,7 +55,16 @@ ul.side_bar_price_list {
         margin: auto 8px;
         line-height: 30px;
       }
- 
+
+      li:first-child {
+        margin-right: 0;
+      }
+    }
+
+    &--cart{
+      padding-left: 140px;
+      display: flex;
+      list-style-type: none;
     }
   }
 
@@ -75,6 +84,7 @@ ul.side_bar_price_list {
      display: flex;
      list-style-type: none;
      height: 70px;
+     width: 840px;
      margin: 0;
      padding-right: 15%;
 

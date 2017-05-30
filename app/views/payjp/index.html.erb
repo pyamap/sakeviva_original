@@ -1,27 +1,37 @@
 <div id="confirmation_all">
+  <section class="Cart">
+  <% for item in @cart.items %>
+      <ul class="Cart__item">
+        <li class="Cart__item--image"><%= image_tag 'pc/top/category_sake.jpg', height: 120, width: 100, alt: "酒の写真"%></li>
+        <li class="Cart__item--name"><%= link_to "#{item.name}", item.product %></li>
+        <li class="Cart__item--description"><%= item.description %></li>
+        <li class="Cart__item--quantity"><%= item.quantity %>個</li>
+        <li class="Cart__item--subtotal_price"><%= number_to_currency(item.subtotal_price) %></li>
+      </ul>
+  <% end %>
+  </section>
 
-  <div class="product_section">
-    <section class="product_img">
-      <%= image_tag @order.product.image, :height =>"250", :width =>"400"%>
-    </section>
-    <section class="product_details">
-      <p><%= @order.product.name %></p>
-      <p>単価 : <%= @order.product.value %>円</p>
-      <p>合計 : <%= @total_price %>円</p>
-      <p>数量 : <%= @quantity %></p>
-    </section>
-  </div>
+  <section class="Address">
+      <table class="Address__item">
+        <tr><td>受取人</td><td><%= "#{params[:address][:recipient]}" %></td></tr>
+        <tr><td>郵便番号</td><td><%= "#{params[:address][:postalcode]}" %></td></tr>
+        <tr><td>郵送先住所</td><td><%= "#{Prefecture.find(params[:address][:prefecture_id]).name}" %>県<%= "#{params[:address][:address]}" %></td></tr>
+        <tr><td>電話番号</td><td><%= "#{params[:address][:tel]}" %></td></tr>
+      </table>  
+  </section>
 
-  <div class="address_section">
-    <h2>配送先住所</h2>
-    <ul class="address_detail">
-      <li><%= @current_address.recipient %></li>
-      <li>〒<%= @current_address.postalcode %></li>
-      <li><%= @current_address.prefecture&.name %>県 <%= @current_address.address %></li>
-    </ul>
+  <div class="payjp-button">お支払い
+  <form action="/pay" method="post">
+  <script src="https://checkout.pay.jp/" class="payjp-button" data-key="pk_test_881e6a718672d171e72ee9dc"></script>
+   <%= hidden_field_tag :total_price, params[:total_price] %>
+   <%= hidden_field_tag :current_user, current_user.id %>
+   
+   <% for item in @cart.items %>
+    <%= hidden_field_tag :product_id, item.id %>
+   <% end %>
+  </form>
+  
   </div>
 </div>
 
-<%= form_tag(action: :pay, method: :post) do %>
-   <script type="text/javascript" src="https://checkout.pay.jp" class="payjp-button" data-key="公開キー"></script>
-<% end %>
+

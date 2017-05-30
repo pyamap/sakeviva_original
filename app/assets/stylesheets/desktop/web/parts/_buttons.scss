@@ -6,7 +6,7 @@
 	text-align: center;
 
 		input {
-			background-color: $color-sakura;
+			background-color: $theme-color;
 			font-size: 18px;
 			color: white;
 			width: 200px;
@@ -21,8 +21,8 @@
 
 		input:hover {
 			background-color: white;
-			color: $color-sakura;
-			border:solid 1px $color-sakura;
+			color: $theme-color;
+			border:solid 1px $theme-color;
 		}
 }
 
@@ -32,7 +32,7 @@
 	margin: 30px auto;
 	font-size: 16px;
 	width: 120px;
-	background-color: $color-sakura;
+	background-color: $theme-color;
 	text-align: center;
 
 	a {
@@ -48,9 +48,9 @@
 .small_btn_dummy:hover {
 	background-color: white;
 	a {
-		color: $color-sakura
+		color: $theme-color
 	}
-	border:solid 1px $color-sakura;
+	border:solid 1px $theme-color;
 }
 
 /* middle button setting
@@ -60,7 +60,7 @@
 	text-align: center;
 
 		input {
-			background-color: $color-sakura;
+			background-color: $theme-color;
 			font-size: 18px;
 			color: white;
 			width: 200px;
@@ -76,8 +76,8 @@
 
 		input:hover {
 			background-color: white;
-			color: $color-sakura;
-			border:solid 1px $color-sakura;
+			color: $theme-color;
+			border:solid 1px $theme-color;
 		}
 }
 
@@ -85,7 +85,7 @@
 ----------------------------------------------------*/
 .middle_btn_dummy {
 	text-align: center;
-	background-color: $color-sakura;
+	background-color: $theme-color;
 	font-size: 18px;
 	width: 200px;
 	height: 40px;
@@ -101,9 +101,9 @@
 
 .middle_btn_dummy:hover {
 	background-color: white;
-	border:solid 1px $color-sakura;
+	border:solid 1px $theme-color;
 		a {
-			color: $color-sakura;
+			color: $theme-color;
 		}
 }
 
@@ -115,7 +115,7 @@
 	height: 30px;
 
 		input {
-			background-color: $color-sakura;
+			background-color: $theme-color;
 			font-size: 18px;
 			color: white;
 			width: 200px;
@@ -131,8 +131,8 @@
 
 		input:hover {
 			background-color: white;
-			color: $color-sakura;
-			border:solid 1px $color-sakura;
+			color: $theme-color;
+			border:solid 1px $theme-color;
 		}
 }
 
@@ -140,7 +140,7 @@
 ----------------------------------------------------*/
 .long_btn_dummy {
 	text-align: center;
-	background-color: $color-sakura;
+	background-color: $theme-color;
 	font-size: 16px;
 	width: 380px;
 	height: 30px;
@@ -157,9 +157,9 @@
 
 .long_btn_dummy:hover {
 	background-color: white;
-	border:solid 1px $color-sakura;
+	border:solid 1px $theme-color;
 		a {
-			color: $color-sakura;
+			color: $theme-color;
 		}
 }
 

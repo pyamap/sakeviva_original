@@ -15,10 +15,11 @@
     <% for item in @cart.items %>
 
     <ul class="Cart__item">
-      <li class="Cart__item--image"><%= image_tag 'pc/top/category_sake.jpg', height: 120, width: 100, alt: "酒の写真"%></li>
-      <li class="Cart__item--name"><%= item.name %></li>
+      <li class="Cart__item--image">
+      <%= image_tag 'pc/top/category_sake.jpg', height: 120, width: 100, alt: "酒の写真"%></li>
+      <li class="Cart__item--name"><%= link_to "#{item.name}", item.product %></li>
       <li class="Cart__item--description"><%= item.description %></li>
-      <li class="Cart__item--price"><%= item.price %></li>
+      <li class="Cart__item--price"><%= number_to_currency(item.price) %></li>
       <li class="Cart__item--quantity">
         <div class="Cart__item--number"> 
           <%= item.quantity %>
@@ -32,12 +33,10 @@
           <% end %>
         </div>
       </li>
+      <li class="Cart__item--subtotal_price"><%= number_to_currency(item.subtotal_price) %></li>
       <%= button_to "x", :action => "delete_from_cart", :id => item.id, :method => :post %>
     </ul>
-
-      <td colspan="2">Total</td>
-      <td class="total-cell"><%= number_to_currency(@cart.total_price) %>
-    </tr>
+    
     <% end %>
 
   <% else %>
@@ -52,28 +51,43 @@
 
 <section class="CheckOut">
   <div class="CheckOut__shipping">
+  <%= form_tag ({controller: :shippings, action: :shipping_fee, :method => :post}) do %>
     <p>送料を計算</p>
-    <p>都道府県</p>
-    <div class="CheckOut__shipping--select">都道府県を選択</div>
-    <div>ここで送料を更新</div>
+    <span style="font-size: 14px">都道府県</span>
+    <div class="CheckOut__shipping--select">
+      <%= collection_select :prefecture, :prefecture_id, Prefecture.all, :id, :name, :prompt => "都道府県を選択" %>
+    </div>
+    <% for item in @cart.items %>
+      <%= hidden_field_tag ":shop_id[]", item.product.shop_id %>
+    <% end %>
+    <div><%= submit_tag "送料を計算" %></div>
+  <% end %>
+
   </div>
   <div class="CheckOut__calculation">
     <p>合計</p>
     <table>
       <tr>
         <td>小計</td>
-        <td><%= item.subtotal_price %>円</td>
+        <td><%= number_to_currency(@cart.total_price) %></td>
       </tr>
       <tr>
         <td>送料</td>
-        <td>800円</td>
+        <td>
+          <%= number_to_currency(@total_shipping_fee) %>
+        </td>
       </tr>
       <tr>
         <td>合計</td>
-        <td>17000円</td>
+        <td>
+        <% if @total_shipping_fee.present? %>
+        <% total_price = @cart.total_price + @total_shipping_fee %>
+        <%= number_to_currency(total_price) %>
+        <% end %>
+        </td>
       </tr>
     </table>
-    <div>チェッックアウト</div>
+    <div class="CheckOut__calculation--btn"><%= link_to "チェッックアウト", new_address_path(:total_price => total_price) %></div>
   </div>
 </section>
 

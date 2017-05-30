@@ -23,8 +23,9 @@ Rails.application.routes.draw do
 
   # post "purchase" => "api#purchase"
   patch "new_order" => "payjp#new"
-  post "purchase" => "payjp#pay" #pay.jpルーティング
+  post "pay" => "payjp#pay" #pay.jpルーティング
   get "thank_you" => "payjp#thank_you"
+  post "confirmation" => "payjp#index"
   post "add_to_cart" => "products#add_to_cart"
   post "decrement_from_cart" =>"products#decrement_from_cart"
   post "empty_cart" => "products#empty_cart"
@@ -33,6 +34,7 @@ Rails.application.routes.draw do
   get "interview_tanaka_noodle" => "static_pages#interview_tanaka_noodle"
   get "interview_souen_rush" => "static_pages#interview_souen_rush"
   get "about_us" => "static_pages#about_us"
+  post "shipping_fee" => "shippings#shipping_fee" #送料を計算する
 
   namespace :admin do
     root to: "products#index"

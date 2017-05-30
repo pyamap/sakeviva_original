@@ -2,13 +2,13 @@ class PayjpController < ApplicationController
 
 	require 'payjp'
 
+	before_filter :current_cart
 	before_action :ordered_product, only:[:index, :new, :pay]
 
-
 	def index
-		@current_address = Address.find(params[:address])
-		@quantity = params[:quantity]
-		@total_price = "#{@order.product.value*@quantity.to_i}"
+		#@current_address = Address.find(params[:address])
+		#@quantity = params[:quantity]
+		#@total_price = "#{@order.product.value*@quantity.to_i}"
 	end
 
 	def new
@@ -26,9 +26,12 @@ class PayjpController < ApplicationController
 		:currency => 'jpy',
 		)
 
-		if @order.save
-
-			user=current_user
+		@order.user = User.find(params[:current_user]) 
+		@order.product = Product.find(params[:product_id])
+		user = @order.user
+		
+		if @order.save			
+	
 			ConfirmMailer.confirm_email(user).deliver_now
 
 			redirect_to "/thank_you"
@@ -39,12 +42,25 @@ class PayjpController < ApplicationController
 		@product=Product.find_by(params[:product_id])
 	end
 
+	def current_cart
+		@cart = find_cart
+	end
+
+	private
+
+	def find_cart
+		unless session[:cart]
+			session[:cart] = Cart.new
+		end
+		session[:cart]
+	end
+
 	private
 
 	def ordered_product
 		@order = Order.new
-		@order.user=current_user
-		@order.product = Product.find(params[:product_id])
+		@order.user = current_user
+		#@order.product = Product.find(params[:product_id])
 	end
 
 end

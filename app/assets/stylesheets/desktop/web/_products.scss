@@ -1,3 +1,5 @@
+@import "desktop/web/parts/buttons";
+
 /*かえさんデザインのCSSここから*/
 
 #breadcrumb {
@@ -161,11 +163,13 @@
 .Cart {
 
 	width: 1200px;
-	margin: auto;
+	margin: 150px auto 50px;
 
 	p {
-		margin: 50px 0 10px 80px;
-		font-size: 20px;
+		width: 1000px;
+		margin: 50px 0 50px 80px;
+		font-size: 18px;
+		border-bottom: 1px solid $color-gray;
 	}
 
 	&__list {
@@ -205,26 +209,30 @@
 		}
 
 		&--description {
-			margin-left: 130px;
+			margin-left: 125px;
 		}
 
 		&--price {
-			margin-left: 185px;
+			margin-left: 170px;
 		}
 
 		&--quantity {
 			width: 70px;
 			height: 40px;
 			display: flex;
-			margin: 25px 0 0 60px;
+			margin: 25px 0 0 35px;
 			border: 1px solid $theme-color;
 		}
 
 		&--number {
-				width: 40px;
-				line-height: 40px;
-				text-align: center;
-			}
+			width: 40px;
+			line-height: 40px;
+			text-align: center;
+		}
+
+		&--subtotal_price {
+			margin-left: 60px;
+		}
 
 		form.button_to{
 				height: 16px;
@@ -245,19 +253,20 @@
 				}
 		}
 
-		&--subtotal {
+		&--subtotal_price {
 			text-align: center;
-			width: 100px;
-			margin-left: 25px;
+			width: 120px;
+			margin-left: 30px;
 		}
 
 		input {
 			background-color: transparent;
 			border: 0;
 			width: 24px;
-			font-size: 22px;
+			font-size: 20px;
 			font-weight: bold;
 			color: $theme-color;
+			margin-left: 30px;
 		}
 	}
 }
@@ -265,7 +274,7 @@
 .CartAction {
 	display: flex;
 	width: 300px;
-	margin: 50px 0 10px 925px;
+	margin: 50px 0 10px 900px;
 
 		&__continue {
 			height: 40px;
@@ -301,18 +310,53 @@
 	font-size: 16px;
 
 		&__shipping {
-			background-color: green;
 			width: 250px;
-			margin-left: 705px;
+			margin-left: 695px;
+
+			p {
+				width:150px;
+				margin-bottom: 25px;
+				border-bottom: 1px solid $color-gray;
+			}
+		}
+
+		select{
+			background-color: transparent;
+			appearance: none;
+			text-align: left;
+			border:3px solid $color-gray;
+			width: 150px;
+			height: 30px;
+			line-height: 30px;
+
+		}
+
+		input {
+			background-color: transparent;
+			appearance: none;
+			border: none;
+			text-align: center;
+			padding: 0;
+			height:35px;
+			width:150px;
+			margin-top: 20px;
+			color: $font-white;
+			background-color: #404040;
 		}
 
 		&__calculation {
-			background-color: pink;
 			width: 250px;
-			margin-left: 20px;
+
+				p {
+					width:50px;
+					margin-bottom: 25px;
+					border-bottom: 1px solid $color-gray;
+				}
 
 				tr {
 					height: 35px;
+					width:250px;
+					border-bottom: 1px solid $color-gray;
 
 				}
 
@@ -322,8 +366,23 @@
 
 				tr td:first-child{
 					text-align: left;
-					width: 180px;
+					width: 160px;
 				}
+
+				&--btn{
+					height: 40px;
+					line-height: 40px;
+					width: 250px;
+					margin: 30px 0 auto ;
+					text-align: center;
+					background-color: $theme-color;
+	
+					a {
+						color: white;
+					}	
+
+				}	
+
 
 		}
 }

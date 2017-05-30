@@ -1,21 +1,22 @@
 <%= stylesheet_link_tag "desktop/web/addresses", :media => "all" %>
 <%= stylesheet_link_tag "desktop/web/errors", :media => "all" %>
 
-<div id="address_form">
-	<h1>配送先住所登録</h1>
-	<%= form_for @address do |form| %>
+<div class="AddressForm">
+	<h1>配送先</h1>
+	<%= form_for(@address,:url => {:controller => :payjp, :action => :index}) do |form| %>
 		<% if @address.errors.any? %>
 			<div id="error_explanation">
 				<ul>
-					<% @address.errors.full_messages.each do |message| %>
-					<li><%= message %></li>
-					<% end %>
+				<% @address.errors.full_messages.each do |message| %>
+				<li><%= message %></li>
+				<% end %>
 				</ul>
 			</div>
 		<% end %>
 		<%= render "form", form: form %>
-		<div class="form_action">
-			<%= form.submit %>
+			<div class="AddressForm__action">
+		<%= hidden_field_tag :total_price, params[:total_price] %>
+			<%= form.submit "確認画面へ進む"%>
 		</div>
 	<% end %>
 </div>
