@@ -12,8 +12,9 @@ class Product < ActiveRecord::Base
 	belongs_to :theme_tag
 	belongs_to :type
 	belongs_to :price
-	has_one :order
 	belongs_to :shop
+	has_many :items
+	has_one :order, dependent: :destroy
 
 end
 

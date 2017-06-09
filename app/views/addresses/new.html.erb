@@ -3,7 +3,7 @@
 
 <div class="AddressForm">
 	<h1>配送先</h1>
-	<%= form_for(@address,:url => {:controller => :payjp, :action => :index}) do |form| %>
+	<%= form_for(@address) do |form| %>
 		<% if @address.errors.any? %>
 			<div id="error_explanation">
 				<ul>
@@ -20,3 +20,4 @@
 		</div>
 	<% end %>
 </div>
+

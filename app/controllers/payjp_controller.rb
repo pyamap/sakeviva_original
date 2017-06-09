@@ -3,10 +3,10 @@ class PayjpController < ApplicationController
 	require 'payjp'
 
 	before_filter :current_cart
-	before_action :ordered_product, only:[:index, :new, :pay]
+	#before_action :ordered_product, only:[:index, :new, :pay]
 
 	def index
-		#@current_address = Address.find(params[:address])
+		@current_address = Address.find(params[:id])
 		#@quantity = params[:quantity]
 		#@total_price = "#{@order.product.value*@quantity.to_i}"
 	end
@@ -26,41 +26,41 @@ class PayjpController < ApplicationController
 		:currency => 'jpy',
 		)
 
-		@order.user = User.find(params[:current_user]) 
-		@order.product = Product.find(params[:product_id])
+		cart = @items
+
+		params[:items].each do |single_item|
+			@order = Order.new
+			@order.product = Product.find(single_item["item_id"])
+			@order.user = User.find(params[:current_user]) 
+			@order.save
+		end
+
 		user = @order.user
 		
-		if @order.save			
+		#if order.save			
 	
 			ConfirmMailer.confirm_email(user).deliver_now
 
 			redirect_to "/thank_you"
-		end
+		#end
 	end
 
 	def thank_you
 		@product=Product.find_by(params[:product_id])
 	end
 
-	def current_cart
-		@cart = find_cart
-	end
 
 	private
 
-	def find_cart
-		unless session[:cart]
-			session[:cart] = Cart.new
-		end
-		session[:cart]
+	def order_params
+		params.require(:order).permit(:product_id => "#{item_id}")
 	end
 
-	private
 
-	def ordered_product
-		@order = Order.new
-		@order.user = current_user
+	#def ordered_product
+		#@order = Order.new
+	#	@order.user = current_user
 		#@order.product = Product.find(params[:product_id])
-	end
+	#end
 
 end

@@ -25,7 +25,8 @@ Rails.application.routes.draw do
   patch "new_order" => "payjp#new"
   post "pay" => "payjp#pay" #pay.jpルーティング
   get "thank_you" => "payjp#thank_you"
-  post "confirmation" => "payjp#index"
+  patch "confirmation" => "payjp#index" #デフォルト住所変更の際のルーティング
+  get "confirmation" => "payjp#index" #住所新規登録の際のルーティング
   post "add_to_cart" => "products#add_to_cart"
   post "decrement_from_cart" =>"products#decrement_from_cart"
   post "empty_cart" => "products#empty_cart"

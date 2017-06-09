@@ -1,10 +1,10 @@
 <%= stylesheet_link_tag "desktop/web/addresses", :media => "all" %>
 
-<div id="address_all">
+<div class = "address_all">
 	<h1>登録住所一覧</h1>
 
 		<% @current_addresses.all.each do |adrs| %>
-			<%= form_for adrs, :url => new_order_path do |form| %>
+			<%= form_for adrs, :url => confirmation_path do |form| %>
 			<div class="each_address">
 				<ul class="address_detail">
 					<li class="radio_btn"><%= radio_button_tag :address, adrs.id %>郵送先として使う</li>
