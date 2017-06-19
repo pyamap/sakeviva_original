@@ -6,7 +6,7 @@ class PayjpController < ApplicationController
 	#before_action :ordered_product, only:[:index, :new, :pay]
 
 	def index
-		@current_address = Address.find(params[:id])
+		@current_address = Address.find(params[:address])
 		#@quantity = params[:quantity]
 		#@total_price = "#{@order.product.value*@quantity.to_i}"
 	end

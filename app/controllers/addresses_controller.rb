@@ -17,9 +17,9 @@ before_action :current_cart, :authenticate_user!
 
 	def new
 		#unless current_user.addresses.present?
-		@address=Address.new
+		  @address=Address.new
 		#else
-		#redirect_to action: "index"
+		 # redirect_to action: "index"
 		#end
 	end
 
@@ -33,7 +33,7 @@ before_action :current_cart, :authenticate_user!
 		current_user.addresses.where.not(id: params[:id]).update_all(default_address: false)
 		@address.update_attribute(:default_address, true)
 		if @address.save
-			redirect_to controller: 'payjp', :action => 'index',:id => @address.id, :total_price => params[:total_price]
+			redirect_to controller: 'payjp', :action => 'index',:address => @address.id, :total_price => params[:total_price]
 		else
 			render "new"
 		end

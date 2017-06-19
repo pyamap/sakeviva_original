@@ -1,29 +1,28 @@
 <%= stylesheet_link_tag "desktop/web/addresses", :media => "all" %>
 
-<div class = "address_all">
+<div class="AllAddresses">
 	<h1>登録住所一覧</h1>
-
+	<div class="AllAddresses__list">
 		<% @current_addresses.all.each do |adrs| %>
 			<%= form_for adrs, :url => confirmation_path do |form| %>
-			<div class="each_address">
-				<ul class="address_detail">
+			<div class="AllAddresses__each">
+				<ul class="AllAddresses__list--item">
 					<li class="radio_btn"><%= radio_button_tag :address, adrs.id %>郵送先として使う</li>
 					<li><%= adrs.recipient %></li>
 					<li>〒<%= adrs.postalcode %></li>
 					<li><%= adrs.prefecture&.name %>県 <%= adrs.address %></li>
 				</ul>
-
-				<ul class="address_edit">
+				<ul class="AllAddresses__list--edit">
 					<li><%= link_to "編集", edit_user_address_path(id: adrs.id) %></li>
-					<li><%= link_to "削除", user_address_path(id: adrs.id), method: :delete, confirm: "本当に削除しますか？"%></li>
+					<li><%= button_to "削除", user_address_path(id: adrs.id), method: :delete, confirm: "本当に削除しますか？", class: :delete_btn %></li>
 				</ul>
-			</div>
 			<%= hidden_field_tag :product_id, params[:product_id] %>
-			<%= hidden_field_tag :quantity, params[:quantity] %>
-			<%= hidden_field_tag :prefecture_id, adrs.prefecture.id %>
+			<%= hidden_field_tag :quantity, params[:quantity] %>			
 			<%= hidden_field_tag :shop_id, params[:shop_id] %>
-			<div class="middle_btn_dummy"><%= link_to "新規住所登録", new_user_address_path %></div>
 			<div class="middle_btn"><%= form.submit "次へ" %></div>
 			<% end %>
+			</div>
 		<% end %>
+	</div>
+	<div class="long_btn_dummy"><%= link_to "新規住所登録", new_user_address_path %></div>
 </div>

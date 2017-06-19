@@ -1,8 +1,8 @@
 <%= stylesheet_link_tag "desktop/web/api", :media => "all" %>
 
 <div id="purchased_notice">
-	<h1>購入ありがとうございました!</h1>
-	<%= image_tag @product.image, :height =>"265", :width =>"440"%>
+	<h1>ご注文ありがとうございました!</h1>
+	<%= image_tag ("pc/top/thank_you.jpg"), :height =>"360", :width =>"600"%>
 	<p>配送状況はご自身の<%= link_to "ダッシュボード", user_orders_path %>から確認できます。</p>
 	<p>引き続き買い物をお続けになる場合は<%= link_to "こちら", root_path %></p>
 </div>
