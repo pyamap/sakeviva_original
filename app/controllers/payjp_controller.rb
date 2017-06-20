@@ -36,13 +36,10 @@ class PayjpController < ApplicationController
 		end
 
 		user = @order.user
-		
-		#if order.save			
-	
-			ConfirmMailer.confirm_email(user).deliver_now
+		session[:cart] = nil
+		ConfirmMailer.confirm_email(user).deliver_now
+		redirect_to "/thank_you"
 
-			redirect_to "/thank_you"
-		#end
 	end
 
 	def thank_you

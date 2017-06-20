@@ -17,6 +17,7 @@
         <tr><td>郵便番号</td><td><%=  @current_address.postalcode %></td></tr>
         <tr><td>郵送先住所</td><td><%=  Prefecture.find(@current_address.prefecture_id).name %>県<%= @current_address.address %></td></tr>
         <tr><td>電話番号</td><td><%=  @current_address.tel %></td></tr>
+        <tr><td>お支払合計金額</td><td><%=  number_to_currency(params[:total_price]) %></td></tr>
       </table>  
   </section>
 

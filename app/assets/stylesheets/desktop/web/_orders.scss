@@ -1,15 +1,16 @@
 /*ユーザーの注文履歴ページのスタイルここから*/
 #orders_list {
-	width: 800px;
+	width: 810px;
 	height: 100%;
 	margin: 100px auto;
-	background-color: $color-gray;
+	background-color: white;
+	border: solid 1px $theme-color;
 
 	div.order_items {
 		width: 580px;
 		float: left;
-		border-bottom: solid 1px white;
-		border-right: solid 1px white;
+		border-bottom: solid 1px $theme-color;
+		border-right: solid 1px $theme-color;
 
 		section.order_pic {
 			float: left;
@@ -21,7 +22,7 @@
 			float: right;
 			width: 320px;
 			padding: 0 20px;
-			margin: 10px 0;
+			margin: 40px 0;
 		}
 
 		ul {
@@ -34,15 +35,19 @@
 
 		p.repurchase_button {
 			text-align: center;
-			border: solid 1px $color-sakura;
-			color: $color-sakura;
+			border: solid 1px $theme-color;
 			width: 90px;
+			margin: 20px 0;
 			border-radius: 5px;
+
+			a {
+				color: $theme-color;
+			}
 		}
 
 		p.repurchase_button:hover {
 			text-align: center;
-			background-color: $color-sakura;
+			background-color: $theme-color;
 			a {
 				color: white;
 			}
@@ -52,11 +57,12 @@
 
 	div.delivery_status {
 		width: 219px;
-		height: 231px;
+		height: 225px;	
 		float: right;
+		border-bottom: solid 1px $theme-color;
 
 		p {
-			background-color: #00FF3B;
+			background-color: $theme-color;
 			color: white;
 			text-align: center;
 			height: 35px;

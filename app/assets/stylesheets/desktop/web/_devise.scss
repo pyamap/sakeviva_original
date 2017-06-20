@@ -1,6 +1,16 @@
 @import "desktop/web/parts/form";
 
 #form_notext {
+
+	background-color: white;
+	border: solid 1px $theme-color;
+	border-radius: 5px;
+	margin-top: 150px;
+
+	h2 {
+		font-size: 24px;
+	}
+
 	input {
 		height: 30px;
 		width: 380px;

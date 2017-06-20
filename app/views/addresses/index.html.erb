@@ -14,11 +14,12 @@
 				</ul>
 				<ul class="AllAddresses__list--edit">
 					<li><%= link_to "編集", edit_user_address_path(id: adrs.id) %></li>
-					<li><%= button_to "削除", user_address_path(id: adrs.id), method: :delete, confirm: "本当に削除しますか？", class: :delete_btn %></li>
+					<li><%= link_to "削除", user_address_path(id: adrs.id), method: :delete, confirm: "本当に削除しますか？", class: :delete_btn %></li>
 				</ul>
 			<%= hidden_field_tag :product_id, params[:product_id] %>
 			<%= hidden_field_tag :quantity, params[:quantity] %>			
 			<%= hidden_field_tag :shop_id, params[:shop_id] %>
+			<%= hidden_field_tag :total_price, params[:total_price] %>
 			<div class="middle_btn"><%= form.submit "次へ" %></div>
 			<% end %>
 			</div>
