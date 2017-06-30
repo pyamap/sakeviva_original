@@ -45,12 +45,8 @@ before_action :authenticate_user!, except: #deviseによるログイン精査の
 
 	def update
 		@product = Product.find(params[:id])
-
-		if @product.update(params.require(:product).permit(:name,:price,:description,:image,:overview_one,:overview_two,:story_title_one,:story_title_two,images_attributes: [:id, :product_id, :image]))
-			redirect_to [:admin, @product], notice: "商品情報を更新しました"
-		else
-			render action: "edit"
-		end
+		@product.update_attributes(product_params)		
+		render action: "show", notice: "情報を更新しました"
 	end
 
 	def destroy
@@ -63,7 +59,7 @@ before_action :authenticate_user!, except: #deviseによるログイン精査の
 
 	private
 	def product_params
-		params.require(:product).permit(:name,:price,:description,:image,:overview_one,:overview_two,:story_title_one,:story_title_two,images_attributes: [:id, :product_id, :image])
+		params.require(:product).permit(:name,:value,:description,:image, :image_cache, :theme_tag_id, :type_id, :price_id, :remove_image, images_attributes: [:id, :product_id, :image, :image_cache])
 	end
 
 end

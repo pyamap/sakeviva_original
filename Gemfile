@@ -29,6 +29,7 @@ gem 'sprockets'
 gem 'devise', '4.1.1'
 
 gem 'carrierwave'
+gem 'cloudinary'
 gem 'seed-fu', '~> 2.3'
 gem 'toastr-rails'
 gem 'dropzonejs-rails'
@@ -44,6 +45,7 @@ gem 'jpmobile', '4.2.0'
 gem "paperclip", "~> 5.0.0"
 gem 'font-awesome-rails'
 gem 'rails_12factor', group: :production
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

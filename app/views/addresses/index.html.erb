@@ -2,6 +2,7 @@
 
 <div class="AllAddresses">
 	<h1>登録住所一覧</h1>
+	<p>※複数候補がある場合は1つだけ選択してください</p>
 	<div class="AllAddresses__list">
 		<% @current_addresses.all.each do |adrs| %>
 			<%= form_for adrs, :url => confirmation_path do |form| %>
@@ -19,6 +20,7 @@
 			<%= hidden_field_tag :product_id, params[:product_id] %>
 			<%= hidden_field_tag :quantity, params[:quantity] %>			
 			<%= hidden_field_tag :shop_id, params[:shop_id] %>
+			<%= hidden_field_tag :total_shipping_fee, params[:total_shipping_fee] %>
 			<%= hidden_field_tag :total_price, params[:total_price] %>
 			<div class="middle_btn"><%= form.submit "次へ" %></div>
 			<% end %>

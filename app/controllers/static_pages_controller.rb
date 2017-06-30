@@ -1,6 +1,10 @@
 class StaticPagesController < ApplicationController
 	
+	before_filter :current_cart
+
 	def index
+
+
     end
 
     def about_us
@@ -10,5 +14,19 @@ class StaticPagesController < ApplicationController
 	end
 
 	def interview_souen_rush
+	end
+
+	def current_cart
+		@total_shipping_fee = flash[:total_shipping_fee]
+    	@cart = find_cart
+	end
+
+	private
+
+	def find_cart
+		unless session[:cart]
+			session[:cart] = Cart.new
+		end
+		session[:cart]
 	end
 end

@@ -17,24 +17,40 @@
 				&--quantity {
 					border: none;
 				}
-
 			}
 		}
 
 		.Address {
 			width: 900px;
 			margin: 50px auto;
+			border-top: solid 1px $theme-color;
 
 			&__item{
-				width:600px;
-				margin: auto;
+				width:420px;
+				margin: 40px auto;
 				font-size: 18px;
 
-				tr {
+				td th {
+					margin: 10px auto;
 					padding: 50px auto;
-				}
+				}	
 			}
+		}
 
+		.total_shipping_fee {
+			width: 900px;
+			font-size: 20px;
+			padding-top: 20px;
+			margin: 20px auto 10px;
+			text-align: right;
+			border-top: solid 1px $theme-color;	
+		}
+
+		.total_price{
+			width: 900px;
+			font-size: 20px;
+			margin: 10px auto 50px;
+			text-align: right;
 		}
 	}
 

@@ -5,7 +5,7 @@
 #breadcrumb {
 	width: 782px;
 	padding: 8px 0;
-	margin: 60px auto 0;
+	margin: 100px auto 0;
 	border-bottom: solid 1px #CCCCCC;
 }
 
@@ -457,7 +457,7 @@ table.attr {
 	#individual_product {
 		height: 100%;
 		width: 800px;
-		margin: 50px auto;
+		margin: 100px auto;
 
 		label {
 			font-size: 20px;
@@ -548,13 +548,14 @@ select#product_theme_tag_id {
 #individual_product {
 	height: 100%;
 	width: 800px;
-	margin: auto;
+	margin: 100px auto;
 }
 
 #products_list {
 	width: 800px;
 	text-align: center;
 	background-color: $color-gray;
+	margin: 120px auto;
 
 	h1 {
 		font-size: 22px;

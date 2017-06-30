@@ -1,4 +1,5 @@
 class Product < ActiveRecord::Base
+	attr_accessor :image, :image_cache
 	mount_uploader :image, ImageUploader #これはproductモデルから商品画像をあげる際に必要。
 	has_many :images
 
@@ -6,8 +7,7 @@ class Product < ActiveRecord::Base
 	accepts_nested_attributes_for :images
 
 	validates :name,:description, presence: true
-	validates :price, numericality: { only_integer: true, greater_than: 0}
-	validates :overview_one,:overview_two, presence: true
+	validates :value, numericality: { only_integer: true, greater_than: 0}
 
 	belongs_to :theme_tag
 	belongs_to :type

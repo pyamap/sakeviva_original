@@ -8,6 +8,24 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # Choose what kind of storage to use for this uploader:
   storage :file
+
+  include Cloudinary::CarrierWave
+
+  process :convert => 'png'
+  process :tags => ['image']
+
+  version :standard do
+    process :resize_to_fit => [100, 150, :north]
+  end
+
+  version :thumbnail do
+    resize_to_fit(50, 50)
+  end
+
+  def public_id
+    return model.id
+  end
+
   # storage :fog
 
   # Override the directory where uploaded files will be stored.

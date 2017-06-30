@@ -77,61 +77,6 @@
 </section>
 
 
-<div id="product_details">
-	<div class="product_img">
-		<%= image_tag @product.image, :height =>"400", :width =>"550"%>
-	</div>
-	<div class="product_info">
-		<ul class="theme_tag">
-			<li><%= link_to @product.theme_tag.tag_name, @product.theme_tag %></li>
-			<li><%= link_to @product.type.type_name, @product.type %></li>
-			<li><%= link_to @product.price.price_range, @product.price %></li>
-		</ul>
-		<h1><%= @product.name %></h1>
-		
-		<p class="description"><%= @product.description %></p>
-		<p class="price"><%= @product.value %>円 (税込)</p>
 
-		<%= form_tag('/add_to_cart', :method => :post) do %>
-			<p class="quantity_select">
-				数量：<%= select_tag 'quantity', options_for_select(["1", "2", "3", "4", "5"]) %></p>
-				<%= hidden_field_tag :id,@product.id %>
-				<%= hidden_field_tag :shop_id, @product.shop_id %>
-			<p class="purchase_btn">
-				<%= submit_tag "カートに入れる" %>
-			</p>
-		<% end %>
-	</div>
-</div>
-
-<div id="product_story">
-	<h1>商品ストーリー</h1>
-	<div class="first_story">
-		<span class="story_image"><%= image_tag @images.first.image_url, :width => '750', :height => '400' %></span>
-		<p class="story_title"><%= @product.story_title_one %></p>
-		<p><%= @product.overview_one %></p>
-	</div>
-	<div clas="second_story">
-		<span class="story_image"><%= image_tag @images.second.image_url, :width => '750', :height => '400' %></span>
-		<p class="story_title"><%= @product.story_title_two %></p>
-		<p><%= @product.overview_two %></p>
-	</div>
-
-	<%= form_tag url_for(controller: :addresses, action: :index), :method => 'get' do %>
-	<p class="quantity_select">
-		数量：<%= select_tag 'quantity', options_for_select(["1", "2", "3", "4", "5"]) %>
-	</p>
-	<%= hidden_field_tag :product_id,@product.id %>
-	<%= hidden_field_tag :shop_id, @product.shop_id %>
-	<p class="purchase_btn">
-		<%= submit_tag "購入手続きへ" %>
-	</p>
-	<% end %>
-
-</div>
-
-<!--
-<p class="btn"><%= link_to "購入手続きへ", user_addresses_path(:product_id => @product.id, :order_quantity => params[:order_quantity]) %></p>
--->
 
 

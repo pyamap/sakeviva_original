@@ -13,13 +13,14 @@
 
   <section class="Address">
       <table class="Address__item">
-        <tr><td>受取人</td><td><%= @current_address.recipient %></td></tr>
-        <tr><td>郵便番号</td><td><%=  @current_address.postalcode %></td></tr>
-        <tr><td>郵送先住所</td><td><%=  Prefecture.find(@current_address.prefecture_id).name %>県<%= @current_address.address %></td></tr>
-        <tr><td>電話番号</td><td><%=  @current_address.tel %></td></tr>
-        <tr><td>お支払合計金額</td><td><%=  number_to_currency(params[:total_price]) %></td></tr>
+        <tr><td>受け取り人 :</td><td style="text-align: center"><%= @current_address.recipient %></td></tr>
+        <tr><td>郵便番号 :</td><td style="text-align: center"><%=  @current_address.postalcode %></td></tr>
+        <tr><td>郵送先住所 :</td><td style="text-align: center"><%=  Prefecture.find(@current_address.prefecture_id).name %>県<%= @current_address.address %></td></tr>
+        <tr><td>電話番号 :</td><td style="text-align: center"><%=  @current_address.tel %></td></tr>
       </table>  
   </section>
+  <div class="total_shipping_fee">送料 : <%=  number_to_currency(params[:total_shipping_fee]) %></div>
+  <div class="total_price">お支払合計金額 : <%=  number_to_currency(params[:total_price]) %></div>
 
   <div class="payjp-button">お支払い
 <%= form_tag(action: :pay, method: :post) do %>
