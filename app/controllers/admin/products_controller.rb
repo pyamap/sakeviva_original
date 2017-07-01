@@ -1,6 +1,8 @@
 class Admin::ProductsController < Admin::Base
 
-#deviseによるログイン精査の為のコード. except: :indexでホーム画面以外は基本的にログインがいる状態にしてある。
+before_action do
+	redirect_to new_user_session_path unless current_user && current_user.admin?
+end
 
 	def index
 		@products=Product.all
