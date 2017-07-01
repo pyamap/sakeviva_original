@@ -1,6 +1,6 @@
 class Admin::ProductsController < Admin::Base
 
-before_action :authenticate_user!, except: #deviseによるログイン精査の為のコード. except: :indexでホーム画面以外は基本的にログインがいる状態にしてある。
+#deviseによるログイン精査の為のコード. except: :indexでホーム画面以外は基本的にログインがいる状態にしてある。
 
 
 	def index

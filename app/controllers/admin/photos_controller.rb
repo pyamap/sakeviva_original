@@ -1,4 +1,5 @@
 class Admin::PhotosController < Admin::Base
+
 	def crate
 		@photo = Photo.new(photo_params)
 		if @photo.save
