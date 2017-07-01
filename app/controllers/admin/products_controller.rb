@@ -2,7 +2,6 @@ class Admin::ProductsController < Admin::Base
 
 #deviseによるログイン精査の為のコード. except: :indexでホーム画面以外は基本的にログインがいる状態にしてある。
 
-
 	def index
 		@products=Product.all
 	end
