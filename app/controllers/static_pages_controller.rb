@@ -3,8 +3,6 @@ class StaticPagesController < ApplicationController
 	before_filter :current_cart
 
 	def index
-
-
     end
 
     def about_us

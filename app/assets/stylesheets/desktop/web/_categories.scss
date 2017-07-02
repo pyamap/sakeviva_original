@@ -44,5 +44,56 @@
 			}
 		}
 	}
-
 }
+
+.Instruction {
+
+	h1 {
+		font-size: 22px;
+		margin: 120px auto 20px;
+		text-align: center;
+	}
+
+	&__image {
+		margin: 0 auto 30px;
+		text-align: center;
+	}
+
+	&__description {
+		width: 700px;
+		margin: auto;
+	}
+}
+
+.CategoryProduct {
+	width: 1000px;
+	margin: 50px auto;
+
+	&__main {
+		width: 1000px;
+		list-style: none;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		margin: 20px auto;
+		padding: 0;
+	}
+
+	&__item {
+		text-align: center;
+		margin: 30px;
+
+		&:nth-child(even) {
+			margin-left: 0;
+		}
+
+		&:nth-child(2) {
+			margin-right: 0;
+		}
+
+		&--title {
+			margin: auto;
+		}
+	}
+}
+

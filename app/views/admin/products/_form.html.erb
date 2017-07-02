@@ -30,6 +30,11 @@
 			<%= form.label :price %>
 			<%= form.collection_select :price_id, Price.all, :id, :price_range %>
 		</table>
+
+		<table class="category_tag_list">
+			<%= form.label :category %>
+			<%= form.collection_select :category_id, Category.all, :id, :name %>
+		</table>
 	</div>
 
 	<div class="field">
@@ -55,21 +60,4 @@
 		<% end %>
 	</div>
 	<!-- 追加箇所 終了 -->
-<div id="products_story">
-	<div class="photo_upload">
-		<%= form.fields_for :images do |p| %>
-			<div class="field">
-				<label for="product_images_attributes_0_image" class="file">
-					<p class="btn"><%= p.file_field :image, :multiple => true, name: "images[image][]" %>ストーリー画像</p>
-					<%= p.hidden_field :image_cache %>
-				</label>
-			</div>
-		<% end %>
-		<% if p.present? %><!--#画像が存在するときのみ-->
-			<dic class="photo_remove">
-				<label><%= form.check_box :remove_image %>画像を削除
-				</label>
-			</div>
-		<% end %>
-	</div>
 </div>

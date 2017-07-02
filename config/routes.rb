@@ -37,6 +37,12 @@ Rails.application.routes.draw do
   get "about_us" => "static_pages#about_us"
   post "shipping_fee" => "shippings#shipping_fee" #送料を計算する
 
+  #カテゴリーページのURL
+  get "category_sake" => "categories#category_sake"
+  get "category_grocery" => "categories#category_grocery"
+  get "category_food" => "categories#category_food"
+  get "category_craft" => "categories#category_craft"
+
   namespace :admin do
     root to: "products#index"
     get "/manage-listing/:id/photos/" => "products#photos", as: "manage_listing_photos"
@@ -72,6 +78,8 @@ Rails.application.routes.draw do
   end
 
   resources :photos, only: [:create, :destroy]
+
+
 
   #match '*path' => 'application#error404', via: :all #ルーティングで定義されていないURLが指定された場合のエラー表示。
 

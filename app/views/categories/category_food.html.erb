@@ -1,0 +1,24 @@
+<%= stylesheet_link_tag "desktop/web/categories", :media => "all" %>
+
+
+<section class="Instruction">
+	<h1>城島町の特産品</h1>
+	<div class="Instruction__image"><%= image_tag('pc/category/category_food.jpeg', size: "700x350")%></div>
+	<div class="Instruction__description">
+	ここに数行程度のカテゴリーの説明が入ります。ここに数行程度のカテゴリーの説明が入ります。ここに数行程度のカテゴリーの説明が入ります。ここに数行程度のカテゴリーの説明が入ります。ここに数行程度のカテゴリーの説明が入ります。
+	</div>
+</section>
+
+<section class="CategoryProduct">
+	<ul class="CategoryProduct__main">
+		<% @food_products.all.each do |item| %>	
+       <li class="CategoryProduct__item">
+          <div class="CategoryProduct__item--photo">
+          <%= image_tag item.image.url, height: 240, width: 210, alt: "商品写真" %></div>
+          <div class="CategoryProduct__item--title"><%= link_to item.name, product_path(:id) %></div>
+          <div class="CategoryProduct__item--price">xxxx円</div>
+       </li>
+     <% end %>
+   </ul> 
+	</div>
+</section>
