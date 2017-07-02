@@ -1,6 +1,10 @@
 class Admin::Base < ApplicationController
 	before_action :authenticate_user! #deviseによるログイン精査の為のコード
+	unless current_user.admin?
+	  flash[:alert] = "This area is restricted to admin only"
+	  redirect_to root_path
+	end
 	#before_action do
 	#	redirect_to new_user_session_path unless current_user && current_user.admin?
-	#nd
+	#end
 end
