@@ -4,7 +4,7 @@
 	<div id="breadcrumb">ここにぱんくずが並びます / 並びます / ならびます</div>
 	<div class="ItemDetails">
 		<div class="ItemDetails__sub">
-			<%= image_tag @product.image, height: 480, width: 360, alt: "商品の写真" %>
+			<%= image_tag @product.image.url, height: 480, width: 360, alt: "商品の写真" %>
 			<ul class="ItemDetails__sub--smallphoto">
 				<li><%= image_tag @product.image, height: 120, width: 100, alt: "準備中" %></li>
 				<li><%= image_tag @product.image, height: 120, width: 100, alt: "準備中" %></li>
@@ -12,12 +12,12 @@
 			</ul>
 		</div>
 		<div class="ItemDetails__main">
-			<h1>社の蔵 採れたて純米吟醸 一の矢（うすにごり生)</h1>
-			<p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが</p>
+			<h1><%= @product.name %></h1>
+			<p><%= @product.description %></p>
 			<ul class="ItemDetails__review">
 				<li>☆☆☆☆☆</li>
-				<li><%= "10" %>件のレビュー</li>
-				<li>レビューを書く</li>
+				<li><レビューはまだありません</li>
+				<li>準備中</li>
 			</ul>
 			<p class="ItemDetails__main--price"><%= @product.value %>円 (税込み)</p>
 			<div class="ItemDetails__main--size">
@@ -54,22 +54,22 @@
 
 	    <li class="RecommendedItems__item">
 	  	  <div class="RecommendedItems__item--photo">
-	  	  <%= image_tag Product.find(17).image.url, height: 240, width: 210, alt: "商品写真" %></div>
-	  	  <div class="RecommendedItems__item--title"><%= link_to Product.find(17).name, product_path(17) %></div>
+	  	  <%= image_tag Product.find(18).image.url, height: 240, width: 210, alt: "商品写真" %></div>
+	  	  <div class="RecommendedItems__item--title"><%= link_to Product.find(18).name, product_path(18) %></div>
 	  	  <div class="RecommendedItems__item--price">xxxx円</div>
 	    </li>
 
 	    <li class="RecommendedItems__item">
 	  	  <div class="RecommendedItems__item--photo">
-	  	  <%= image_tag Product.find(17).image.url, height: 240, width: 210, alt: "商品写真" %></div>
-	  	  <div class="RecommendedItems__item--title"><%= link_to Product.find(17).name, product_path(17) %></div>
+	  	  <%= image_tag Product.find(28).image.url, height: 240, width: 210, alt: "商品写真" %></div>
+	  	  <div class="RecommendedItems__item--title"><%= link_to Product.find(28).name, product_path(28) %></div>
 	  	  <div class="RecommendedItems__item--price">xxxx円</div>
 	    </li>
 
 	    <li class="RecommendedItems__item">
 	  	  <div class="RecommendedItems__item--photo">
-	  	  <%= image_tag Product.find(17).image.url, height: 240, width: 210, alt: "商品写真" %></div>
-	  	  <div class="RecommendedItems__item--title"><%= link_to Product.find(17).name, product_path(17) %></div>
+	  	  <%= image_tag Product.find(29).image.url, height: 240, width: 210, alt: "商品写真" %></div>
+	  	  <div class="RecommendedItems__item--title"><%= link_to Product.find(29).name, product_path(29) %></div>
 	  	  <div class="RecommendedItems__item--price">xxxx円</div>
 	    </li>
     </ul>
