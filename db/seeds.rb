@@ -9,10 +9,7 @@
 #p = "#{Rails.root}/db/fixtures/images/airbnb_1.png"
 #ThemeTag.create(thumbnail: File.read(p))
 
-Category.create(:name => '城島町の地酒')
-Category.create(:name => '城島町の雑貨')
-Category.create(:name => '城島町の特産品')
-Category.create(:name => '城島町の工芸品')
+Type.create(:type_name => '焼酎')
 
 =begin
 #北海道

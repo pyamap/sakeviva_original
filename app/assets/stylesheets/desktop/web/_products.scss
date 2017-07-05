@@ -483,31 +483,6 @@ table.attr {
 			height: 150px;
 			margin: 10px auto;
 		}
-}
-
-	#products_story {
-		h1 {
-			font-size: 22px;
-		}
-
-		h2 {
-			font-size: 22px;
-		}
-
-		input#product_overview_one {
-			font-size: 20px;
-		}
-		input#product_overview_two {
-			width: 600px;
-			height: 250px;
-			font-size: 20px;
-		}
-		input#product_story_title_one {
-			font-size: 20px;
-		}
-		input#product_story_title_two {
-			font-size: 20px;
-		}
 	}
 }
 
@@ -527,7 +502,7 @@ select#product_theme_tag_id {
 			background-color: $color-sakura;
 			color: white;
 			font-size: 16px;
-			width: 70px;
+			width: 90px;
 			height: 30px;
 			margin: 10px 15px;
 		}
