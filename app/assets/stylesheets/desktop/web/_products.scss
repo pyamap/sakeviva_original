@@ -44,6 +44,12 @@
 			margin: 10px auto 20px;
 		}
 
+		&--element {
+			margin: 20px auto;
+			padding-left: 0;
+			list-style-type: none;
+		}
+
 		&--price {
 			height: 50px;
 			margin: 0;
@@ -155,7 +161,7 @@
 
 		&--price {
 			text-align: right;
-			font-size: 18px;
+			font-size: 14px;
 		}
 	}
 }
@@ -398,7 +404,6 @@
 
 /*商品ページで統一すべきスタイルここから*/
 
-
 /*adminのproductフォームに関するスタイルここから*/
 #products_list {
 	background-color: $color-gray;
@@ -406,7 +411,7 @@
 	margin: 50px auto;
 }
 
-.product_list {
+.product_details {
 
 	width: 800px;
 
@@ -551,35 +556,13 @@ select#product_theme_tag_id {
 	margin: 100px auto;
 }
 
-#products_list {
+.product_details {
 	width: 800px;
 	text-align: center;
 	background-color: $color-gray;
 	margin: 120px auto;
+	list-style-type: none;
 
-	h1 {
-		font-size: 22px;
-		margin: 5px;
-	}
-
-	h2 {
-		font-size: 22px;
-		margin: 5px;
-	}
-
-	h3 {
-		font-size: 22px;
-		margin: 5px;
-	}
-
-	h4 {
-		font-size: 22px;
-		margin: 5px;
-	}
-
-	p {
-		margin: 0;
-	}
 }
 
 .products_list th.description {

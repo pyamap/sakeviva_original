@@ -54,7 +54,7 @@ class Admin::ProductsController < Admin::Base
 
 	private
 	def product_params
-		params.require(:product).permit(:name,:value,:description,:image, :image_cache, :theme_tag_id, :type_id, :price_id, :category_id, :remove_image, images_attributes: [:id, :product_id, :image, :image_cache])
+		params.require(:product).permit(:name,:value,:description,:image, :image_cache, :theme_tag_id, :type_id, :price_id, :category_id, :alcoholpercentage, :ingredients, :sakepercentage, :ricedegree, :remove_image, images_attributes: [:id, :product_id, :image, :image_cache])
 	end
 
 end

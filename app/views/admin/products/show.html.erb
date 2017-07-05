@@ -16,28 +16,18 @@
 	</table>
 -->
 <div id="individual_product">
-	<div id="products_list">
-		<div class="product_name">
-			<h1>商品名</h1>
-			<p><%= @product.name %></p>
-		</div>
+	<ul class="product_details">
+		<li>商品名 : <%= @product.name %></li>
+		<li>商品価格 : <%= number_to_currency(@product.value) %></li>
+		<li>商品詳細 : <%= @product.description %></li>
+		<li>アルコール度数 : <%= @product.alcoholpercentage %></li>
+		<li>原材料名 : <%= @product.ingredients %></li>
+		<li>日本酒度 : <%= @product.sakepercentage %></li>
+		<li>精米度合 : <%= @product.ricedegree %></li>
+		<li><%= image_tag @product.image.url, :width => '500', :height => '300' %></li>
+	</ul>
 
-		<div class="product_price">
-			<h2>商品価格</h2>
-			<p><%= number_to_currency(@product.value) %></p>
-		</div>
-
-		<div class="product_description">
-			<h3>商品詳細</h3>
-			<p><%= @product.description %></p>
-		</div>
-
-		<div class="product_pic">
-			<h4>商品イメージ</h4>
-			<p><%= image_tag @product.image.url, :width => '500', :height => '300' %></p>
-		</div>
-	</div>
-	<div id="products_story">
+	<div class="products_story">
 		<%= link_to "編集する", :edit_admin_product %>
 		<%= link_to "一覧に戻る", :admin_products %>
 	</div>
