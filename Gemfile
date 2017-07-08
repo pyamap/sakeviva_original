@@ -36,6 +36,7 @@ gem 'dropzonejs-rails'
 
 gem 'webpay'
 gem 'omniauth-facebook'
+gem 'gretel'
 
 gem 'payjp'
 gem 'stripe'

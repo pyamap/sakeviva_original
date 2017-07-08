@@ -1,7 +1,7 @@
 <%= stylesheet_link_tag "desktop/web/products", :media => "all" %>
 
 <section>
-	<div id="breadcrumb">ここにぱんくずが並びます / 並びます / ならびます</div>
+	<% breadcrumb :product %>
 	<div class="ItemDetails">
 		<div class="ItemDetails__sub">
 			<%= image_tag @product.image.url, height: 480, width: 360, alt: "商品の写真" %>
@@ -25,16 +25,20 @@
 			<ul class="ItemDetails__review">
 				<li>☆☆☆☆☆</li>
 				<li>レビューはまだありません</li>
-				<li>準備中</li>
+				<li></li>
 			</ul>
 			<p class="ItemDetails__main--price"><%= @product.value %>円 (税込み)</p>
 			<div class="ItemDetails__main--size">
 				<p>サイズ</p>
-				<select>ここでサイズを選ばせるボックス</select>
+				<select>
+					<option value="">この商品はサイズは選べません</option>
+				</select>
 			</div>
 			<div class="ItemDetails__main--option">
 				<p>オプション</p>
-				<select>ここでオプションを選ばせるボックス</select>
+				<select>
+					<option value="">この商品はオプションは選べません</option>
+				</select>
 			</div>
 			<%= form_tag('/add_to_cart', :method => :post) do %>
 			<div class="ItemDetails__main--quantity">

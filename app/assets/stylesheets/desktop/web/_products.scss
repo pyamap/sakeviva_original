@@ -2,11 +2,15 @@
 
 /*かえさんデザインのCSSここから*/
 
-#breadcrumb {
+.breadcrumbs {
 	width: 782px;
 	padding: 8px 0;
 	margin: 100px auto 0;
 	border-bottom: solid 1px #CCCCCC;
+
+	a {
+		color: $theme-color;
+	}
 }
 
 .ItemDetails {
@@ -173,7 +177,7 @@
 
 	p {
 		width: 1000px;
-		margin: 50px 0 50px 80px;
+		margin: 50px 0 50px 40px;
 		font-size: 18px;
 		border-bottom: 1px solid $color-gray;
 	}
@@ -182,15 +186,15 @@
 		display: flex;
 		list-style-type: none;
 		height: 40px;
-		padding-left: 250px;
+		padding-left: 215px;
 
 		&--details {
-			margin-left: 150px;		
+			margin-left: 200px;		
 		}
 
 		&--price {
 			width: 40px;
-			margin-left: 240px;		
+			margin-left: 225px;		
 		}
 
 		&--quantity {
@@ -207,27 +211,41 @@
 	&__item {
 		display: flex;
 		list-style-type: none;
-		padding-left: 85px;
-		line-height: 85px;
+		padding-left: 40px;
+		line-height: 25px;
 
 		&--name {
-			margin-left: 40px;
+			display: block;
+			flex: 0 0 150px;
+			margin-left: 25px;
 		}
 
 		&--description {
-			margin-left: 125px;
+			margin-left: 25px;
+			flex: 0 0 320px;
 		}
 
 		&--price {
-			margin-left: 170px;
+			margin-left: 65px;
 		}
 
 		&--quantity {
 			width: 70px;
 			height: 40px;
 			display: flex;
-			margin: 25px 0 0 35px;
+			margin: 0 0 0 35px;
 			border: 1px solid $theme-color;
+		}
+
+		&--updown {
+			i.fa.fa-chevron-down {
+				margin-top: -15px;
+			}
+
+			i.fa.fa-chevron-up {
+				margin-top: -15px;
+			}
+
 		}
 
 		&--number {
@@ -399,7 +417,6 @@
 /*商品ページで統一すべきスタイルここから*/
 .product_form {
 	height: 300px;
-	background-color: yellow;
 }
 
 /*商品ページで統一すべきスタイルここから*/
