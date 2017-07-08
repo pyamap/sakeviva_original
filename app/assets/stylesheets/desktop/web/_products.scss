@@ -404,8 +404,17 @@
 					a {
 						color: white;
 					}	
-
 				}	
+
+				&--nobtn {
+					height: 40px;
+					line-height: 40px;
+					width: 250px;
+					margin: 30px 0 auto ;
+					text-align: center;
+					background-color: $color-gray;
+					color: #C0C0C0;
+				}
 
 
 		}
