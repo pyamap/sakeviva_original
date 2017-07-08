@@ -1,6 +1,6 @@
 @import "desktop/web/parts/buttons";
 
-/*かえさんデザインのCSSここから*/
+/* Start CSS for design by Kae */
 
 .breadcrumbs {
 	width: 782px;
@@ -410,22 +410,54 @@
 
 		}
 }
-/*かえさんデザインのCSSここまで*/
+/* End CSS for design by Kae */
 
 
-
-/*商品ページで統一すべきスタイルここから*/
 .product_form {
 	height: 300px;
 }
 
-/*商品ページで統一すべきスタイルここから*/
-
-/*adminのproductフォームに関するスタイルここから*/
+/* Start CSS of admin product form */
 #products_list {
-	background-color: $color-gray;
-	width: 1000px;
-	margin: 50px auto;
+	background-color: white;
+	width: 1200px;
+	margin: 150px auto;
+
+	th {
+		background-color: $theme-color;
+		padding: 5px;
+		border: solid 1px white;
+		color: white;
+		text-align: center;
+	}
+
+	td {
+		border: solid 1px $theme-color;
+		text-align: center;
+		padding: 15px;
+	}
+
+	td.name {
+		width: 140px;
+	}
+
+	td.price {
+		width: 100px;
+	}
+
+	td.edit {
+		width: 140px;
+	}
+
+	input {
+		background-color: transparent;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        padding: 0;
+        appearance: none;
+	}
+
 }
 
 .product_details {
@@ -453,9 +485,9 @@
 	}
 }
 
-/*adminのproductフォームに関するスタイルここまで*/
+/* End CSS of admin product form */
 
-/*adminのproducts/newページに関するスタイルここから*/
+/* Start CSS of admin/products/new*/
 #product_registration {
 	width: 800px;
 	height: 100%;
@@ -503,9 +535,9 @@ table.attr {
 	}
 }
 
-/*adminのproducts/newページに関するスタイルここまで*/
+/* End CSS of admin/products/new*/
 
-/*adminのproducts/newと/editに共通するスタイルここから*/
+/* Start common CSS of admin products/new and edit*/
 select#product_theme_tag_id {
 			background-color: $color-sakura;
 			color: white;
@@ -538,9 +570,9 @@ select#product_theme_tag_id {
 		margin-top: 30px;
 }
 
-/*adminのproducts/newと/editに共通するスタイルここまで*/
+/* End common CSS of admin products/new and edit*/
 
-/*adminのproduct/showページに関するスタイルここから*/
+/* Start CSS of admin products/show*/
 
 #individual_product {
 	height: 100%;
@@ -620,9 +652,10 @@ select#product_theme_tag_id {
 	}
 
 
-/*adminのproduct/showページに関するスタイルここまで*/
+/* End CSS of admin products/show*/
 
-/*adminのproduct/editページに関するスタイルここから*/
+/* Start CSS of admin products/edit */
+
 #product_edit_form {
 	width: 800px;
 	height: 100%;
@@ -634,9 +667,11 @@ select#product_theme_tag_id {
 	width: 600px;
 	height: 480px;
 }
-/*adminのproduct/editページに関するスタイルここまで*/
+/* Start CSS of admin products/edit */
 
-/*products/idページに関するスタイルここから*/
+
+/* Start CSS of products/id */
+
 #product_details {
 	width: 1000px;
 	height: 100%;
@@ -709,8 +744,7 @@ select#product_theme_tag_id {
 	}
 }
 
-/*products/idページに関するスタイルここまで*/
-
+/* End CSS of products/id */
 
 
 

@@ -5,18 +5,22 @@
 		<table class="product_list">
 			<h1>商品一覧画面</h1>
 			<tr>
+				<th>商品 ID</th>
 				<th>商品名</th>
 				<th>価格(円)</th>
 				<th class="description">商品説明</th>
+				<th>操作</th>
 			</tr>
 		<% @products.each do |product| %>
 			<tr>
-				<td><%= product.name %></td>
-				<td><%= product.value %>円</td>
-				<td><%= product.description %></td>
-				<td>
+				<td class ="id"><%= product.id %></td>
+				<td class="name"><%= product.name %></td>
+				<td class="price"><%= number_to_currency(product.value) %></td>
+				<td class="description"><%= product.description %></td>
+				<td class="edit">
 					<%= link_to "詳細", [:admin, product] %>
 					<%= link_to "編集", [:edit, :admin, product] %>
+					<%= button_to "削除",[:admin, product], method: :delete, confirm: "本当に削除しますか？" %>
 				</td>
 			</tr>
 		<% end %>
@@ -25,5 +29,5 @@
 	<% else %>
 		<p>商品が登録されていません。</p>
 	<% end %>
-	<p class="new_product"><%= link_to "商品の新規登録", :new_admin_product, :class=> "new_product" %></p>
+	<p class="long_btn_dummy"><%= link_to "商品の新規登録", :new_admin_product %></p>
 </div>

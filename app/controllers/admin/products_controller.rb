@@ -45,6 +45,9 @@ class Admin::ProductsController < Admin::Base
 	end
 
 	def destroy
+		@product = Product.find(params[:id])
+		@product.destroy
+		redirect_to [:admin, @product], notice: "商品を削除しました"
 	end
 
 	def photos
