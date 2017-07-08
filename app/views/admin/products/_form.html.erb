@@ -56,6 +56,11 @@
 			<%= form.label :category %>
 			<%= form.collection_select :category_id, Category.all, :id, :name %>
 		</table>
+
+		<table class="shop_list">
+			<%= form.label :shop_id %>
+			<%= form.collection_select :shop_id, Shop.all, :id, :name %>
+		</table>
 	</div>
 
 	<div class="field">

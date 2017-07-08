@@ -24,6 +24,7 @@
 		<li>原材料名 : <%= @product.ingredients %></li>
 		<li>日本酒度 : <%= @product.sakepercentage %></li>
 		<li>精米度合 : <%= @product.ricedegree %></li>
+		<li>店舗名 : <%= @product.shop.name %></li>
 		<li><%= image_tag @product.image.url, :width => '500', :height => '300' %></li>
 	</ul>
 
