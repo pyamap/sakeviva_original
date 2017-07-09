@@ -95,6 +95,7 @@
 		margin: auto;
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: center;
 
 		form.edit_address {
 			border: solid 1px $theme-color;

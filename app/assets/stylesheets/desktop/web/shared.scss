@@ -92,6 +92,10 @@ ul.side_bar_price_list {
         margin: 0 10px;
         line-height: 70px;
         color: #FFFFFF;
+
+        a {
+          color: white;
+        }
       }
 
     }
@@ -185,8 +189,13 @@ footer {
 .Footer {
   display: flex;
   height: 200px;
-  width: 700px;
+  width: 800px;
   margin: auto;
+
+  a {
+    color: white;
+  }
+
 
     &__category {
       color: #FFFFFF;

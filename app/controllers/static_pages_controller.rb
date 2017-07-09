@@ -14,6 +14,10 @@ class StaticPagesController < ApplicationController
 	def interview_souen_rush
 	end
 
+	def trade_law
+	end
+
+
 	def current_cart
 		@total_shipping_fee = flash[:total_shipping_fee]
     	@cart = find_cart
