@@ -4,27 +4,27 @@
   <section>
     <div class="Intro">
     <div class="Intro__main">
-          <div class="Intro__main--logo"><%= image_tag 'http://res.cloudinary.com/dmfclza05/image/upload/v1498882875/top/logo.png',size:"140x70", alt: "logo image of sakeviva" %></div>
+          <div class="Intro__main--logo"><%= image_tag '//res.cloudinary.com/dmfclza05/image/upload/v1498882875/top/logo.png',size:"140x70", alt: "logo image of sakeviva" %></div>
      <div class="Intro__sub">
        <div class="Category"></div>
           <ul class="Category__menu">
             <li class="Category__item">
-                  <div class ="Category__picture"><%= image_tag 'http://res.cloudinary.com/dmfclza05/image/upload/v1498882878/top/category_sake.jpg', height: 145, width: 148, alt: "酒の写真" %></div>
+                  <div class ="Category__picture"><%= image_tag '//res.cloudinary.com/dmfclza05/image/upload/v1498882878/top/category_sake.jpg', height: 145, width: 148, alt: "酒の写真" %></div>
               <p class="Category__title"><%= link_to "日本酒", category_sake_path %></p>
               <div class="Category__subtitle"><%= link_to "城島町の日本酒", category_sake_path %></div>
             </li>
             <li class="Category__item">
-                  <div class ="Category__picture"><%= image_tag 'http://res.cloudinary.com/dmfclza05/image/upload/v1498882876/top/category_grocery.jpg', height: 145, width: 148, alt: "雑貨の写真" %></div>                
+                  <div class ="Category__picture"><%= image_tag '//res.cloudinary.com/dmfclza05/image/upload/v1498882876/top/category_grocery.jpg', height: 145, width: 148, alt: "雑貨の写真" %></div>                
               <p class="Category__title"><%= link_to "雑貨", category_grocery_path %></p>
               <div class="Category__subtitle"><%= link_to "城島町の雑貨", category_grocery_path %></div>
             </li>
             <li class="Category__item">
-                  <div class ="Category__picture"><%= image_tag 'http://res.cloudinary.com/dmfclza05/image/upload/v1498882878/top/category_food.jpg', height: 145, width: 148, alt: "特産品の写真" %></div> 
+                  <div class ="Category__picture"><%= image_tag '//res.cloudinary.com/dmfclza05/image/upload/v1498882878/top/category_food.jpg', height: 145, width: 148, alt: "特産品の写真" %></div> 
               <p class="Category__title"><%= link_to "特産品", category_food_path %></p>
               <div class="Category__subtitle"><%= link_to "城島町の特産品", category_food_path %></div>             
             </li>
             <li class="Category__item">
-                  <div class ="Category__picture"><%= image_tag 'http://res.cloudinary.com/dmfclza05/image/upload/v1498882878/top/category_craft.jpg', height: 145, width: 148, alt: "工芸品の写真" %></div>
+                  <div class ="Category__picture"><%= image_tag '//res.cloudinary.com/dmfclza05/image/upload/v1498882878/top/category_craft.jpg', height: 145, width: 148, alt: "工芸品の写真" %></div>
               <p class="Category__title"><%= link_to "工芸品", category_craft_path %></p>
               <div class="Category__subtitle"><%= link_to "工芸品", category_craft_path %></div>
             </li>
@@ -39,7 +39,7 @@
   <section>
     <div class="NewArrival">
       <h2 class="NewArrival__head">新入荷</h2>
-      <p class="NewArrival__text">テキストが入ります。テキストが入ります。</p>
+      <p class="NewArrival__text">日本酒は旬の飲み物。季節に合った日本酒をご紹介します。</p>
      <ul class="NewArrival__main">
 
        <li class="NewArrival__item">
@@ -185,7 +185,7 @@
   </section>
 
   <section>
-    <div class="JojimaMap"><%= image_tag 'http://res.cloudinary.com/dmfclza05/image/upload/v1498882877/top/aboutjojima.jpg', height: 200, alt:"城島町についての写真" %></div>
+    <div class="JojimaMap"><%= image_tag '//res.cloudinary.com/dmfclza05/image/upload/v1498882877/top/aboutjojima.jpg', height: 200, alt:"城島町についての写真" %></div>
   </section>
 
 
@@ -198,12 +198,12 @@
 
         <div class="Interview__item">
           <div class="Interview__sub">
-            <img class="Interview__sub--photo"><%= image_tag "http://res.cloudinary.com/dmfclza05/image/upload/v1498883316/top/tanaka_pic.png", height: 240 , width: 200, alt:'インタビュアーの写真' %></img>
+            <img class="Interview__sub--photo"><%= image_tag "//res.cloudinary.com/dmfclza05/image/upload/v1498883316/top/tanaka_pic.png", height: 240 , width: 200, alt:'インタビュアーの写真' %></img>
           </div>
           <div class="Interview__main">
             <div class="Interview__main--id">#01</div>
             <div class="Interview__main--companyname">田中製麺</div>
-            <div class="Interview__main--name">田中義眞さん</div>
+            <div class="Interview__main--name">田中義眞</div>
             <div class="Interview__main--summary">テキストはいるよテキストはいるよテキストはいるよ</div>
             <div class="Interview__main--btn"><%= link_to 'もっと読む', interview_tanaka_noodle_path %></div>
           </div>
@@ -211,15 +211,27 @@
 
         <div class="Interview__item">    
           <div class="Interview__sub">
-            <img class="Interview__sub--photo"><%= image_tag "http://res.cloudinary.com/dmfclza05/image/upload/v1498883270/top/shimosaka_pic.png", height: 240 , width: 200, alt:'インタビュアーの写真'%></img>
+            <img class="Interview__sub--photo"><%= image_tag "//res.cloudinary.com/dmfclza05/image/upload/v1498883270/top/shimosaka_pic.png", height: 240 , width: 200, alt:'インタビュアーの写真'%></img>
           </div>
-
           <div class="Interview__main">
             <div class="Interview__main--id">#02</div>
-            <div class="Interview__main--companyname">創筵 (そうえん)</div>
-            <div class="Interview__main--name">下坂美佳さん</div>
+            <div class="Interview__main--companyname">創筵<br>(そうえん)</div>
+            <div class="Interview__main--name">下坂美佳</div>
             <div class="Interview__main--summary">テキストはいるよテキストはいるよテキストはいるよ</div>
             <div class="Interview__main--btn"><%= link_to 'もっと読む', interview_souen_rush_path %></div>
+          </div>
+        </div>
+
+        <div class="Interview__item">
+          <div class="Interview__sub">
+            <img class="Interview__sub--photo"><%= image_tag "//res.cloudinary.com/dmfclza05/image/upload/v1499588862/interview_chiyo_seaweed/1.jpg", height: 240 , width: 200, alt:'インタビュアーの写真' %></img>
+          </div>
+          <div class="Interview__main">
+            <div class="Interview__main--id">#03</div>
+            <div class="Interview__main--companyname">千代海苔</div>
+            <div class="Interview__main--name">千代島</div>
+            <div class="Interview__main--summary">テキストはいるよテキストはいるよテキストはいるよ</div>
+            <div class="Interview__main--btn"><%= link_to 'もっと読む', interview_chiyo_seaweed_path %></div>
           </div>
         </div>
 

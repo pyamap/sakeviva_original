@@ -34,6 +34,7 @@ Rails.application.routes.draw do
   get "current_cart" => "products#current_cart"
   get "interview_tanaka_noodle" => "static_pages#interview_tanaka_noodle"
   get "interview_souen_rush" => "static_pages#interview_souen_rush"
+  get "interview_chiyo_seaweed" => "static_pages#interview_chiyo_seaweed"
   get "about_us" => "static_pages#about_us"
   post "shipping_fee" => "shippings#shipping_fee" #送料を計算する
 
