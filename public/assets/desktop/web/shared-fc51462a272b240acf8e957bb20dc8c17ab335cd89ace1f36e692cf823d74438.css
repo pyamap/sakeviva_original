@@ -1,0 +1,224 @@
+@charset "UTF-8";
+/* color setting
+----------------------------------------------------*/
+/*サイドメニューバーのスタイルここから*/
+/* line 4, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/shared.scss */
+ul.side_bar_theme_list {
+  padding-left: 30px;
+}
+/* line 7, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/shared.scss */
+ul.side_bar_theme_list li a {
+  color: black;
+}
+/* line 10, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/shared.scss */
+ul.side_bar_theme_list a:hover {
+  color: #79b6C8;
+}
+
+/* line 16, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/shared.scss */
+ul.side_bar_category_list {
+  padding-left: 30px;
+}
+/* line 19, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/shared.scss */
+ul.side_bar_category_list li a {
+  color: black;
+}
+/* line 22, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/shared.scss */
+ul.side_bar_category_list a:hover {
+  color: #79b6C8;
+}
+
+/* line 27, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/shared.scss */
+ul.side_bar_price_list {
+  padding-left: 30px;
+}
+/* line 30, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/shared.scss */
+ul.side_bar_price_list li a {
+  color: black;
+}
+/* line 33, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/shared.scss */
+ul.side_bar_price_list a:hover {
+  color: #79b6C8;
+}
+
+/*サイドメニューバーのスタイルここまで*/
+/*ヘッダーのメニューここから*/
+/* line 44, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/shared.scss */
+.Header__account {
+  height: 30px;
+}
+/* line 47, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/shared.scss */
+.Header__account--menu {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  height: 30px;
+  padding-left: 60%;
+}
+/* line 54, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/shared.scss */
+.Header__account--menu li {
+  margin: auto 8px;
+  line-height: 30px;
+}
+/* line 59, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/shared.scss */
+.Header__account--menu li:first-child {
+  margin-right: 0;
+}
+/* line 64, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/shared.scss */
+.Header__account--cart {
+  display: flex;
+  list-style-type: none;
+  padding-left: 0;
+}
+/* line 71, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/shared.scss */
+.Header__main {
+  background-color: #72C1C8;
+  height: 70px;
+  display: flex;
+  justify-content: flex-end;
+}
+/* line 77, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/shared.scss */
+.Header__main--logo:first-child {
+  line-height: 70px;
+  margin-right: auto;
+  margin-left: 15%;
+}
+/* line 83, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/shared.scss */
+.Header__main--menu {
+  display: flex;
+  list-style-type: none;
+  height: 70px;
+  width: 840px;
+  margin: 0;
+  padding-right: 15%;
+}
+/* line 91, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/shared.scss */
+.Header__main--menu li {
+  margin: 0 10px;
+  line-height: 70px;
+  color: #FFFFFF;
+}
+/* line 96, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/shared.scss */
+.Header__main--menu li a {
+  color: white;
+}
+
+/* line 105, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/shared.scss */
+ul.Header__account--menu {
+  width: 150px;
+}
+
+/* line 109, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/shared.scss */
+.menu {
+  height: 51px;
+  padding: 0px;
+  font-size: 18px;
+}
+
+/* line 116, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/shared.scss */
+.dropmenu {
+  *zoom: 1;
+  list-style-type: none;
+  width: 200px;
+  margin: 5px auto 30px;
+  padding: 0;
+  height: 71px;
+  line-height: 71px;
+  z-index: 9999;
+  display: flex;
+}
+
+/* line 128, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/shared.scss */
+.dropmenu li {
+  position: relative;
+  width: 80%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* line 135, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/shared.scss */
+.dropmenu li a {
+  display: block;
+  margin: 0;
+  padding: 15px 0 11px;
+  background: #8a9b0f;
+  color: #79b6C8;
+  font-size: 14px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+/* line 145, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/shared.scss */
+.dropmenu li ul {
+  list-style: none;
+  top: 100%;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 152, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/shared.scss */
+.dropmenu li ul li {
+  width: 100%;
+}
+
+/* line 155, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/shared.scss */
+.dropmenu li ul li a {
+  padding: 13px 15px;
+  border-top: 1px solid #eeeeee;
+  background: white;
+  text-align: center;
+}
+
+/* line 161, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/shared.scss */
+.dropmenu li:hover > a {
+  background: whtie;
+}
+
+/* line 164, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/shared.scss */
+.dropmenu li a:hover {
+  background: #79b6C8;
+  color: white;
+}
+
+/* line 169, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/shared.scss */
+.dropmenu li ul li {
+  overflow: hidden;
+  height: 0;
+  transition: .2s;
+}
+
+/* line 174, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/shared.scss */
+.dropmenu li:hover ul li {
+  overflow: visible;
+  height: 38px;
+}
+
+/*ヘッダーのメニューここまで*/
+/*フッターのメニューここから*/
+/* line 183, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/shared.scss */
+footer {
+  height: 300px;
+  background-color: #404040;
+  margin-top: 50px;
+}
+
+/* line 189, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/shared.scss */
+.Footer {
+  display: flex;
+  height: 200px;
+  width: 800px;
+  margin: auto;
+}
+/* line 195, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/shared.scss */
+.Footer a {
+  color: white;
+}
+/* line 200, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/shared.scss */
+.Footer__category {
+  color: #FFFFFF;
+  margin: 80px 20px;
+}
+
+/*フッターのメニューここまで*/

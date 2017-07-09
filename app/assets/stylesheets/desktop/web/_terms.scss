@@ -1,0 +1,96 @@
+/* Start CSS for tradelaw */
+	
+	.TradeLaw{
+		width: 800px;
+		margin: 150px auto;
+		border: 1px solid $theme-color;
+
+		h1 {
+			font-size: 24px;
+			margin-top: 30px;
+			font-weight: bold;
+			text-align: center;
+		}
+
+		&__list {
+
+			padding: 20px;
+
+			dt {
+				font-weight: bold;
+				padding: 20px 15px;
+				display: block;
+				width: 20%;
+				float: left;
+				clear: left;
+			}
+
+			dd {
+				display: block;
+				padding: 20px 15px;		
+				width: 80%;
+				float: left;
+
+				a {
+					color: $theme-color;
+				}
+			}
+		}
+
+		&__list:after{
+		content: "."; 
+		display: block; 
+		height: 0; 
+		font-size:0;	
+		clear: both; 
+		visibility:hidden;
+		}
+	}
+
+/* End CSS for tradelaw */
+
+/* Start CSS for privacy */
+	.Privacy{
+		width: 800px;
+		margin: 150px auto;
+		border: 1px solid $theme-color;
+
+		h1 {
+			font-size: 24px;
+			margin-top: 30px;
+			font-weight: bold;
+			text-align: center;
+		}
+
+		&__list {
+
+			padding: 20px;
+
+			dt {
+				font-weight: bold;
+				padding: 20px 15px;
+				display: block;
+				width: 20%;
+				float: left;
+				clear: left;
+			}
+
+			dd {
+				color: gray;
+				display: block;
+				padding: 20px 15px;		
+				width: 80%;
+				float: left;
+			}
+		}
+
+		&__list:after{
+		content: "."; 
+		display: block; 
+		height: 0; 
+		font-size:0;	
+		clear: both; 
+		visibility:hidden;
+		}
+	}
+/* End CSS for privacy */

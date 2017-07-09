@@ -42,7 +42,8 @@ Rails.application.routes.draw do
   get "category_grocery" => "categories#category_grocery"
   get "category_food" => "categories#category_food"
   get "category_craft" => "categories#category_craft"
-  get "trade_law" => "static_pages#trade_law"
+  get "trade_law" => "terms#trade_law"
+  get "privacy" => "terms#privacy"
 
   namespace :admin do
     root to: "products#index"
