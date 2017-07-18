@@ -45,7 +45,11 @@ Rails.application.routes.draw do
   get "category_craft" => "categories#category_craft"
   get "trade_law" => "terms#trade_law"
   get "privacy" => "terms#privacy"
-  get "faq" => "terms#faq"
+  
+  #お問い合わせフォーム  
+  get "inquiry" => "inquiries#index"
+  post "inquiry/confirm" => "inquiries#confirm"
+  post "inquiry/thanks" => "inquiries#thanks"
 
   namespace :admin do
     root to: "products#index"

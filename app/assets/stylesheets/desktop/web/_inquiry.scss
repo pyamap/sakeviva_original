@@ -1,0 +1,119 @@
+/* Start CSS for Inquiry */
+
+.InquiryIntro {
+	width: 800px;
+	margin: 150px auto 0;
+	text-align: center;
+
+	h1 {
+		font-size: 24px;
+	}
+
+	p {
+		margin: 30px;
+	}
+}
+
+.Inquiry {
+	margin: 50px auto 50px;
+	width: 800px;
+	border: 1px solid $theme-color;
+
+	h2 {
+		font-size: 24px;
+		margin-top: 30px;
+		font-weight: bold;
+		text-align: center;
+	}
+
+
+	&__list {
+
+		padding: 20px;
+
+		dt {
+			font-weight: bold;
+			padding: 20px 15px;
+			display: block;
+			width: 25%;
+			float: left;
+			clear: left;
+		}
+
+		dd {
+			color: gray;
+			display: block;
+			padding: 20px 15px;		
+			width: 75%;
+			float: left;
+		}
+	}
+
+	&__list:after{
+	content: "."; 
+	display: block; 
+	height: 0; 
+	font-size:0;	
+	clear: both; 
+	visibility:hidden;
+	}
+
+	h3 {
+		text-align: center;
+		font-size: 24px;
+		font-weight: bold;
+	}
+
+	p {
+		padding: 30px;
+	}
+}
+
+	h4 {
+		text-align: center;
+		font-size: 24px;
+		font-weight: bold;
+	}
+
+	.Form {
+		margin: 30px auto 50px;
+		border: 1px solid $theme-color;
+		width: 800px;
+
+		&__item {
+			margin: 30px auto 0;
+
+			th,td {
+				padding: 15px;
+				font-size: 18px;
+			}	
+		}
+
+		.submit_btn{
+			text-align: center;
+				
+			input.small_btn_dummy {
+				border: none;
+				color: white;
+			}
+
+			input.small_btn_dummy:hover{
+				color: $theme-color;
+				border: 1px solid $theme-color;
+		}
+	}
+}
+
+
+.InquirySent {
+	margin: 150px auto 50px;
+	width: 800px;
+	border: 1px solid $theme-color;
+	text-align: center;
+
+	h1 {
+		font-size: 24px;
+	}
+}
+/* End CSS for Inquiry */
+

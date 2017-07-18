@@ -1,0 +1,38 @@
+<%= stylesheet_link_tag "desktop/web/terms", :media => "all" %>
+
+<section class="InquiryIntro">
+  <h1>お問い合わせ内容確認</h1>
+</section>
+
+<section class ="Form">
+ 
+<%= form_for @inquiry, :url => inquiry_thanks_path do |f| %>
+  <table class="Form__item">
+    <tr>
+      <th>名前</th>
+      <td>
+        <%= f.hidden_field :name %>
+        <%= @inquiry.name %>
+      </td>
+    </tr>
+    <tr>
+      <th>メールアドレス</th>
+      <td>
+        <%= f.hidden_field :email %>
+        <%= @inquiry.email %>
+      </td>
+    </tr>
+    <tr>
+      <th>お問い合わせ内容</th>
+      <td>
+        <%= f.hidden_field :message %>
+        <%= simple_format(@inquiry.message) %>
+      </td>
+    </tr>
+  </table>
+  <div class="submit_btn">
+    <%= f.submit "送信", class: 'small_btn_dummy' %>
+  </div>
+<% end %>
+
+</section>
