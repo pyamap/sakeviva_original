@@ -184,7 +184,7 @@
 
 
 .Interview {
-	width: 1080px;
+	width: 1200px;
 	margin: auto;
 
 	&__head {
@@ -200,7 +200,7 @@
 
 	&__section {
 		display: flex;
-		width: 1100px;
+		width: 1200px;
 		margin: auto;
 	}
 
@@ -208,7 +208,7 @@
 		display: flex;
 		margin: 15px;
 		height: 300px;
-		width: 350px;
+		width: 370px;
 	}
 
 
@@ -237,7 +237,7 @@
 
 		&--name {
 			text-align: center;
-			font-size: 20px;
+			font-size: 18px;
 		}
 
 		&--summary {
@@ -248,6 +248,10 @@
 		&--btn {
 			text-align: center;
 			margin-top: 20px;
+
+				a {
+					color: $theme-color;
+				}
 		}
 		
 

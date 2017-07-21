@@ -19,11 +19,8 @@
 	<ul class="product_details">
 		<li>商品名 : <%= @product.name %></li>
 		<li>商品価格 : <%= number_to_currency(@product.value) %></li>
-		<li>商品詳細 : <%= @product.description %></li>
-		<li>アルコール度数 : <%= @product.alcoholpercentage %></li>
-		<li>原材料名 : <%= @product.ingredients %></li>
-		<li>日本酒度 : <%= @product.sakepercentage %></li>
-		<li>精米度合 : <%= @product.ricedegree %></li>
+		<li>商品詳細 : <%= simple_format(@product.description) %></li>
+		<li>商品情報：<%= simple_format(@product.info) %></li>
 		<li>店舗名 : <%= @product.shop.name %></li>
 		<li><%= image_tag @product.image.url, :width => '500', :height => '300' %></li>
 	</ul>

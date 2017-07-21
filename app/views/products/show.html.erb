@@ -13,14 +13,11 @@
 		</div>
 		<div class="ItemDetails__main">
 			<h1><%= @product.name %></h1>
-			<p><%= @product.description %></p>
+			<p><%= simple_format(@product.description) %></p>
 
-			<ul class="ItemDetails__main--element">
-				<li>アルコール度数 : <%= @product.alcoholpercentage %></li>
-				<li>原材料名 : <%= @product.ingredients %></li>
-				<li>日本酒度 : <%= @product.sakepercentage %></li>
-				<li>精米歩合 : <%= @product.ricedegree %></li>
-			</ul>
+			<% unless @product.info.empty? %>
+				<%= simple_format(@product.info, :class => "ItemDetails__main--info") %></p>
+			<% end %>
 
 			<ul class="ItemDetails__review">
 				<li>☆☆☆☆☆</li>

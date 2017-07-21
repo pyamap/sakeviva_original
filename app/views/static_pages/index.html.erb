@@ -32,7 +32,7 @@
        </div>
      </div>
     </div>
-    <p class="Intro__news">お知らせが入ります。お知らせが入ります。お知らせが入ります。</p>
+    <p class="Intro__news">現在、新しいお知らせはありません。</p>
     </div>
   </div>
 
@@ -198,40 +198,38 @@
 
         <div class="Interview__item">
           <div class="Interview__sub">
-            <img class="Interview__sub--photo"><%= image_tag "//res.cloudinary.com/dmfclza05/image/upload/v1498883316/top/tanaka_pic.png", height: 240 , width: 200, alt:'インタビュアーの写真' %></img>
+            <img class="Interview__sub--photo"><%= link_to (image_tag "//res.cloudinary.com/dmfclza05/image/upload/v1498883316/top/tanaka_pic.png"), interview_tanaka_noodle_path, height: 240 , width: 200, alt:'インタビュアーの写真' %></img>
           </div>
           <div class="Interview__main">
             <div class="Interview__main--id">#01</div>
             <div class="Interview__main--companyname">田中製麺</div>
-            <div class="Interview__main--name">田中義眞</div>
-            <div class="Interview__main--summary">テキストはいるよテキストはいるよテキストはいるよ</div>
-            <div class="Interview__main--btn"><%= link_to 'もっと読む', interview_tanaka_noodle_path %></div>
+            <div class="Interview__main--name">田中義眞さん</div>
+            
+            <div class="Interview__main--btn"><%= link_to 'インタビューを読む', interview_tanaka_noodle_path %></div>
           </div>
         </div>
 
         <div class="Interview__item">    
           <div class="Interview__sub">
-            <img class="Interview__sub--photo"><%= image_tag "//res.cloudinary.com/dmfclza05/image/upload/v1498883270/top/shimosaka_pic.png", height: 240 , width: 200, alt:'インタビュアーの写真'%></img>
+            <img class="Interview__sub--photo"><%= link_to (image_tag "//res.cloudinary.com/dmfclza05/image/upload/v1498883270/top/shimosaka_pic.png"), interview_souen_rush_path, height: 240 , width: 200, alt:'インタビュアーの写真'%></img>
           </div>
           <div class="Interview__main">
             <div class="Interview__main--id">#02</div>
             <div class="Interview__main--companyname">創筵<br>(そうえん)</div>
-            <div class="Interview__main--name">下坂美佳</div>
-            <div class="Interview__main--summary">テキストはいるよテキストはいるよテキストはいるよ</div>
-            <div class="Interview__main--btn"><%= link_to 'もっと読む', interview_souen_rush_path %></div>
+            <div class="Interview__main--name">下坂美佳さん</div>
+            <div class="Interview__main--btn"><%= link_to 'インタビューを読む', interview_souen_rush_path %></div>
           </div>
         </div>
 
         <div class="Interview__item">
           <div class="Interview__sub">
-            <img class="Interview__sub--photo"><%= image_tag "//res.cloudinary.com/dmfclza05/image/upload/v1500385937/interview_chiyo_seaweed/chiyonori-bio-pic.jpg", height: 240 , width: 200, alt:'インタビュアーの写真' %></img>
+            <img class="Interview__sub--photo"><%= link_to (image_tag "//res.cloudinary.com/dmfclza05/image/upload/v1500385937/interview_chiyo_seaweed/chiyonori-bio-pic.jpg"), interview_chiyo_seaweed_path, height: 240 , width: 200, alt:'インタビュアーの写真' %></img>
           </div>
           <div class="Interview__main">
             <div class="Interview__main--id">#03</div>
             <div class="Interview__main--companyname">千代海苔</div>
-            <div class="Interview__main--name">千代島</div>
-            <div class="Interview__main--summary">テキストはいるよテキストはいるよテキストはいるよ</div>
-            <div class="Interview__main--btn"><%= link_to 'もっと読む', interview_chiyo_seaweed_path %></div>
+            <div class="Interview__main--name">千代島さん</div>
+            <div class="Interview__main--btn"><%= link_to 'インタビューを読む', interview_chiyo_seaweed_path %></div>
           </div>
         </div>
 

@@ -5,7 +5,7 @@
 	<h1>城島町の雑貨</h1>
 	<div class="Instruction__image"><%= image_tag('pc/category/category_craft.jpeg', size: "900x400")%></div>
 	<div class="Instruction__description">
-	ここに数行程度のカテゴリーの説明が入ります。ここに数行程度のカテゴリーの説明が入ります。ここに数行程度のカテゴリーの説明が入ります。ここに数行程度のカテゴリーの説明が入ります。ここに数行程度のカテゴリーの説明が入ります。
+	城島町の素敵な雑貨の販売に向けて只今準備中です！
 	</div>
 </section>
 
@@ -16,7 +16,7 @@
           <div class="CategoryProduct__item--photo">
           <%= image_tag item.image.url, height: 240, width: 210, alt: "商品写真" %></div>
           <div class="CategoryProduct__item--title"><%= link_to item.name, product_path(:id) %></div>
-          <div class="CategoryProduct__item--price">xxxx円</div>
+          <div class="CategoryProduct__item--price">number_to_currency(item.value)</div>
        </li>
      <% end %>
    </ul> 
