@@ -9,22 +9,22 @@
        <div class="Category"></div>
           <ul class="Category__menu">
             <li class="Category__item">
-                  <div class ="Category__picture"><%= image_tag '//res.cloudinary.com/dmfclza05/image/upload/v1498882878/top/category_sake.jpg', height: 145, width: 148, alt: "酒の写真" %></div>
+                  <div class ="Category__picture"><%= link_to image_tag('//res.cloudinary.com/dmfclza05/image/upload/v1498882878/top/category_sake.jpg', height: 145, width: 148, alt: "酒の写真"),category_sake_path %></div>
               <p class="Category__title"><%= link_to "日本酒", category_sake_path %></p>
               <div class="Category__subtitle"><%= link_to "城島町の日本酒", category_sake_path %></div>
             </li>
             <li class="Category__item">
-                  <div class ="Category__picture"><%= image_tag '//res.cloudinary.com/dmfclza05/image/upload/v1498882876/top/category_grocery.jpg', height: 145, width: 148, alt: "雑貨の写真" %></div>                
+                  <div class ="Category__picture"><%= link_to image_tag('//res.cloudinary.com/dmfclza05/image/upload/v1498882876/top/category_grocery.jpg', height: 145, width: 148, alt: "雑貨の写真"),category_grocery_path %></div>                
               <p class="Category__title"><%= link_to "雑貨", category_grocery_path %></p>
               <div class="Category__subtitle"><%= link_to "城島町の雑貨", category_grocery_path %></div>
             </li>
             <li class="Category__item">
-                  <div class ="Category__picture"><%= image_tag '//res.cloudinary.com/dmfclza05/image/upload/v1498882878/top/category_food.jpg', height: 145, width: 148, alt: "特産品の写真" %></div> 
+                  <div class ="Category__picture"><%= link_to image_tag('//res.cloudinary.com/dmfclza05/image/upload/v1498882878/top/category_food.jpg', height: 145, width: 148, alt: "特産品の写真"),category_food_path %></div> 
               <p class="Category__title"><%= link_to "特産品", category_food_path %></p>
               <div class="Category__subtitle"><%= link_to "城島町の特産品", category_food_path %></div>             
             </li>
             <li class="Category__item">
-                  <div class ="Category__picture"><%= image_tag '//res.cloudinary.com/dmfclza05/image/upload/v1498882878/top/category_craft.jpg', height: 145, width: 148, alt: "工芸品の写真" %></div>
+                  <div class ="Category__picture"><%= link_to image_tag('//res.cloudinary.com/dmfclza05/image/upload/v1498882878/top/category_craft.jpg', height: 145, width: 148, alt: "工芸品の写真"),category_craft_path %></div>
               <p class="Category__title"><%= link_to "工芸品", category_craft_path %></p>
               <div class="Category__subtitle"><%= link_to "工芸品", category_craft_path %></div>
             </li>
@@ -44,28 +44,28 @@
 
        <li class="NewArrival__item">
           <div class="NewArrival__item--photo">
-          <%= image_tag Product.find(31).image.url, height: 240, width: 210, alt: "商品写真" %></div>
+          <%= link_to image_tag(Product.find(31).image.url, height: 240, width: 210, alt: "商品写真"),product_path(31) %></div>
           <div class="NewArrival__item--title"><%= link_to Product.find(31).name, product_path(31) %></div>
           <div class="NewArrival__item--price"><%= number_to_currency(Product.find(31).value) %></div>
        </li>
 
        <li class="NewArrival__item">
           <div class="NewArrival__item--photo">
-          <%= image_tag Product.find(32).image.url, height: 240, width: 210, alt: "商品写真" %></div>
+          <%= link_to image_tag(Product.find(32).image.url, height: 240, width: 210, alt: "商品写真"),product_path(31) %></div>
           <div class="NewArrival__item--title"><%= link_to Product.find(32).name, product_path(32) %></div>
           <div class="NewArrival__item--price"><%= number_to_currency(Product.find(31).value) %></div>
        </li>
 
        <li class="NewArrival__item">
           <div class="NewArrival__item--photo">
-          <%= image_tag Product.find(33).image.url, height: 240, width: 210, alt: "商品写真" %></div>
+          <%= link_to image_tag(Product.find(33).image.url, height: 240, width: 210, alt: "商品写真"),product_path(31) %></div>
           <div class="NewArrival__item--title"><%= link_to Product.find(33).name, product_path(33) %></div>
           <div class="NewArrival__item--price"><%= number_to_currency(Product.find(31).value) %></div>
        </li>
 
        <li class="NewArrival__item">
           <div class="NewArrival__item--photo">
-          <%= image_tag Product.find(34).image.url, height: 240, width: 210, alt: "商品写真" %></div>
+          <%= link_to image_tag(Product.find(34).image.url, height: 240, width: 210, alt: "商品写真"),product_path(31) %></div>
           <div class="NewArrival__item--title"><%= link_to Product.find(34).name, product_path(34) %></div>
           <div class="NewArrival__item--price"><%= number_to_currency(Product.find(31).value) %></div>
        </li>
@@ -83,7 +83,7 @@
     <ul class="Ranking__all">
      <li class="Ranking__item">
         <div class="Ranking__sub">
-         <img class="Ranking__sub--photo"><%= image_tag Product.find(31).image.url, height: 80, width: 68, alt: "商品写真" %>
+         <img class="Ranking__sub--photo"><%= link_to image_tag(Product.find(31).image.url, height: 80, width: 68, alt: "商品写真"), product_path(31) %>
          </img>
        </div>
        <div class="Ranking__main">
@@ -94,7 +94,7 @@
 
      <li class="Ranking__item">
         <div class="Ranking__sub">
-         <img class="Ranking__main--photo"><%= image_tag Product.find(31).image.url, height: 80, width: 68, alt: "商品写真" %>
+         <img class="Ranking__main--photo"><%= link_to image_tag(Product.find(31).image.url, height: 80, width: 68, alt: "商品写真"), product_path(31) %>
          </img>
        </div>
        <div class="Ranking__main">
@@ -105,7 +105,7 @@
 
      <li class="Ranking__item">
         <div class="Ranking__sub">
-         <img class="Ranking__main--photo"><%= image_tag Product.find(31).image.url, height: 80, width: 68, alt: "商品写真" %>
+         <img class="Ranking__main--photo"><%= link_to image_tag(Product.find(31).image.url, height: 80, width: 68, alt: "商品写真"), product_path(31) %>
          </img>
        </div>
        <div class="Ranking__main">
@@ -116,7 +116,7 @@
 
      <li class="Ranking__item">
         <div class="Ranking__sub">
-         <img class="Ranking__sub--photo"><%= image_tag Product.find(31).image.url, height: 80, width: 68, alt: "商品写真" %>
+         <img class="Ranking__sub--photo"><%= link_to image_tag(Product.find(31).image.url, height: 80, width: 68, alt: "商品写真"), product_path(31) %>
          </img>
        </div>
        <div class="Ranking__main">
@@ -127,7 +127,7 @@
 
      <li class="Ranking__item">
         <div class="Ranking__sub">
-         <img class="Ranking__main--photo"><%= image_tag Product.find(31).image.url, height: 80, width: 68, alt: "商品写真" %>
+         <img class="Ranking__main--photo"><%= link_to image_tag(Product.find(31).image.url, height: 80, width: 68, alt: "商品写真"), product_path(31) %>
          </img>
        </div>
        <div class="Ranking__main">
@@ -138,7 +138,7 @@
 
      <li class="Ranking__item">
         <div class="Ranking__sub">
-         <img class="Ranking__main--photo"><%= image_tag Product.find(31).image.url, height: 80, width: 68, alt: "商品写真" %>
+         <img class="Ranking__main--photo"><%= link_to image_tag(Product.find(31).image.url, height: 80, width: 68, alt: "商品写真"), product_path(31) %>
          </img>
        </div>
        <div class="Ranking__main">
@@ -150,7 +150,7 @@
 
      <li class="Ranking__item">
         <div class="Ranking__sub">
-         <img class="Ranking__sub--photo"><%= image_tag Product.find(31).image.url, height: 80, width: 68, alt: "商品写真" %>
+         <img class="Ranking__sub--photo"><%= link_to image_tag(Product.find(31).image.url, height: 80, width: 68, alt: "商品写真"), product_path(31) %>
          </img>
        </div>
        <div class="Ranking__main">
@@ -161,7 +161,7 @@
 
      <li class="Ranking__item">
         <div class="Ranking__sub">
-         <img class="Ranking__main--photo"><%= image_tag Product.find(31).image.url, height: 80, width: 68, alt: "商品写真" %>
+         <img class="Ranking__main--photo"><%= link_to image_tag(Product.find(31).image.url, height: 80, width: 68, alt: "商品写真"), product_path(31) %>
          </img>
        </div>
        <div class="Ranking__main">
@@ -172,7 +172,7 @@
 
      <li class="Ranking__item">
         <div class="Ranking__sub">
-         <img class="Ranking__main--photo"><%= image_tag Product.find(31).image.url, height: 80, width: 68, alt: "商品写真" %>
+         <img class="Ranking__main--photo"><%= link_to image_tag(Product.find(31).image.url, height: 80, width: 68, alt: "商品写真"), product_path(31) %>
          </img>
        </div>
        <div class="Ranking__main">
