@@ -8,6 +8,7 @@
 
 			&__item{
 				padding: 0;
+				font-size: 18px;
 
 				li {
 					width: 180px;
@@ -16,6 +17,7 @@
 
 				&--quantity {
 					border: none;
+					width: 30px;
 				}
 			}
 		}
@@ -107,6 +109,7 @@
 
 		a {
 			color: $theme-color;
+			font-size: 20px;
 		}
 
 		a: hover {

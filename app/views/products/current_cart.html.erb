@@ -89,10 +89,9 @@
     </table>
     <% unless total_price == nil %>
       <div class="CheckOut__calculation--btn">
-      <%= link_to "チェッックアウト", user_addresses_path(:total_price => total_price, :total_shipping_fee => @total_shipping_fee) %></div>
+      <%= link_to "レジへ進む", user_addresses_path(:total_price => total_price, :total_shipping_fee => @total_shipping_fee) %></div>
     <% else %>
-      <div class="CheckOut__calculation--nobtn">チェッックアウト</div>
-      </div>
+      <div class="CheckOut__calculation--nobtn">レジへ進む</div>
     <% end %>
   </div>
 </section>

@@ -4,7 +4,6 @@
       <ul class="Cart__item">
         <li class="Cart__item--image"><%= image_tag 'pc/top/category_sake.jpg', height: 120, width: 100, alt: "酒の写真"%></li>
         <li class="Cart__item--name"><%= link_to "#{item.name}", item.product %></li>
-        <li class="Cart__item--description"><%= item.description %></li>
         <li class="Cart__item--quantity"><%= item.quantity %>個</li>
         <li class="Cart__item--subtotal_price"><%= number_to_currency(item.subtotal_price) %></li>
       </ul>

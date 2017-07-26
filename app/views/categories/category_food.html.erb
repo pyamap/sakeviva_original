@@ -2,7 +2,7 @@
 
 
 <section class="Instruction">
-	<h1>城島町の特産品</h1>
+	<h1>城島町の食</h1>
 	<div class="Instruction__image"><%= image_tag('pc/category/category_food.jpeg', size: "900x400")%></div>
 	<div class="Instruction__description">
 	雄大な筑後川の流れ、養分を蓄えた粘土質の土、代々受け継がれてきた城島人特有の職人気質。城島町の食文化は、自然と人が寄り添いあいながら育まれてきました。春夏秋冬、そのときにしか食べられない城島の「季節」をお楽しみください。
@@ -14,8 +14,8 @@
 		<% @food_products.all.each do |item| %>	
        <li class="CategoryProduct__item">
           <div class="CategoryProduct__item--photo">
-          <%= image_tag item.image.url, height: 240, width: 210, alt: "商品写真" %></div>
-          <div class="CategoryProduct__item--title"><%= link_to item.name, product_path(:id) %></div>
+          <%= link_to image_tag(item.image.url, height: 240, width: 210, alt: "商品写真"), product_path(item.id) %></div>
+          <div class="CategoryProduct__item--title"><%= link_to item.name, product_path(item.id) %></div>
           <div class="CategoryProduct__item--price">number_to_currency(item.value)</div>
        </li>
      <% end %>

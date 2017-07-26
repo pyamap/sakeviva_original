@@ -20,8 +20,8 @@
             </li>
             <li class="Category__item">
                   <div class ="Category__picture"><%= link_to image_tag('//res.cloudinary.com/dmfclza05/image/upload/v1498882878/top/category_food.jpg', height: 145, width: 148, alt: "特産品の写真"),category_food_path %></div> 
-              <p class="Category__title"><%= link_to "特産品", category_food_path %></p>
-              <div class="Category__subtitle"><%= link_to "城島町の特産品", category_food_path %></div>             
+              <p class="Category__title"><%= link_to "食", category_food_path %></p>
+              <div class="Category__subtitle"><%= link_to "城島町の食", category_food_path %></div>             
             </li>
             <li class="Category__item">
                   <div class ="Category__picture"><%= link_to image_tag('//res.cloudinary.com/dmfclza05/image/upload/v1498882878/top/category_craft.jpg', height: 145, width: 148, alt: "工芸品の写真"),category_craft_path %></div>
@@ -185,7 +185,7 @@
   </section>
 
   <section>
-    <div class="JojimaMap"><%= image_tag '//res.cloudinary.com/dmfclza05/image/upload/v1498882877/top/aboutjojima.jpg', height: 200, alt:"城島町についての写真" %></div>
+    <div class="JojimaMap"><%= link_to image_tag('//res.cloudinary.com/dmfclza05/image/upload/v1498882877/top/aboutjojima.jpg', height: 200, alt:"城島町についての写真"), about_us_path %></div>
   </section>
 
 
@@ -203,7 +203,7 @@
           <div class="Interview__main">
             <div class="Interview__main--id">#01</div>
             <div class="Interview__main--companyname">田中製麺</div>
-            <div class="Interview__main--name">田中義眞さん</div>
+            <div class="Interview__main--name">田中稔和さん</div>
             
             <div class="Interview__main--btn"><%= link_to 'インタビューを読む', interview_tanaka_noodle_path %></div>
           </div>

@@ -14,6 +14,7 @@ class Admin::ProductsController < Admin::Base
 
 	def new
 		@product=Product.new
+		@product.options.build
 		@image=@product.images.build
 		@theme_tag=@product.theme_tag
 		@category=@product.category
@@ -57,7 +58,7 @@ class Admin::ProductsController < Admin::Base
 
 	private
 	def product_params
-		params.require(:product).permit(:name,:value,:description,:image, :image_cache, :theme_tag_id, :shop_id, :price_id, :category_id, :info, :remove_image, images_attributes: [:id, :product_id, :image, :image_cache])
+		params.require(:product).permit(:name,:value,:description,:image, :image_cache, :theme_tag_id, :shop_id, :price_id, :category_id, :info, :remove_image, images_attributes: [:id, :product_id, :image, :image_cache], options_attributes: [:id, :title, :price])
 	end
 
 end
