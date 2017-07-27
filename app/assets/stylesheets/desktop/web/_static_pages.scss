@@ -266,13 +266,17 @@
 	color: $font-white;
 
 	&__first {
-		
 		text-align: center;
-		height: 900px;
-		padding-top: 450px;
+		height: 700px;
 		margin-top: 70px;
 		background-image: image-url("pc/about_us/about_us_1.jpg");
 		background-size: cover;
+
+			p {
+				margin: 0 auto;
+				padding-top: 250px;
+
+			}
 
 			span{
 				margin-top: 20px;
@@ -280,29 +284,44 @@
 	}
 
 	&__second {
-		height: 900px;
-		padding: 250px 0 0 50px;
+		height: 700px;
 		text-align: left;
 		background-image: image-url("pc/about_us/about_us_2.jpg");
 		background-size: cover;
+
+		p {
+			margin: 0 auto;
+			padding: 150px 0 0 50px;
+		}
 	}
 
 	&__third {
-		height: 900px;
-		padding: 200px 0 0 50px;
+		height: 700px;
 		text-align: left;
 		background-image: image-url("pc/about_us/about_us_3.jpg");
 		background-size: cover;
+
+		p {
+			margin: 0 auto;
+			padding: 150px 0 0 50px;
+		}
 	}
 
 	&__fourth {
-		height: 900px;
-		width: 100%;
-		padding: 300px 50px 0 0;
+		height: 700px;
 		text-align: right;
 		background-image: image-url("pc/about_us/about_us_4.jpg");
 		background-size: cover;
+
+		p {
+			margin: 0 auto;
+			padding: 250px 50px 0 0;
+		}
 	}
+}
+
+footer {
+	margin: 0;
 }
 
 

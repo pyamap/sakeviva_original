@@ -16,7 +16,7 @@
           <div class="CategoryProduct__item--photo">
           <%= link_to image_tag(item.image.url, height: 240, width: 210, alt: "商品写真"), product_path(item.id) %></div>
           <div class="CategoryProduct__item--title"><%= link_to item.name, product_path(item.id) %></div>
-          <div class="CategoryProduct__item--price">number_to_currency(item.value)</div>
+          <div class="CategoryProduct__item--price"><%= number_to_currency(item.value) %></div>
        </li>
      <% end %>
    </ul>
