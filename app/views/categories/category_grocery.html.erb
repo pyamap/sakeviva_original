@@ -3,7 +3,7 @@
 
 <section class="Instruction">
 	<h1>城島町の雑貨</h1>
-	<div class="Instruction__image"><%= image_tag('pc/category/category_grocery.jpeg', size: "900x400")%></div>
+	<div class="Instruction__image"><%= image_tag('//res.cloudinary.com/dmfclza05/image/upload/v1501265508/categpry/category_grocery.jpg', size: "900x450")%></div>
 	<div class="Instruction__description">
 	城島で作られた原料、城島で育った人、城島という場所。城島町だからこそ生まれた製品がここにはあります。城島町というアイデンティティを持った商品をお楽しみください。
 	</div>
@@ -14,7 +14,7 @@
 		<% @grocery_products.all.each do |item| %>	
        <li class="CategoryProduct__item">
           <div class="CategoryProduct__item--photo">
-          <%= link_to image_tag(item.image.url, height: 240, width: 210, alt: "商品写真"), product_path(item.id) %></div>
+          <%= link_to image_tag(item.image.url, height: 280, width: 210, alt: "商品写真"), product_path(item.id) %></div>
           <div class="CategoryProduct__item--title"><%= link_to item.name, product_path(item.id) %></div>
           <div class="CategoryProduct__item--price"><%= number_to_currency(item.value) %></div>
        </li>
