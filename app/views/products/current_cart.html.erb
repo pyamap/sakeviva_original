@@ -57,9 +57,9 @@
     <div class="CheckOut__shipping--select">
       <%= collection_select :prefecture, :prefecture_id, Prefecture.all, :id, :name, :prompt => "都道府県を選択" %>
     </div>
-    <% for item in @cart.items %>
+
       <%= hidden_field_tag ":shop_id[]", item.product.shop_id %>
-    <% end %>
+
     <div><%= submit_tag "送料を計算" %></div>
   <% end %>
 
