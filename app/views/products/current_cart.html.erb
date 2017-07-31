@@ -57,9 +57,9 @@
     <div class="CheckOut__shipping--select">
       <%= collection_select :prefecture, :prefecture_id, Prefecture.all, :id, :name, :prompt => "都道府県を選択" %>
     </div>
-
+    <% for item in @cart.items %>
       <%= hidden_field_tag ":shop_id[]", item.product.shop_id %>
-
+    <% end %>
     <div><%= submit_tag "送料を計算" %></div>
   <% end %>
 
@@ -92,6 +92,7 @@
       <%= link_to "レジへ進む", user_addresses_path(:total_price => total_price, :total_shipping_fee => @total_shipping_fee) %></div>
     <% else %>
       <div class="CheckOut__calculation--nobtn">レジへ進む</div>
+      </div>
     <% end %>
   </div>
 </section>
