@@ -18,6 +18,10 @@ class CartItem
 		@product.id
 	end
 
+	def image
+		@product.image
+	end
+
 	def quantity
 		@quantity
 	end
