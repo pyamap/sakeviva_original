@@ -9,7 +9,15 @@
 #p = "#{Rails.root}/db/fixtures/images/airbnb_1.png"
 #ThemeTag.create(thumbnail: File.read(p))
 
+Type.create(:type_name => '純米大吟醸')
+Type.create(:type_name => '純米吟醸')
+Type.create(:type_name => '大吟醸')
+Type.create(:type_name => '特別純米')
+Type.create(:type_name => '純米')
+Type.create(:type_name => '本醸造')
 Type.create(:type_name => '焼酎')
+Type.create(:type_name => 'その他')
+
 
 =begin
 #北海道
