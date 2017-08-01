@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery :except => [:pay]
   before_filter :current_cart, :configure_permitted_parameters, if: :devise_controller?
 
-  include Jpmobile::ViewSelector
+  #include Jpmobile::ViewSelector => モバイルからのアクセスだったら、モバイルに落とす方法。モバイルの準備ができていないので、一旦コメントアウト
 
   #↓エラーが起きた時の処理と表示方法をまとめているが、中身が見えず使いにくいので一旦コメントアウト。
   #rescue_from Exception, with: :error500
