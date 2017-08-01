@@ -79,7 +79,7 @@
 
 .NewArrival {
 
-	width: 1080px;
+	width: 100%;
 	margin: auto;
 
 	&__head {
@@ -123,7 +123,7 @@
 
 .Ranking {
 
-	width: 1080px;
+	width: 100%;
 	margin: auto;
 
 	&__head {
@@ -143,7 +143,8 @@
 		flex-wrap: wrap;
 		justify-content: center;
 		list-style: none;
-		width: 1080px;
+		width: 980px;
+		margin: auto;
 		padding: 0;
 	}
 
@@ -184,7 +185,7 @@
 
 
 .Interview {
-	width: 1200px;
+	width: 100%;
 	margin: auto;
 
 	&__head {
@@ -200,7 +201,7 @@
 
 	&__section {
 		display: flex;
-		width: 1200px;
+		width: 980px;
 		margin: auto;
 	}
 
