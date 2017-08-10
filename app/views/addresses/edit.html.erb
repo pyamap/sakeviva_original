@@ -1,13 +1,11 @@
 <%= stylesheet_link_tag "desktop/web/addresses", :media => "all" %>
 
-<div id="address_all">
+<div class="AddressForm">
+	<h1>配送先住所の変更</h1>
 	<%= form_for @address do |form| %>
-		<div class="product_form">
-			<%= render "form", form: form %>
-		</div>
-
-		<div class="middle_btn">
-			<%= form.submit %>
+		<%= render "form", form: form %>
+		<div class="AddressForm__action">
+		<%= form.submit %>
 		</div>
 	<% end %>
 </div>

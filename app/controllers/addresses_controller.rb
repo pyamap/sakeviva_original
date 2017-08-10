@@ -16,11 +16,7 @@ before_action :current_cart, :authenticate_user!
 	end
 
 	def new
-		unless current_user.addresses.present?
 		  @address=Address.new
-		else
-		  redirect_to action: "index"
-		end
 	end
 
 	def edit
