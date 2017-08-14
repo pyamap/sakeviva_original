@@ -46,6 +46,8 @@ gem 'jpmobile', '4.2.0'
 gem "paperclip", "~> 5.0.0"
 gem 'font-awesome-rails'
 gem 'rails_12factor', group: :production
+gem 'premailer-rails'
+gem 'nokogiri'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
