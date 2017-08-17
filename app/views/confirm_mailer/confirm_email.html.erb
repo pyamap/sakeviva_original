@@ -13,23 +13,22 @@
 		<div class="ProductInfo">
 		▼ご注文商品情報<br>
 		================================================================<br>
-		【　商　　品　　名　】<br>
-		【　価　格　(税込)　】<br>
-		【　　数　　　量　　】<br>
-		【　　送　　　料　　】<br>
-		【　総　　合　　計　】<br>
+		【　商　　品　　名　】<%= @order_product.name %><br> 
+		【　価　格　(税込)　】<%= @order_product.value %><br>
+		【　　数　　　量　　】<%= @order_quantity %><br>
+		【　　送　　　料　　】<br> 
+		【　総　　合　　計　】<%= number_to_currency(@order_total_price) %> <br>
 		</div>
 
 		<div class="UserInfo">
 		▼お客様情報<br>
 		================================================================<br>
-		【　お　　名　　前　】<br>
-		【　メールアドレス　】<br>
-		【　郵　便　番　号　】<br>
-		【　ご　　住　　所　】<br>
-		【　電　話　番　号　】<br>
-		【　注　　文　　日　】<br>
-		【　決　済　方　法　】クレジット <br>
+		【　お　　名　　前　】<%= @order_user.name %><br>
+		【　メールアドレス　】<%= @order_user.email %><br>
+		【　郵　便　番　号　】<%= @order_address.postalcode %><br>
+		【　ご　　住　　所　】<%= @order_address.address %><br>
+		【　注　　文　　日　】<%= @order.created_at %><br>
+		【　決　済　方　法　】クレジットカード<br>
 		</div>
 
 		<div class="ShippingInfo">

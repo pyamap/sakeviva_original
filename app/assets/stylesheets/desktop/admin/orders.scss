@@ -1,78 +1,77 @@
 @import "base/variable";
 
-/*admin/ordersのスタイルここから*/
-#orders_list {
+/*Start of admin/orders/css*/
+.OrderList {
+	width: 820px;
+	margin: 150px auto 100px;
 	background-color: white;
-	width: 800px;
-	margin: 50px auto;
+	border: solid 1px $theme-color;
 
-	h1 {
-		text-align: center;
-		font-size: 22px;
-	}
-}
+	&__item{
 
-.order_list {
-
-	width: 100%;
-
-	tr: nth-child(odd) td {
-	}
-
-	tr: nth-child(even) td {
-		background-color: #FBDADE;
-	}
-
-	 th {
-		width: 100px;
-	}
-
-	th.description {
-		width: 500px;
+		th {
+			text-align: center;
 		}
-
-	 td {
-		width: 70px;
-		text-align: center;
+		td {
+			width: 120px;
+			height: 30px;
+			text-align: center;
+		}
 	}
+		h1 {
+			text-align: center;
+			font-size: 24px;
+		}
 }
-/*admin/ordersのスタイルここまで*/
+/*End of admin/orders/css*/
+
 
 /*admin/orders/idのスタイルここから*/
-	#order_info {
+	.OrderInfo {
 		width: 600px;
 		height: 100%;
 		margin: 100px auto;
-		background-color: $color-gray;
+		background-color: white;
+		border: solid 1px $theme-color;
 		font-weight: bold;
+
+		ul {
+			padding: 0;
+		}
 
 		ul li {
 			list-style-type: none;
+			text-align: center;
+			margin: 10px;
 		}
 
-		section.order_id {
+		&__id {
 			border-bottom: dotted 1px $color-sakura;
-			padding: 5px 10px;
+			margin: 20px;
 		}
 
-		section.product_info {
-			padding: 5px 10px;
+		&__info {
+			margin: 20px;
 		}
 
-		section.user_info {
-			padding: 5px 10px;
+		&__info {
+			margin: 20px;
 		}
 
-		section.delivery_status {
+		&__status {
 			border-top: solid 1px $color-sakura;
 			text-align: center;
 
-			p {
-			color: #00FF3B;
-			letter-spacing: 3px;
-			text-align: center;
+			&--detail{
+				font-weight: bold; 
+				font-size: 22px; 
+				margin-top: 10px;
+				color: #00FF3B;
+				letter-spacing: 3px;
+				text-align: center;
 			}
 
+		
 			input {
 			text-align: center;
 			border: solid 1px $color-sakura;

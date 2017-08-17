@@ -1,27 +1,28 @@
 <%= stylesheet_link_tag "desktop/admin/orders", :media => "all" %>
 
-<div id="order_info">
-	<section class="order_id">
+<section class="OrderInfo">
+	<div class="OrderInfo__id">
 		<ul>
 			<li>Order ID : <%= @order.id %></li>
 			<li>注文日時 : <%= @order.created_at %></li>
 		</ul>
-	</section>
-	<section class="product_info">
+	</div>
+	<div class="OrderInfo__info">
 		<ul>
 			<li>商品名 : <%= link_to @order.product.name, product_path %></li>
-			<li>価格 : <%= @order.product.value %></li>
+			<li>価格 : <%= number_to_currency(@order.product.value) %></li>
+			<li><%= image_tag @order.product.image.url, height: 400, width:280, alt: "注文品の写真" %></li>
 		</ul>
-	</section>
-	<section class="user_info">
+	</div>
+	<div class="OrderInfo__info">
 		<ul>
 			<li>購入者 : <%= @order.user.name %></li>
 			<li>郵便番号 : <%= @current_address.postalcode %></li>
 			<li>配送先 : <%= @current_address.address %></li>
 		</ul>
-	</section>
-	<section class="delivery_status">
-		<p style="font-weight:bold; font-size:20px;"><%= @order.delivery.status %></p>
+	</div>
+	<div class="OrderInfo__status">
+		<p class="OrderInfo__status--detail"><%= @order.delivery.status %></p>
 		<% unless @order.delivery.id == 1 %>
 		<p>配送ステータス最終更新 : <%= @order.updated_at %></p>
 		<% end %>
@@ -34,5 +35,5 @@
 				<%= form.submit %>
 			<% end %>
 		<% end %>
-	</section>
-</div>
+	</div>
+</section>

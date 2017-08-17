@@ -1,9 +1,9 @@
 <%= stylesheet_link_tag "desktop/admin/orders", :media => "all" %>
 
-<div id="orders_list">
+<div class="OrderList">
 	<% if @orders.present? %>
 
-		<table class="order_list">
+		<table class="OrderList__item">
 			<h1>注文一覧画面</h1>
 			<tr>
 				<th>注文ID</th>
