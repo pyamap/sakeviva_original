@@ -31,7 +31,8 @@ class PayjpController < ApplicationController
 		params[:items].each do |single_item|
 			@order = Order.new
 			@order.product = Product.find(single_item["item_id"])
-			@order.user = User.find(params[:current_user]) 
+			@order.quantity = single_item[:item_quantity]
+			@order.user = User.find(params[:current_user])
 			@order.save
 		end
 
@@ -53,7 +54,7 @@ class PayjpController < ApplicationController
 	private
 
 	def order_params
-		params.require(:order).permit(:product_id => "#{item_id}")
+		params.require(:order).permit(:quantity)
 	end
 
 
