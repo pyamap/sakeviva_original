@@ -25,6 +25,7 @@
 <%= form_tag(action: :pay, method: :post) do %>
   <script src="https://checkout.pay.jp/" class="payjp-button" data-key="pk_test_881e6a718672d171e72ee9dc"></script>
    <%= hidden_field_tag :total_price, params[:total_price] %>
+   <%= hidden_field_tag :total_shipping_fee, params[:total_shipping_fee]%>
    <%= hidden_field_tag :current_user, current_user.id %>
    
    <% @cart.items.each do |item| %>
