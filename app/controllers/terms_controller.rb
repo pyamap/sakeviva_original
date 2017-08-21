@@ -5,6 +5,9 @@ class TermsController < ApplicationController
 	def privacy
 	end
 
+	def shipping_fee
+	end
+
 	def faq
 	end
 end

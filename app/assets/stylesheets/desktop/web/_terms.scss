@@ -94,3 +94,51 @@
 		}
 	}
 /* End CSS for privacy */
+
+/* Start CSS for shipping_fee */
+
+.DeliveryRemarks{
+		width: 800px;
+		margin: 150px auto;
+		border: 1px solid $theme-color;
+
+		h1 {
+			font-size: 24px;
+			margin: 30px auto;
+			font-weight: bold;
+			text-align: center;
+		}
+
+		p {
+			margin: 20px 60px;
+		}
+
+		&__table {
+			margin: 30px auto;
+			text-align: center;
+		}
+
+		h2 {
+			font-size: 24px;
+			margin: 20px auto 20px;
+			font-weight: bold;
+			text-align: center;
+		}
+
+		.DeliveryRemarks__case {
+
+			width: 680px;
+			margin: auto;
+
+			&--one {
+				margin: 20px auto;
+			}
+
+			&--two {
+				margin: 20px auto;
+			}
+		}
+}
+
+/* End CSS for shipping_fee */
+

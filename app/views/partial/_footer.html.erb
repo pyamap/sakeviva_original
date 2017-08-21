@@ -11,8 +11,9 @@
 
 		<div class="Footer__category">
 			<p>インフォメーション</p>
+			<li><%= link_to_unless_current "送料について", shipping_fee_path %></li>
 			<li><%= link_to_unless_current "お問い合わせ", inquiry_path %></li>
-			<li><%= link_to_unless_current "配送方法・送料・お支払い方法について", inquiry_path %></li>
+			<li><%= link_to_unless_current "配送方法・お支払い方法について", inquiry_path %></li>
 			<li><%= link_to_unless_current "特定商取引法に基づく表記", trade_law_path %></li>
 		</div>
 
