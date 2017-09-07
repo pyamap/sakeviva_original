@@ -1,14 +1,10 @@
-<div id="individual_product">
+<div id="individual_item">
 	<table class="attr">
 		<tr>
 			<th><%= form.label :name, "商品名" %></th>
 			<td><%= form.text_field :name %></td>
 		</tr>
 
-		<tr>
-			<th><%= form.label :value, "価格" %></th>
-			<td><%= form.number_field :value %></td>
-		</tr>
 		<tr>
 			<th><%= form.label :description, "商品詳細" %></th>
 			<td><%= form.text_area :description, :size => "60x15" %></td>
@@ -18,6 +14,30 @@
 			<th><%= form.label :info, "商品情報" %></th>
 			<td><%= form.text_area :info, :size => "40x5" %></td>
 		</tr>
+
+		<fieldset>
+		<tr>
+			<th><%= form.label :options, "オプション一覧" %></th>
+			<td><%= form.fields_for :options do |options_form| %></td>
+		</tr>
+
+		<tr>
+			<th><%= options_form.label :title, "オプション名" %></th>
+			<td><%= options_form.text_field :title %></td>
+		</tr>
+
+		<tr>
+			<th><%= options_form.label :value, "価格" %></th>
+			<td><%= options_form.text_field :value %></td>
+		</tr>
+
+			<% if @product.persisted? %>
+			<th><%= options_form.check_box :_destroy %></th>
+			<td><%= options_form.label :_destroy, "削除" %></td>
+			<% end %>
+		<% end %>
+
+		</fieldset>
 
 	</table>
 

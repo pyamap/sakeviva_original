@@ -46,6 +46,7 @@ gem 'jpmobile', '4.2.0'
 gem "paperclip", "~> 5.0.0"
 gem 'font-awesome-rails'
 gem 'rails_12factor', group: :production
+gem 'jquery-turbolinks'
 
 
 # Use ActiveModel has_secure_password

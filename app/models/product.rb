@@ -7,7 +7,7 @@ class Product < ActiveRecord::Base
 	accepts_nested_attributes_for :images
 
 	validates :name,:description, presence: true
-	validates :value, numericality: { only_integer: true, greater_than: 0}
+	#validates :value, numericality: { only_integer: true, greater_than: 0}
 
 	belongs_to :category
 	belongs_to :theme_tag
@@ -16,6 +16,9 @@ class Product < ActiveRecord::Base
 	belongs_to :shop
 	has_many :items
 	has_one :order, dependent: :destroy
+	has_many :options, dependent: :destroy
+	accepts_nested_attributes_for :options, allow_destroy: true
+	
 
 end
 

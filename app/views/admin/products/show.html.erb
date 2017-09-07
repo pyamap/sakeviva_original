@@ -18,8 +18,12 @@
 <div id="individual_product">
 	<ul class="product_details">
 		<li>商品名 : <%= @product.name %></li>
-		<li>商品価格 : <%= number_to_currency(@product.value) %></li>
 		<li>商品詳細 : <%= simple_format(@product.description) %></li>
+		<% @options.each do |option| %>
+			<li>オプション名 : <%= option.title %></li>
+			<li>商品価格 : <%= option.value %></li>
+		<% end %>
+		
 		<li>商品情報：<%= simple_format(@product.info) %></li>
 		<li>店舗名 : <%= @product.shop.name %></li>
 		<li><%= image_tag @product.image.url, :width => '500', :height => '300' %></li>

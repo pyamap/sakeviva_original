@@ -24,25 +24,26 @@
 				<li>レビューはまだありません</li>
 				<li></li>
 			</ul>
-			<p class="ItemDetails__main--price"><%= @product.value %>円 (税込み)</p>
-			<div class="ItemDetails__main--size">
-				<p>サイズ</p>
-				<select>
-					<option value="">この商品はサイズは選べません</option>
-				</select>
+			<%= form_tag('/add_to_cart', :method => :post) do %>
+			<p class="ItemDetails__main--price">
+				<%= render partial: 'option_value', locals: {option_id: Option.first.id} %>
+			</p>
+			<p>オプション</p>
+			<div class="ItemDetails__main--option">
+				<%= collection_select :option, :option_id, Option.all, :id, :title, :prompt => "オプションを選択" %>
 			</div>
+
 			<div class="ItemDetails__main--option">
 				<p>オプション</p>
 				<select>
 					<option value="">この商品はオプションは選べません</option>
 				</select>
 			</div>
-			<%= form_tag('/add_to_cart', :method => :post) do %>
 			<div class="ItemDetails__main--quantity">
 				<p>個数</p>		
 				<%= select_tag 'quantity', options_for_select([1, 2, 3, 4, 5]) %>
 			</div>
-				<%= hidden_field_tag :id,@product.id %>
+				<%= hidden_field_tag :id, @product.id %>
 				<%= hidden_field_tag :shop_id, @product.shop_id %>			
 			<div class="middle_btn"><%= submit_tag "カートに入れる" %></div>				
 			<% end %>
