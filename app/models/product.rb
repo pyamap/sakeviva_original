@@ -5,7 +5,12 @@ class Product < ActiveRecord::Base
 	has_many :photos
 	accepts_nested_attributes_for :images
 
+<<<<<<< HEAD
 	validates :value, numericality: { only_integer: true, greater_than: 0}
+=======
+	validates :name,:description, presence: true
+	#validates :value, numericality: { only_integer: true, greater_than: 0}
+>>>>>>> multi-options-admin
 
 	belongs_to :category
 	belongs_to :theme_tag
@@ -14,8 +19,14 @@ class Product < ActiveRecord::Base
 	belongs_to :shop
 	has_many :items
 	has_one :order, dependent: :destroy
+<<<<<<< HEAD
 	has_many :options
 	accepts_nested_attributes_for :options
+=======
+	has_many :options, dependent: :destroy
+	accepts_nested_attributes_for :options, allow_destroy: true
+	
+>>>>>>> multi-options-admin
 
 end
 

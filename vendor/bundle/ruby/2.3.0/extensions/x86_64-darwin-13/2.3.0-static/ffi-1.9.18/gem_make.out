@@ -1,5 +1,9 @@
 current directory: /Users/pyamap/Documents/original/sakeviva_original/vendor/bundle/ruby/2.3.0/gems/ffi-1.9.18/ext/ffi_c
+<<<<<<< HEAD
 /Users/pyamap/.rbenv/versions/2.3.1/bin/ruby -r ./siteconf20170811-4171-1e9c68l.rb extconf.rb
+=======
+/Users/pyamap/.rbenv/versions/2.3.1/bin/ruby -r ./siteconf20170830-32810-14fi5b.rb extconf.rb
+>>>>>>> multi-options-admin
 checking for ffi.h... no
 checking for ffi.h in /usr/local/include,/usr/include/ffi... yes
 checking for ffi_call() in -lffi... yes
@@ -62,4 +66,8 @@ linking shared-object ffi_c.bundle
 
 current directory: /Users/pyamap/Documents/original/sakeviva_original/vendor/bundle/ruby/2.3.0/gems/ffi-1.9.18/ext/ffi_c
 make "DESTDIR=" install
+<<<<<<< HEAD
 /usr/local/bin/ginstall -c -m 0755 ffi_c.bundle ./.gem.20170811-4171-jbbuid
+=======
+/usr/local/bin/ginstall -c -m 0755 ffi_c.bundle ./.gem.20170830-32810-1s0yxls
+>>>>>>> multi-options-admin

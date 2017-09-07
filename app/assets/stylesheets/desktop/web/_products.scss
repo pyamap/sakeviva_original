@@ -497,29 +497,18 @@
 
 /* Start CSS of admin/products/new*/
 #product_registration {
+	margin: 150px auto;
 	width: 800px;
-	height: 100%;
-	margin: auto;
-	background-color: $color-gray;
-}
+	border: solid 1px $theme-color;
 
-table.attr {
-	width: 800px;
-
-	th {
-		width: 205px;
+	h1 {
+		font-size: 24px;
+		text-align: center;
 	}
-}
 
-.file input {
-	display: none;
-}
-
-#product_registration {
-	#individual_product {
-		height: 100%;
+	#individual_item {
 		width: 800px;
-		margin: 100px auto;
+		margin: 30px auto;
 
 		label {
 			font-size: 20px;
@@ -542,6 +531,19 @@ table.attr {
 		}
 	}
 }
+
+table.attr {
+	width: 800px;
+
+	th {
+		width: 205px;
+	}
+}
+
+.file input {
+	display: none;
+}
+
 
 /* End CSS of admin/products/new*/
 

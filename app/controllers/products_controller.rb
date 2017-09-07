@@ -14,6 +14,7 @@ before_filter :current_cart
 
 	def show
 		@product=Product.find(params[:id])
+		@options=@product.options
 		@images=@product.images.all
 	end
 
@@ -24,7 +25,6 @@ before_filter :current_cart
 	def edit
 		@product=Product.find(params[:id])
 	end
-
 
 	def create
 	end
@@ -39,8 +39,10 @@ before_filter :current_cart
 		product = Product.find(params[:id])
 		@cart = find_cart
 		@quantity = params[:quantity]
-		@cart.add_product(product)
-		redirect_to_current_cart("数量を１つ増やしました")
+		@options = product.options
+		option = @options.find_by(id: params[:option_id])
+		@cart.add_product(product,option)
+		redirect_to_current_cart("数量を増やしました")
 	end
 
 	def empty_cart
@@ -67,6 +69,11 @@ before_filter :current_cart
     	@cart = find_cart
 	end
 
+	def option_value
+		render partial: 'option_value', locals: {option_id: params[:option_id]}
+	end
+
+
 	private
 
 	def find_cart
@@ -75,6 +82,7 @@ before_filter :current_cart
 		end
 		session[:cart]
 	end
+
 
 	def redirect_to_current_cart(msg)
 		flash[:notice] = msg

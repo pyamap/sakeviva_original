@@ -78,6 +78,9 @@ Rails.application.routes.draw do
   end
 
   resources :products, only: [:show] do
+    member do
+      get :option_value
+    end
   end
 
   resources :prices, only: [:show] do

@@ -1,5 +1,6 @@
 <%= stylesheet_link_tag "desktop/web/products", :media => "all" %>
 <div id="product_registration">
+	<h1>商品登録ページ</h1>
 	<%= form_for [:admin, @product] do |form| %>
 	<% if @product.errors.any? %>
 		<div id="error_explanation">
