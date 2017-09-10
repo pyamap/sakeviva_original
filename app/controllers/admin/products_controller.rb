@@ -60,11 +60,7 @@ class Admin::ProductsController < Admin::Base
 
 	private
 	def product_params
-<<<<<<< HEAD
-		params.require(:product).permit(:name,:value,:description,:image, :image_cache, :theme_tag_id, :shop_id, :price_id, :category_id, :info, :remove_image, images_attributes: [:id, :product_id, :image, :image_cache], options_attributes: [:id, :title, :price])
-=======
 		params.require(:product).permit(:name,:description,:image, :image_cache, :theme_tag_id, :type_id, :shop_id, :price_id, :category_id, :info, :remove_image, options_attributes: [:id, :title, :product_id, :value, :_destroy ], images_attributes: [:id, :product_id, :image, :image_cache])
->>>>>>> multi-options-admin
 	end
 
 end

@@ -46,28 +46,28 @@
           <div class="NewArrival__item--photo">
           <%= link_to image_tag(Product.find(31).image.url, height: 280, width: 210, alt: "商品写真"),product_path(31) %></div>
           <div class="NewArrival__item--title"><%= link_to Product.find(31).name, product_path(31) %></div>
-          <div class="NewArrival__item--price"><%= number_to_currency(Product.find(31).value) %></div>
+          <div class="NewArrival__item--price"><%= number_to_currency(Product.find(31).options.first.value) %></div>
        </li>
 
        <li class="NewArrival__item">
           <div class="NewArrival__item--photo">
           <%= link_to image_tag(Product.find(32).image.url, height: 280, width: 210, alt: "商品写真"),product_path(31) %></div>
           <div class="NewArrival__item--title"><%= link_to Product.find(32).name, product_path(32) %></div>
-          <div class="NewArrival__item--price"><%= number_to_currency(Product.find(31).value) %></div>
+          <div class="NewArrival__item--price"><%= number_to_currency(Product.find(31).options.first.value) %></div>
        </li>
 
        <li class="NewArrival__item">
           <div class="NewArrival__item--photo">
           <%= link_to image_tag(Product.find(33).image.url, height: 280, width: 210, alt: "商品写真"),product_path(31) %></div>
           <div class="NewArrival__item--title"><%= link_to Product.find(33).name, product_path(33) %></div>
-          <div class="NewArrival__item--price"><%= number_to_currency(Product.find(31).value) %></div>
+          <div class="NewArrival__item--price"><%= number_to_currency(Product.find(31).options.first.value) %></div>
        </li>
 
        <li class="NewArrival__item">
           <div class="NewArrival__item--photo">
           <%= link_to image_tag(Product.find(34).image.url, height: 280, width: 210, alt: "商品写真"),product_path(31) %></div>
           <div class="NewArrival__item--title"><%= link_to Product.find(34).name, product_path(34) %></div>
-          <div class="NewArrival__item--price"><%= number_to_currency(Product.find(31).value) %></div>
+          <div class="NewArrival__item--price"><%= number_to_currency(Product.find(31).options.first.value) %></div>
        </li>
 
      </ul>
@@ -88,7 +88,7 @@
        </div>
        <div class="Ranking__main">
          <div class="Ranking__main--title"><%= link_to Product.find(31).name, product_path(31) %>。</div>
-         <div class="Ranking__main--price"><%= number_to_currency(Product.find(31).value) %></div>
+         <div class="Ranking__main--price"><%= number_to_currency(Product.find(31).options.first.value) %></div>
        </div>
      </li>
 
@@ -99,7 +99,7 @@
        </div>
        <div class="Ranking__main">
          <div class="Ranking__main--title"><%= link_to Product.find(31).name, product_path(31) %></div>
-         <div class="Ranking__main--price"><%= number_to_currency(Product.find(31).value) %></div>
+         <div class="Ranking__main--price"><%= number_to_currency(Product.find(31).options.first.value) %></div>
        </div>
      </li>
 
@@ -110,7 +110,7 @@
        </div>
        <div class="Ranking__main">
          <div class="Ranking__main--title"><%= link_to Product.find(31).name, product_path(31) %>。</div>
-         <div class="Ranking__main--price"><%= number_to_currency(Product.find(31).value) %></div>
+         <div class="Ranking__main--price"><%= number_to_currency(Product.find(31).options.first.value) %></div>
        </div>
      </li>
 
@@ -121,7 +121,7 @@
        </div>
        <div class="Ranking__main">
          <div class="Ranking__main--title"><%= link_to Product.find(31).name, product_path(31) %>。</div>
-         <div class="Ranking__main--price"><%= number_to_currency(Product.find(31).value) %></div>
+         <div class="Ranking__main--price"><%= number_to_currency(Product.find(31).options.first.value) %></div>
        </div>
      </li>
 
@@ -132,7 +132,7 @@
        </div>
        <div class="Ranking__main">
          <div class="Ranking__main--title"><%= link_to Product.find(31).name, product_path(31) %>。</div>
-         <div class="Ranking__main--price"><%= number_to_currency(Product.find(31).value) %></div>
+         <div class="Ranking__main--price"><%= number_to_currency(Product.find(31).options.first.value) %></div>
        </div>
      </li>
 
@@ -143,7 +143,7 @@
        </div>
        <div class="Ranking__main">
          <div class="Ranking__main--title"><%= link_to Product.find(31).name, product_path(31) %>。</div>
-         <div class="Ranking__main--price"><%= number_to_currency(Product.find(31).value) %></div>
+         <div class="Ranking__main--price"><%= number_to_currency(Product.find(31).options.first.value) %></div>
        </div>
      </li>
 
@@ -155,7 +155,7 @@
        </div>
        <div class="Ranking__main">
          <div class="Ranking__main--title"><%= link_to Product.find(31).name, product_path(31) %>。</div>
-         <div class="Ranking__main--price"><%= number_to_currency(Product.find(31).value) %></div>
+         <div class="Ranking__main--price"><%= number_to_currency(Product.find(31).options.first.value) %></div>
        </div>
      </li>
 
@@ -166,7 +166,7 @@
        </div>
        <div class="Ranking__main">
          <div class="Ranking__main--title"><%= link_to Product.find(31).name, product_path(31) %>。</div>
-         <div class="Ranking__main--price"><%= number_to_currency(Product.find(31).value) %></div>
+         <div class="Ranking__main--price"><%= number_to_currency(Product.find(31).options.first.value) %></div>
        </div>
      </li>
 
@@ -177,7 +177,7 @@
        </div>
        <div class="Ranking__main">
          <div class="Ranking__main--title"><%= link_to Product.find(31).name, product_path(31) %>。</div>
-         <div class="Ranking__main--price"><%= number_to_currency(Product.find(31).value) %></div>
+         <div class="Ranking__main--price"><%= number_to_currency(Product.find(31).options.first.value) %></div>
        </div>
      </li>
     </ul>

@@ -68,14 +68,6 @@
 		</table>
 	</div>
 
-	<%= form.label :options, "商品オプション" %>
-	<%= fields_for :options do |options_form| %>
-		<%= options_form.label :title, "オプション名" %>
-		<%= options_form.text_field :title %>
-		<%= options_form.label :value, "オプション料金" %>
-		<%= options_form.number_field :value %>
-	<% end %>
-
 	<div class="field">
 	    <% if @product.image? %>
 		    <div class="thumbnail"><%= image_tag @product.image.url %></div>
