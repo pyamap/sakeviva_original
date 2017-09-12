@@ -14,7 +14,7 @@ before_filter :current_cart
 
 	def show
 		@product=Product.find(params[:id])
-		@options=@product.options
+		@options = @product.options
 		@images=@product.images.all
 	end
 

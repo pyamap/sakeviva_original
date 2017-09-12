@@ -30,7 +30,7 @@
 			</p>
 			<p>オプション</p>
 			<div class="ItemDetails__main--option">
-				<%= collection_select :option, :option_id, Option.all, :id, :title, :prompt => "オプションを選択" %>
+				<%= select :option, :option_id, @options.map{|t| [t.title, t.id]} %>
 			</div>
 
 			<div class="ItemDetails__main--option">
