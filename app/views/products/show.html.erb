@@ -28,7 +28,7 @@
 			<p class="ItemDetails__main--price">
 				<%= render partial: 'option_value', locals: {option_id: @options.first.id} %>
 			</p>
-			<p>オプション</p>
+			<p>サイズ</p>
 			<div class="ItemDetails__main--option">
 				<%= select :option, :option_id, @options.map{|t| [t.title, t.id]} %>
 			</div>
