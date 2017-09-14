@@ -26,7 +26,7 @@
 			</ul>
 			<%= form_tag('/add_to_cart', :method => :post) do %>
 			<p class="ItemDetails__main--price">
-				<%= render partial: 'option_value', locals: {option_id: Option.first.id} %>
+				<%= render partial: 'option_value', locals: {option_id: @options.first.id} %>
 			</p>
 			<p>オプション</p>
 			<div class="ItemDetails__main--option">
