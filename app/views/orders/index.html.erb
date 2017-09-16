@@ -5,7 +5,7 @@
 	<% @orders.each do |order| %>
 	<div class="order_items">
 		<section class="order_pic">
-			<%= image_tag (order.product.image.url,:size => "210x200", :alt => "商品写真") %>
+			<%= image_tag(order.product.image.url, height: 210, width: 200, :alt => "商品写真") %>
 		</section>
 		<section class="details_list">
 			<ul>
