@@ -38,10 +38,10 @@ before_filter :current_cart
 	def add_to_cart
 		product = Product.find(params[:id])
 		@cart = find_cart
-		@quantity = params[:quantity]
+		quantity = params[:quantity]
 		@options = product.options
 		option = @options.find_by(id: params[:option_id])
-		@cart.add_product(product,option)
+		@cart.add_product(product,quantity,option)
 		redirect_to_current_cart("数量を増やしました")
 	end
 

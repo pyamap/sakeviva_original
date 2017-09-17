@@ -5,13 +5,13 @@ class Cart
 		@items = []
 	end
 
-	def add_product(product,option)
+	def add_product(product,quantity,option)
 		current_item = @items.find { |item| item.product == product }
 		#@itemsの中にあるproductとadd_to_cartに代入。
 		if current_item
 			current_item.increment_quantity
 		else
-			@items << CartItem.new(product,option)
+			@items << CartItem.new(product,quantity,option)
 		end
 	end
 

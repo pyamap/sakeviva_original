@@ -78,8 +78,19 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+staging:
+  <<: *default
+  adapter: postgresql
+  encoding: utf8
+  database: sakevivastaging
+  pool: 5
+  username: pyamap
+# password:
+
+
 production:
   <<: *default
   database: sakeviva_original_production
   username: sakeviva_original
   password: <%= ENV['SAKEVIVA_ORIGINAL_DATABASE_PASSWORD'] %>
+

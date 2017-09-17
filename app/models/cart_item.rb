@@ -1,9 +1,9 @@
 class CartItem
 	attr_reader :product, :quantity, :option
 
-	def initialize (product,option)
+	def initialize (product,quantity,option)
 		@product = product
-		@quantity = 1
+		@quantity = quantity
 		@option = option
 	end
 
@@ -24,7 +24,7 @@ class CartItem
 	end
 
 	def quantity
-		@quantity
+		@quantity.to_i
 	end
 
 	def price
@@ -32,7 +32,7 @@ class CartItem
 	end 
 
 	def subtotal_price #アイテムの小計を出すメソッド
-		@option.value * @quantity
+		@option.value * @quantity.to_i
 	end
 
 	def increment_quantity #アイテムの数量を増やすメソッド

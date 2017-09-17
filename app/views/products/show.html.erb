@@ -6,9 +6,9 @@
 		<div class="ItemDetails__sub">
 			<%= image_tag @product.image.url, height: 480, width: 360, alt: "商品の写真" %>
 			<ul class="ItemDetails__sub--smallphoto">
-				<li><%= image_tag @product.image, height: 120, width: 100, alt: "準備中" %></li>
-				<li><%= image_tag @product.image, height: 120, width: 100, alt: "準備中" %></li>
-				<li><%= image_tag @product.image, height: 120, width: 100, alt: "準備中" %></li>
+				<li><%= image_tag @product.image.url, height: 120, width: 100, alt: "準備中" %></li>
+				<li><%= image_tag @product.image.url, height: 120, width: 100, alt: "準備中" %></li>
+				<li><%= image_tag @product.image.url, height: 120, width: 100, alt: "準備中" %></li>
 			</ul>
 		</div>
 		<div class="ItemDetails__main">
@@ -31,13 +31,6 @@
 			<p>サイズ</p>
 			<div class="ItemDetails__main--option">
 				<%= select :option, :option_id, @options.map{|t| [t.title, t.id]} %>
-			</div>
-
-			<div class="ItemDetails__main--option">
-				<p>オプション</p>
-				<select>
-					<option value="">この商品はオプションは選べません</option>
-				</select>
 			</div>
 			<div class="ItemDetails__main--quantity">
 				<p>個数</p>		
