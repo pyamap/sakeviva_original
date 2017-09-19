@@ -10,9 +10,10 @@
 		<% end %>
 				<li>商品情報：<%= simple_format(@product.info) %></li>
 		<li>店舗名 : <%= @product.shop.name %></li>
-		<li><%= image_tag @product.image.url, :width => '500', :height => '300' %></li>
+		<li>メインイメージ : <%= image_tag @product.image.url, :width => '500', :height => '300' %></li>
+		
 		<% @images.each do |sub_image| %>
-			<li><%= image_tag sub_image.image.url, :width => '500', :height => '300' %>
+			<li>商品サブ画像 : <%= image_tag sub_image.image.url, :width => '500', :height => '300' %></li>
 		<% end %>	
 	</ul>
 
