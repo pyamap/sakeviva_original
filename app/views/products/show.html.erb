@@ -6,9 +6,11 @@
 		<div class="ItemDetails__sub">
 			<%= image_tag @product.image.url, height: 480, width: 360, alt: "商品の写真" %>
 			<ul class="ItemDetails__sub--smallphoto">
-				<li><%= image_tag @product.image.url, height: 120, width: 100, alt: "準備中" %></li>
-				<li><%= image_tag @product.image.url, height: 120, width: 100, alt: "準備中" %></li>
-				<li><%= image_tag @product.image.url, height: 120, width: 100, alt: "準備中" %></li>
+				<% if @images.exists? %>
+					<% @images.each do |sub_image| %>
+						<li><%= image_tag sub_image.image.url, height: 120, width: 100, alt: "準備中" %></li>
+					<% end %>
+				<% end %>
 			</ul>
 		</div>
 		<div class="ItemDetails__main">

@@ -15,16 +15,19 @@ class Admin::ProductsController < Admin::Base
 
 	def new
 		@product=Product.new
-		@product.options.build
-		@image=@product.images.build
+		@product.options.build 
 		@theme_tag=@product.theme_tag
 		@category=@product.category
 		@type=@product.type
+		@image=@product.images.build #メインフォト
+		#2.times { @product.images.build } #写真を3枚アップするためのリレーションbuild
 	end
 
 	def edit
 		@product = Product.find(params[:id])
 		@product.options.build
+		@images=@product.images.all
+		@product.images.build
 	end
 
 	def create
@@ -60,7 +63,7 @@ class Admin::ProductsController < Admin::Base
 
 	private
 	def product_params
-		params.require(:product).permit(:name,:description,:image, :image_cache, :theme_tag_id, :type_id, :shop_id, :price_id, :category_id, :info, :remove_image, options_attributes: [:id, :title, :product_id, :value, :_destroy ], images_attributes: [:id, :product_id, :image, :image_cache])
+		params.require(:product).permit(:name,:description,:image, :image_cache, :theme_tag_id, :type_id, :shop_id, :price_id, :category_id, :info, :remove_image, options_attributes: [:id, :title, :product_id, :value, :_destroy ], images_attributes: [:id, :product_id, :image, :image_cache, :_destroy])
 	end
 
 end

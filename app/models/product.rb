@@ -3,9 +3,10 @@ class Product < ActiveRecord::Base
 	mount_uploader :image, ImageUploader #これはproductモデルから商品画像をあげる際に必要。
 	has_many :images
 	has_many :photos
-	accepts_nested_attributes_for :images
+	accepts_nested_attributes_for :images, allow_destroy: true
 
-	validates :value, numericality: { only_integer: true, greater_than: 0}
+	#validates :value, numericality: { only_integer: true, greater_than: 0}
+	#↑登録の際に"valueは数値にしてください"とエラーが出るので、一旦コメントアウトでworkする。
 	validates :name,:description, presence: true
 
 	belongs_to :category

@@ -3,8 +3,8 @@
 <div id="product_registration">
 	<h1>商品編集ページ</h1>
 	<%= form_for [:admin, @product] do |form| %>
-	<%= render "form", form: form %>
-	<%= form.submit %>
+		<%= render "form", form: form %>
+		<%= form.submit %>
 	<% end %>
 	<p><%= link_to "商品の詳細に戻る", [:admin, @product] %></p>
 </div>

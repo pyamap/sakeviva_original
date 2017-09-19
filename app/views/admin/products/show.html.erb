@@ -1,20 +1,5 @@
 <%= stylesheet_link_tag "desktop/web/products", :media => "all" %>
 
-<!--
-<div id="products_list">
-	<table class="products_list">
-		<tr>
-			<th>商品名</th>
-			<th>価格</th>
-			<th class="description">商品詳細</th>
-		</tr>
-		<tr>
-			<td><%= @product.name %></td>
-			<td><%= @product.price %></td>
-			<td class="description"><%= @product.description %></td>
-		</tr>
-	</table>
--->
 <div id="individual_product">
 	<ul class="product_details">
 		<li>商品名 : <%= @product.name %></li>
@@ -23,10 +8,12 @@
 			<li>オプション名 : <%= option.title %></li>
 			<li>商品価格 : <%= option.value %></li>
 		<% end %>
-		
-		<li>商品情報：<%= simple_format(@product.info) %></li>
+				<li>商品情報：<%= simple_format(@product.info) %></li>
 		<li>店舗名 : <%= @product.shop.name %></li>
 		<li><%= image_tag @product.image.url, :width => '500', :height => '300' %></li>
+		<% @images.each do |sub_image| %>
+			<li><%= image_tag sub_image.image.url, :width => '500', :height => '300' %>
+		<% end %>	
 	</ul>
 
 	<div class="products_story">
