@@ -23,14 +23,13 @@
 
 		&--smallphoto {
 			display: flex;
+			flex-wrap: wrap;
 			list-style: none;
 			padding: 0;
 
 			li {
 				margin:10px;
-				&:nth-child(-n+3) {
-					margin-left: 0;
-				}
+				
 			}
 		}
 	}

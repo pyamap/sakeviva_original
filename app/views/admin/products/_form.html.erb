@@ -91,11 +91,17 @@
 		<%= form.fields_for :images do |images_form| %>
 			<%= images_form.file_field :image %>	
 			<%= images_form.hidden_field :image_cache %>
-			<% if @images.present? %>
-						<th><%= images_form.check_box :_destroy %></th>
-						<td><%= images_form.label :_destroy, "削除" %></td>
-			<% end %>
+		
+			<% if params[:action] == "edit" %> 
+				<% @images.map do |sub_image| %>
+					<%= image_tag sub_image.image.url, :size => "150x150" %>
+				<% end %>			
+							<th><%= images_form.check_box :_destroy %></th>
+							<td><%= images_form.label :_destroy, "削除" %></td>
+			<% end %>	
 		<% end %>
+
+
 	</div>
 
 

@@ -26,7 +26,7 @@ class Admin::ProductsController < Admin::Base
 	def edit
 		@product = Product.find(params[:id])
 		@product.options.build
-		@images=@product.images.all
+		@images=@product.images
 		@product.images.build
 	end
 
