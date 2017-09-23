@@ -19,6 +19,7 @@
 @import "desktop/web/inquiry";
 @import "dropzone/dropzone";
 @import "font-awesome";
+@import 'lightbox';
 
 
 body {
@@ -117,4 +118,5 @@ a :hover{
  *
  *= require_tree .
  *= require_self
+ *= require css/lightbox
  */

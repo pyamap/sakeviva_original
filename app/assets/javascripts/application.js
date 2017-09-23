@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require dropzone
+//= require js/lightbox
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require toastr
