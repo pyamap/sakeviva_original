@@ -8,11 +8,8 @@
 			<ul class="ItemDetails__sub--smallphoto">
 				<% if @images.exists? %>
 					<% @images.each do |sub_image| %>
-
-					<%= link_to image_tag(sub_image.image.url, height: 120, width: 100), sub_image.image.url, :'data-lightbox' => sub_image.id %>
-
+						<li><%= link_to image_tag(sub_image.image.url, height: 120, width: 100), sub_image.image.url, :'data-lightbox' => sub_image.id %></li>
 					<% end %>
-
 				<% end %>
 			</ul>
 		</div>
