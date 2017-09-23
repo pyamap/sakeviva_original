@@ -35,12 +35,12 @@
 				<%= select :option, :option_id, @options.map{|t| [t.title, t.id]} %>
 			</div>
 			<div class="ItemDetails__main--quantity">
-				<p>個数</p>		
+				<p>個数</p>
 				<%= select_tag 'quantity', options_for_select([1, 2, 3, 4, 5]) %>
 			</div>
 				<%= hidden_field_tag :id, @product.id %>
-				<%= hidden_field_tag :shop_id, @product.shop_id %>			
-			<div class="middle_btn"><%= submit_tag "カートに入れる" %></div>				
+				<%= hidden_field_tag :shop_id, @product.shop_id %>
+			<div class="middle_btn"><%= submit_tag "カートに入れる" %></div>
 			<% end %>
 		</div>
 	</div>
@@ -79,7 +79,7 @@
 	    </li>
     </ul>
 	</div>
-</section>
+	</section>
 
 
 

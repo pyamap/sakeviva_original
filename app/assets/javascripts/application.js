@@ -12,11 +12,10 @@
 //
 //= require jquery
 //= require jquery.turbolinks
+//= require lightbox
 //= require dropzone
-//= require js/lightbox
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require toastr
-//= require jquery_ujs
 //= require turbolinks
 //= require_tree .
