@@ -16,6 +16,7 @@ before_filter :current_cart
 		@product=Product.find(params[:id])
 		@options = @product.options
 		@images=@product.images.all
+		@recommended_products = Product.where(category_id: @product.category_id).order("RANDOM()").limit(4)
 	end
 
 	def new
