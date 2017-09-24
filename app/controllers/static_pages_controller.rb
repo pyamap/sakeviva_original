@@ -1,12 +1,14 @@
 class StaticPagesController < ApplicationController
-	
+
 	before_filter :current_cart
 
 	def index
-    end
+		@new_products = Product.find([34,35,36,37])
+		@popular_products = Product.find([34,35,36,37,38,39,40,41,42])
+  end
 
-    def about_us
-    end
+  def about_us
+  end
 
 	def interview_tanaka_noodle
 	end

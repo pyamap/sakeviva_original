@@ -6,25 +6,25 @@ before_filter :current_cart
 	attr_accessor :product
 
 	def index
-		@products=Product.all
+		@products = Product.all
 	end
 
 	def search
 	end
 
 	def show
-		@product=Product.find(params[:id])
+		@product = Product.find(params[:id])
 		@options = @product.options
-		@images=@product.images.all
+		@images = @product.images.all
 		@recommended_products = Product.where(category_id: @product.category_id).order("RANDOM()").limit(4)
 	end
 
 	def new
-		@product=Product.new
+		@product = Product.new
 	end
 
 	def edit
-		@product=Product.find(params[:id])
+		@product = Product.find(params[:id])
 	end
 
 	def create
