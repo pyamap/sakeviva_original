@@ -1,24 +1,34 @@
 <%= stylesheet_link_tag "desktop/web/products", :media => "all" %>
+<section class="ProductDetails">
+	<dl>
+		<dt>商品名</dt>
+		<dd><%= @product.name %></dd>
 
-<div id="individual_product">
-	<ul class="product_details">
-		<li>商品名 : <%= @product.name %></li>
-		<li>商品詳細 : <%= simple_format(@product.description) %></li>
-		<% @options.each do |option| %>
-			<li>オプション名 : <%= option.title %></li>
-			<li>商品価格 : <%= option.value %></li>
-		<% end %>
-				<li>商品情報：<%= simple_format(@product.info) %></li>
-		<li>店舗名 : <%= @product.shop.name %></li>
-		<li>メインイメージ : <%= image_tag @product.image.url, :width => '500', :height => '300' %></li>
-		
-		<% @images.each do |sub_image| %>
-			<li>商品サブ画像 : <%= image_tag sub_image.image.url, :width => '500', :height => '300' %></li>
-		<% end %>	
-	</ul>
+		<dt class="ProductDetails__description">商品詳細</dt>
+		<dd class="ProductDetails__description"><%= simple_format(@product.description) %></dd>
+
+	<% @options.each do |option| %>
+		<dt>オプション名</dt>
+		<dd><%= option.title %></dd>
+		<dt>商品価格</dt>
+		<dd><%= option.value %></dd>
+	<% end %>
+
+		<dt>商品情報</dt>
+		<dd><%= simple_format(@product.info) %></dd>
+		<dt>店舗名</dt>
+		<dd><%= @product.shop.name %></dd>
+		<dt class="ProductDetails__mainimage">メインイメージ</dt>
+		<dd><%= image_tag @product.image.url, :width => '500', :height => '300' %></dd>
+
+	<% @images.each do |sub_image| %>
+		<dt class="ProductDetails__subimage">商品サブ画像</dt>
+		<dd><%= image_tag sub_image.image.url, :width => '500', :height => '300' %></dd>
+	<% end %>
+	</dl>
 
 	<div class="products_story">
 		<%= link_to "編集する", :edit_admin_product %>
 		<%= link_to "一覧に戻る", :admin_products %>
 	</div>
-</div>
+</section>

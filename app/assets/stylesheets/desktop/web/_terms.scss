@@ -1,5 +1,5 @@
 /* Start CSS for tradelaw */
-	
+
 	.TradeLaw{
 		width: 800px;
 		margin: 150px auto;
@@ -27,7 +27,7 @@
 
 			dd {
 				display: block;
-				padding: 20px 15px;		
+				padding: 20px 15px;
 				width: 75%;
 				float: left;
 
@@ -38,11 +38,11 @@
 		}
 
 		&__list:after{
-		content: "."; 
-		display: block; 
-		height: 0; 
-		font-size:0;	
-		clear: both; 
+		content: ".";
+		display: block;
+		height: 0;
+		font-size:0;
+		clear: both;
 		visibility:hidden;
 		}
 	}
@@ -78,18 +78,18 @@
 			dd {
 				color: gray;
 				display: block;
-				padding: 20px 15px;		
+				padding: 20px 15px;
 				width: 75%;
 				float: left;
 			}
 		}
 
 		&__list:after{
-		content: "."; 
-		display: block; 
-		height: 0; 
-		font-size:0;	
-		clear: both; 
+		content: ".";
+		display: block;
+		height: 0;
+		font-size:0;
+		clear: both;
 		visibility:hidden;
 		}
 	}

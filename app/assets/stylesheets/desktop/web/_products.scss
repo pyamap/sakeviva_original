@@ -468,7 +468,6 @@
 }
 
 .product_details {
-
 	width: 800px;
 
 	tr: nth-child(odd) td {
@@ -583,82 +582,55 @@ select#product_theme_tag_id {
 
 /* Start CSS of admin products/show*/
 
-#individual_product {
-	height: 100%;
+.ProductDetails {
 	width: 800px;
-	margin: 100px auto;
-}
-
-.product_details {
-	width: 800px;
+	border: solid 1px $theme-color;
+	background-color: white;
 	text-align: center;
-	background-color: $color-gray;
 	margin: 120px auto;
 	list-style-type: none;
 
-}
+			dt {
+				font-weight: bold;
+				padding: 20px 15px;
+				display: block;
+				width: 25%;
+				float: left;
+				clear: left;
+			}
 
-.products_list th.description {
-	width: 600px;
-}
+			dd {
+				display: block;
+				padding: 20px 15px;
+				width: 75%;
+				float: right;
+				clear: right;
+			}
 
-.products_list td.description {
-	width: 600px;
-}
+			&__description {
+				height: 120px;
+			}
 
-#products_story {
-	width: 800px;
-	margin: 0 auto;
-	text-align: center;
-	background-color: $color-gray;
-}
+			&__mainimage {
+				height: 340px;
+				line-height: 340px;
+			}
+
+			&__subimage {
+				height: 340px;
+				line-height: 340px;
+			}
 
 
-	p.price{
-		margin: 10px 0;
-	}
-
-	p.quantity_select {
-		text-align: center;
-		margin: 10px 0 0 0;
-
-		select#quantity{
-			-webkit-appearance:none;
-			height: 30px;
-			width: 50px;
-			background-color: white;
-			color: $color-sakura;
-			border-color: $color-sakura;
-			font-size:15px;
-			margin: auto;
-			text-align: -webkit-center;
-			padding:0 18px;
+		dl:after{
+		content: ".";
+		display: block;
+		height: 0;
+		font-size:0;
+		clear: both;
+		visibility:hidden;
 		}
-
-	}
-
-	p.purchase_btn{
-		text-align: center;
-		margin: 0;
-		height:50px;
-
-		input {
-			background-color: $color-sakura;
-			font-size: 18px;
-			color: white;
-			width: 200px;
-			height: 40px;
-			border-radius: 8px;
-			margin: 15px auto;
-			border-style:none;
-		}
-
-		input:hover {
-			background-color: white;
-			color: $color-sakura;
-			border:solid 1px $color-sakura;
-		}
-	}
+}
 
 
 /* End CSS of admin products/show*/
