@@ -8,7 +8,7 @@ class ShippingsController < ApplicationController
 		@delivery_fee_first = Shipping.find_by("shop_id = ? and prefecture_id = ?", @shop_id_first, params[:prefecture][:prefecture_id]).fee
 		else
 		@delivery_fee_first = 0
-		end 
+		end
 
 		unless unique_shop_ids[1].blank? then
 		@shop_id_second = unique_shop_ids[1]
@@ -35,8 +35,9 @@ class ShippingsController < ApplicationController
 		end
 
 		@total_shipping_fee = @delivery_fee_first + @delivery_fee_second + @delivery_fee_third + @delivery_fee_fourth
+
+		flash[:prefecture_id] = params[:prefecture][:prefecture_id] #送料を更新し、current_cartに戻した際に、prefecture_idも一緒に渡して、選んだ都道府県がselectedで選ばれた状態にしておく。
 		flash[:total_shipping_fee] = @total_shipping_fee
-			
 		redirect_to current_cart_path
 	end
 end

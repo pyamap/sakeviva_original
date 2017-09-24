@@ -11,7 +11,7 @@
 		<dt>オプション名</dt>
 		<dd><%= option.title %></dd>
 		<dt>商品価格</dt>
-		<dd><%= option.value %></dd>
+		<dd><%= number_to_currency(option.value) %></dd>
 	<% end %>
 
 		<dt>商品情報</dt>

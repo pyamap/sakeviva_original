@@ -21,7 +21,7 @@
       <li class="Cart__item--description"><%= item.description.truncate(100, separator: '。', :omission => "。....") %></li>
       <li class="Cart__item--price"><%= number_to_currency(item.price) %></li>
       <li class="Cart__item--quantity">
-        <div class="Cart__item--number"> 
+        <div class="Cart__item--number">
           <%= item.quantity %>
         </div>
         <div class="Cart__item--updown ">
@@ -36,7 +36,7 @@
       <li class="Cart__item--subtotal_price"><%= number_to_currency(item.subtotal_price) %></li>
       <%= button_to "x", :action => "delete_from_cart", :id => item.id, :method => :post %>
     </ul>
-    
+
     <% end %>
 
   <% else %>
@@ -53,9 +53,9 @@
   <div class="CheckOut__shipping">
   <%= form_tag ({controller: :shippings, action: :shipping_fee, :method => :post}) do %>
     <p>送料を計算</p>
-    <span style="font-size: 14px">都道府県</span>
+    <span style="font-size: 14px">都道府県を選択</span>
     <div class="CheckOut__shipping--select">
-      <%= collection_select :prefecture, :prefecture_id, Prefecture.all, :id, :name, :prompt => "都道府県を選択" %>
+      <%= collection_select :prefecture, :prefecture_id, Prefecture.all, :id, :name, :selected => @prefecture_id %>
     </div>
     <% for item in @cart.items %>
       <%= hidden_field_tag ":shop_id[]", item.product.shop_id %>
