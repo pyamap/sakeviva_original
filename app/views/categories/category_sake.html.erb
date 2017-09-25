@@ -1,6 +1,5 @@
 <%= stylesheet_link_tag "desktop/web/categories", :media => "all" %>
 
-
 <section class="Instruction">
   <h1>城島町の日本酒</h1>
 	<div class="Instruction__image"><%= image_tag('//res.cloudinary.com/dmfclza05/image/upload/v1501265505/categpry/category_sake.jpg', size: "900x450")%></div>
@@ -9,9 +8,19 @@
 	</div>
 </section>
 
+<div class="ProductFilter">
+  <%= form_tag(category_sake_path, method: "get") do %>
+    <%= label_tag :name, "お酒の種類" %>
+    <%= select_tag :type, options_for_select(Product.types), include_blank: true %>
+    <%= label_tag :name, "価格帯" %>
+    <%= select_tag :price, options_for_select(Product.prices), include_blank: true %>
+    <%= submit_tag "絞り込む" %>
+  <% end %>
+</div>
+
 <section class="CategoryProduct">
 	<ul class="CategoryProduct__main">
-		<% @sake_products.all.each do |item| %>	
+		<% @sake_products.all.each do |item| %>
        <li class="CategoryProduct__item">
           <div class="CategoryProduct__item--photo">
           <%= link_to image_tag(item.image.url, height: 280, width: 210, alt: "商品写真"), product_path(item.id) %></div>
@@ -19,6 +28,6 @@
           <div class="CategoryProduct__item--price"><%= number_to_currency(item.options.first.value) %></div>
        </li>
      <% end %>
-   </ul> 
+   </ul>
 	</div>
 </section>

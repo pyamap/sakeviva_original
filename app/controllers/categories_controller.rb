@@ -2,6 +2,15 @@ class CategoriesController < ApplicationController
 
 	def category_sake
 		@sake_products = Product.all.where(category_id: 1).order(:id)
+
+		if params[:type].present?
+			@sake_products = @sake_products.get_by_type params[:type]
+		end
+
+		if params[:price].present?
+			@sake_products = @sake_products.get_by_price params[:price]
+		end
+
 	end
 
 	def category_grocery
