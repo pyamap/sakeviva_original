@@ -14,6 +14,7 @@ class Product < ActiveRecord::Base
 	belongs_to :type
 	belongs_to :price
 	belongs_to :shop
+	belongs_to :brand
 	has_many :items
 	has_one :order, dependent: :destroy
 	has_many :options, dependent: :destroy

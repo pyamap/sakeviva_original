@@ -16,6 +16,8 @@
 
 		<dt>商品情報</dt>
 		<dd><%= simple_format(@product.info) %></dd>
+		<dt>ブランド名</dt>
+		<dd><%= @product.brand.name %></dd>
 		<dt>店舗名</dt>
 		<dd><%= @product.shop.name %></dd>
 		<dt class="ProductDetails__mainimage">メインイメージ</dt>

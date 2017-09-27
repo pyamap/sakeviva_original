@@ -9,15 +9,16 @@
 #p = "#{Rails.root}/db/fixtures/images/airbnb_1.png"
 #ThemeTag.create(thumbnail: File.read(p))
 
-Type.create(:type_name => '純米大吟醸')
-Type.create(:type_name => '純米吟醸')
-Type.create(:type_name => '大吟醸')
-Type.create(:type_name => '特別純米')
-Type.create(:type_name => '純米')
-Type.create(:type_name => '本醸造')
-Type.create(:type_name => '焼酎')
-Type.create(:type_name => 'その他')
 
+Option.create(:product_id => 34, :title => '720ml', :value => 3000)
+Option.create(:product_id => 35, :title => '720ml', :value => 4000,)
+Option.create(:product_id => 36, :title => '720ml', :value => 5000,)
+Option.create(:product_id => 37, :title => '720ml', :value => 000,)
+Option.create(:product_id => 38, :title => '720ml', :value => 7000,)
+Option.create(:product_id => 39, :title => '720ml', :value => 8000,)
+Option.create(:product_id => 40, :title => '720ml', :value => 10000,)
+Option.create(:product_id => 41, :title => '720ml', :value => 11000,)
+Option.create(:product_id => 41, :title => '720ml', :value => 2000,)
 
 =begin
 #北海道

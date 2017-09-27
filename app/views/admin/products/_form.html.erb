@@ -60,6 +60,11 @@
 			<%= form.collection_select :category_id, Category.all, :id, :name %>
 		</table>
 
+		<table class="brand_tag_list">
+			<%= form.label :brand %>
+			<%= form.collection_select :brand_id, Brand.all, :id, :name %>
+		</table>
+
 		<table class="shop_list">
 			<%= form.label :shop_id %>
 			<%= form.collection_select :shop_id, Shop.all, :id, :name %>
@@ -75,7 +80,7 @@
 		    <p><%= form.file_field :image%>商品メイン画像</p>
 		    <%= form.hidden_field :image_cache %>
 			</label>
-    <% end %>	    
+    <% end %>
 		<%= form.hidden_field :image_cache %>
 		<%= form.file_field :image %>
 	</div>
@@ -89,16 +94,16 @@
 	<div class="SubImage">
 		<%= form.label :images, "商品サブ画像" %>
 		<%= form.fields_for :images do |images_form| %>
-			<%= images_form.file_field :image %>	
+			<%= images_form.file_field :image %>
 			<%= images_form.hidden_field :image_cache %>
-		
-			<% if params[:action] == "edit" %> 
+
+			<% if params[:action] == "edit" %>
 				<% @images.map do |sub_image| %>
 					<%= image_tag sub_image.image.url, :size => "150x150" %>
-				<% end %>			
+				<% end %>
 							<th><%= images_form.check_box :_destroy %></th>
 							<td><%= images_form.label :_destroy, "削除" %></td>
-			<% end %>	
+			<% end %>
 		<% end %>
 
 

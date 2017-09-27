@@ -15,7 +15,7 @@ class Admin::ProductsController < Admin::Base
 
 	def new
 		@product=Product.new
-		@product.options.build 
+		@product.options.build
 		@theme_tag=@product.theme_tag
 		@category=@product.category
 		@type=@product.type
@@ -46,7 +46,7 @@ class Admin::ProductsController < Admin::Base
 
 	def update
 		@product = Product.find(params[:id])
-		@product.update(product_params)		
+		@product.update(product_params)
 		redirect_to action: "show", notice: "情報を更新しました"
 	end
 
@@ -63,7 +63,7 @@ class Admin::ProductsController < Admin::Base
 
 	private
 	def product_params
-		params.require(:product).permit(:name,:description,:image, :image_cache, :theme_tag_id, :type_id, :shop_id, :price_id, :category_id, :info, :remove_image, options_attributes: [:id, :title, :product_id, :value, :_destroy ], images_attributes: [:id, :product_id, :image, :image_cache, :_destroy])
+		params.require(:product).permit(:name,:description,:image, :image_cache, :theme_tag_id, :type_id, :shop_id, :price_id, :category_id, :brand_id, :info, :remove_image, options_attributes: [:id, :title, :product_id, :value, :_destroy ], images_attributes: [:id, :product_id, :image, :image_cache, :_destroy])
 	end
 
 end
