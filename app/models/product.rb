@@ -25,5 +25,8 @@ class Product < ActiveRecord::Base
 
 	enum price: { "〜5000円": 1, "5000円〜10000円": 2, "10000円〜": 3 }
 	scope :get_by_price, ->(price) {where(price: price)}
+
+	enum brand: { "花の露": 1,"比翼鶴": 2,"有薫": 3,"旭菊": 4,"池亀": 5,"杜の蔵": 6,"城島の酒": 7,"萬年亀": 8,"筑紫の誉": 9,}
+	scope :get_by_brand, ->(brand) {where(brand: brand)}
 end
 

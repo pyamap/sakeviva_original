@@ -11,6 +11,10 @@ class CategoriesController < ApplicationController
 			@sake_products = @sake_products.get_by_price params[:price]
 		end
 
+		if params[:brand].present?
+			@sake_products = @sake_products.get_by_brand params[:brand]
+		end
+
 	end
 
 	def category_grocery

@@ -1,3 +1,3 @@
 class Brand < ActiveRecord::Base
-  has_one :product, dependent: :destroy
+  has_many :products, dependent: :destroy
 end
