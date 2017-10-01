@@ -14,7 +14,7 @@ class CategoriesController < ApplicationController
 		if params[:brand].present?
 			@sake_products = @sake_products.get_by_brand params[:brand]
 		end
-
+		#PGadminにbrandテーブルと中身を足す必要あり。=>カラム追加完了したので、中身を足す。
 	end
 
 	def category_grocery

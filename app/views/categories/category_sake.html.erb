@@ -10,13 +10,23 @@
 
 <div class="ProductFilter">
   <%= form_tag(category_sake_path, method: "get") do %>
-    <%= label_tag :name, "お酒の種類" %>
-    <%= select_tag :type, options_for_select(Product.types), include_blank: true %>
-    <%= label_tag :name, "価格帯" %>
-    <%= select_tag :price, options_for_select(Product.prices), include_blank: true %>
-    <%= label_tag :name, "ブランド名" %>
-    <%= select_tag :brand, options_for_select(Product.brands), include_blank: true %>
-    <%= submit_tag "絞り込む" %>
+    <div class="ProductFilter__category">
+      <%= label_tag :name, "日本酒の種類", :class => 'ProductFilter__name' %>
+      <div class="select-wrap"><%= select_tag :type, options_for_select(Product.types), include_blank: true %></div>
+    </div>
+
+    <div class="ProductFilter__category">
+      <%= label_tag :name, "価格帯", :class => 'ProductFilter__name' %>
+      <div class="select-wrap"><%= select_tag :price, options_for_select(Product.prices), include_blank: true %></div>
+    </div>
+
+    <div class="ProductFilter__category">
+      <%= label_tag :name, "ブランド名", :class => 'ProductFilter__name' %>
+      <div class="select-wrap"><%= select_tag :brand, options_for_select(Product.brands), include_blank: true %></div>
+    </div>
+    <div class="filter_button">
+      <%= submit_tag "絞り込む" %>
+    </div>
   <% end %>
 </div>
 
