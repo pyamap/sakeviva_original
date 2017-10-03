@@ -84,18 +84,29 @@ ul.side_bar_price_list {
      display: flex;
      list-style-type: none;
      height: 70px;
-     width: 840px;
-     margin: 0;
-     padding-right: 15%;
+     width: 900px;
+     margin-left: 200px;
+
+      li.nav2 {
+          width: 110px;
+          text-align: center;
+        }
+
+      li.nav3 {
+          width: 100px;
+          text-align: center;
+        }
 
       li{
         margin: 0 10px;
+        width: 80px;
         line-height: 70px;
         color: #FFFFFF;
+        text-align: center;
 
-        a {
-          color: white;
-        }
+          a {
+            color: white;
+          }
       }
 
     }

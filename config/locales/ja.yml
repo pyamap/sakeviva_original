@@ -16,7 +16,7 @@ ja:
     description: 商品詳細
     overview_one: ストーリー1
     overview_two: ストーリー2
-    postalcode: 郵便場号
+    postalcode: 郵便番号
     address: 住所
     recipient: 受取人名
     tel: 電話番号
@@ -214,4 +214,4 @@ ja:
       long: "%Y年%m月%d日(%a) %H時%M分%S秒 %z"
       short: "%y/%m/%d %H:%M"
     pm: 午後
-  
+
