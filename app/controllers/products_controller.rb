@@ -39,7 +39,7 @@ before_filter :current_cart
 	def add_to_cart
 		product = Product.find(params[:id])
 		@cart = find_cart
-		quantity = params[:quantity]
+		quantity = params[:quantity].to_i
 		@options = product.options
 		option = @options.find_by(id: params[:option_id])
 		@cart.add_product(product,quantity,option)
