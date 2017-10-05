@@ -3,7 +3,7 @@ class CartItem
 
 	def initialize (product,quantity,option)
 		@product = product
-		@quantity = quantity
+		@quantity = quantity.to_i
 		@option = option
 	end
 
@@ -36,10 +36,10 @@ class CartItem
 	end
 
 	def increment_quantity #アイテムの数量を増やすメソッド
-		@quantity += 1
+		@quantity = @quantity.to_i + 1
 	end
 
 	def decrement_quantity #アイテムの数量を減らすメソッド
-		@quantity -= 1
+		@quantity = @quantity.to_i - 1
 	end
 end
