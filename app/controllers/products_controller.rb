@@ -66,7 +66,8 @@ before_filter :current_cart
 	end
 
 	def current_cart
-		@prefecture_id = flash[:prefecture_id]#shipping controllerからtotal_shipping_feeを受け取って、更新後も選択できる状態にしておく。
+		@prefecture_id = flash[:prefecture_id]
+	  #shipping controllerからtotal_shipping_feeを受け取って、更新後も選択できる状態にしておく。
 		@total_shipping_fee = flash[:total_shipping_fee]
 		#shipping controllerからtotal_shipping_feeを受け取って、更新後も選択できる状態にしておく。
     @cart = find_cart

@@ -16,10 +16,10 @@
         <tr><td>郵便番号 :</td><td style="text-align: center"><%=  @current_address.postalcode %></td></tr>
         <tr><td>郵送先住所 :</td><td style="text-align: center"><%=  Prefecture.find(@current_address.prefecture_id).name %>県<%= @current_address.address %></td></tr>
         <tr><td>電話番号 :</td><td style="text-align: center"><%=  @current_address.tel %></td></tr>
-      </table>  
+      </table>
   </section>
-  <div class="total_shipping_fee">送料 : <%=  number_to_currency(params[:total_shipping_fee]) %></div>
-  <div class="total_price">お支払合計金額 : <%=  number_to_currency(params[:total_price]) %></div>
+  <div class="total_shipping_fee">送料 : <%=  number_to_currency(@total_price) %></div>
+  <div class="total_price">お支払合計金額 : <%=  number_to_currency(@total_shipping_fee) %></div>
 
   <div class="payjp-button">お支払い
 <%= form_tag(action: :pay, method: :post) do %>
@@ -27,14 +27,14 @@
    <%= hidden_field_tag :total_price, params[:total_price] %>
    <%= hidden_field_tag :total_shipping_fee, params[:total_shipping_fee]%>
    <%= hidden_field_tag :current_user, current_user.id %>
-   
+
    <% @cart.items.each do |item| %>
      <%= hidden_field_tag "items[][item_id]", item.id %>
      <%= hidden_field_tag "items[][item_quantity]", item.quantity %>
    <% end %>
 
 <% end %>
-  
+
   </div>
 </div>
 

@@ -3,6 +3,8 @@ class AddressesController < ApplicationController
 before_action :current_cart, :authenticate_user!
 
 	def index
+		session[:total_shipping_fee] = params[:total_shipping_fee]
+		session[:total_price] = params[:total_price]
 		@current_addresses=current_user.addresses
 		if @current_addresses.empty?
 			redirect_to :action => "new"
@@ -28,7 +30,7 @@ before_action :current_cart, :authenticate_user!
 		@address.user=current_user
 		current_user.addresses.where.not(id: params[:id]).update_all(default_address: false)
 		@address.update_attribute(:default_address, true)
-		if @address.save
+		if @address.save(valildate: true)
 			redirect_to controller: 'payjp', :action => 'index',:address => @address.id, :total_price => params[:total_price]
 		else
 			render "new"

@@ -7,6 +7,8 @@ class PayjpController < ApplicationController
 
 	def index
 		@current_address = Address.find(params[:address])
+		@total_price = session[:total_price]
+		@total_shipping_fee = session[:total_shipping_fee]
 		#@quantity = params[:quantity]
 		#@total_price = "#{@order.product.value*@quantity.to_i}"
 	end
