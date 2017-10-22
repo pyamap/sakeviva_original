@@ -5,6 +5,7 @@ a.nav-toggle {
   position: absolute;
   margin: 30px 0 0 30px;
   color: gray;
+  color: white;
 }
 
 a.nav-toggle.active {

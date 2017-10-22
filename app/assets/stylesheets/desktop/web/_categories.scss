@@ -64,10 +64,10 @@
 	}
 
 	&__image {
-		margin: 0 20px 30px;
-		text-align: center;
 		.pc { display: block !important;}
 		.sp { display: none !important;}
+		margin: 0 20px 30px;
+		text-align: center;
 
 		img.pc {
 			margin: auto;
@@ -76,6 +76,7 @@
 		@include mq-sp {
 			.pc { display: none !important; }
 			.sp { display: block !important; }
+			margin: 0 20px 15px;
 
 			img.sp {
 				width: 100%;
@@ -91,6 +92,7 @@
 		@include mq-sp {
 			width: 100%;
 			padding: 10px;
+			font-size: 14px;
 		}
 	}
 }

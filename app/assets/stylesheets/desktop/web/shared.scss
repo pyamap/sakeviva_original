@@ -45,7 +45,6 @@ ul.side_bar_price_list {
   &__account.PcMenu { display: block !important;}
   &__account.SpMenu { display: none !important;}
 
-
   &__account {
     height: 30px;
 
@@ -123,10 +122,30 @@ ul.side_bar_price_list {
       }
     }
   }
+
     @include mq-sp {//スマホメニューのスタイルここから
        &__account.PcMenu { display: none !important;}
        &__account.SpMenu { display: block !important;}
 
+       &__account.SpMenu {
+          background-color: $theme-color;
+          height: 40px;
+          text-align: center;
+
+          img {
+            margin: 2px auto;
+          }
+
+          a.nav-toggle {
+            position: absolute;
+            margin: 0 0 0 -130px;
+          }
+
+            a.nav-toggle.active {
+            position: absolute;
+            margin: 160 0 0 -160px;
+          }
+       }
     }//スマホメニューのスタイルここまで
 
 }

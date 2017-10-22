@@ -1,58 +1,105 @@
 <%= stylesheet_link_tag "desktop/web/shared", :media => "all" %>
+<% unless current_page?(root_url) %>
+	<header class="Header__account SpMenu">
+	    <nav class="nav-collapse">
+      <ul>
+       <!-- user_signed_in? はユーザがログインしているか調べるdeviseのHelperメソッド -->
+        <% if user_signed_in? %>
+          <!-- current_user は現在ログインしているUserオブジェクトを返すdeviseのHelperメソッド -->
+          <!-- *_path はUserモデルを作成したときに、
+            deviseにより自動で作成されてますので、rake routesで確認できます -->
+          <li>
+            <% if current_user.provider %>
+            <!-- facebookログインしているとき -->
+              <ul class="logininfo">
+                <li>
+                  <%= image_tag current_user.image, class: "img-circle profile-0" %>
+                  <%= link_to current_user.name, edit_user_registration_path %></p>
+                </li>
+              </ul>
+            <% else %>
+              <ul>
+            <!-- 通常ログインのとき -->
+                <li><%= link_to current_user.name, edit_user_registration_path %></li>
+              </ul>
+            <% end %>
+            <ul>
+              <li><%= link_to '注文履歴', user_orders_path, class: "Menu__item"%></li>
+              <li><%= link_to 'プロフィール変更', edit_user_registration_path, class: "Menu__item" %></li>
+              <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "Menu__item" %></li>
+            </ul>
+         </li>
+        <% else %>
+         <li>
+           <ul>
+             <li><%= link_to "サインアップ", new_user_registration_path, class: "Menu__item" %></li>
+             <li><%= link_to "ログイン", new_user_session_path, class: "Menu__item" %></li>
+           </ul>
+         </li>
+        <% end %>
+        <li class="nav1"><%= link_to "トップ", root_path %></li>
+        <li class="nav2"><%= link_to "城島町について", about_us_path %></li>
+        <li class="nav3"><%= link_to "お問い合わせ", inquiry_path%></li>
+        <li class="nav5"><%= link_to "出品者紹介", "#" %></li>
+      </ul>
+    </nav>
 
-<header class="Header__account PcMenu">
-	<ul class="Header__account--menu">
-		<ul id="Menu" class="dropmenu">
-		    <!-- user_signed_in? はユーザがログインしているか調べるdeviseのHelperメソッド -->
-		      <% if user_signed_in? %>
-		      <!-- current_user は現在ログインしているUserオブジェクトを返すdeviseのHelperメソッド -->
-		      <!-- *_path はUserモデルを作成したときに、
-		        deviseにより自動で作成されてますので、rake routesで確認できます -->
-		      <li>
-		      	<% if current_user.provider %>
-		      	<!-- facebookログインしているとき -->
-		      		<%= image_tag current_user.image, class: "img-circle profile-0" %>
-		      		<%= current_user.name %>
-		      	<% else %>
-		      	<!-- 通常ログインのとき -->
-		      		<%= current_user.name %>
-		      	<% end %>
-		      	<ul>
-			      	<li><%= link_to '注文履歴', user_orders_path, class: "Menu__item"%></li>
-				    	<li><%= link_to 'プロフィール変更', edit_user_registration_path, class: "Menu__item" %></li>
-				     	<li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "Menu__item" %></li>
-			    	</ul>
-			   </li>
-		    <% else %>
-		     <li>サインアップ
-		       <ul>
-		  	     <li><%= link_to "サインアップ", new_user_registration_path, class: "Menu__item" %></li>
-		  	     <li><%= link_to "ログイン", new_user_session_path, class: "Menu__item" %></li>
-		       </ul>
-		     </li>
-		    <% end %>
+			<%= link_to image_tag('//res.cloudinary.com/dmfclza05/image/upload/v1498882875/top/logo.png', size: '70x34'), root_path %>
+	</header>
+<% end %>
+	<header class="Header__account PcMenu">
+		<ul class="Header__account--menu">
+			<ul id="Menu" class="dropmenu">
+			    <!-- user_signed_in? はユーザがログインしているか調べるdeviseのHelperメソッド -->
+			      <% if user_signed_in? %>
+			      <!-- current_user は現在ログインしているUserオブジェクトを返すdeviseのHelperメソッド -->
+			      <!-- *_path はUserモデルを作成したときに、
+			        deviseにより自動で作成されてますので、rake routesで確認できます -->
+			      <li>
+			      	<% if current_user.provider %>
+			      	<!-- facebookログインしているとき -->
+			      		<%= image_tag current_user.image, class: "img-circle profile-0" %>
+			      		<%= current_user.name %>
+			      	<% else %>
+			      	<!-- 通常ログインのとき -->
+			      		<%= current_user.name %>
+			      	<% end %>
+			      	<ul>
+				      	<li><%= link_to '注文履歴', user_orders_path, class: "Menu__item"%></li>
+					    	<li><%= link_to 'プロフィール変更', edit_user_registration_path, class: "Menu__item" %></li>
+					     	<li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "Menu__item" %></li>
+				    	</ul>
+				   </li>
+			    <% else %>
+			     <li>サインアップ
+			       <ul>
+			  	     <li><%= link_to "サインアップ", new_user_registration_path, class: "Menu__item" %></li>
+			  	     <li><%= link_to "ログイン", new_user_session_path, class: "Menu__item" %></li>
+			       </ul>
+			     </li>
+			    <% end %>
+			</ul>
+			<ul class="Header__account--cart">
+				<li><%= fa_icon("shopping-cart 2x")%></li>
+				<% unless @cart.blank? %>
+			   	<li>(<%= link_to_unless_current "#{@cart.items.inject(0) {|sum, product| sum + product.quantity}}", current_cart_path %>)</li>
+				<% end %>
+				</ul>
 		</ul>
-		<ul class="Header__account--cart">
-			<li><%= fa_icon("shopping-cart 2x")%></li>
-			<% unless @cart.blank? %>
-		   	<li>(<%= link_to_unless_current "#{@cart.items.inject(0) {|sum, product| sum + product.quantity}}", current_cart_path %>)</li>
-			<% end %>
-			</ul>
-	</ul>
-		<div class="Header__main">
-			<div class=Header__main--logo>
-				<%= link_to image_tag("pc/top/logo.png", size:"80x45", alt: "logo image of sakeviva"), root_path %>
+			<div class="Header__main">
+				<div class=Header__main--logo>
+					<%= link_to image_tag("pc/top/logo.png", size:"80x45", alt: "logo image of sakeviva"), root_path %>
+				</div>
+				<ul class="Header__main--menu">
+						<li class="nav1"><%= link_to "トップ", root_path %></li>
+						<li class="nav2"><%= link_to "城島町について", about_us_path %></li>
+						<li class="nav3"><%= link_to "お問い合わせ", inquiry_path%></li>
+						<li class="nav4">マイページ</li>
+						<li class="nav5">出品者紹介</li>
+				</ul>
 			</div>
-			<ul class="Header__main--menu">
-					<li class="nav1"><%= link_to "トップ", root_path %></li>
-					<li class="nav2"><%= link_to "城島町について", about_us_path %></li>
-					<li class="nav3"><%= link_to "お問い合わせ", inquiry_path%></li>
-					<li class="nav4">マイページ</li>
-					<li class="nav5">出品者紹介</li>
-			</ul>
 		</div>
-	</div>
-</header>
+	</header>
 
 
 
