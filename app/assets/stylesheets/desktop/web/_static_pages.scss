@@ -10,12 +10,16 @@
 }
 
 .Intro{
-	margin: 50px 0 210px;
+	margin: 70px 0 210px;
 	width: 1080px;
 
 	@include mq-sp {
 		width: 100%;
 		margin: 0px;
+	}
+
+ 	@include mq-pc {
+		.nav-collapse{ display: none !important; }
 	}
 
 	&__main {
@@ -378,7 +382,7 @@
 			}
 			.fa {
 				position: absolute;
-				margin: 7% 85%;
+				margin: 7% -7%;
 				font-size: 24px;
 			}
 	  }

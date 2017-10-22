@@ -47,22 +47,51 @@
 }
 
 .Instruction {
+		@include mq-sp {
+			width: 100%;
+		}
 
 	h1 {
 		font-size: 22px;
 		margin: 120px auto 20px;
 		text-align: center;
+		color: $theme-color;
+
+		@include mq-sp {
+			margin: 20px auto;
+			font-size: 24px;
+		}
 	}
 
 	&__image {
-		margin: 0 auto 30px;
+		margin: 0 20px 30px;
 		text-align: center;
+		.pc { display: block !important;}
+		.sp { display: none !important;}
+
+		img.pc {
+			margin: auto;
+		}
+
+		@include mq-sp {
+			.pc { display: none !important; }
+			.sp { display: block !important; }
+
+			img.sp {
+				width: 100%;
+			}
+		}
 	}
 
 	&__description {
 		width: 850px;
 		margin: auto;
 		font-size: 18px;
+
+		@include mq-sp {
+			width: 100%;
+			padding: 10px;
+		}
 	}
 }
 
