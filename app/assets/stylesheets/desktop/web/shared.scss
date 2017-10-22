@@ -137,13 +137,15 @@ ul.side_bar_price_list {
           }
 
           a.nav-toggle {
+            display: block;
             position: absolute;
-            margin: 0 0 0 -130px;
+            margin: 0 0 0 30px;
           }
 
             a.nav-toggle.active {
+            display: block;
             position: absolute;
-            margin: 160 0 0 -160px;
+            margin: 160px 0 0 30px;
           }
        }
     }//スマホメニューのスタイルここまで
