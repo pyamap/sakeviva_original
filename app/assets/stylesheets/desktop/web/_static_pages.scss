@@ -178,6 +178,11 @@
 	width: 100%;
 	margin: auto;
 
+	i.fa {//PCの際の表示は消す。
+		@include mq-pc {
+			display: none;
+		}
+	}
 
 	&__head {
 		display: block;
@@ -249,7 +254,7 @@
 		}
 
 		&--title {
-			margin: auto;
+			margin: auto 10px;
 			height: 40px;
 
 			@include mq-sp {
@@ -262,7 +267,7 @@
 
 		.fa {
 			position: absolute;
-			margin: -50px 21%;
+			margin: -13px 25%;
 			font-size: 24px;
 		}
 	}
@@ -373,7 +378,7 @@
 
 				.fa {
 				position: absolute;
-				margin: 30px 52%;
+				margin: 10% 52%;
 				font-size: 24px;
 				}
 			}
