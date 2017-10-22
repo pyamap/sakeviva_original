@@ -2,92 +2,192 @@
 
 #jojima-top {
 	width: 1080px;
-	margin: auto;
+	margin: -20px auto 0;
+
+	@include mq-sp {
+		width: 100%;
+	}
 }
 
 .Intro{
 	margin: 50px 0 210px;
 	width: 1080px;
 
-	&__main {
-		background-image: url("http://res.cloudinary.com/dmfclza05/image/upload/v1498882879/top/top_main.jpg");
-		background-size: 100% 100%;
+	@include mq-sp {
 		width: 100%;
-		height: 600px;
+		margin: 0px;
+	}
 
-		&--logo {
+	&__main {
+
+		#wrapper.SpMenu__wrapper {
+			border-style: none;
+		}
+
+			background-image: url("http://res.cloudinary.com/dmfclza05/image/upload/v1498882879/top/top_main.jpg");
+			background-size: 100% 100%;
+			width: 100%;
+			height: 600px;
 			text-align: center;
 			padding-top: 110px;
-		}
-	}
+
+			@include mq-sp {
+				background-image: url("http://res.cloudinary.com/dmfclza05/image/upload/v1498882879/top/top_main.jpg");
+				width: 100%;
+				height: 300px;
+				margin-top: -20px;
+				background-size: cover;
+				background-repeat: no-repeat;
+				border-radius: 0 0 40% 25%;
+			}
+
+			img {
+				@include mq-sp {
+					margin-top: -100px !important;
+					z-index: 1;
+				}
+			}
+
+			a.nav-toggle {
+				color: yellow;
+			}
+  }
 
 	&__sub {
 		height: 100%;
-		margin: 0 160px;
-		padding: 310px 0 0;
+		margin: -90px 160px;
+		padding: 0;
+
+		@include mq-sp {
+			width: 100%;
+			margin: 10px 0;
+		}
 
 		.Category {
-			&__menu {
-				list-style: none;
-				display: flex;
-				justify-content: space-around;
-				padding: 0;
-				margin:10px auto;
-				background-color: white;
-			}
+				&__menu {
+					list-style: none;
+					display: flex;
+					justify-content: space-around;
+					padding: 0;
+					margin: 10px auto;
+					background-color: white;
+
+						@include mq-sp {
+						width: 100%;
+						list-style: none;
+						display: flex;
+						flex-direction: column;
+
+				}
+		  }
 
 			&__item {
 				border: 1px solid #72C1C8;
-				height: 210px;
-				width: 250px;
-				margin: 15px 15px;
+				height: 220px;
+				width: 100%;
+				margin: 15px;
+
+					@include mq-sp {
+						height: 90px;
+						width: 90%;
+						margin: 10px auto;
+						border: none;
+						border-radius: 10px;
+						background-image: linear-gradient(-90deg, #E0A500, #FFFFFF);
+						opacity: 0.9;
+					}
 
 				&:nth-child(even) {
 					margin-left: 0;
+
+					@include mq-sp {
+						margin: 10px auto;
+					}
 				}
 
 				&:nth-child(2) {
 					margin-right: 0;
+
+   				@include mq-sp {
+						margin: 10px auto;
+					}
 				}
 			}
 
 			&__picture {
 				margin: 5px;
+				.pc { display: block !important; }
+				.sp { display: none !important; }
+
+				@include mq-sp {
+					.pc { display: none !important; }
+					.sp { display: block !important; }
+					width: 30%;
+					float: left;
+					margin: 0;
+				}
+
+				img.sp {
+					@include mq-sp {
+						border-radius: 10px;
+					}
+				}
 			}
 
-			&__title {
+			&__text {
 				text-align: center;
-				margin: 10px auto 5px;
-			}
-
-			&__subtitle {
+				float: right;
+				width: 100%;
 				text-align: center;
+				margin: 0 auto;
 
+				@include mq-sp {
+					width: 70%;
+					margin: 10px auto;
+				}
+
+				a {
+					@include mq-sp {
+						color: white;
+					}
+				}
+
+				&--title {
+					margin: 10px auto 5px;
+				}
 			}
 		}
-	}
-
-	&__news {
+ }
+ 	&__news {
 		text-align: center;
 		border: solid 1px #72C1C8;
 		height: 80px;
 		margin: 200px 200px 80px;
 		line-height: 80px;
+
+		@include mq-sp {
+			width: 90%;
+			margin: 20px auto;
+			border-radius: 10px;
+		}
 	}
-
 }
-
 
 .NewArrival {
 
 	width: 100%;
 	margin: auto;
 
+
 	&__head {
 		display: block;
 		text-align: center;
 		padding: 20px 0 10px;
 		margin: 0;
+
+		@include mq-sp{
+			font-size: 22px;
+		}
 	}
 
 	&__text {
@@ -101,26 +201,71 @@
 		justify-content: space-around;
 		margin: 20px 200px;
 		padding: 0;
+
+
+		@include mq-sp {
+			width: 100%;
+			margin: 20px 0;
+			flex-direction: column;
+		}
 	}
 
 	&__item {
 		text-align: center;
 		margin: 30px;
 
+		@include mq-sp {
+			border-bottom: 1px solid gray;
+			margin: 0 15px;
+			padding-bottom: 15px;
+		}
+
 		&:nth-child(even) {
 			margin-left: 0;
-		}
+
+			@include mq-sp {
+				margin: 15px;
+			}
+	}
 
 		&:nth-child(2) {
 			margin-right: 0;
+
+			@include mq-sp{
+				margin: 15px;
+			}
+		}
+
+		&--picture {
+			.pc { display: block !important;}
+			.sp {	display: none !important;}
+
+			@include mq-sp {
+				width: 30%;
+				float: left;
+				.pc { display: none !important;}
+				.sp { display: block !important;}
+			}
 		}
 
 		&--title {
 			margin: auto;
 			height: 40px;
+
+			@include mq-sp {
+				width: 70%;
+				float: right;
+				line-height: 40px;
+				margin: 10px 0;
+			}
+		}
+
+		.fa {
+			position: absolute;
+			margin: -50px 25%;
+			font-size: 24px;
 		}
 	}
-
 }
 
 
@@ -141,8 +286,12 @@
 		font-size: 16px;
 	}
 
+	&__all_pc { display: flex !important;}
+	&__all_sp {	display: none !important;}
+	//注目の商品を16こと4こでhtmlで分けて、PC用に16このほうを表示する。
 
-	&__all {
+
+	&__all_pc{
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
@@ -174,12 +323,57 @@
 		}
 	}
 
+		@include mq-sp {
+			&__all_pc { display: none !important;}
+			&__all_sp {	display: block !important;}
+			//注目の商品を16こと4こでhtmlで分けて、PC用に4このほうを表示する。
+
+			&__all_sp{
+				padding: 0;
+			}
+				&__item {
+						margin: 0;
+						padding: 15px 0;
+						width: 100%;
+						border-bottom: 1px solid gray;
+						background-color: white;
+
+					.fa {
+							position: absolute;
+							margin: 30px 90%;
+							font-size: 24px;
+						}
+				}
+					&__main {
+						width: 70%;
+						float: right;
+
+							&--title {
+								text-align: center;
+								line-height: 40px;
+								margin: 10px 0;
+							}
+
+							&--price {
+								text-align: center;
+								margin: 0 10px;
+							}
+						}
+	  }
 
 }
 
 
 .JojimaMap {
 	margin: 100px 30px 50px;
+	.pc { display: block !important;}
+	.sp { display: none !important;}
+
+	@include mq-sp {
+		margin: 30px 10px;
+		.pc { display: none !important;}
+		.sp { display: block !important;}
+	}
 
 	img {
 		width: 100%;
@@ -188,85 +382,118 @@
 	}
 }
 
+section {
 
-.Interview {
-	width: 100%;
-	margin: auto;
+	.InterviewPC { display: block !important;}
+	.InterviewSP { display: none !important;}
+	//PC表示のときのインタビューCSS↓
 
-	&__head {
-		display: block;
-		text-align: center;
-		padding: 20px 0 10px;
-		margin: 0;
-	}
-
-	&__text {
-		text-align: center;
-		font-size: 16px;
-	}
-
-	&__section {
-		display: flex;
-		width: 1050px;
+	.InterviewPC {
+		width: 100%;
 		margin: auto;
+
+		&__head {
+			display: block;
+			text-align: center;
+			padding: 20px 0 10px;
+			margin: 0;
+
+			@include mq-sp {
+				font-size: 20px;
+			}
+		}
+
+		&__text {
+			text-align: center;
+			font-size: 16px;
+
+			@include mq-sp {
+				text-align: left;
+				font-size: 14px;
+				margin: 5px 30px;
+			}
+		}
+
+		&__section {
+			display: flex;
+			width: 1050px;
+			margin: auto;
+		}
+
+		&__item {
+			display: flex;
+			margin: 15px;
+			height: 300px;
+			width: 370px;
+		}
+
+
+		&__sub {
+
+			&--photo {
+				margin: 20px 0 0 10px;
+			}
+		}
+
+		&__main {
+			width: 110px;
+			display: flex;
+			flex-direction: column;
+			margin: 0 15px;
+
+			&--id {
+				margin: 26px 10px;
+				text-align: center;
+				font-size: 26px;
+			}
+
+			&--companyname {
+				text-align: center;
+				font-size: 20px;
+			}
+
+			&--name {
+				text-align: center;
+				font-size: 18px;
+			}
+
+			&--summary {
+				margin: 10px 10px;
+				font-size: 12px;
+			}
+
+			&--btn {
+				text-align: center;
+				margin-top: 20px;
+
+					a {
+						color: $theme-color;
+					}
+			}
+		}
 	}
 
-	&__item {
-		display: flex;
-		margin: 15px;
-		height: 300px;
-		width: 370px;
+	@include mq-sp {
+	.InterviewPC { display: none !important;}
+	.InterviewSP { display: block !important;}
+
+	.InterviewSP {
+
+		&__photo {
+			list-style-type: none;
+			width: 100%;
+			margin: 10px 0;
+			padding: 0;
+
+			.sp-image {
+				width: 100%;
+				padding: 5px 10px;
+			}
+			}
 	}
-
-
-	&__sub {
-
-		&--photo {
-			margin: 20px 0 0 10px;
-		}
+	//SP表示のときのインタビューCSS
 	}
-
-	&__main {
-		width: 110px;
-		display: flex;
-		flex-direction: column;
-		margin: 0 15px;
-
-		&--id {
-			margin: 26px 10px;
-			text-align: center;
-			font-size: 26px;
-		}
-
-		&--companyname {
-			text-align: center;
-			font-size: 20px;
-		}
-
-		&--name {
-			text-align: center;
-			font-size: 18px;
-		}
-
-		&--summary {
-			margin: 10px 10px;
-			font-size: 12px;
-		}
-
-		&--btn {
-			text-align: center;
-			margin-top: 20px;
-
-				a {
-					color: $theme-color;
-				}
-		}
-
-
-	}
-
 }
-
 
 .AboutUs{
 	width: 100%;

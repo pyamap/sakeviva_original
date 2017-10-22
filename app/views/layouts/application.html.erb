@@ -2,12 +2,14 @@
 <html lang="ja-jp">
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-	<meta name="viewport" content="width=1024, maximum-scale=1, user-scalable=0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8">
 		<title>SakevivaOriginal</title>
 		<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
 		<%= csrf_meta_tags %>
-  	</meta>
+  </meta>
+    <link rel="stylesheet" href="responsive-nav.css">
+    <script src="responsive-nav.js"></script>
 </head>
 <body>
 
@@ -33,6 +35,8 @@
 	</footer>
 
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+  <script>var nav = responsiveNav(".nav-collapse");</script>
 
 </body>
 </html>
