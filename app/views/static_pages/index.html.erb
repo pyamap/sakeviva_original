@@ -147,11 +147,11 @@
             <img class="Popular__sub--photo"><%= link_to image_tag(popular_product.image.url, height: 90, width: 120, alt: "商品写真"), product_path(popular_product.id) %>
             </img>
           </div>
-           <div class="Popular__main">
-             <div class="Popular__main--title"><%= link_to popular_product.name, product_path(popular_product.id) %></div>
-             <div class="Popular__main--price"><%= number_to_currency(popular_product.options.first.value) %></div>
-             <i class="fa fa-angle-right" aria-hidden="true"></i>
-           </div>
+          <div class="Popular__main">
+           <div class="Popular__main--title"><%= link_to popular_product.name, product_path(popular_product.id) %></div>
+           <div class="Popular__main--price"><%= number_to_currency(popular_product.options.first.value) %></div>
+          </div>
+           <i class="fa fa-angle-right" aria-hidden="true"></i>
          </li>
        <% end %>
        </ul>

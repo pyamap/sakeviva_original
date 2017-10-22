@@ -280,7 +280,7 @@
 	margin: auto;
 
 	&__head {
-		display: block;
+		font-size: 22px;
 		text-align: center;
 		padding: 20px 0 10px;
 		margin: 0;
@@ -375,12 +375,11 @@
 				text-align: center;
 				margin: 0 10px;
 				}
-
-				.fa {
+			}
+			.fa {
 				position: absolute;
-				padding: 7% 58%;
+				margin: 7% 85%;
 				font-size: 24px;
-				}
 			}
 	  }
 
