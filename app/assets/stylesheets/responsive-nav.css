@@ -35,6 +35,20 @@ a.nav-toggle.active {
     }
 }
 
+ul.logininfo {//SPでfbログインした際のログインprofileとログイン名のスタイル
+  height: 38px;
+   li {
+    height: 38px;
+      img {
+        line-height: 38px;
+        margin-left: 10px;
+      }
+      a {
+        line-height: 38px;
+      }
+   }
+}
+
 .js .nav-collapse {
   clip: rect(0 0 0 0);
   max-height: 0;

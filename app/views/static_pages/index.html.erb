@@ -13,7 +13,7 @@
           <li>
             <% if current_user.provider %>
             <!-- facebookログインしているとき -->
-              <ul>
+              <ul class="logininfo">
                 <li>
                   <%= image_tag current_user.image, class: "img-circle profile-0" %>
                   <%= link_to current_user.name, edit_user_registration_path %></p>
@@ -32,7 +32,7 @@
             </ul>
          </li>
         <% else %>
-         <li>サインアップ
+         <li>
            <ul>
              <li><%= link_to "サインアップ", new_user_registration_path, class: "Menu__item" %></li>
              <li><%= link_to "ログイン", new_user_session_path, class: "Menu__item" %></li>
