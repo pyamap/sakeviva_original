@@ -262,7 +262,7 @@
 
 		.fa {
 			position: absolute;
-			margin: -50px 25%;
+			margin: -50px 21%;
 			font-size: 24px;
 		}
 	}
@@ -324,6 +324,23 @@
 	}
 
 		@include mq-sp {
+
+			&__head {
+				display: block;
+				text-align: center;
+				padding: 20px 0 10px;
+				margin: 0;
+			}
+
+			&__text {
+				width : 100%;
+				margin: 5px;
+				text-align: center;
+				font-size: 13px;
+			}
+
+			width: 100%;
+			margin: 20px 0;
 			&__all_pc { display: none !important;}
 			&__all_sp {	display: block !important;}
 			//注目の商品を16こと4こでhtmlで分けて、PC用に4このほうを表示する。
@@ -337,12 +354,6 @@
 						width: 100%;
 						border-bottom: 1px solid gray;
 						background-color: white;
-
-					.fa {
-							position: absolute;
-							margin: 30px 90%;
-							font-size: 24px;
-						}
 				}
 					&__main {
 						width: 70%;
@@ -358,7 +369,13 @@
 								text-align: center;
 								margin: 0 10px;
 							}
-						}
+
+							.fa {
+								position: absolute;
+								margin: 30px 52%;
+								font-size: 24px;
+							}
+					}
 	  }
 
 }
