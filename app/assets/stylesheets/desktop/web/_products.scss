@@ -61,7 +61,6 @@
 
 			li {
 				margin:10px;
-
 			}
 		}
 	}
@@ -72,7 +71,7 @@
 
 		@include mq-sp {
 			width: 90%;
-			margin: 20px auto;
+			margin: 10px auto;
 		}
 
 		p {
@@ -241,6 +240,9 @@
 		}
 
 		&--photo {
+			.pc { display: block !important;}
+			.sp { display: none !important;}
+
 			@include mq-sp {
 				width: 30%;
 				float: left;
@@ -293,19 +295,36 @@
 	width: 1200px;
 	margin: 150px auto 50px;
 
+	@include mq-sp {
+		width: 100%;
+		margin: 20px auto;
+	}
+
 	p {
 		width: 1000px;
 		margin: 50px 0 50px 40px;
 		font-size: 18px;
 		border-bottom: 1px solid $color-gray;
 		color: $theme-color;
+
+		@include mq-sp {
+			margin: 10px auto 10px 20px;
+		}
 	}
 
 	&__list {
 		display: flex;
 		list-style-type: none;
 		height: 40px;
-		padding-left: 215px;
+		padding-left: 10px;
+
+		@include mq-sp {
+			display: none;
+		}
+
+		&--name {
+			margin-left: 200px;
+		}
 
 		&--details {
 			margin-left: 200px;
@@ -318,7 +337,7 @@
 
 		&--quantity {
 			width: 100px;
-			margin-left: 20px;
+			margin-left: 94px;
 			text-align: center;
 		}
 
@@ -333,27 +352,77 @@
 		padding-left: 40px;
 		line-height: 25px;
 
+		@include mq-sp {
+			display: block;
+			width: 100%;
+			height: 270px;
+			margin: 20px;
+			padding: 0;
+			display: block;
+			border-bottom: 1px solid gray;
+		}
+
+		&--image {
+			.pc { display: block !important;}
+			.sp { display: none !important;}
+
+			@include mq-sp {
+				.pc { display: none !important;}
+				.sp { display: block !important;}
+				width: 25%;
+				float: left;
+				margin: 0;
+			}
+		}
+
 		&--name {
 			display: block;
 			flex: 0 0 150px;
 			margin-left: 25px;
+
+			@include mq-sp {
+				display: block;
+				width: 50%;
+				line-height: 1.5;
+				margin-right: 68px;
+				float: right;
+			}
 		}
 
 		&--description {
 			margin-left: 25px;
 			flex: 0 0 320px;
+
+			@include mq-sp {
+				width: 56%;
+				height: 130px;
+				margin: 8px auto 10px auto;
+				margin-right: 40px;
+				float: right;
+			}
 		}
 
 		&--price {
 			margin-left: 65px;
+			@include mq-sp {
+				width: 300px;
+				float: left;
+				margin: 5px auto 5px 35%;
+			}
 		}
 
 		&--quantity {
 			width: 70px;
 			height: 40px;
 			display: flex;
-			margin: 0 0 0 35px;
+			margin: 0 0 0 65px;
 			border: 1px solid $theme-color;
+
+			@include mq-sp {
+				float: left;
+				margin-left: 35%;
+			}
+
 		}
 
 		&--updown {
@@ -371,10 +440,19 @@
 			width: 40px;
 			line-height: 40px;
 			text-align: center;
+
+			@include mq-sp {
+				float: right;
+			}
 		}
 
 		&--subtotal_price {
-			margin-left: 60px;
+			margin-left: 35px;
+
+			@include mq-sp {
+				display: none;
+			}
+
 		}
 
 		form.button_to{
@@ -382,6 +460,8 @@
 				width: 20px;
 				margin: 0;
 				background-color: transparent;
+				float: right;
+				margin-right: 40%;
 		}
 
 		button {
@@ -396,19 +476,31 @@
 				}
 		}
 
-		&--subtotal_price {
-			text-align: center;
-			width: 120px;
-			margin-left: 30px;
-		}
-
 		input {
 			background-color: transparent;
 			border: 0;
 			width: 24px;
-			font-size: 20px;
-			font-weight: bold;
+			font-size: 15px;
+			font-weight: normal;
 			color: $theme-color;
+			margin-left: 30px;
+			border: 1px solid $theme-color;
+			width: 60px;
+			.pc { display: block !important;}
+			.sp { display: none !important;}
+
+			@include mq-sp {
+				.pc { display: none !important;}
+				.sp { display: block !important;}
+				height: 40px;
+				margin: 0;
+				padding: 0;
+			}
+		}
+
+		&--subtotal_price {
+			text-align: center;
+			width: 120px;
 			margin-left: 30px;
 		}
 	}
@@ -418,6 +510,10 @@
 	display: flex;
 	width: 300px;
 	margin: 50px 0 10px 900px;
+
+	@include mq-sp {
+		margin: 50px auto 10px;
+	}
 
 		&__continue {
 			height: 40px;
@@ -449,12 +545,20 @@
 
 .CheckOut {
 	display: flex;
-	margin: 80px auto;
+	margin: 50px auto;
 	font-size: 16px;
 
 		&__shipping {
 			width: 250px;
 			margin-left: 695px;
+
+			@include mq-sp {
+				margin: auto;
+			}
+
+			form {
+				margin: 0 50px;
+			}
 
 			p {
 				width:150px;
@@ -489,6 +593,10 @@
 
 		&__calculation {
 			width: 250px;
+
+			@include mq-sp {
+				margin: 0 25px;
+			}
 
 				p {
 					width:50px;

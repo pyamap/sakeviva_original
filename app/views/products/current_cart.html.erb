@@ -16,10 +16,12 @@
 
     <ul class="Cart__item">
       <li class="Cart__item--image">
-      <%= image_tag(item.image.url, height: 120, width: 100, alt: "酒の写真") %></li>
+      <%= image_tag(item.image.url, height: 120, width: 100, :class => 'pc', alt: "酒の写真") %>
+      <%= image_tag(item.image.url, height: 150, width: 120, :class => 'sp',alt: "酒の写真") %>
+      </li>
       <li class="Cart__item--name"><%= link_to "#{item.name}", item.product %></li>
       <li class="Cart__item--description"><%= item.description.truncate(100, separator: '。', :omission => "。....") %></li>
-      <li class="Cart__item--price"><%= number_to_currency(item.price) %></li>
+      <li class="Cart__item--price"><%= number_to_currency(item.price) %> (税込)</li>
       <li class="Cart__item--quantity">
         <div class="Cart__item--number">
           <%= item.quantity %>
@@ -33,8 +35,8 @@
           <% end %>
         </div>
       </li>
-      <li class="Cart__item--subtotal_price"><%= number_to_currency(item.subtotal_price) %></li>
-      <%= button_to "x", :action => "delete_from_cart", :id => item.id, :method => :post %>
+      <li class="Cart__item--subtotal_price"><%= number_to_currency(item.subtotal_price) %> (税込)</li>
+      <%= button_to "削除", :action => "delete_from_cart", :id => item.id, :method => :post %>
     </ul>
 
     <% end %>

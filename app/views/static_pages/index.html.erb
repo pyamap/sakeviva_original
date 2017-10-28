@@ -112,7 +112,7 @@
           <%= link_to image_tag(new_product.image.url, height: 90, width: 120, :class => "sp", alt: "商品写真"),product_path(new_product.id) %>
           </div>
           <div class="NewArrival__item--title"><%= link_to new_product.name, product_path(new_product.id) %></div>
-          <div class="NewArrival__item--price"><%= number_to_currency(new_product.options.first.value) (税込) %> </div>
+          <div class="NewArrival__item--price"><%= number_to_currency(new_product.options.first.value) %> (税込)</div>
           <%= link_to product_path(new_product.id), :method => :get do %>
             <i class="fa fa-angle-right" aria-hidden="true"></i>
           <% end %>
@@ -136,7 +136,7 @@
           </div>
            <div class="Popular__main">
              <div class="Popular__main--title"><%= link_to popular_product.name, product_path(popular_product.id) %></div>
-             <div class="Popular__main--price"><%= number_to_currency(popular_product.options.first.value) (税込) %></div>
+             <div class="Popular__main--price"><%= number_to_currency(popular_product.options.first.value) %> (税込)</div>
            </div>
         </li>
        <% end %>
@@ -151,7 +151,7 @@
           </div>
           <div class="Popular__main">
            <div class="Popular__main--title"><%= link_to popular_product.name, product_path(popular_product.id) %></div>
-           <div class="Popular__main--price"><%= number_to_currency(popular_product.options.first.value) (税込) %></div>
+           <div class="Popular__main--price"><%= number_to_currency(popular_product.options.first.value) %> (税込)</div>
           </div>
            <%= link_to product_path(popular_product.id), :method => :get do %>
              <i class="fa fa-angle-right" aria-hidden="true"></i>

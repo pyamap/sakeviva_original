@@ -73,6 +73,11 @@ ul.side_bar_price_list {
       display: flex;
       list-style-type: none;
       padding-left: 0;
+
+      @include mq-sp {
+        float: right;
+        margin: 5px 7% 0 0;
+      }
     }
   }
 
@@ -133,7 +138,8 @@ ul.side_bar_price_list {
           text-align: center;
 
           img {
-            margin: 2px auto;
+            position: absolute;
+            margin: 2px -8%;
           }
 
           a.nav-toggle {
