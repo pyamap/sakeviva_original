@@ -284,7 +284,6 @@
 		}
 
 		&--price {
-
 			@include mq-sp {
 				width: 70%;
 				float: right;
@@ -294,7 +293,6 @@
 		}
 
 		i.fa {
-
 			@include mq-pc {
 				display: none;
 			}

@@ -4,7 +4,10 @@
 	<% breadcrumb :product %>
 	<div class="ItemDetails">
 		<div class="ItemDetails__sub">
-			<%= image_tag @product.image.url, height: 480, width: 360, alt: "商品の写真" %>
+			<div class="ItemDetails__sub--mainphoto">
+				<%= image_tag @product.image.url, height: 480, width: 360, :class => 'pc', alt: "商品の写真" %>
+				<%= image_tag @product.image.url, :class => 'sp', alt: "商品の写真" %>
+			</div>
 			<ul class="ItemDetails__sub--smallphoto">
 				<% if @images.exists? %>
 					<% @images.each do |sub_image| %>
@@ -28,7 +31,7 @@
 			</ul>
 			<%= form_tag('/add_to_cart', :method => :post) do %>
 			<p class="ItemDetails__main--price">
-				<%= render partial: 'option_value', locals: {option_id: @options.first.id} %>
+				<%= render partial: 'option_value', locals: {option_id: @options.first.id} %> (税込)
 			</p>
 			<p>サイズ</p>
 			<div class="ItemDetails__main--option">
@@ -53,9 +56,14 @@
 		<% @recommended_products.each do |recommended_product| %>
 	    <li class="RecommendedItems__item">
 	  	  <div class="RecommendedItems__item--photo">
-	  	  <%= link_to image_tag(recommended_product.image.url, height: 240, width: 210, alt: "商品写真") %></div>
+		  	  <%= link_to image_tag(recommended_product.image.url, height: 240, width: 210, :class => "pc", alt: "商品写真") %>
+		  	  <%= link_to image_tag(recommended_product.image.url, height: 90, width: 120, :class => "sp", alt: "商品写真") %>
+	  	  </div>
 	  	  <div class="RecommendedItems__item--title"><%= link_to recommended_product.name, product_path(recommended_product.id) %></div>
-	  	  <div class="RecommendedItems__item--price"><%= number_to_currency(recommended_product.value) %></div>
+	  	  <div class="RecommendedItems__item--price"><%= number_to_currency(recommended_product.value) %> (税込)</div>
+	      <%= link_to product_path(recommended_product.id), :method => :get do %>
+         <i class="fa fa-angle-right" aria-hidden="true"></i>
+        <% end %>
 	    </li>
 	  <% end %>
 	  </ul>

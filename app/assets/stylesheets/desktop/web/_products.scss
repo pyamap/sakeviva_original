@@ -8,6 +8,11 @@
 	margin: 100px auto 0;
 	border-bottom: solid 1px #CCCCCC;
 
+	@include mq-sp {
+		width: 100%;
+		margin: 10px;
+	}
+
 	a {
 		color: $theme-color;
 	}
@@ -18,8 +23,35 @@
 	margin: 20px auto 40px;
 	display: flex;
 
+	@include mq-sp {
+		width: 100%;
+		margin: 0;
+		flex-direction: column;
+	}
+
 	&__sub {
 		margin: 30px 50px 50px;
+
+		@include mq-sp {
+			margin: 10px 30px;
+		}
+
+		&--mainphoto {
+			img.pc { display: block !important; }
+			img.sp { display: none !important; }
+
+			@include mq-sp {
+				width: 100%;
+				height: 320px;
+				img.pc { display: none !important; }
+				img.sp { display: block !important; }
+
+					img {
+						width: 100%;
+						height: 100%;
+					}
+			}
+		}
 
 		&--smallphoto {
 			display: flex;
@@ -38,6 +70,11 @@
 		width: 370px;
 		margin: 20px 50px 50px 0;
 
+		@include mq-sp {
+			width: 90%;
+			margin: 20px auto;
+		}
+
 		p {
 			margin: 10px auto 0;
 		}
@@ -47,13 +84,25 @@
 			margin: 10px auto 20px;
 		}
 
-
+		form {
+			@include mq-sp {
+				width: 80%;
+				margin: auto;
+			}
+		}
 
 		&--price {
 			height: 50px;
 			margin: 0;
 			line-height: 50px;
 			font-size: 18px;
+
+			@include mq-sp {
+				height: 35px;
+				line-height: 35px;
+				text-align: right;
+				margin: 0;
+			}
 		}
 
 		&--size {
@@ -68,10 +117,14 @@
 		&--option {
 
 			select {
-			-webkit-appearance:none;
-			width: 360px;
-			height: 30px;
-			padding-left: 10px;
+				-webkit-appearance:none;
+				width: 360px;
+				height: 30px;
+				padding-left: 10px;
+
+				@include mq-sp {
+					width: 100%;
+				}
 			}
 		}
 
@@ -88,6 +141,15 @@
 		.middle_btn {
 			text-align: left;
 			width: 200px;
+
+			@include mq-sp {
+				width: 100%;
+				margin: auto;
+
+				input {
+					width: 100%;
+				}
+			}
 		}
 
 	}
@@ -117,11 +179,21 @@
 	width: 1080px;
 	margin: auto;
 
+	@include mq-sp {
+		width: 100%;
+	}
+
 	h2 {
 		width: 930px;
 		text-align: left;
 		font-size: 18px;
 		margin: auto;
+
+		@include mq-sp {
+			width: 100%;
+			font-size: 20px;
+			text-align: center;
+		}
 	}
 
 	&__head {
@@ -141,30 +213,78 @@
 		justify-content: space-around;
 		margin: 20px 200px;
 		padding: 0;
+
+		@include mq-sp {
+			width: 100%;
+			margin: 20px 0;
+			flex-direction: column;
+		}
 	}
 
 	&__item {
 		text-align: center;
 		margin: 0 30px 30px;
 
-
-		&:nth-child(even) {
-			margin-left: 0;
+		@include mq-sp {
+			border-bottom: 1px solid gray;
+			margin: 0 15px;
+			padding-bottom: 15px;
 		}
 
-		&:nth-child(2) {
-			margin-right: 0;
+		@include mq-pc {
+			&:nth-child(even) {
+				margin-left: 0;
+			}
+			&:nth-child(2) {
+				margin-right: 0;
+			}
+		}
+
+		&--photo {
+			@include mq-sp {
+				width: 30%;
+				float: left;
+				margin: 15px 0 0 0;
+				.pc { display: none !important;}
+				.sp { display: block !important;}
+			}
 		}
 
 		&--title {
 			margin: 10px auto 5px;
 			height: 40px;
+
+			@include mq-sp {
+				width: 70%;
+				float: right;
+				line-height: 40px;
+				margin: 10px 0;
+			}
 		}
 
 		&--price {
 			text-align: right;
 			font-size: 14px;
+
+				@include mq-sp {
+				width: 70%;
+				float: right;
+				line-height: 30px;
+				margin: 0;
+				text-align: center;
+			}
 		}
+
+		i.fa {
+			position: absolute;
+			margin: 10% 60%;
+			font-size: 24px;
+
+			@include mq-pc {
+				display: none;
+			}
+		}
+
 	}
 }
 
