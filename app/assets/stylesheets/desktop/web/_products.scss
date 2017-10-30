@@ -548,12 +548,19 @@
 	margin: 50px auto;
 	font-size: 16px;
 
+	@include mq-sp {
+		width: 100%;
+		flex-direction: column;
+	}
+
 		&__shipping {
 			width: 250px;
 			margin-left: 695px;
 
 			@include mq-sp {
 				margin: auto;
+				width: 80%;
+				text-align: center;
 			}
 
 			form {
@@ -564,6 +571,11 @@
 				width:150px;
 				margin-bottom: 25px;
 				border-bottom: 1px solid $color-gray;
+
+				@include mq-sp {
+					margin: 25px auto;
+					font-size: 20px;
+				}
 			}
 		}
 
@@ -576,6 +588,10 @@
 			height: 30px;
 			line-height: 30px;
 
+			@include mq-sp {
+				width: 250px;
+				height: 40px;
+			}
 		}
 
 		input {
@@ -595,13 +611,15 @@
 			width: 250px;
 
 			@include mq-sp {
-				margin: 0 25px;
+				margin: 50px auto;
+				width: 60%;
 			}
 
 				p {
 					width:50px;
 					margin-bottom: 25px;
 					border-bottom: 1px solid $color-gray;
+					font-weight: bold;
 				}
 
 				tr {
