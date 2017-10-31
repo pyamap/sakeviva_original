@@ -9247,7 +9247,7 @@ input.delete_btn {
   width: 430px;
   height: 100%;
   margin: 10px auto;
-  border: $theme-color 0.5px solid;
+  border: #79b6C8 0.5px solid;
   font-size: 18px;
 }
 /* line 161, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_addresses.scss */
@@ -9256,7 +9256,7 @@ input.delete_btn {
 }
 /* line 165, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_addresses.scss */
 #address_all ul.address_detail li.radio_btn {
-  color: $theme-color;
+  color: #79b6C8;
 }
 /* line 169, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_addresses.scss */
 #address_all ul.address_detail li {
@@ -9281,7 +9281,7 @@ input.delete_btn {
 }
 /* line 190, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_addresses.scss */
 #address_all ul.address_edit li a {
-  background-color: $theme-color;
+  background-color: #79b6C8;
   color: white;
   display: block;
   height: 32px;
@@ -9291,7 +9291,7 @@ input.delete_btn {
 }
 /* line 200, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_addresses.scss */
 #address_all ul.address_edit li input {
-  background-color: $theme-color;
+  background-color: #79b6C8;
   font-size: 18px;
   color: white;
   width: 50px;
@@ -9348,45 +9348,117 @@ input.delete_btn {
   margin: 5px 0;
 }
 
-/* line 51, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
+@media only screen and (max-width: 640px) {
+  /* line 49, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
+  .Instruction {
+    width: 100%;
+  }
+}
+/* line 54, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
 .Instruction h1 {
   font-size: 22px;
   margin: 120px auto 20px;
   text-align: center;
+  color: #79b6C8;
 }
-/* line 57, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
+@media only screen and (max-width: 640px) {
+  /* line 54, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
+  .Instruction h1 {
+    margin: 20px auto;
+    font-size: 24px;
+  }
+}
+/* line 66, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
 .Instruction__image {
-  margin: 0 auto 30px;
+  margin: 0 20px 30px;
   text-align: center;
 }
-/* line 62, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
+/* line 67, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
+.Instruction__image .pc {
+  display: block !important;
+}
+/* line 68, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
+.Instruction__image .sp {
+  display: none !important;
+}
+/* line 72, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
+.Instruction__image img.pc {
+  margin: auto;
+}
+@media only screen and (max-width: 640px) {
+  /* line 66, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
+  .Instruction__image {
+    margin: 0 20px 15px;
+  }
+  /* line 77, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
+  .Instruction__image .pc {
+    display: none !important;
+  }
+  /* line 78, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
+  .Instruction__image .sp {
+    display: block !important;
+  }
+  /* line 81, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
+  .Instruction__image img.sp {
+    width: 100%;
+  }
+}
+/* line 87, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
 .Instruction__description {
   width: 850px;
   margin: auto;
   font-size: 18px;
 }
+@media only screen and (max-width: 640px) {
+  /* line 87, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
+  .Instruction__description {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+  }
+}
 
-/* line 69, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
+/* line 100, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
 .ProductFilter {
   margin: 50px auto 15px;
 }
-/* line 72, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
+@media only screen and (max-width: 640px) {
+  /* line 100, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
+  .ProductFilter {
+    width: 100%;
+  }
+}
+/* line 107, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
 .ProductFilter form {
   display: flex;
   width: 700px;
   margin: auto;
 }
-/* line 77, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
+@media only screen and (max-width: 640px) {
+  /* line 107, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
+  .ProductFilter form {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+/* line 117, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
 .ProductFilter form .ProductFilter__category {
   margin: 20px;
   text-align: center;
 }
-/* line 82, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
+@media only screen and (max-width: 640px) {
+  /* line 117, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
+  .ProductFilter form .ProductFilter__category {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+/* line 127, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
 .ProductFilter form__name {
   font-size: 18px;
   margin: 5px 10px;
 }
-/* line 87, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
+/* line 132, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
 .ProductFilter form select {
   width: 160px;
   padding-left: 10px;
@@ -9401,25 +9473,32 @@ input.delete_btn {
   -moz-appearance: button;
   appearance: button;
 }
-/* line 102, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
+@media only screen and (max-width: 640px) {
+  /* line 132, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
+  .ProductFilter form select {
+    height: 30px;
+    width: 200px;
+  }
+}
+/* line 152, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
 .ProductFilter form select option {
   background-color: white;
   color: #79b6C8;
 }
-/* line 107, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
+/* line 157, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
 .ProductFilter form select::-ms-expand {
   display: none;
 }
-/* line 111, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
+/* line 161, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
 .ProductFilter form select:-moz-focusring {
   color: transparent;
   text-shadow: 0 0 0 #828c9a;
 }
-/* line 116, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
+/* line 166, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
 .ProductFilter form .select-wrap {
   position: relative;
 }
-/* line 120, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
+/* line 170, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
 .ProductFilter form .select-wrap:before {
   z-index: 1;
   position: absolute;
@@ -9431,8 +9510,23 @@ input.delete_btn {
   color: #7F878C;
   pointer-events: none;
 }
-/* line 132, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
-.ProductFilter form input {
+@media only screen and (max-width: 640px) {
+  /* line 170, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
+  .ProductFilter form .select-wrap:before {
+    line-height: 30px;
+    width: 350px;
+  }
+}
+@media only screen and (max-width: 640px) {
+  /* line 187, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
+  .ProductFilter form .filter_button {
+    height: 40px;
+    margin: 20px;
+    text-align: center;
+  }
+}
+/* line 195, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
+.ProductFilter form .filter_button input {
   background-color: white;
   border: 1px solid #79b6C8;
   color: #79b6C8;
@@ -9440,13 +9534,30 @@ input.delete_btn {
   margin: 42px 20px 10px;
   border-radius: 8px;
 }
+@media only screen and (max-width: 640px) {
+  /* line 195, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
+  .ProductFilter form .filter_button input {
+    text-align: center;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0;
+    padding: 0;
+  }
+}
 
-/* line 144, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
+/* line 217, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
 .CategoryProduct {
   width: 1000px;
   margin: 25px auto;
 }
-/* line 148, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
+@media only screen and (max-width: 640px) {
+  /* line 217, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
+  .CategoryProduct {
+    width: 100%;
+  }
+}
+/* line 225, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
 .CategoryProduct__main {
   width: 1000px;
   list-style: none;
@@ -9456,24 +9567,95 @@ input.delete_btn {
   margin: auto;
   padding: 0;
 }
-/* line 158, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
+@media only screen and (max-width: 640px) {
+  /* line 225, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
+  .CategoryProduct__main {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+/* line 240, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
 .CategoryProduct__item {
   text-align: center;
   width: 220px;
-  margin: 15px;
+  margin: 15px 0 0 15px;
 }
-/* line 163, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
-.CategoryProduct__item:nth-child(even) {
-  margin-left: 0;
+@media only screen and (max-width: 640px) {
+  /* line 240, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
+  .CategoryProduct__item {
+    width: 100%;
+    border-bottom: 1px solid gray;
+    margin: 15px;
+    padding-bottom: 15px;
+  }
 }
-/* line 167, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
-.CategoryProduct__item:nth-child(2) {
-  margin-right: 0;
+@media only screen and (min-width: 641px) {
+  /* line 253, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
+  .CategoryProduct__item:nth-child(even) {
+    margin-left: 0;
+  }
+  /* line 257, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
+  .CategoryProduct__item:nth-child(2) {
+    margin-right: 0;
+  }
 }
-/* line 171, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
+/* line 263, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
+.CategoryProduct__item--photo .pc {
+  display: block !important;
+}
+/* line 264, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
+.CategoryProduct__item--photo .sp {
+  display: none !important;
+}
+@media only screen and (max-width: 640px) {
+  /* line 262, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
+  .CategoryProduct__item--photo {
+    width: 30%;
+    float: left;
+  }
+  /* line 267, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
+  .CategoryProduct__item--photo .pc {
+    display: none !important;
+  }
+  /* line 268, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
+  .CategoryProduct__item--photo .sp {
+    display: block !important;
+  }
+}
+/* line 274, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
 .CategoryProduct__item--title {
   margin: auto;
   height: 40px;
+}
+@media only screen and (max-width: 640px) {
+  /* line 274, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
+  .CategoryProduct__item--title {
+    width: 70%;
+    float: right;
+    line-height: 40px;
+    margin: 10px 0;
+  }
+}
+@media only screen and (max-width: 640px) {
+  /* line 286, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
+  .CategoryProduct__item--price {
+    width: 70%;
+    float: right;
+    line-height: 30px;
+    margin: 0;
+  }
+}
+/* line 295, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
+.CategoryProduct__item i.fa {
+  position: absolute;
+  margin: 10% 60%;
+  font-size: 24px;
+}
+@media only screen and (min-width: 641px) {
+  /* line 295, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_categories.scss */
+  .CategoryProduct__item i.fa {
+    display: none;
+  }
 }
 
 /* line 1, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/parts/form.scss */
@@ -9503,7 +9685,7 @@ input.delete_btn {
   color: white;
   height: 50px;
   width: 386px;
-  background-color: $theme-color;
+  background-color: #79b6C8;
   margin: 20px auto;
   border-style: none;
 }
@@ -9532,11 +9714,26 @@ input.delete_btn {
   border-radius: 5px;
   margin-top: 150px;
 }
-/* line 10, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_devise.scss */
+@media only screen and (max-width: 640px) {
+  /* line 3, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_devise.scss */
+  #form_notext {
+    width: 90%;
+    height: 80%;
+    margin-top: 70px;
+  }
+}
+/* line 16, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_devise.scss */
 #form_notext h2 {
   font-size: 24px;
 }
-/* line 14, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_devise.scss */
+@media only screen and (max-width: 640px) {
+  /* line 16, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_devise.scss */
+  #form_notext h2 {
+    font-size: 20px;
+    padding: 20px;
+  }
+}
+/* line 25, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_devise.scss */
 #form_notext input {
   height: 30px;
   width: 380px;
@@ -9545,31 +9742,39 @@ input.delete_btn {
   border-style: solid 0.1px gray;
 }
 
-/* line 23, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_devise.scss */
+@media only screen and (max-width: 640px) {
+  /* line 34, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_devise.scss */
+  form#new_user.new_user {
+    margin: 15px auto;
+  }
+}
+
+/* line 40, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_devise.scss */
 .long_btn_dummy {
   background-color: #2F56A6;
 }
 
-/* line 27, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_devise.scss */
+/* line 44, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_devise.scss */
 .long_btn_dummy:hover {
   border-color: #2F56A6;
 }
-/* line 28, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_devise.scss */
+/* line 45, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_devise.scss */
 .long_btn_dummy:hover a {
   color: #2F56A6;
 }
 
-/* line 34, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_devise.scss */
+/* line 51, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_devise.scss */
 .btn-facebook {
   color: #fff;
   background-color: #4c66a4;
   z-index: 10;
+  margin: 0 auto 20px;
 }
 
 /* line 3, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_errors.scss */
 #error_explanation li {
   font-size: 16px;
-  color: $theme-color;
+  color: #79b6C8;
 }
 
 /*ユーザーの注文履歴ページのスタイルここから*/
@@ -9867,79 +10072,168 @@ input.delete_btn {
   margin: 100px auto 0;
   border-bottom: solid 1px #CCCCCC;
 }
-/* line 11, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+@media only screen and (max-width: 640px) {
+  /* line 5, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+  .breadcrumbs {
+    width: 100%;
+    margin: 10px;
+  }
+}
+/* line 16, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .breadcrumbs a {
   color: #79b6C8;
 }
 
-/* line 16, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 21, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .ItemDetails {
   width: 880px;
   margin: 20px auto 40px;
   display: flex;
 }
-/* line 21, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+@media only screen and (max-width: 640px) {
+  /* line 21, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+  .ItemDetails {
+    width: 100%;
+    margin: 0;
+    flex-direction: column;
+  }
+}
+/* line 32, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .ItemDetails__sub {
   margin: 30px 50px 50px;
 }
-/* line 24, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+@media only screen and (max-width: 640px) {
+  /* line 32, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+  .ItemDetails__sub {
+    margin: 10px 30px;
+  }
+}
+/* line 40, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+.ItemDetails__sub--mainphoto img.pc {
+  display: block !important;
+}
+/* line 41, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+.ItemDetails__sub--mainphoto img.sp {
+  display: none !important;
+}
+@media only screen and (max-width: 640px) {
+  /* line 39, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+  .ItemDetails__sub--mainphoto {
+    width: 100%;
+    height: 320px;
+  }
+  /* line 46, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+  .ItemDetails__sub--mainphoto img.pc {
+    display: none !important;
+  }
+  /* line 47, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+  .ItemDetails__sub--mainphoto img.sp {
+    display: block !important;
+  }
+  /* line 49, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+  .ItemDetails__sub--mainphoto img {
+    width: 100%;
+    height: 100%;
+  }
+}
+/* line 56, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .ItemDetails__sub--smallphoto {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
   padding: 0;
 }
-/* line 30, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 62, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .ItemDetails__sub--smallphoto li {
   margin: 10px;
 }
-/* line 37, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 68, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .ItemDetails__main {
   width: 370px;
   margin: 20px 50px 50px 0;
 }
-/* line 41, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+@media only screen and (max-width: 640px) {
+  /* line 68, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+  .ItemDetails__main {
+    width: 90%;
+    margin: 10px auto;
+  }
+}
+/* line 77, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .ItemDetails__main p {
   margin: 10px auto 0;
 }
-/* line 45, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 81, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .ItemDetails__main h1 {
   font-size: 24px;
   margin: 10px auto 20px;
 }
-/* line 52, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+@media only screen and (max-width: 640px) {
+  /* line 86, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+  .ItemDetails__main form {
+    width: 80%;
+    margin: auto;
+  }
+}
+/* line 93, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .ItemDetails__main--price {
   height: 50px;
   margin: 0;
   line-height: 50px;
   font-size: 18px;
 }
-/* line 61, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+@media only screen and (max-width: 640px) {
+  /* line 93, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+  .ItemDetails__main--price {
+    height: 35px;
+    line-height: 35px;
+    text-align: right;
+    margin: 0;
+  }
+}
+/* line 109, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .ItemDetails__main--size select {
   -webkit-appearance: none;
   width: 360px;
   height: 30px;
 }
-/* line 70, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 118, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .ItemDetails__main--option select {
   -webkit-appearance: none;
   width: 360px;
   height: 30px;
   padding-left: 10px;
 }
-/* line 80, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+@media only screen and (max-width: 640px) {
+  /* line 118, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+  .ItemDetails__main--option select {
+    width: 100%;
+  }
+}
+/* line 132, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .ItemDetails__main--quantity select {
   -webkit-appearance: none;
   width: 100px;
   height: 30px;
   padding-left: 10px;
 }
-/* line 88, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 140, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .ItemDetails__main .middle_btn {
   text-align: left;
   width: 200px;
 }
-/* line 95, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+@media only screen and (max-width: 640px) {
+  /* line 140, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+  .ItemDetails__main .middle_btn {
+    width: 100%;
+    margin: auto;
+  }
+  /* line 148, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+  .ItemDetails__main .middle_btn input {
+    width: 100%;
+  }
+}
+/* line 156, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .ItemDetails__review {
   display: flex;
   list-style: none;
@@ -9947,44 +10241,58 @@ input.delete_btn {
   margin: 0;
   font-size: 11px;
 }
-/* line 102, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 163, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .ItemDetails__review li {
   margin: 12px;
 }
-/* line 104, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 165, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .ItemDetails__review li:nth-child(-n+3) {
   margin-left: 0;
 }
-/* line 108, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 169, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .ItemDetails__review li:nth-child(-n+2) {
   padding-right: 10px;
   border-right: 1px solid #CCCCCC;
 }
 
-/* line 116, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 177, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .RecommendedItems {
   width: 1080px;
   margin: auto;
 }
-/* line 120, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+@media only screen and (max-width: 640px) {
+  /* line 177, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+  .RecommendedItems {
+    width: 100%;
+  }
+}
+/* line 185, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .RecommendedItems h2 {
   width: 930px;
   text-align: left;
   font-size: 18px;
   margin: auto;
 }
-/* line 127, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+@media only screen and (max-width: 640px) {
+  /* line 185, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+  .RecommendedItems h2 {
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+  }
+}
+/* line 198, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .RecommendedItems__head {
   display: block;
   text-align: center;
   padding: 20px 0 10px;
   margin: 0;
 }
-/* line 134, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 205, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .RecommendedItems__text {
   text-align: center;
 }
-/* line 138, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 209, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .RecommendedItems__main {
   list-style: none;
   display: flex;
@@ -9992,36 +10300,116 @@ input.delete_btn {
   margin: 20px 200px;
   padding: 0;
 }
-/* line 146, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+@media only screen and (max-width: 640px) {
+  /* line 209, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+  .RecommendedItems__main {
+    width: 100%;
+    margin: 20px 0;
+    flex-direction: column;
+  }
+}
+/* line 223, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .RecommendedItems__item {
   text-align: center;
   margin: 0 30px 30px;
 }
-/* line 151, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
-.RecommendedItems__item:nth-child(even) {
-  margin-left: 0;
+@media only screen and (max-width: 640px) {
+  /* line 223, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+  .RecommendedItems__item {
+    border-bottom: 1px solid gray;
+    margin: 0 15px;
+    padding-bottom: 15px;
+  }
 }
-/* line 155, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
-.RecommendedItems__item:nth-child(2) {
-  margin-right: 0;
+@media only screen and (min-width: 641px) {
+  /* line 234, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+  .RecommendedItems__item:nth-child(even) {
+    margin-left: 0;
+  }
+  /* line 237, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+  .RecommendedItems__item:nth-child(2) {
+    margin-right: 0;
+  }
 }
-/* line 159, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 243, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+.RecommendedItems__item--photo .pc {
+  display: block !important;
+}
+/* line 244, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+.RecommendedItems__item--photo .sp {
+  display: none !important;
+}
+@media only screen and (max-width: 640px) {
+  /* line 242, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+  .RecommendedItems__item--photo {
+    width: 30%;
+    float: left;
+    margin: 15px 0 0 0;
+  }
+  /* line 250, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+  .RecommendedItems__item--photo .pc {
+    display: none !important;
+  }
+  /* line 251, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+  .RecommendedItems__item--photo .sp {
+    display: block !important;
+  }
+}
+/* line 255, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .RecommendedItems__item--title {
   margin: 10px auto 5px;
   height: 40px;
 }
-/* line 164, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+@media only screen and (max-width: 640px) {
+  /* line 255, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+  .RecommendedItems__item--title {
+    width: 70%;
+    float: right;
+    line-height: 40px;
+    margin: 10px 0;
+  }
+}
+/* line 267, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .RecommendedItems__item--price {
   text-align: right;
   font-size: 14px;
 }
+@media only screen and (max-width: 640px) {
+  /* line 267, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+  .RecommendedItems__item--price {
+    width: 70%;
+    float: right;
+    line-height: 30px;
+    margin: 0;
+    text-align: center;
+  }
+}
+/* line 280, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+.RecommendedItems__item i.fa {
+  position: absolute;
+  margin: 10% 60%;
+  font-size: 24px;
+}
+@media only screen and (min-width: 641px) {
+  /* line 280, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+  .RecommendedItems__item i.fa {
+    display: none;
+  }
+}
 
-/* line 171, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 293, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .Cart {
   width: 1200px;
   margin: 150px auto 50px;
 }
-/* line 176, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+@media only screen and (max-width: 640px) {
+  /* line 293, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+  .Cart {
+    width: 100%;
+    margin: 20px auto;
+  }
+}
+/* line 303, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .Cart p {
   width: 1000px;
   margin: 50px 0 50px 40px;
@@ -10029,123 +10417,257 @@ input.delete_btn {
   border-bottom: 1px solid #eeeeee;
   color: #79b6C8;
 }
-/* line 184, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+@media only screen and (max-width: 640px) {
+  /* line 303, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+  .Cart p {
+    width: 95%;
+    margin: 10px auto 10px 20px;
+  }
+}
+/* line 316, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .Cart__list {
   display: flex;
   list-style-type: none;
   height: 40px;
-  padding-left: 215px;
+  padding-left: 10px;
 }
-/* line 190, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+@media only screen and (max-width: 640px) {
+  /* line 316, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+  .Cart__list {
+    display: none;
+  }
+}
+/* line 326, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+.Cart__list--name {
+  margin-left: 200px;
+}
+/* line 330, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .Cart__list--details {
   margin-left: 200px;
 }
-/* line 194, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 334, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .Cart__list--price {
   width: 40px;
   margin-left: 225px;
 }
-/* line 199, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 339, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .Cart__list--quantity {
   width: 100px;
-  margin-left: 20px;
+  margin-left: 94px;
   text-align: center;
 }
-/* line 205, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 345, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .Cart__list--unitprice {
   margin-left: 60px;
 }
-/* line 210, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 350, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .Cart__item {
   display: flex;
   list-style-type: none;
   padding-left: 40px;
   line-height: 25px;
 }
-/* line 216, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+@media only screen and (max-width: 640px) {
+  /* line 350, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+  .Cart__item {
+    display: block;
+    width: 95%;
+    height: 270px;
+    margin: 20px;
+    padding: 0;
+    display: block;
+    border-bottom: 1px solid gray;
+  }
+}
+/* line 367, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+.Cart__item--image .pc {
+  display: block !important;
+}
+/* line 368, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+.Cart__item--image .sp {
+  display: none !important;
+}
+@media only screen and (max-width: 640px) {
+  /* line 366, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+  .Cart__item--image {
+    width: 25%;
+    float: left;
+    margin: 0;
+  }
+  /* line 371, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+  .Cart__item--image .pc {
+    display: none !important;
+  }
+  /* line 372, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+  .Cart__item--image .sp {
+    display: block !important;
+  }
+}
+/* line 379, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .Cart__item--name {
   display: block;
   flex: 0 0 150px;
   margin-left: 25px;
 }
-/* line 222, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+@media only screen and (max-width: 640px) {
+  /* line 379, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+  .Cart__item--name {
+    display: block;
+    width: 50%;
+    line-height: 1.5;
+    margin-right: 68px;
+    float: right;
+  }
+}
+/* line 393, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .Cart__item--description {
   margin-left: 25px;
   flex: 0 0 320px;
 }
-/* line 227, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+@media only screen and (max-width: 640px) {
+  /* line 393, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+  .Cart__item--description {
+    width: 56%;
+    height: 130px;
+    margin: 8px auto 10px auto;
+    margin-right: 40px;
+    float: right;
+  }
+}
+/* line 406, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .Cart__item--price {
   margin-left: 65px;
 }
-/* line 231, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+@media only screen and (max-width: 640px) {
+  /* line 406, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+  .Cart__item--price {
+    width: 300px;
+    float: left;
+    margin: 5px auto 5px 35%;
+  }
+}
+/* line 415, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .Cart__item--quantity {
   width: 70px;
   height: 40px;
   display: flex;
-  margin: 0 0 0 35px;
+  margin: 0 0 0 65px;
   border: 1px solid #79b6C8;
 }
-/* line 240, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+@media only screen and (max-width: 640px) {
+  /* line 415, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+  .Cart__item--quantity {
+    float: left;
+    margin-left: 35%;
+  }
+}
+/* line 430, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .Cart__item--updown i.fa.fa-chevron-down {
   margin-top: -15px;
 }
-/* line 244, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 434, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .Cart__item--updown i.fa.fa-chevron-up {
   margin-top: -15px;
 }
-/* line 250, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 440, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .Cart__item--number {
   width: 40px;
   line-height: 40px;
   text-align: center;
 }
-/* line 256, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
-.Cart__item--subtotal_price {
-  margin-left: 60px;
+@media only screen and (max-width: 640px) {
+  /* line 440, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+  .Cart__item--number {
+    float: right;
+  }
 }
-/* line 260, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 450, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+.Cart__item--subtotal_price {
+  margin-left: 35px;
+}
+@media only screen and (max-width: 640px) {
+  /* line 450, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+  .Cart__item--subtotal_price {
+    display: none;
+  }
+}
+/* line 459, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .Cart__item form.button_to {
   height: 16px;
   width: 20px;
   margin: 0;
   background-color: transparent;
+  float: right;
+  margin-right: 40%;
 }
-/* line 267, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 468, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .Cart__item button {
   background-color: transparent;
   height: 1px;
   padding: 0px 6px;
   border: 0;
 }
-/* line 273, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 474, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .Cart__item button i {
   position: absolute;
   margin-top: -43px;
 }
-/* line 279, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 480, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+.Cart__item input {
+  background-color: transparent;
+  border: 0;
+  width: 24px;
+  font-size: 15px;
+  font-weight: normal;
+  color: #79b6C8;
+  margin-left: 30px;
+  border: 1px solid #79b6C8;
+  width: 60px;
+}
+/* line 490, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+.Cart__item input .pc {
+  display: block !important;
+}
+/* line 491, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+.Cart__item input .sp {
+  display: none !important;
+}
+@media only screen and (max-width: 640px) {
+  /* line 480, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+  .Cart__item input {
+    height: 40px;
+    margin: 0;
+    padding: 0;
+  }
+  /* line 494, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+  .Cart__item input .pc {
+    display: none !important;
+  }
+  /* line 495, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+  .Cart__item input .sp {
+    display: block !important;
+  }
+}
+/* line 502, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .Cart__item--subtotal_price {
   text-align: center;
   width: 120px;
   margin-left: 30px;
 }
-/* line 285, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
-.Cart__item input {
-  background-color: transparent;
-  border: 0;
-  width: 24px;
-  font-size: 20px;
-  font-weight: bold;
-  color: #79b6C8;
-  margin-left: 30px;
-}
 
-/* line 297, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 510, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .CartAction {
   display: flex;
   width: 300px;
   margin: 50px 0 10px 900px;
 }
-/* line 302, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+@media only screen and (max-width: 640px) {
+  /* line 510, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+  .CartAction {
+    margin: 50px auto 10px;
+  }
+}
+/* line 519, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .CartAction__continue {
   height: 40px;
   line-height: 40px;
@@ -10154,18 +10676,18 @@ input.delete_btn {
   text-align: center;
   background-color: #79b6C8;
 }
-/* line 310, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 527, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .CartAction__continue a {
   color: white;
 }
-/* line 315, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 532, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .CartAction__emptycart {
   height: 40px;
   width: 140px;
   background-color: #404040;
   text-align: center;
 }
-/* line 321, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 538, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .CartAction__emptycart input {
   line-height: 40px;
   background-color: transparent;
@@ -10173,24 +10695,50 @@ input.delete_btn {
   color: white;
 }
 
-/* line 330, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 547, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .CheckOut {
   display: flex;
-  margin: 80px auto;
+  margin: 50px auto;
   font-size: 16px;
 }
-/* line 335, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+@media only screen and (max-width: 640px) {
+  /* line 547, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+  .CheckOut {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+/* line 557, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .CheckOut__shipping {
   width: 250px;
   margin-left: 695px;
 }
-/* line 339, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+@media only screen and (max-width: 640px) {
+  /* line 557, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+  .CheckOut__shipping {
+    margin: auto;
+    width: 90%;
+    text-align: center;
+  }
+}
+/* line 567, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+.CheckOut__shipping form {
+  margin: 0 50px;
+}
+/* line 571, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .CheckOut__shipping p {
   width: 150px;
   margin-bottom: 25px;
   border-bottom: 1px solid #eeeeee;
 }
-/* line 346, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+@media only screen and (max-width: 640px) {
+  /* line 571, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+  .CheckOut__shipping p {
+    margin: 25px auto;
+    font-size: 20px;
+  }
+}
+/* line 583, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .CheckOut select {
   background-color: transparent;
   appearance: none;
@@ -10200,7 +10748,14 @@ input.delete_btn {
   height: 30px;
   line-height: 30px;
 }
-/* line 357, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+@media only screen and (max-width: 640px) {
+  /* line 583, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+  .CheckOut select {
+    width: 250px;
+    height: 40px;
+  }
+}
+/* line 598, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .CheckOut input {
   background-color: transparent;
   appearance: none;
@@ -10213,32 +10768,40 @@ input.delete_btn {
   color: #FFFFFF;
   background-color: #404040;
 }
-/* line 370, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 611, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .CheckOut__calculation {
   width: 250px;
 }
-/* line 373, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+@media only screen and (max-width: 640px) {
+  /* line 611, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+  .CheckOut__calculation {
+    margin: 50px auto;
+    width: 60%;
+  }
+}
+/* line 619, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .CheckOut__calculation p {
   width: 50px;
   margin-bottom: 25px;
   border-bottom: 1px solid #eeeeee;
+  font-weight: bold;
 }
-/* line 379, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 626, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .CheckOut__calculation tr {
   height: 35px;
   width: 250px;
   border-bottom: 1px solid #eeeeee;
 }
-/* line 386, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 633, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .CheckOut__calculation tr td {
   text-align: right;
 }
-/* line 390, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 637, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .CheckOut__calculation tr td:first-child {
   text-align: left;
   width: 160px;
 }
-/* line 395, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 642, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .CheckOut__calculation--btn {
   height: 40px;
   line-height: 40px;
@@ -10247,11 +10810,11 @@ input.delete_btn {
   text-align: center;
   background-color: #79b6C8;
 }
-/* line 403, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 650, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .CheckOut__calculation--btn a {
   color: white;
 }
-/* line 408, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 655, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .CheckOut__calculation--nobtn {
   height: 40px;
   line-height: 40px;
@@ -10263,19 +10826,19 @@ input.delete_btn {
 }
 
 /* End CSS for design by Kae */
-/* line 424, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 671, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .product_form {
   height: 300px;
 }
 
 /* Start CSS of admin product form */
-/* line 429, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 676, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 #products_list {
   background-color: white;
   width: 1200px;
   margin: 150px auto;
 }
-/* line 434, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 681, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 #products_list th {
   background-color: #79b6C8;
   padding: 5px;
@@ -10283,25 +10846,25 @@ input.delete_btn {
   color: white;
   text-align: center;
 }
-/* line 442, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 689, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 #products_list td {
   border: solid 1px #79b6C8;
   text-align: center;
   padding: 15px;
 }
-/* line 448, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 695, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 #products_list td.name {
   width: 140px;
 }
-/* line 452, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 699, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 #products_list td.price {
   width: 100px;
 }
-/* line 456, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 703, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 #products_list td.edit {
   width: 140px;
 }
-/* line 460, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 707, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 #products_list input {
   background-color: transparent;
   border: none;
@@ -10311,22 +10874,22 @@ input.delete_btn {
   appearance: none;
 }
 
-/* line 471, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 718, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .product_details {
   width: 800px;
   tr: nth-child(odd) td;
   tr: nth-child(even) td;
   tr-background-color: #FBDADE;
 }
-/* line 481, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 728, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .product_details th {
   width: 100px;
 }
-/* line 485, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 732, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .product_details th.description {
   width: 500px;
 }
-/* line 489, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 736, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .product_details td {
   width: 70px;
   text-align: center;
@@ -10334,64 +10897,64 @@ input.delete_btn {
 
 /* End CSS of admin product form */
 /* Start CSS of admin/products/new*/
-/* line 498, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 745, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 #product_registration {
   margin: 150px auto;
   width: 800px;
   border: solid 1px #79b6C8;
 }
-/* line 503, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 750, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 #product_registration h1 {
   font-size: 24px;
   text-align: center;
 }
-/* line 508, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 755, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 #product_registration #individual_item {
   width: 800px;
   margin: 30px auto;
 }
-/* line 512, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 759, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 #product_registration #individual_item label {
   font-size: 20px;
 }
-/* line 516, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 763, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 #product_registration #individual_item input#product_name {
   width: 200px;
   height: 30px;
   margin: 20px auto;
 }
-/* line 521, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 768, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 #product_registration #individual_item input#product_price {
   width: 200px;
   height: 30px;
   margin: 10px auto;
 }
-/* line 526, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 773, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 #product_registration #individual_item input#product_description {
   width: 500px;
   height: 150px;
   margin: 10px auto;
 }
 
-/* line 534, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 781, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 table.attr {
   width: 800px;
 }
-/* line 537, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 784, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 table.attr th {
   width: 205px;
 }
 
-/* line 542, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 789, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .file input {
   display: none;
 }
 
 /* End CSS of admin/products/new*/
 /* Start common CSS of admin products/new and edit*/
-/* line 550, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 797, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 select#product_theme_tag_id {
-  background-color: $theme-color;
+  background-color: #79b6C8;
   color: white;
   font-size: 16px;
   width: 160px;
@@ -10399,9 +10962,9 @@ select#product_theme_tag_id {
   margin: 10px 15px;
 }
 
-/* line 559, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 806, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 select#product_type_id {
-  background-color: $theme-color;
+  background-color: #79b6C8;
   color: white;
   font-size: 16px;
   width: 90px;
@@ -10409,9 +10972,9 @@ select#product_type_id {
   margin: 10px 15px;
 }
 
-/* line 568, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 815, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 select#product_price_id {
-  background-color: $theme-color;
+  background-color: #79b6C8;
   color: white;
   font-size: 16px;
   width: 120px;
@@ -10419,7 +10982,7 @@ select#product_price_id {
   margin: 10px 15px;
 }
 
-/* line 577, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 824, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .tag_section {
   margin-left: 7%;
   margin-top: 30px;
@@ -10427,7 +10990,7 @@ select#product_price_id {
 
 /* End common CSS of admin products/new and edit*/
 /* Start CSS of admin products/show*/
-/* line 586, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 833, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .ProductDetails {
   width: 800px;
   border: solid 1px #79b6C8;
@@ -10436,7 +10999,7 @@ select#product_price_id {
   margin: 120px auto;
   list-style-type: none;
 }
-/* line 594, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 841, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .ProductDetails dt {
   font-weight: bold;
   padding: 20px 15px;
@@ -10445,7 +11008,7 @@ select#product_price_id {
   float: left;
   clear: left;
 }
-/* line 603, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 850, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .ProductDetails dd {
   display: block;
   padding: 20px 15px;
@@ -10453,21 +11016,21 @@ select#product_price_id {
   float: right;
   clear: right;
 }
-/* line 611, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 858, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .ProductDetails__description {
   height: 120px;
 }
-/* line 615, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 862, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .ProductDetails__mainimage {
   height: 340px;
   line-height: 340px;
 }
-/* line 620, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 867, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .ProductDetails__subimage {
   height: 340px;
   line-height: 340px;
 }
-/* line 626, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 873, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .ProductDetails dl:after {
   content: ".";
   display: block;
@@ -10479,7 +11042,7 @@ select#product_price_id {
 
 /* End CSS of admin products/show*/
 /* Start CSS of admin products/edit */
-/* line 641, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 888, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 #product_edit_form {
   width: 800px;
   height: 100%;
@@ -10487,7 +11050,7 @@ select#product_price_id {
   background-color: #eeeeee;
 }
 
-/* line 648, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 895, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .thumbnail img {
   width: 600px;
   height: 480px;
@@ -10495,7 +11058,7 @@ select#product_price_id {
 
 /* Start CSS of admin products/edit */
 /* Start CSS of products/id */
-/* line 657, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 904, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 #product_details {
   width: 1000px;
   height: 100%;
@@ -10503,18 +11066,18 @@ select#product_price_id {
   margin: 50px auto;
   display: flex;
 }
-/* line 664, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 911, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 #product_details img {
   margin: 15px;
 }
 
-/* line 669, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 916, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .product_info {
   width: 400px;
   height: 370px;
   margin: 15px 15px 10px 0;
 }
-/* line 674, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 921, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .product_info ul.theme_tag {
   margin: 0;
   padding: 0;
@@ -10522,33 +11085,33 @@ select#product_price_id {
   li: hover;
   li-background-color: white;
 }
-/* line 679, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 926, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .product_info ul.theme_tag li {
   display: inline-block;
   list-style-type: none;
   margin: 0 10px;
   padding: 0 10px;
-  border: 1px $theme-color solid;
+  border: 1px #79b6C8 solid;
   border-radius: 5px;
-  color: $theme-color;
+  color: #79b6C8;
 }
-/* line 694, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 941, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .product_info h1 {
   text-align: center;
   margin: 10px 0;
   font-size: 24px;
 }
-/* line 700, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 947, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .product_info p.description {
   margin: 5px 0;
   height: 150px;
 }
-/* line 705, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 952, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 .product_info p.price {
   text-align: center;
 }
 
-/* line 711, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 958, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 #product_story {
   height: 100%;
   text-align: center;
@@ -10556,12 +11119,12 @@ select#product_price_id {
   margin: 50px auto 20px auto;
   background-color: #eeeeee;
 }
-/* line 718, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 965, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 #product_story h1 {
   padding: 15px;
   font-size: 24px;
 }
-/* line 723, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
+/* line 970, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_products.scss */
 #product_story p {
   width: 700px;
   margin: 35px auto;
@@ -10583,7 +11146,7 @@ select#product_price_id {
 
 /* line 12, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .Intro {
-  margin: 50px 0 210px;
+  margin: 70px 0 210px;
   width: 1080px;
 }
 @media only screen and (max-width: 640px) {
@@ -10593,23 +11156,29 @@ select#product_price_id {
     margin: 0px;
   }
 }
-/* line 21, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+@media only screen and (min-width: 641px) {
+  /* line 22, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+  .Intro .nav-collapse {
+    display: none !important;
+  }
+}
+/* line 25, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .Intro__main {
-  background-image: url("http://res.cloudinary.com/dmfclza05/image/upload/v1498882879/top/top_main.jpg");
+  background-image: url("//res.cloudinary.com/dmfclza05/image/upload/v1498882879/top/top_main.jpg");
   background-size: 100% 100%;
   width: 100%;
   height: 600px;
   text-align: center;
   padding-top: 110px;
 }
-/* line 23, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 27, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .Intro__main #wrapper.SpMenu__wrapper {
   border-style: none;
 }
 @media only screen and (max-width: 640px) {
-  /* line 21, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+  /* line 25, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
   .Intro__main {
-    background-image: url("http://res.cloudinary.com/dmfclza05/image/upload/v1498882879/top/top_main.jpg");
+    background-image: url("//res.cloudinary.com/dmfclza05/image/upload/v1498882879/top/top_main.jpg");
     width: 100%;
     height: 300px;
     margin-top: -20px;
@@ -10619,30 +11188,26 @@ select#product_price_id {
   }
 }
 @media only screen and (max-width: 640px) {
-  /* line 44, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+  /* line 48, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
   .Intro__main img {
     margin-top: -100px !important;
     z-index: 1;
   }
 }
-/* line 51, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
-.Intro__main a.nav-toggle {
-  color: yellow;
-}
-/* line 56, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 57, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .Intro__sub {
   height: 100%;
   margin: -90px 160px;
   padding: 0;
 }
 @media only screen and (max-width: 640px) {
-  /* line 56, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+  /* line 57, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
   .Intro__sub {
     width: 100%;
     margin: 10px 0;
   }
 }
-/* line 67, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 68, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .Intro__sub .Category__menu {
   list-style: none;
   display: flex;
@@ -10652,7 +11217,7 @@ select#product_price_id {
   background-color: white;
 }
 @media only screen and (max-width: 640px) {
-  /* line 67, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+  /* line 68, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
   .Intro__sub .Category__menu {
     width: 100%;
     list-style: none;
@@ -10660,7 +11225,7 @@ select#product_price_id {
     flex-direction: column;
   }
 }
-/* line 84, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 85, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .Intro__sub .Category__item {
   border: 1px solid #72C1C8;
   height: 220px;
@@ -10668,7 +11233,7 @@ select#product_price_id {
   margin: 15px;
 }
 @media only screen and (max-width: 640px) {
-  /* line 84, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+  /* line 85, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
   .Intro__sub .Category__item {
     height: 90px;
     width: 90%;
@@ -10679,61 +11244,61 @@ select#product_price_id {
     opacity: 0.9;
   }
 }
-/* line 100, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 102, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .Intro__sub .Category__item:nth-child(even) {
   margin-left: 0;
 }
 @media only screen and (max-width: 640px) {
-  /* line 100, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+  /* line 102, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
   .Intro__sub .Category__item:nth-child(even) {
     margin: 10px auto;
   }
 }
-/* line 108, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 110, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .Intro__sub .Category__item:nth-child(2) {
   margin-right: 0;
 }
 @media only screen and (max-width: 640px) {
-  /* line 108, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+  /* line 110, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
   .Intro__sub .Category__item:nth-child(2) {
     margin: 10px auto;
   }
 }
-/* line 117, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
-.Intro__sub .Category__picture {
+/* line 119, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+.Intro__sub .Category__photo {
   margin: 5px;
 }
-/* line 119, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
-.Intro__sub .Category__picture .pc {
+/* line 121, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+.Intro__sub .Category__photo .pc {
   display: block !important;
 }
-/* line 120, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
-.Intro__sub .Category__picture .sp {
+/* line 122, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+.Intro__sub .Category__photo .sp {
   display: none !important;
 }
 @media only screen and (max-width: 640px) {
-  /* line 117, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
-  .Intro__sub .Category__picture {
+  /* line 119, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+  .Intro__sub .Category__photo {
     width: 30%;
     float: left;
     margin: 0;
   }
-  /* line 123, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
-  .Intro__sub .Category__picture .pc {
+  /* line 125, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+  .Intro__sub .Category__photo .pc {
     display: none !important;
   }
-  /* line 124, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
-  .Intro__sub .Category__picture .sp {
+  /* line 126, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+  .Intro__sub .Category__photo .sp {
     display: block !important;
   }
 }
 @media only screen and (max-width: 640px) {
-  /* line 130, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
-  .Intro__sub .Category__picture img.sp {
+  /* line 132, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+  .Intro__sub .Category__photo img.sp {
     border-radius: 10px;
   }
 }
-/* line 137, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 139, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .Intro__sub .Category__text {
   text-align: center;
   float: right;
@@ -10742,32 +11307,33 @@ select#product_price_id {
   margin: 0 auto;
 }
 @media only screen and (max-width: 640px) {
-  /* line 137, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+  /* line 139, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
   .Intro__sub .Category__text {
     width: 70%;
     margin: 10px auto;
   }
 }
 @media only screen and (max-width: 640px) {
-  /* line 149, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+  /* line 151, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
   .Intro__sub .Category__text a {
     color: white;
   }
 }
-/* line 155, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 157, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .Intro__sub .Category__text--title {
   margin: 10px auto 5px;
 }
-/* line 161, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 163, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .Intro__news {
   text-align: center;
   border: solid 1px #72C1C8;
   height: 80px;
   margin: 200px 200px 80px;
-  line-height: 80px;
+  padding: 15px 20px;
+  line-height: 25px;
 }
 @media only screen and (max-width: 640px) {
-  /* line 161, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+  /* line 163, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
   .Intro__news {
     width: 90%;
     margin: 20px auto;
@@ -10775,12 +11341,18 @@ select#product_price_id {
   }
 }
 
-/* line 176, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 179, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .NewArrival {
   width: 100%;
   margin: auto;
 }
-/* line 182, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+@media only screen and (min-width: 641px) {
+  /* line 184, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+  .NewArrival i.fa {
+    display: none;
+  }
+}
+/* line 190, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .NewArrival__head {
   display: block;
   text-align: center;
@@ -10788,17 +11360,17 @@ select#product_price_id {
   margin: 0;
 }
 @media only screen and (max-width: 640px) {
-  /* line 182, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+  /* line 190, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
   .NewArrival__head {
     font-size: 22px;
   }
 }
-/* line 193, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 201, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .NewArrival__text {
   text-align: center;
   font-size: 16px;
 }
-/* line 198, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 206, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .NewArrival__main {
   list-style: none;
   display: flex;
@@ -10807,76 +11379,76 @@ select#product_price_id {
   padding: 0;
 }
 @media only screen and (max-width: 640px) {
-  /* line 198, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+  /* line 206, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
   .NewArrival__main {
     width: 100%;
     margin: 20px 0;
     flex-direction: column;
   }
 }
-/* line 213, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 221, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .NewArrival__item {
   text-align: center;
   margin: 30px;
 }
 @media only screen and (max-width: 640px) {
-  /* line 213, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+  /* line 221, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
   .NewArrival__item {
     border-bottom: 1px solid gray;
     margin: 0 15px;
     padding-bottom: 15px;
   }
 }
-/* line 223, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 231, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .NewArrival__item:nth-child(even) {
   margin-left: 0;
 }
 @media only screen and (max-width: 640px) {
-  /* line 223, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+  /* line 231, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
   .NewArrival__item:nth-child(even) {
     margin: 15px;
   }
 }
-/* line 231, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 239, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .NewArrival__item:nth-child(2) {
   margin-right: 0;
 }
 @media only screen and (max-width: 640px) {
-  /* line 231, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+  /* line 239, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
   .NewArrival__item:nth-child(2) {
     margin: 15px;
   }
 }
-/* line 240, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
-.NewArrival__item--picture .pc {
+/* line 248, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+.NewArrival__item--photo .pc {
   display: block !important;
 }
-/* line 241, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
-.NewArrival__item--picture .sp {
+/* line 249, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+.NewArrival__item--photo .sp {
   display: none !important;
 }
 @media only screen and (max-width: 640px) {
-  /* line 239, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
-  .NewArrival__item--picture {
+  /* line 247, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+  .NewArrival__item--photo {
     width: 30%;
     float: left;
   }
-  /* line 246, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
-  .NewArrival__item--picture .pc {
+  /* line 254, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+  .NewArrival__item--photo .pc {
     display: none !important;
   }
-  /* line 247, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
-  .NewArrival__item--picture .sp {
+  /* line 255, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+  .NewArrival__item--photo .sp {
     display: block !important;
   }
 }
-/* line 251, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 259, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .NewArrival__item--title {
-  margin: auto;
+  margin: auto 10px;
   height: 40px;
 }
 @media only screen and (max-width: 640px) {
-  /* line 251, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+  /* line 259, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
   .NewArrival__item--title {
     width: 70%;
     float: right;
@@ -10884,39 +11456,39 @@ select#product_price_id {
     margin: 10px 0;
   }
 }
-/* line 263, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 271, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .NewArrival__item .fa {
   position: absolute;
-  margin: -50px 21%;
+  margin: -8% 25%;
   font-size: 24px;
 }
 
-/* line 272, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 280, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .Popular {
   width: 100%;
   margin: auto;
 }
-/* line 277, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 285, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .Popular__head {
-  display: block;
+  font-size: 22px;
   text-align: center;
   padding: 20px 0 10px;
   margin: 0;
 }
-/* line 284, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 292, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .Popular__text {
   text-align: center;
   font-size: 16px;
 }
-/* line 289, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 297, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .Popular__all_pc {
   display: flex !important;
 }
-/* line 290, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 298, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .Popular__all_sp {
   display: none !important;
 }
-/* line 294, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 302, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .Popular__all_pc {
   display: flex;
   flex-wrap: wrap;
@@ -10926,61 +11498,61 @@ select#product_price_id {
   margin: auto;
   padding: 0;
 }
-/* line 304, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 312, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .Popular__item {
   display: flex;
   margin: 15px;
   width: 280px;
   background-color: #FAFAFA;
 }
-/* line 311, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 319, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .Popular__main {
   display: flex;
   flex-direction: column;
 }
-/* line 315, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 323, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .Popular__main--title {
   margin: 5px 10px;
   height: 40px;
 }
-/* line 320, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 328, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .Popular__main--price {
   margin: 0 10px;
 }
 @media only screen and (max-width: 640px) {
-  /* line 272, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+  /* line 280, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
   .Popular {
     width: 100%;
     margin: 20px 0;
     flex-direction: column;
   }
-  /* line 326, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+  /* line 334, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
   .Popular__all_pc {
     display: none !important;
   }
-  /* line 327, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+  /* line 335, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
   .Popular__all_sp {
     display: block !important;
   }
-  /* line 333, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+  /* line 341, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
   .Popular__head {
     display: block;
     text-align: center;
     padding: 20px 0 10px;
     margin: 0;
   }
-  /* line 340, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+  /* line 348, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
   .Popular__text {
     width: 100%;
     margin: 5px;
     text-align: center;
     font-size: 15px;
   }
-  /* line 347, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+  /* line 355, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
   .Popular__all_sp {
     padding: 0;
   }
-  /* line 351, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+  /* line 359, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
   .Popular__item {
     margin: 0 15px;
     padding: 15px 0;
@@ -10988,77 +11560,77 @@ select#product_price_id {
     border-bottom: 1px solid gray;
     background-color: white;
   }
-  /* line 359, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+  /* line 367, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
   .Popular__main {
     width: 70%;
     float: right;
   }
-  /* line 363, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+  /* line 371, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
   .Popular__main--title {
     text-align: center;
     line-height: 40px;
     margin: 10px 0;
   }
-  /* line 369, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+  /* line 377, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
   .Popular__main--price {
     text-align: center;
     margin: 0 10px;
   }
-  /* line 374, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
-  .Popular__main .fa {
+  /* line 382, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+  .Popular .fa {
     position: absolute;
-    margin: 30px 52%;
+    margin: 7% -7%;
     font-size: 24px;
   }
 }
 
-/* line 385, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 392, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .JojimaMap {
   margin: 100px 30px 50px;
 }
-/* line 387, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 394, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .JojimaMap .pc {
   display: block !important;
 }
-/* line 388, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 395, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .JojimaMap .sp {
   display: none !important;
 }
 @media only screen and (max-width: 640px) {
-  /* line 385, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+  /* line 392, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
   .JojimaMap {
     margin: 30px 10px;
   }
-  /* line 392, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+  /* line 399, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
   .JojimaMap .pc {
     display: none !important;
   }
-  /* line 393, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+  /* line 400, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
   .JojimaMap .sp {
     display: block !important;
   }
 }
-/* line 396, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 403, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .JojimaMap img {
   width: 100%;
   max-width: 100%;
   height: auto;
 }
 
-/* line 405, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 412, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 section .InterviewPC {
   display: block !important;
 }
-/* line 406, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 413, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 section .InterviewSP {
   display: none !important;
 }
-/* line 409, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 416, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 section .InterviewPC {
   width: 100%;
   margin: auto;
 }
-/* line 413, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 420, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 section .InterviewPC__head {
   display: block;
   text-align: center;
@@ -11066,108 +11638,108 @@ section .InterviewPC__head {
   margin: 0;
 }
 @media only screen and (max-width: 640px) {
-  /* line 413, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+  /* line 420, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
   section .InterviewPC__head {
     font-size: 20px;
   }
 }
-/* line 424, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 431, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 section .InterviewPC__text {
   text-align: center;
   font-size: 16px;
 }
 @media only screen and (max-width: 640px) {
-  /* line 424, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+  /* line 431, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
   section .InterviewPC__text {
     text-align: left;
     font-size: 14px;
     margin: 5px 30px;
   }
 }
-/* line 435, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 442, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 section .InterviewPC__section {
   display: flex;
   width: 1050px;
   margin: auto;
 }
-/* line 441, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 448, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 section .InterviewPC__item {
   display: flex;
   margin: 15px;
   height: 300px;
   width: 370px;
 }
-/* line 451, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 458, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 section .InterviewPC__sub--photo {
   margin: 20px 0 0 10px;
 }
-/* line 456, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 463, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 section .InterviewPC__main {
   width: 110px;
   display: flex;
   flex-direction: column;
   margin: 0 15px;
 }
-/* line 462, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 469, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 section .InterviewPC__main--id {
   margin: 26px 10px;
   text-align: center;
   font-size: 26px;
 }
-/* line 468, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 475, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 section .InterviewPC__main--companyname {
   text-align: center;
   font-size: 20px;
 }
-/* line 473, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 480, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 section .InterviewPC__main--name {
   text-align: center;
   font-size: 18px;
 }
-/* line 478, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 485, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 section .InterviewPC__main--summary {
   margin: 10px 10px;
   font-size: 12px;
 }
-/* line 483, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 490, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 section .InterviewPC__main--btn {
   text-align: center;
   margin-top: 20px;
 }
-/* line 487, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 494, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 section .InterviewPC__main--btn a {
   color: #79b6C8;
 }
 @media only screen and (max-width: 640px) {
-  /* line 495, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+  /* line 502, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
   section .InterviewPC {
     display: none !important;
   }
-  /* line 496, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+  /* line 503, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
   section .InterviewSP {
     display: block !important;
   }
-  /* line 500, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+  /* line 507, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
   section .InterviewSP__photo {
     list-style-type: none;
     width: 100%;
     margin: 10px 0;
     padding: 0;
   }
-  /* line 506, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+  /* line 513, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
   section .InterviewSP__photo .sp-image {
     width: 100%;
     padding: 5px 10px;
   }
 }
 
-/* line 516, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 523, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .AboutUs {
   width: 100%;
   font-size: 22px;
   color: #FFFFFF;
 }
-/* line 521, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 528, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .AboutUs__first {
   text-align: center;
   height: 700px;
@@ -11175,96 +11747,96 @@ section .InterviewPC__main--btn a {
   background-image: url(/assets/pc/about_us/about_us_1-6885d63c4aeacdef91e3ee9f696bb4ece139f308347ea39bbfd305741e219535.jpg);
   background-size: cover;
 }
-/* line 528, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 535, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .AboutUs__first p {
   margin: 0 auto;
   padding-top: 250px;
 }
-/* line 534, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 541, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .AboutUs__first span {
   margin-top: 20px;
 }
-/* line 539, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 546, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .AboutUs__second {
   height: 700px;
   text-align: left;
   background-image: url(/assets/pc/about_us/about_us_2-31578dd735df73b7ad917958d92eee81c934879c85838d4408210e2d4d5bffc7.jpg);
   background-size: cover;
 }
-/* line 545, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 552, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .AboutUs__second p {
   margin: 0 auto;
   padding: 150px 0 0 50px;
 }
-/* line 551, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 558, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .AboutUs__third {
   height: 700px;
   text-align: left;
   background-image: url(/assets/pc/about_us/about_us_3-1f4a4ec9eaa913365e2d7ecd042abeef86cd4cc017cda43db05af18a251763ad.jpg);
   background-size: cover;
 }
-/* line 557, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 564, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .AboutUs__third p {
   margin: 0 auto;
   padding: 150px 0 0 50px;
 }
-/* line 563, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 570, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .AboutUs__fourth {
   height: 700px;
   text-align: right;
   background-image: url(/assets/pc/about_us/about_us_4-0ffbc6762dd25826bbb2eee6befc62ae9f9c405a48e53d96c127ce30fa6799e3.jpg);
   background-size: cover;
 }
-/* line 569, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 576, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .AboutUs__fourth p {
   margin: 0 auto;
   padding: 250px 50px 0 0;
 }
 
-/* line 576, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 583, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 footer {
   margin: 0;
 }
 
 /*ここまでトップページのデザイン*/
-/* line 583, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 590, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .InterviewPanel {
   width: 680px;
   margin: 100px auto auto;
   line-height: 2;
 }
-/* line 589, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 596, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .InterviewPanel__photo {
   width: 680px;
   height: 450px;
 }
-/* line 594, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 601, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .InterviewPanel__question {
   color: #999999;
 }
-/* line 598, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 605, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .InterviewPanel h1 {
   font-size: 28px;
   margin: 12px auto 20px;
   text-align: center;
 }
-/* line 604, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 611, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .InterviewPanel h2 {
   font-size: 28px;
 }
-/* line 608, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 615, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .InterviewPanel h3 {
   font-size: 28px;
 }
-/* line 612, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 619, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .InterviewPanel h4 {
   font-size: 28px;
 }
-/* line 616, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 623, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .InterviewPanel h5 {
   font-size: 28px;
 }
-/* line 620, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
+/* line 627, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/web/_static_pages.scss */
 .InterviewPanel p {
   margin: 13px;
 }
@@ -16193,15 +16765,16 @@ a.nav-toggle {
   position: absolute;
   margin: 30px 0 0 30px;
   color: gray;
+  color: white;
 }
 
-/* line 10, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/responsive-nav.css */
+/* line 11, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/responsive-nav.css */
 a.nav-toggle.active {
   position: absolute;
-  margin: 180px 40px -50px;
+  margin: 155px 40px -50px;
 }
 
-/* line 16, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/responsive-nav.css */
+/* line 17, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/responsive-nav.css */
 .nav-collapse ul {
   margin: 0;
   padding: 0;
@@ -16210,7 +16783,7 @@ a.nav-toggle.active {
   list-style: none;
 }
 
-/* line 24, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/responsive-nav.css */
+/* line 25, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/responsive-nav.css */
 .nav-collapse li {
   width: 100%;
   display: block;
@@ -16219,31 +16792,31 @@ a.nav-toggle.active {
   border-bottom: 0.05px solid white;
   padding: 3px auto;
 }
-/* line 32, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/responsive-nav.css */
+/* line 33, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/responsive-nav.css */
 .nav-collapse li a {
   color: white;
   margin-left: 10px;
 }
 
-/* line 38, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/responsive-nav.css */
+/* line 39, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/responsive-nav.css */
 ul.logininfo {
   height: 38px;
 }
-/* line 40, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/responsive-nav.css */
+/* line 41, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/responsive-nav.css */
 ul.logininfo li {
   height: 38px;
 }
-/* line 42, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/responsive-nav.css */
+/* line 43, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/responsive-nav.css */
 ul.logininfo li img {
   line-height: 38px;
   margin-left: 10px;
 }
-/* line 46, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/responsive-nav.css */
+/* line 47, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/responsive-nav.css */
 ul.logininfo li a {
   line-height: 38px;
 }
 
-/* line 52, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/responsive-nav.css */
+/* line 53, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/responsive-nav.css */
 .js .nav-collapse {
   clip: rect(0 0 0 0);
   max-height: 0;
@@ -16253,12 +16826,12 @@ ul.logininfo li a {
   zoom: 1;
 }
 
-/* line 61, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/responsive-nav.css */
+/* line 62, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/responsive-nav.css */
 .nav-collapse.opened {
   max-height: 9999px;
 }
 
-/* line 65, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/responsive-nav.css */
+/* line 66, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/responsive-nav.css */
 .nav-toggle {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-touch-callout: none;
@@ -16270,17 +16843,17 @@ ul.logininfo li a {
 }
 
 @media screen and (min-width: 641px) {
-  /* line 76, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/responsive-nav.css */
+  /* line 77, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/responsive-nav.css */
   .js .nav-collapse {
     position: relative;
   }
 
-  /* line 79, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/responsive-nav.css */
+  /* line 80, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/responsive-nav.css */
   .js .nav-collapse.closed {
     max-height: none;
   }
 
-  /* line 82, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/responsive-nav.css */
+  /* line 83, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/responsive-nav.css */
   .nav-toggle {
     display: none;
   }
@@ -16309,7 +16882,7 @@ a img:hover {
   width: 100%;
   height: 70px;
   margin: 0　auto;
-  border-bottom: solid 0.5px $theme-color;
+  border-bottom: solid 0.5px #79b6C8;
   overflow: hidden;
 }
 

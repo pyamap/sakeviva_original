@@ -308,6 +308,7 @@
 		color: $theme-color;
 
 		@include mq-sp {
+			width: 95%;
 			margin: 10px auto 10px 20px;
 		}
 	}
@@ -354,7 +355,7 @@
 
 		@include mq-sp {
 			display: block;
-			width: 100%;
+			width: 95%;
 			height: 270px;
 			margin: 20px;
 			padding: 0;
@@ -559,7 +560,7 @@
 
 			@include mq-sp {
 				margin: auto;
-				width: 80%;
+				width: 90%;
 				text-align: center;
 			}
 

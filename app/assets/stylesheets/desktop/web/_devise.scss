@@ -7,8 +7,19 @@
 	border-radius: 5px;
 	margin-top: 150px;
 
+	@include mq-sp {
+		width: 90%;
+		height: 80%;
+		margin-top: 70px;
+	}
+
 	h2 {
 		font-size: 24px;
+
+		@include mq-sp {
+			font-size: 20px;
+			padding: 20px;
+		}
 	}
 
 	input {
@@ -17,6 +28,12 @@
 		font-size: 120%;
 		border-radius: 5px;
 		border-style: solid 0.1px gray;
+	}
+}
+
+form#new_user.new_user {
+	@include mq-sp {
+		margin: 15px auto;
 	}
 }
 
@@ -35,5 +52,6 @@
 	color: #fff;
 	background-color: #4c66a4;
 	z-index: 10;
+	margin: 0 auto 20px;
 }
 

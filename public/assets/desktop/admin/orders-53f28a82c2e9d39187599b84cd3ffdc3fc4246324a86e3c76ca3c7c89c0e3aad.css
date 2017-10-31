@@ -1,0 +1,91 @@
+@charset "UTF-8";
+/* responsive setting
+----------------------------------------------------*/
+/* color setting
+----------------------------------------------------*/
+/*Start of admin/orders/css*/
+/* line 4, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/admin/orders.scss */
+.OrderList {
+  width: 820px;
+  margin: 150px auto 100px;
+  background-color: white;
+  border: solid 1px #79b6C8;
+}
+/* line 12, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/admin/orders.scss */
+.OrderList__item th {
+  text-align: center;
+}
+/* line 15, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/admin/orders.scss */
+.OrderList__item td {
+  width: 120px;
+  height: 30px;
+  text-align: center;
+}
+/* line 21, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/admin/orders.scss */
+.OrderList h1 {
+  text-align: center;
+  font-size: 24px;
+}
+
+/*End of admin/orders/css*/
+/*admin/orders/idのスタイルここから*/
+/* line 30, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/admin/orders.scss */
+.OrderInfo {
+  width: 600px;
+  height: 100%;
+  margin: 100px auto;
+  background-color: white;
+  border: solid 1px #79b6C8;
+  font-weight: bold;
+}
+/* line 38, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/admin/orders.scss */
+.OrderInfo ul {
+  padding: 0;
+}
+/* line 42, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/admin/orders.scss */
+.OrderInfo ul li {
+  list-style-type: none;
+  text-align: center;
+  margin: 10px;
+}
+/* line 48, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/admin/orders.scss */
+.OrderInfo__id {
+  border-bottom: dotted 1px #79b6C8;
+  margin: 20px;
+}
+/* line 53, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/admin/orders.scss */
+.OrderInfo__info {
+  margin: 20px;
+}
+/* line 57, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/admin/orders.scss */
+.OrderInfo__info {
+  margin: 20px;
+}
+/* line 61, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/admin/orders.scss */
+.OrderInfo__status {
+  border-top: solid 1px #79b6C8;
+  text-align: center;
+}
+/* line 65, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/admin/orders.scss */
+.OrderInfo__status--detail {
+  font-weight: bold;
+  font-size: 22px;
+  margin-top: 10px;
+  color: #00FF3B;
+  letter-spacing: 3px;
+  text-align: center;
+}
+/* line 75, /Users/pyamap/Documents/original/sakeviva_original/app/assets/stylesheets/desktop/admin/orders.scss */
+.OrderInfo__status input {
+  text-align: center;
+  border: solid 1px #79b6C8;
+  background-color: #79b6C8;
+  width: 100px;
+  height: 30px;
+  font-size: 12px;
+  border-radius: 5px;
+  color: white;
+  margin: 10px auto 30px auto;
+}
+
+/*admin/orders/idのスタイルここまで*/
