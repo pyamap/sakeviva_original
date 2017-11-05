@@ -594,9 +594,29 @@ footer {
 	margin: 100px auto auto;
 	line-height: 2;
 
+	@include mq-sp {
+		width: 95%;
+		margin: 50px auto;
+	}
+
 	&__photo {
 		width: 680px;
 		height: 450px;
+		.pc { display: block !important;}
+		.sp { display: none !important;}
+
+		@include mq-sp {
+			width: 95%;
+			height: 250px;
+			margin: 10px auto;
+			.pc { display: none !important;}
+			.sp { display: block !important;}
+
+			img {
+				width: 100%;
+				height: 250px;
+			}
+		}
 	}
 
 	&__question {
