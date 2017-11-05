@@ -78,6 +78,10 @@
 
 	margin-top: 150px;
 
+	@include mq-sp {
+		margin-top: 50px;
+	}
+
 	h1 {
 		font-size: 24px;
 		text-align: center;
@@ -97,6 +101,12 @@
 		flex-wrap: wrap;
 		justify-content: center;
 
+		@include mq-sp {
+			width: 100%;
+			flex-direction: column;
+			text-align: center;
+		}
+
 		form.edit_address {
 			border: solid 1px $theme-color;
 			border-radius: 8px;
@@ -111,6 +121,10 @@
 			list-style-type: none;
 			text-align: center;
 			font-size: 16px;
+
+			@include mq-sp {
+				margin: 20px auto;
+			}
 
 			li {
 				padding-top: 3px;

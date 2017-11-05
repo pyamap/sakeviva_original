@@ -2,10 +2,12 @@
   <section class="Cart">
   <% for item in @cart.items %>
       <ul class="Cart__item">
-        <li class="Cart__item--image"><%= image_tag 'pc/top/category_sake.jpg', height: 120, width: 100, alt: "酒の写真"%></li>
+        <li class="Cart__item--image">
+        <%= image_tag(item.image.url, height: 120, width: 100, :class =>'pc', alt: "酒の写真") %>
+        <%= image_tag(item.image.url, height: 210, width: 170, :class =>'sp', alt: "酒の写真") %></li>
         <li class="Cart__item--name"><%= link_to "#{item.name}", item.product %></li>
-        <li class="Cart__item--quantity"><%= item.quantity %>個</li>
-        <li class="Cart__item--subtotal_price"><%= number_to_currency(item.subtotal_price) %></li>
+        <li class="Cart__item--quantity">数量 : <%= item.quantity %></li>
+        <li class="Cart__item--subtotal"><%= number_to_currency(item.subtotal_price) %></li>
       </ul>
   <% end %>
   </section>

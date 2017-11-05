@@ -46,8 +46,8 @@ Rails.application.routes.draw do
   get "trade_law" => "terms#trade_law"
   get "privacy" => "terms#privacy"
   get "shipping_fee" => "terms#shipping_fee"
-  
-  #お問い合わせフォーム  
+
+  #お問い合わせフォーム
   get "inquiry" => "inquiries#index"
   post "inquiry/confirm" => "inquiries#confirm"
   post "inquiry/thanks" => "inquiries#thanks"

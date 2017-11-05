@@ -2,22 +2,77 @@
 	#confirmation_all {
 		margin: 200px auto 30px auto;
 
+		@include mq-sp {
+			width: 95%;
+			margin: 50px auto 30px auto;
+		}
+
 		.Cart{
 			width: 900px;
 			margin: auto;
 
+			@include mq-sp {
+				width: 100%;
+			}
+
+
 			&__item{
 				padding: 0;
 				font-size: 18px;
+				border-bottom: 1px solid $theme-color;
+				margin: 0 auto;
+
+				@include mq-sp {
+					height: 225px;
+					width: 100%;
+					margin: 10px auto;
+				}
 
 				li {
 					width: 180px;
-					margin: 0 20px;
+					margin: 10px 20px 10px 50px;
+
+					@include mq-sp {
+						margin: 0 15px;
+						width: 40%;
+					}
+				}
+
+			&--image{
+				.pc { display: block !important; }
+				.sp { display: none !important; }
+				width: 150px;
+
+				@include mq-sp {
+					margin: 30px 15px;
+				 	.pc { display: none !important; }
+					.sp { display: block !important; }
+				}
+			}
+
+				&--name {
+					@include mq-sp {
+						float: right;
+					}
 				}
 
 				&--quantity {
 					border: none;
 					width: 30px;
+
+					@include mq-sp {
+						float: right;
+						height: 40px;
+						line-height: 40px;
+					}
+				}
+
+				&--subtotal {
+					@include mq-sp {
+						float: right;
+						height: 30px;
+						line-height: 30px;
+					}
 				}
 			}
 		}
@@ -27,6 +82,12 @@
 			margin: 50px auto;
 			border-top: solid 1px $theme-color;
 
+			@include mq-sp {
+				width: 100%;
+				text-align: center;
+			}
+
+
 			&__item{
 				width:420px;
 				margin: 40px auto;
@@ -35,7 +96,7 @@
 				td th {
 					margin: 10px auto;
 					padding: 50px auto;
-				}	
+				}
 			}
 		}
 
@@ -45,7 +106,12 @@
 			padding-top: 20px;
 			margin: 20px auto 10px;
 			text-align: right;
-			border-top: solid 1px $theme-color;	
+			border-top: solid 1px $theme-color;
+
+			@include mq-sp {
+				width: 100%;
+			}
+
 		}
 
 		.total_price{
@@ -53,6 +119,11 @@
 			font-size: 20px;
 			margin: 10px auto 50px;
 			text-align: right;
+
+			@include mq-sp {
+				width: 100%;
+			}
+
 		}
 	}
 
@@ -73,7 +144,7 @@
 
 
 #payjp_checkout_box {
-	
+
 	opacity:0;
 	width: 250px;
 	height: 50px;
