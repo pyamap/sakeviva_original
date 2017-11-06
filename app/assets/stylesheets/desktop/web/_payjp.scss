@@ -162,16 +162,41 @@
 
 /*Thank you Pageのスタイルここから*/
 
-#purchased_notice {
+.PurchasedNotice {
 	width: 800px;
-	height: 100%;
 	margin: 150px auto;
 	border-color: 1px solid $theme-color;
 	text-align: center;
 
+	@include mq-sp {
+		width: 95%;
+		margin: 50px auto;
+	}
+
 	h1 {
 		font-size: 26px;
 		padding: 30px;
+
+		@include mq-sp {
+			padding: 15px;
+		}
+	}
+
+	&--photo {
+		margin: auto;
+		width: 600px;
+		img.pc { display: block !important; }
+		img.sp { display: none !important; }
+
+		@include mq-sp {
+			width: 90%;
+			img.pc { display: none !important; }
+			img.sp { display: block !important; }
+
+			img {
+				width: 100%;
+			}
+		}
 	}
 
 	p {
@@ -181,6 +206,10 @@
 		a {
 			color: $theme-color;
 			font-size: 20px;
+
+			@include mq-sp {
+				font-size: 16px;
+			}
 		}
 
 		a: hover {
