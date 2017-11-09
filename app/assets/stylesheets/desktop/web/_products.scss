@@ -333,17 +333,17 @@
 
 		&--price {
 			width: 40px;
-			margin-left: 225px;
+			margin-left: 215px;
 		}
 
 		&--quantity {
 			width: 100px;
-			margin-left: 94px;
+			margin-left: 26px;
 			text-align: center;
 		}
 
 		&--unitprice {
-			margin-left: 60px;
+			margin-left: 28px;
 		}
 	}
 
@@ -404,7 +404,9 @@
 		}
 
 		&--price {
-			margin-left: 65px;
+			flex: 0 0 60px;
+			margin-left: 50px;
+
 			@include mq-sp {
 				width: 300px;
 				float: left;
@@ -416,7 +418,7 @@
 			width: 70px;
 			height: 40px;
 			display: flex;
-			margin: 0 0 0 65px;
+			margin: 0 0 0 40px;
 			border: 1px solid $theme-color;
 
 			@include mq-sp {
@@ -448,7 +450,9 @@
 		}
 
 		&--subtotal_price {
+			flex: 0 0 60px;
 			margin-left: 35px;
+
 
 			@include mq-sp {
 				display: none;

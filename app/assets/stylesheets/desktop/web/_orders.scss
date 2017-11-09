@@ -7,39 +7,100 @@
 	background-color: white;
 	border: solid 1px $theme-color;
 
+		@include mq-sp {
+			width: 95%;
+			margin: 50px auto;
+		}
+
 	div.order_items {
 		width: 580px;
 		float: left;
 		border-bottom: solid 1px $theme-color;
 		border-right: solid 1px $theme-color;
 
-		section.order_pic {
+		@include mq-sp {
+			width: 100%;
+			border-right: none;
+		}
+
+		.order_pic {
 			float: left;
 			margin: 7px;
 			height: 210px;
+
+			img.pc { display: block !important ;}
+			img.sp { display: none !important ;}
+
+			@include mq-sp {
+				width: 40%;
+				height: 95%;
+				margin: 50px 3%;
+		  	img.pc { display: none !important ;}
+			  img.sp { display: block !important ;}
+
+			  img {
+			  	width: 100%;
+			  }
+
+			}
 		}
 
-		section.details_list {
+		.details_list {
 			float: right;
 			width: 320px;
 			padding: 0 20px;
 			margin: 40px 0;
+
+			@include mq-sp {
+				width: 47%;
+				padding: 0;
+			}
 		}
 
 		ul {
 			padding: 0;
+
+			@include mq-sp {
+				width: 90%;
+				margin: 0;
+			}
 		}
 
 		ul li {
 			list-style-type: none;
+
+			@include mq-sp {
+				margin: 10px;
+			}
+		}
+
+		.delivery_statusSp {
+			width: 100px;
+			p {
+				background-color: $theme-color;
+				color: white;
+				text-align: center;
+				height: 35px;
+				line-height: 35px;
+				width: 100px;
+				margin: 20px auto;
+				border-radius: 8px;
+			}
+
+				@include mq-pc {
+				display: none !important;
+			}
 		}
 
 		p.repurchase_button {
 			text-align: center;
 			border: solid 1px $theme-color;
-			width: 90px;
-			margin: 20px 0;
+			width: 100px;
+			margin: 10px 0;
 			border-radius: 5px;
+			height: 31px;
+	    line-height: 31px;
+	    border-radius: 8px;
 
 			a {
 				color: $theme-color;
@@ -56,11 +117,15 @@
 
 	}
 
-	div.delivery_status {
+	.delivery_statusPc {
 		width: 219px;
-		height: 225px;	
+		height: 225px;
 		float: right;
 		border-bottom: solid 1px $theme-color;
+
+		@include mq-sp {
+			 display: none !important;
+		}
 
 		p {
 			background-color: $theme-color;
