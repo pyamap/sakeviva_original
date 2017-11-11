@@ -39,4 +39,22 @@ class ApplicationController < ActionController::Base
 		devise_parameter_sanitizer.permit(:account_update) {|u| u.permit(:name, :email, :password, :password_confirmation, :current_password)}
 	end
 
+  after_filter :store_location
+
+  def store_location
+    if (request.fullpath != "/users/sign_in" && \
+        request.fullpath != "/users/sign_up" && \
+        request.fullpath != "/users/password/new" && \
+        !request.xhr?) # don't store ajax calls
+      session[:previous_url] = request.fullpath
+    end
+  end
+
+  def after_sign_in_path_for(resource)
+    session[:previous_url] || root_path
+  end
+
+  def after_sign_out_path_for(resource)
+    session[:previous_url] || root_path
+  end
 end
