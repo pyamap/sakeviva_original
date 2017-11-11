@@ -21,7 +21,11 @@ class PayjpController < ApplicationController
 	end
 
 	def pay #payjpの決算がおりるメソッド
-		Payjp.api_key = 'sk_live_59afb933e6fad56abe00d3dac5cd1562902a1fc9df05dacb5befc109'
+		if Rails.env == 'development'
+			Payjp.api_key = 'sk_test_e3591175b23241e952c79a40'
+		else
+			Payjp.api_key = 'sk_live_59afb933e6fad56abe00d3dac5cd1562902a1fc9df05dacb5befc109'
+		end
 		charge = Payjp::Charge.create(
 		:amount => params[:total_price],
 		:card => params['payjp-token'],
