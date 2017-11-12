@@ -13,7 +13,7 @@
 				<li>注文日：<%= order.created_at %></li>
 				<li>配送予定日：11月11日 </li>
 				<li><%= order.product.name %></li>
-				<li><%= order.product.value %>円</li>
+				<li><%= order.product.value %>円 (税込)</li>
 			</ul>
 			<div class="delivery_statusSp">
 				<p><%= order.delivery.status %></p>

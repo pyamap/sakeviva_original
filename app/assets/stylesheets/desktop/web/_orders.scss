@@ -49,7 +49,7 @@
 			float: right;
 			width: 320px;
 			padding: 0 20px;
-			margin: 40px 0;
+			margin: 30px 0 20px ;
 
 			@include mq-sp {
 				width: 47%;
@@ -68,6 +68,7 @@
 
 		ul li {
 			list-style-type: none;
+			margin: 6px auto;
 
 			@include mq-sp {
 				margin: 10px;
@@ -96,7 +97,7 @@
 			text-align: center;
 			border: solid 1px $theme-color;
 			width: 100px;
-			margin: 10px 0;
+			margin: 20px 0;
 			border-radius: 5px;
 			height: 31px;
 	    line-height: 31px;
