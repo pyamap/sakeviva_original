@@ -37,7 +37,8 @@ class ShippingsController < ApplicationController
 		@total_shipping_fee = @delivery_fee_first + @delivery_fee_second + @delivery_fee_third + @delivery_fee_fourth
 
 		flash[:prefecture_id] = params[:prefecture][:prefecture_id] #送料を更新し、current_cartに戻した際に、prefecture_idも一緒に渡して、選んだ都道府県がselectedで選ばれた状態にしておく。
-		flash[:total_shipping_fee] = @total_shipping_fee
+		session[:total_shipping_fee] = @total_shipping_fee
+		#session内に保管し最終支払ページまでこのまま運ぶ。
 		redirect_to current_cart_path
 	end
 end

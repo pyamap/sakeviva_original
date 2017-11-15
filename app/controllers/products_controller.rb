@@ -48,6 +48,8 @@ before_filter :current_cart
 
 	def empty_cart
 		session[:cart] = nil
+		session[:total_shipping_fee] = nil
+		session[:total_price] = nil
 		redirect_to_current_cart("カートは空にしました")
 	end
 
@@ -67,8 +69,8 @@ before_filter :current_cart
 
 	def current_cart
 		@prefecture_id = flash[:prefecture_id]
-	  #shipping controllerからtotal_shipping_feeを受け取って、更新後も選択できる状態にしておく。
-		@total_shipping_fee = flash[:total_shipping_fee]
+	  #shipping controllerからprefectureを受け取って、更新後も選択できる状態にしておく。
+		@total_shipping_fee = session[:total_shipping_fee]
 		#shipping controllerからtotal_shipping_feeを受け取って、更新後も選択できる状態にしておく。
     @cart = find_cart
 	end

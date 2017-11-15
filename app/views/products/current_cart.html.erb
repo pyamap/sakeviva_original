@@ -38,11 +38,10 @@
       <li class="Cart__item--subtotal_price"><%= number_to_currency(item.subtotal_price) %> (税込)</li>
       <%= button_to "削除", :action => "delete_from_cart", :id => item.id, :method => :post %>
     </ul>
-
     <% end %>
-
   <% else %>
-  カートは空です。
+  <p>カートは空です。</p>
+  <%= session[:total_shipping_fee] = nil %>
   <% end %>
 </section>
 
@@ -62,7 +61,11 @@
     <% for item in @cart.items %>
       <%= hidden_field_tag ":shop_id[]", item.product.shop_id %>
     <% end %>
-    <div><%= submit_tag "送料を計算" %></div>
+    <% unless @cart.items.empty? %>
+      <div class="CheckOut__shipping--btn"><%= submit_tag "送料を計算" %></div>
+    <% else %>
+      <div class="CheckOut__shipping--nobtn">送料を計算しない</div>
+    <% end %>
   <% end %>
 
   </div>
@@ -91,7 +94,7 @@
     </table>
     <% unless total_price == nil %>
       <div class="CheckOut__calculation--btn">
-      <%= link_to "レジへ進む", user_addresses_path(:total_price => total_price, :total_shipping_fee => @total_shipping_fee) %></div>
+      <%= link_to "レジへ進む", user_addresses_path(session[:total_price] = total_price) %></div>
     <% else %>
       <div class="CheckOut__calculation--nobtn">レジへ進む</div>
       </div>

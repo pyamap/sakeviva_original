@@ -582,6 +582,34 @@
 					font-size: 20px;
 				}
 			}
+
+			&--btn input {
+				background-color: transparent;
+				appearance: none;
+				border: none;
+				text-align: center;
+				padding: 0;
+				height:35px;
+				width:150px;
+				margin-top: 20px;
+				color: $font-white;
+				background-color: #404040;
+			}
+
+			&--nobtn {
+				background-color: transparent;
+				appearance: none;
+				border: none;
+				text-align: center;
+				padding: 0;
+				height:35px;
+				line-height: 35px;
+				width:150px;
+				margin-top: 20px;
+				background-color: $color-gray;
+				color: #C0C0C0;
+			}
+
 		}
 
 		select{
@@ -597,19 +625,6 @@
 				width: 250px;
 				height: 40px;
 			}
-		}
-
-		input {
-			background-color: transparent;
-			appearance: none;
-			border: none;
-			text-align: center;
-			padding: 0;
-			height:35px;
-			width:150px;
-			margin-top: 20px;
-			color: $font-white;
-			background-color: #404040;
 		}
 
 		&__calculation {
