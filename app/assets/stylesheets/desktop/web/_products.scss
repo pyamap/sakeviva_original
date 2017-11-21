@@ -373,7 +373,6 @@
 				.sp { display: block !important;}
 				width: 25%;
 				float: left;
-				margin-left: 5%;
 			}
 		}
 
@@ -386,7 +385,7 @@
 				display: block;
 				width: 50%;
 				line-height: 1.5;
-				margin-right: 45px;
+				margin-right: 24px;
 				float: right;
 			}
 		}
@@ -398,9 +397,11 @@
 			@include mq-sp {
 				width: 56%;
 				height: 130px;
+				line-height: 20px;
 				margin: 8px auto 10px auto;
-				margin-right: 20px;
+				margin-right: 12px;
 				float: right;
+				font-size: 13px;
 			}
 		}
 
@@ -467,7 +468,7 @@
 				margin: 0;
 				background-color: transparent;
 				float: right;
-				margin-right: 35%;
+				margin-right: 30%;
 		}
 
 		button {
