@@ -49,6 +49,18 @@
       <img class="Intro__main--logo">
         <%= image_tag '//res.cloudinary.com/dmfclza05/image/upload/v1498882875/top/logo.png',size:"140x70", alt: "logo image of sakeviva" %>
       </img>
+
+    <% unless @cart.blank? %>
+      <ul class="Intro__main--cart">
+        <li>
+          <%= link_to current_cart_path do %>
+            <%= fa_icon("shopping-cart 2x")%>
+          <% end %>
+        </li>
+        <li>(<%= link_to_unless_current "#{@cart.items.inject(0) {|sum, product| sum + product.quantity}}", current_cart_path %>)</li>
+      </ul>
+    <% end %>
+
     </div>
     <div class="Intro__sub">
       <div class="Category"></div>

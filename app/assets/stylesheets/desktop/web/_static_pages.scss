@@ -52,6 +52,13 @@
 				}
 			}
 
+			&--cart {
+				display: flex;
+				list-style-type: none;
+				float: right;
+				margin: -65px 45px 0 0;
+			}
+
   }
 
 	&__sub {
