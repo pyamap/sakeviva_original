@@ -5,14 +5,17 @@ class CategoriesController < ApplicationController
 
 		if params[:type].present?
 			@sake_products = @sake_products.get_by_type params[:type]
+			@product_type = params[:type]
 		end
 
 		if params[:price].present?
 			@sake_products = @sake_products.get_by_price params[:price]
+			@product_price = params[:price]
 		end
 
 		if params[:brand].present?
 			@sake_products = @sake_products.get_by_brand params[:brand]
+			@product_brand = params[:brand]
 		end
 		#PGadminにbrandテーブルと中身を足す必要あり。=>カラム追加完了したので、中身を足す。
 	end

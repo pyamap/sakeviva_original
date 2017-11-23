@@ -53,6 +53,11 @@
 			}
 
 			&--cart {
+
+				@include mq-pc {
+					display: none !important ;
+				}
+
 				display: flex;
 				list-style-type: none;
 				float: right;

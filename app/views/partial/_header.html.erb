@@ -32,7 +32,10 @@
 			    <% end %>
 			</ul>
 			<ul class="Header__account--cart">
-				<li><%= fa_icon("shopping-cart 2x")%></li>
+				<li>
+				<%= link_to current_cart_path do %>
+					<%= fa_icon("shopping-cart 2x")%></li>
+				<% end %>
 				<% unless @cart.blank? %>
 			   	<li>(<%= link_to_unless_current "#{@cart.items.inject(0) {|sum, product| sum + product.quantity}}", current_cart_path %>)</li>
 				<% end %>

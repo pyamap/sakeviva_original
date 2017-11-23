@@ -24,24 +24,23 @@
   <div class="total_price">お支払合計金額 : <%=  number_to_currency(@total_price) %></div>
 
   <div class="payjp-button">お支払い
-<%= form_tag(action: :pay, method: :post) do %>
-  <% if Rails.env == 'development' %>
-  <script src="https://checkout.pay.jp/" class="payjp-button" data-key="pk_test_881e6a718672d171e72ee9dc"></script>
-  <% else %>
-  <script src="https://checkout.pay.jp/" class="payjp-button" data-key="pk_live_bf15a30695f37bf032d9ae78"></script>
+  <%= form_tag(action: :pay, method: :post) do %>
+    <% if Rails.env == 'development' %>
+    <script src="https://checkout.pay.jp/" class="payjp-button" data-key="pk_test_881e6a718672d171e72ee9dc"></script>
+    <% else %>
+    <script src="https://checkout.pay.jp/" class="payjp-button" data-key="pk_live_bf15a30695f37bf032d9ae78"></script>
+    <% end %>
+     <%= hidden_field_tag :total_price, params[:total_price] %>
+     <%= hidden_field_tag :total_shipping_fee, params[:total_shipping_fee]%>
+     <%= hidden_field_tag :current_user, current_user.id %>
+
+     <% @cart.items.each do |item| %>
+       <%= hidden_field_tag "items[][item_id]", item.id %>
+       <%= hidden_field_tag "items[][item_quantity]", item.quantity %>
+     <% end %>
   <% end %>
-   <%= hidden_field_tag :total_price, params[:total_price] %>
-   <%= hidden_field_tag :total_shipping_fee, params[:total_shipping_fee]%>
-   <%= hidden_field_tag :current_user, current_user.id %>
-
-   <% @cart.items.each do |item| %>
-     <%= hidden_field_tag "items[][item_id]", item.id %>
-     <%= hidden_field_tag "items[][item_quantity]", item.quantity %>
-   <% end %>
-
-<% end %>
-
   </div>
+  <p>※銀行振込でのお支払をご希望のお客さまは「商品名」「オプション」「数量」を添えて、 jojimasakemedia@gmail.com までご連絡くださいませ。</p>
 </div>
 
 
