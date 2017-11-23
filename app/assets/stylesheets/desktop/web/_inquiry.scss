@@ -115,12 +115,29 @@
 				width: 100%;
 			}
 
+			tbody {
+				@include mq-sp {
+					display: block;
+					width: 100%;
+				}
+			}
+
+			tr {
+				@include mq-sp {
+					margin: 10px auto;
+					display: flex;
+					flex-flow:column nowrap;
+				}
+			}
+
 			th,td {
 				padding: 15px;
 				font-size: 18px;
 
 				@include mq-sp {
-					font-size: 13px;
+					font-size: 16px;
+					margin: auto;
+					padding: 5px;
 				}
 			}
 		}

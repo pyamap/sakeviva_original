@@ -94,10 +94,10 @@
     </table>
     <% unless total_price == nil %>
       <div class="CheckOut__calculation--btn">
-      <%= link_to "レジへ進む", user_addresses_path(session[:total_price] = total_price) %></div>
+        <%= link_to "レジへ進む", user_addresses_path(session[:total_price] = total_price) %>
+      </div>
     <% else %>
       <div class="CheckOut__calculation--nobtn">レジへ進む</div>
-      </div>
     <% end %>
   </div>
 </section>
