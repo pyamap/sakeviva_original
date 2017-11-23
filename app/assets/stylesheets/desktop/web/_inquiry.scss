@@ -5,6 +5,11 @@
 	margin: 150px auto 0;
 	text-align: center;
 
+	@include mq-sp {
+		width: 95%;
+		margin: 50px auto 0;
+	}
+
 	h1 {
 		font-size: 24px;
 	}
@@ -19,6 +24,10 @@
 	width: 800px;
 	border: 1px solid $theme-color;
 
+	@include mq-sp {
+		width: 95%;
+	}
+
 	h2 {
 		font-size: 24px;
 		margin-top: 30px;
@@ -31,6 +40,10 @@
 
 		padding: 20px;
 
+		@include mq-sp {
+			padding: 20px 20px 20px 40px;
+		}
+
 		dt {
 			font-weight: bold;
 			padding: 20px 15px;
@@ -38,23 +51,33 @@
 			width: 25%;
 			float: left;
 			clear: left;
+
+			@include mq-sp {
+				width: 95%;
+				padding: 5px 15px;
+			}
 		}
 
 		dd {
 			color: gray;
 			display: block;
-			padding: 20px 15px;		
+			padding: 20px 15px;
 			width: 75%;
 			float: left;
+
+			@include mq-sp {
+				width: 95%;
+				padding: 5px 15px 25px 15px;
+			}
 		}
 	}
 
 	&__list:after{
-	content: "."; 
-	display: block; 
-	height: 0; 
-	font-size:0;	
-	clear: both; 
+	content: ".";
+	display: block;
+	height: 0;
+	font-size:0;
+	clear: both;
 	visibility:hidden;
 	}
 
@@ -75,29 +98,43 @@
 		font-weight: bold;
 	}
 
-	.Form {
+	.InquiryForm {
 		margin: 30px auto 50px;
 		border: 1px solid $theme-color;
 		width: 800px;
 
+		@include mq-sp {
+			width: 95%;
+		}
+
 		&__item {
 			margin: 30px auto 0;
+
+			@include mq-sp {
+				display: block;
+				width: 100%;
+			}
 
 			th,td {
 				padding: 15px;
 				font-size: 18px;
-			}	
+
+				@include mq-sp {
+					font-size: 13px;
+				}
+			}
 		}
 
 		.submit_btn{
 			text-align: center;
-				
-			input.small_btn_dummy {
+
+			input.middle_btn_dummy {
 				border: none;
 				color: white;
+				margin: 20px auto;
 			}
 
-			input.small_btn_dummy:hover{
+			input.middle_btn_dummy:hover{
 				color: $theme-color;
 				border: 1px solid $theme-color;
 		}

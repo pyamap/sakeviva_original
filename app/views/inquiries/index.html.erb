@@ -1,4 +1,4 @@
-<%= stylesheet_link_tag "desktop/web/terms", :media => "all" %>
+<%= stylesheet_link_tag "desktop/web/inquiry", :media => "all" %>
 
 <section class="InquiryIntro">
 <h1>お問い合わせ</h1>
@@ -52,7 +52,7 @@
 
 <h4>お問い合わせフォーム</h4>
 
-<section class="Form">
+<section class="InquiryForm">
 
 <%= form_for @inquiry, :url => inquiry_confirm_path do |f| %>
 
@@ -68,9 +68,9 @@
 		</div>
 	<% end %>
 
-	<table class="Form__item">
+	<table class="InquiryForm__item">
 		<tr>
-			<th>お名前<span class="text-danger">(必須)</span></th>
+			<th>お名前<span class="text-danger"><br>(必須)</span></th>
 			<td><%= f.text_field :name %></td>
 		</tr>
 
@@ -81,11 +81,11 @@
 
 		<tr>
 			<th>お問い合わせ内容</th>
-			<td><%= f.text_area :message, :size => "40x5" %></td>
+			<td><%= f.text_area :message, :size => "28x5" %></td>
 		</tr>
 	</table>
 	<div class="submit_btn">
-		<%= f.submit "確認", class: 'small_btn_dummy' %>
+		<%= f.submit "確認", class: 'middle_btn_dummy' %>
 	</div>
 
 <% end %>
