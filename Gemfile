@@ -26,7 +26,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 
 gem 'sprockets'
 
-gem 'devise', '4.1.1'
+gem 'devise'
 
 gem 'carrierwave'
 gem 'cloudinary'
@@ -71,7 +71,7 @@ group :development, :test do
   gem 'hirb', group: [:development, :test]
   gem 'hirb-unicode', group: [:development, :test]
   gem 'better_errors', group: [:development, :test]
-  gem 'binding_of_caller', group: [:development, :test]
+  gem 'binding_of_caller', '0.7.3', group: [:development, :test]
   gem 'spring', group: [:development, :test]
   gem 'rails-erd', group: [:development, :test]
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring

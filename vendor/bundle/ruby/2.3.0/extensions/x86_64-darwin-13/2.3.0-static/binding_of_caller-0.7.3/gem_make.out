@@ -1,0 +1,12 @@
+current directory: /Users/pyamap/Documents/original/sakeviva_original/vendor/bundle/ruby/2.3.0/gems/binding_of_caller-0.7.3/ext/binding_of_caller
+/Users/pyamap/.rbenv/versions/2.3.1/bin/ruby -r ./siteconf20171129-32307-1ra2yjs.rb extconf.rb
+
+current directory: /Users/pyamap/Documents/original/sakeviva_original/vendor/bundle/ruby/2.3.0/gems/binding_of_caller-0.7.3/ext/binding_of_caller
+make "DESTDIR=" clean
+xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
+
+current directory: /Users/pyamap/Documents/original/sakeviva_original/vendor/bundle/ruby/2.3.0/gems/binding_of_caller-0.7.3/ext/binding_of_caller
+make "DESTDIR="
+xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
+
+make failed, exit code 1

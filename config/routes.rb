@@ -1,14 +1,13 @@
 Rails.application.routes.draw do
   resources :images
-  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
-=begin
-  devise_for :users, path_names: { sign_in: "login", sign_out: "logout"},
-  :controllers => {
+  devise_for :users, :controllers => {
     sessions: 'users/sessions',
     registrations: 'users/registrations',
     omniauth_callbacks: 'users/omniauth_callbacks'
   }
-=end
+  #devise_for :users, path_names: { sign_in: "login", sign_out: "logout"},
+
+
   root to: 'static_pages#index'
 
   get "category_first" => "categories#category_first" #categoryの個別ページのルーティング
@@ -25,8 +24,8 @@ Rails.application.routes.draw do
   patch "new_order" => "payjp#new"
   post "pay" => "payjp#pay" #pay.jpルーティング
   get "thank_you" => "payjp#thank_you"
-  patch "confirmation" => "payjp#index" #デフォルト住所変更の際のルーティング
-  get "confirmation" => "payjp#index" #住所新規登録の際のルーティング
+  patch "payment_confirmation" => "payjp#index" #デフォルト住所変更の際のルーティング
+  get "payment_confirmation" => "payjp#index" #住所新規登録の際のルーティング
   post "add_to_cart" => "products#add_to_cart"
   post "decrement_from_cart" =>"products#decrement_from_cart"
   post "empty_cart" => "products#empty_cart"

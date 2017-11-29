@@ -54,7 +54,7 @@
   <div class="CheckOut__shipping">
   <%= form_tag ({controller: :shippings, action: :shipping_fee, :method => :post}) do %>
     <p>送料を計算</p>
-    <span style="font-size: 14px">都道府県を選択</span>
+    <span style="font-size: 14px">送り先を選ぶ</span>
     <div class="CheckOut__shipping--select">
       <%= collection_select :prefecture, :prefecture_id, Prefecture.all, :id, :name, :selected => @prefecture_id %>
     </div>
