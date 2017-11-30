@@ -21,7 +21,7 @@
       </table>
   </section>
   <div class="total_shipping_fee">送料 : <%=  number_to_currency(@total_shipping_fee) %></div>
-  <div class="total_price">お支払合計金額 : <%=  number_to_currency(50) %></div>
+  <div class="total_price">お支払合計金額 : <%=  number_to_currency(@total_price) %></div>
 
   <div class="payjp-button">お支払い
   <%= form_tag(action: :pay, method: :post) do %>
@@ -30,7 +30,7 @@
     <% else %>
     <script src="https://checkout.pay.jp/" class="payjp-button" data-key="pk_live_bf15a30695f37bf032d9ae78"></script>
     <% end %>
-     <%= hidden_field_tag :total_price, 50 %>
+     <%= hidden_field_tag :total_price, @total_price %>
      <%= hidden_field_tag :total_shipping_fee, @total_shipping_fee %>
      <%= hidden_field_tag :current_user, current_user.id %>
      <% @cart.items.each do |item| %>
@@ -39,7 +39,7 @@
      <% end %>
   <% end %>
   </div>
-  <p>※銀行振込でのお支払をご希望のお客さまは「商品名」「オプション」「数量」を添えて、 jojimasakemedia@gmail.com までご連絡くださいませ。</p>
+  <p>※銀行振込でのお支払をご希望のお客さまは「商品名」「サイズ」「数量」「お客様の氏名、ご住所」「送り先住所」を添えて、 jojimasakemedia@gmail.com までご連絡くださいませ。</p>
 </div>
 
 
