@@ -49,6 +49,10 @@ before_action :current_cart, :authenticate_user!
 		redirect_to :addresses, notice:"住所を削除しました"
 	end
 
+	def decide_address
+		@product = Product.find(params[:product_id])
+	end
+
 private
 
 	def address_params

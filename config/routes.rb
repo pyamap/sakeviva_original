@@ -16,7 +16,8 @@ Rails.application.routes.draw do
   get "category_fourth" => "categories#category_fourth" #categoryの個別ページのルーティング
 
   patch "decide_address" => "addresses#decide_address" #複数住所から１つを選んでアドレスを更新する場合。
-  get "confirmation_address" => "addresses#confirmation_address" #上記Patchでは/decide_addressでリロードした後にRouting Errorになる為、GETでページ取得できるようにする。
+  get "confirmation_address" => "addresses#confirmation_address"
+   #上記Patchでは/decide_addressでリロードした後にRouting Errorになる為、GETでページ取得できるようにする。
 
   patch "reservation" => "reservations#new"
 
