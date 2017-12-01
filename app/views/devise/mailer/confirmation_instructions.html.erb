@@ -4,10 +4,7 @@
 下記URLより、引き続き会員登録を継続してください。
 </p>
 
-<p><%= link_to '会員登録を完了する',
-            controller: 'devise/confirmations',
-            action: 'create',
-            confirmation_token: @token %></p>
+<p><%= link_to '会員登録を完了する', user_confirmation_url(confirmation_token: @token) %></p>
 
 <p>
 ※このメールは明日の城島にメールアドレスをご登録いただいた方にお送りしております。<br>

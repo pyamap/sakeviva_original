@@ -142,7 +142,7 @@
 }
 
 #orders_list:after {
-  content: "";
+  content: " ";
   display: block;
   height: 0;
   font-size: 0;
@@ -150,14 +150,31 @@
   visibility: hidden;
 }
 
-div.order_items:after {
-  content: "";
+.order_items:after {
+  content: " ";
   display: block;
   height: 0;
   font-size: 0;
   clear: both;
   visibility: hidden;
 }
+
+.no_order {
+	margin: 100px;
+	height: 250px;
+	line-height: 250px;
+	text-align: center;
+	font-size: 18px;
+	color: $theme-color;
+
+	@include mq-sp {
+		width: 90%;
+		line-height: 30px;
+		height: 150px;
+		margin: 80px auto;
+	}
+}
+
 
 /*ユーザーの注文履歴ページのスタイルここまで*/
 

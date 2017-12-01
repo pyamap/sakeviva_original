@@ -3,7 +3,8 @@ class OrdersController < ApplicationController
 before_action :authenticate_user!, except: [:new]
 
 	def index
-		@orders=Order.all
+		@user = current_user
+		@orders = @user.orders.all
 	end
 
 	def show
