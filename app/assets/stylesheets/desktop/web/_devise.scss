@@ -6,6 +6,7 @@
 	border: solid 1px $theme-color;
 	border-radius: 5px;
 	margin-top: 150px;
+	color: $theme-color;
 
 	@include mq-sp {
 		width: 90%;

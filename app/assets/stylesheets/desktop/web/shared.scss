@@ -62,6 +62,7 @@ ul.side_bar_price_list {
       li {
         margin: auto 8px;
         line-height: 30px;
+        color: $theme-color;
       }
 
       li:first-child {
@@ -77,6 +78,10 @@ ul.side_bar_price_list {
       @include mq-sp {
         float: right;
         margin: 5px 7% 0 0;
+      }
+
+      a {
+        color: $theme-color;
       }
     }
   }

@@ -1,12 +1,12 @@
 <%= stylesheet_link_tag "desktop/web/devise", :media => "all" %>
 
 <div id="form_notext">
-  <h2>サインアップ</h2>
+  <h2>アカウントを作成する</h2>
 
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= devise_error_messages! %>
 
-  <%= link_to "Sign up with Facebook", user_facebook_omniauth_authorize_path, class: "btn btn-facebook" %>
+  <%= link_to "Facebookでアカウント作成", user_facebook_omniauth_authorize_path, class: "btn btn-facebook" %>
 
     <div class="field">
       <%= f.email_field :email, placeholder:"メールアドレス", autofocus: true %>
@@ -29,7 +29,7 @@
     </div>
 
     <div class="long_btn">
-      <%= f.submit "サインアップ" %>
+      <%= f.submit "アカウントを作成" %>
     </div>
 
     <div class="nav_btn">
