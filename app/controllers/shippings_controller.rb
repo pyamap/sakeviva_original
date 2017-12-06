@@ -1,6 +1,6 @@
 class ShippingsController < ApplicationController
 	def shipping_fee
-		unique_shop_ids = params[":shop_id"].uniq
+		unique_shop_ids = params[":shop_id"].uniq.sort
 
 		unless unique_shop_ids[0].blank? then
 		@shop_id_first = unique_shop_ids[0]
@@ -21,7 +21,7 @@ class ShippingsController < ApplicationController
 		unless unique_shop_ids[2].blank? then
 		@shop_id_third = unique_shop_ids[2]
 		@shop_id_third.present?
-		@delivery_fee_third = Shipping.find_by("shop_id = ? and prefecture_id = ?", @shop_id_second, params[:prefecture][:prefecture_id]).fee
+		@delivery_fee_third = Shipping.find_by("shop_id = ? and prefecture_id = ?", @shop_id_third, params[:prefecture][:prefecture_id]).fee
 		else
 		@delivery_fee_third = 0
 		end
@@ -29,7 +29,7 @@ class ShippingsController < ApplicationController
 		unless unique_shop_ids[3].blank? then
 		@shop_id_fourth = unique_shop_ids[3]
 		@shop_id_fourth.present?
-		@delivery_fee_fourth = Shipping.find_by("shop_id = ? and prefecture_id = ?", @shop_id_second, params[:prefecture][:prefecture_id]).fee
+		@delivery_fee_fourth = Shipping.find_by("shop_id = ? and prefecture_id = ?", @shop_id_fourth, params[:prefecture][:prefecture_id]).fee
 		else
 		@delivery_fee_fourth = 0
 		end

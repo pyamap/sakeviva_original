@@ -43,6 +43,7 @@ before_filter :current_cart
 		@options = product.options
 		option = @options.find_by(id: params[:option_id])
 		@cart.add_product(product,quantity,option)
+		session[:total_shipping_fee] = nil
 		redirect_to_current_cart("数量を増やしました")
 	end
 
