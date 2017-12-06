@@ -6,10 +6,10 @@
 	<meta charset="UTF-8">
 		<title>あしたの城島</title>
 		<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag 'toastr' %>
+    <%= stylesheet_link_tag 'responsive-nav' %>
 		<%= csrf_meta_tags %>
   </meta>
-    <link rel="stylesheet" href="responsive-nav.css">
-    <script src="responsive-nav.js"></script>
 </head>
 <body>
 
@@ -33,11 +33,10 @@
 	<footer>
 		<%= render 'partial/footer' %>
 	</footer>
-
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-
+  <%= javascript_include_tag 'toastr' %>
+  <%= javascript_include_tag 'responsive-nav' %>
   <script>var nav = responsiveNav(".nav-collapse");</script>
-
 </body>
 </html>
 

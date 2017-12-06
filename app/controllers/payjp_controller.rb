@@ -47,8 +47,9 @@ class PayjpController < ApplicationController
 		total_price = params[:total_price]
 		total_shipping_fee = params[:total_shipping_fee]
 		items = params[:items]
+		shipping_address = Address.find(params[:shipping_address])
 
-		ConfirmMailer.confirm_email(user,unique_order,total_price,total_shipping_fee,items).deliver_now
+		ConfirmMailer.confirm_email(unique_order,user,shipping_address,total_price,total_shipping_fee,items).deliver_now
 		session[:cart] = nil
 		redirect_to "/thank_you"
 	end

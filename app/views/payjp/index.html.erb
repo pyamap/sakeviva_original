@@ -30,6 +30,7 @@
     <% else %>
     <script src="https://checkout.pay.jp/" class="payjp-button" data-key="pk_live_bf15a30695f37bf032d9ae78"></script>
     <% end %>
+     <%= hidden_field_tag :shipping_address, params[:address] %>
      <%= hidden_field_tag :total_price, @total_price %>
      <%= hidden_field_tag :total_shipping_fee, @total_shipping_fee %>
      <%= hidden_field_tag :current_user, current_user.id %>

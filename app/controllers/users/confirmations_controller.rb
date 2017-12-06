@@ -13,6 +13,7 @@ class Users::ConfirmationsController < Devise::ConfirmationsController
   def show
     super do |resource|
       sign_in resource
+      flash[:notice] = "アカウントを作成してログインしました"
     end
   end
 

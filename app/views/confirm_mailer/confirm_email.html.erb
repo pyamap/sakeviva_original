@@ -14,12 +14,12 @@
 		▼ご注文商品情報<br>
 		<% @order_items.each do |order_item| %>
 		================================================================<br>
-		【　商　　品　　名　】<%= Product.find(order_item["item_id"]).name %><br> 
-		【　価　格　(税込)　】<%= Product.find(order_item["item_id"]).value %><br>
+		【　商　　品　　名　】<%= Product.find(order_item["item_id"]).name %><br>
+		【　価　格　(税込)　】<%= number_to_currency(Product.find(order_item["item_id"]).value) %><br>
 		【　　数　　　量　　】<%= order_item[:item_quantity] %><br>
 		================================================================<br>
 		<% end %>
-		【　　送　　　料　　】<%= number_to_currency(@total_shipping_fee) %><br> 
+		【　　送　　　料　　】<%= number_to_currency(@total_shipping_fee) %><br>
 		【　総　　合　　計　】<%= number_to_currency(@order_total_price) %> <br>
 		</div>
 
@@ -28,8 +28,6 @@
 		================================================================<br>
 		【　お　　名　　前　】<%= @order_user.name %><br>
 		【　メールアドレス　】<%= @order_user.email %><br>
-		【　郵　便　番　号　】<%= @order_address.postalcode %><br>
-		【　ご　　住　　所　】<%= @order_address.address %><br>
 		【　注　　文　　日　】<%= @unique_order.created_at %><br>
 		【　決　済　方　法　】クレジットカード<br>
 		</div>
@@ -37,10 +35,10 @@
 		<div class="ShippingInfo">
 		▼配送先情報<br>
 		================================================================<br>
-		【　受取人 お名前  】<%= @order_address.recipient %><br>
-		【　郵　便　番　号　】<%= @order_address.postalcode %><br>
-		【　ご　　住　　所　】<%= @order_address.address %><br>
-		【　電　話　番　号　】<%= @order_address.tel %><br>
+		【　受取人 お名前  】<%= @shipping_address.recipient %><br>
+		【　郵　便　番　号　】<%= @shipping_address.postalcode %><br>
+		【　ご　　住　　所　】<%= @shipping_address.address %><br>
+		【　電　話　番　号　】<%= @shipping_address.tel %><br>
 		</div>
 
 		<p>※お客様のご都合によるキャンセル、追加や変更はお受けできかねますので予めご了承お願いします。</p>
