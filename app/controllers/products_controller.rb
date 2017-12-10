@@ -42,6 +42,7 @@ before_filter :current_cart
 		quantity = params[:quantity].to_i
 		@options = product.options
 		option = @options.find_by(id: params[:option_id])
+		(session[:selected_options] ||= []) && (session[:selected_options] << params[:option_id])
 		@cart.add_product(product,quantity,option)
 		session[:total_shipping_fee] = nil
 		redirect_to_current_cart("数量を増やしました")
@@ -51,6 +52,7 @@ before_filter :current_cart
 		session[:cart] = nil
 		session[:total_shipping_fee] = nil
 		session[:total_price] = nil
+		session[:selected_options] = nil #保存していたオプションIDも破棄しないと最後order mailの中に入ってきちゃう。
 		redirect_to_current_cart("カートは空にしました")
 	end
 
