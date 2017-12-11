@@ -161,6 +161,8 @@
 				}
 
 				a {
+					color: $theme-color;
+					font-weight: bold;
 					@include mq-sp {
 						color: white;
 					}
