@@ -1,14 +1,15 @@
 class PayjpController < ApplicationController
-
 	require 'payjp'
+	include ShippingCalculator
 
 	before_filter :current_cart
 	#before_action :ordered_product, only:[:index, :new, :pay]
 
 	def index
 		@current_address = Address.find(params[:address])
-		@total_price = session[:total_price]
-		@total_shipping_fee = session[:total_shipping_fee]
+		@prefecture_id = @current_address.prefecture.id #実際に選んだ住所のprefecture_id
+		calculator #shipping_calculator内のcalculatorメソッドをコール
+		@total_price = @cart.total_price + session[:total_shipping_fee]
 		#@quantity = params[:quantity]
 		#@total_price = "#{@order.product.value*@quantity.to_i}"
 	end
@@ -68,7 +69,6 @@ class PayjpController < ApplicationController
 	def order_params
 		params.require(:order).permit(:quantity)
 	end
-
 
 	#def ordered_product
 		#@order = Order.new
