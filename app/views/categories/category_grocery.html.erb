@@ -16,7 +16,7 @@
 		<% @grocery_products.all.each do |item| %>
        <li class="CategoryProduct__item">
           <div class="CategoryProduct__item--photo">
-          <%= link_to image_tag(item.image.url, height: 280, width: 210, alt: "商品写真"), product_path(item.id) %>
+          <%= link_to image_tag(item.image.url, height: 280, width: 210, :class => 'pc', alt: "商品写真"), product_path(item.id) %>
           <%= link_to image_tag(item.image.url, height: 90, width: 120, :class => 'sp', alt: "商品写真"), product_path(item.id) %>
           </div>
           <div class="CategoryProduct__item--title"><%= link_to item.name, product_path(item.id) %></div>
