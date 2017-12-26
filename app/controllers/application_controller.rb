@@ -34,9 +34,9 @@ class ApplicationController < ActionController::Base
 
   protected
 	def configure_permitted_parameters
-		devise_parameter_sanitizer.permit(:sign_up) {|u| u.permit(:name, :email, :password, :password_confirmation, :remember_me)}
+		devise_parameter_sanitizer.permit(:sign_up) {|u| u.permit(:name, :email, :mobile, :sender, :password, :password_confirmation, :remember_me)}
 		devise_parameter_sanitizer.permit(:sign_up) {|u| u.permit(:login, :name, :email, :password, :remember_me)}
-		devise_parameter_sanitizer.permit(:account_update) {|u| u.permit(:name, :email, :password, :password_confirmation, :current_password)}
+		devise_parameter_sanitizer.permit(:account_update) {|u| u.permit(:name, :email, :mobile, :sender,:password, :password_confirmation, :current_password)}
 	end
 
   after_filter :store_location
@@ -45,6 +45,7 @@ class ApplicationController < ActionController::Base
     if (request.fullpath != "/users/sign_in" && \
         request.fullpath != "/users/sign_up" && \
         request.fullpath != "/users/password/new" && \
+        request.fullpath != "/users/edit" && \
         !request.xhr?) # don't store ajax calls
       session[:previous_url] = request.fullpath
     end

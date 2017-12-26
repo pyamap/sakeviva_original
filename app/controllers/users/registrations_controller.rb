@@ -8,14 +8,15 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # POST /resource
-  # def create
-  #   super
-  # end
+  def create
+    devise_parameter_sanitizer.permit(:sign_up) {|u| u.permit(:name, :email, :mobile, :sender, :password, :password_confirmation, :remember_me)}
+    super
+  end
 
   # GET /resource/edit
-  # def edit
-  #   super
-  # end
+  def edit
+    super
+  end
 
   # PUT /resource
   # def update

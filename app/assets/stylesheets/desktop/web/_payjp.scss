@@ -78,7 +78,30 @@
 
 		}
 
-		.Address {
+		.Recipient {
+			width: 900px;
+			margin: 50px auto;
+
+
+			@include mq-sp {
+				width: 100%;
+				text-align: center;
+			}
+
+
+			&__item{
+				width:420px;
+				margin: 40px auto;
+				font-size: 18px;
+
+				td th {
+					margin: 10px auto;
+					padding: 50px auto;
+				}
+			}
+		}
+
+		.Sender {
 			width: 900px;
 			margin: 50px auto;
 

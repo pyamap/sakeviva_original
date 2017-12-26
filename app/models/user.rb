@@ -9,11 +9,14 @@ class User < ActiveRecord::Base
   validates :name,
   	uniqueness: {case_sensitive: :false},
   	length: {minimum: 4, maximum: 20}
+
   	#format: { with: /\A[a-z0-9]+\z/, message: "ユーザー名は半角英数字です"}
 
   	has_many :addresses, dependent: :destroy
     has_many :orders, dependent: :destroy
     accepts_nested_attributes_for :addresses, allow_destroy: true
+
+  validates :password, length: {minimum: 5, maximum: 120}, on: :update, allow_blank: true
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
