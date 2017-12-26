@@ -286,10 +286,10 @@
 			height: 40px;
 
 			@include mq-sp {
-				width: 70%;
+				width: 50%;
 				float: right;
 				line-height: 25px;
-				margin: 10px 0;
+				margin: 10px 40px 10px 0;
 			}
 		}
 
