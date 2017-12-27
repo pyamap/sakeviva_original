@@ -253,7 +253,7 @@
 		margin: 15px 0 0 15px;
 
 		@include mq-sp {
-			width: 100%;
+			width: 95%;
 			border-bottom: 1px solid gray;
 			margin: 15px;
 			padding-bottom: 15px;
@@ -286,7 +286,7 @@
 			height: 40px;
 
 			@include mq-sp {
-				width: 50%;
+				width: 52%;
 				float: right;
 				line-height: 25px;
 				margin: 10px 40px 10px 0;
