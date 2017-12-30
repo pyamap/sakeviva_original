@@ -9,8 +9,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # POST /resource
   def create
+<<<<<<< HEAD
     devise_parameter_sanitizer.permit(:sign_up) {|u| u.permit(:name, :email, :mobile, :sender, :password, :password_confirmation, :remember_me)}
     super
+=======
+   devise_parameter_sanitizer.permit(:sign_up) {|u| u.permit(:name, :email, :mobile, :sender, :password, :password_confirmation, :remember_me)}
+  super
+>>>>>>> add-sender-info
   end
 
   # GET /resource/edit
@@ -19,9 +24,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
   end
 
   # PUT /resource
-  # def update
-  #   super
-  # end
+  def update
+    devise_parameter_sanitizer.permit(:account_update) {|u| u.permit(:name, :email, :mobile, :sender, :password, :password_confirmation, :remember_me)}
+    super
+  end
 
   # DELETE /resource
   # def destroy
@@ -37,7 +43,20 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
-  # protected
+  protected
+
+  def update_resource(resource, params)
+    # Require current password if user is trying to change password.
+    return super if params["password"]&.present?
+
+    # Allows user to update registration information without password.
+    resource.update_without_password(params.except("current_password"))
+  end
+
+
+  def after_update_path_for(resource)
+    session[:previous_url] #プロフアプデの後、元いたURLにリダイレクト
+  end
 
   # If you have extra params to permit, append them to the sanitizer.
   # def configure_sign_up_params

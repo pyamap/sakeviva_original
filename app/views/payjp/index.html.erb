@@ -17,15 +17,25 @@
         <tr><td>受け取り人 :</td><td style="text-align: center"><%= @current_address.recipient %></td></tr>
         <tr><td>郵便番号 :</td><td style="text-align: center"><%=  @current_address.postalcode %></td></tr>
         <tr><td>郵送先住所 :</td><td style="text-align: center"><%=  Prefecture.find(@current_address.prefecture_id).name %>県<%= @current_address.address %></td></tr>
-        <tr><td>電話番号 :</td><td style="text-align: center"><%=  @current_address.tel %></td></tr>
+        <tr><td>電話番号 :</td><td style="text-align: center">0<%=  @current_address.tel %></td></tr>
       </table>
   </section>
+<<<<<<< HEAD
   <section class="Sender">
     <table class="Sender__item">
       <tr><td>送り主:</td><td style="text-align: center"><%= @user.sender %></td></tr>
       <tr><td>電話番号 :</td><td style="text-align: center"><%=  @user.mobile %></td></tr>
     </table>
   </section>
+=======
+  <section class="Address">
+    <table class="Address__item">
+      <tr><td>送り主 :</td><td style="text-align: center"><%= @user.sender %></td></tr>
+      <tr><td>送り主電話番号 :</td><td style="text-align: center"><%=  @user.mobile %></td></tr>
+    </table>
+  </section>
+
+>>>>>>> add-sender-info
   <div class="total_shipping_fee">送料 : <%=  number_to_currency(@total_shipping_fee) %></div>
   <div class="total_price">お支払合計金額 : <%=  number_to_currency(@total_price) %></div>
 
