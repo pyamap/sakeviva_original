@@ -45,6 +45,7 @@ class ApplicationController < ActionController::Base
     if (request.fullpath != "/users/sign_in" && \
         request.fullpath != "/users/sign_up" && \
         request.fullpath != "/users/password/new" && \
+        request.fullpath != "/users/edit" && \
         !request.xhr?) # don't store ajax calls
       session[:previous_url] = request.fullpath
     end
@@ -57,4 +58,5 @@ class ApplicationController < ActionController::Base
   def after_sign_out_path_for(resource)
     session[:previous_url] || root_path
   end
+
 end

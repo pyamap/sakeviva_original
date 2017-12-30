@@ -3,13 +3,22 @@ class PayjpController < ApplicationController
 	include ShippingCalculator
 
 	before_filter :current_cart
+	#before_action :check_sender, only:[:index]
 	#before_action :ordered_product, only:[:index, :new, :pay]
 
 	def index
-		@current_address = Address.find(params[:address])
+		unless session[:current_address].present?
+			session[:current_address] = Address.find(params[:address])
+		end
+		@user = current_user
+		if @user.sender.blank? || @user.mobile.blank?
+			redirect_to edit_user_registration_path
+		end
+		@current_address = session[:current_address]
 		@prefecture_id = @current_address.prefecture.id #実際に選んだ住所のprefecture_id
 		calculator #shipping_calculator内のcalculatorメソッドをコール
 		@total_price = @cart.total_price + session[:total_shipping_fee]
+
 		#@quantity = params[:quantity]
 		#@total_price = "#{@order.product.value*@quantity.to_i}"
 	end
@@ -56,6 +65,7 @@ class PayjpController < ApplicationController
 		session[:total_shipping_fee] = nil
 		session[:total_price] = nil
 		session[:selected_options] = nil
+		session[:current_address] = nil
 		redirect_to "/thank_you"
 	end
 
@@ -68,6 +78,13 @@ class PayjpController < ApplicationController
 
 	def order_params
 		params.require(:order).permit(:quantity)
+	end
+
+	def check_sender
+		@user = current_user
+		if @user.sender.blank? || @user.mobile.blank?
+			redirect_to edit_user_registration_path
+		end
 	end
 
 	#def ordered_product

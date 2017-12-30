@@ -13,7 +13,15 @@
     </div>
 
     <div class="field">
-      <%= f.text_field :name, placeholder:"ユーザー名 (送り主のお名前として使用されます)", autocomplete: "off" %>
+      <%= f.text_field :name, placeholder:"ユーザー名", autocomplete: "off" %>
+    </div>
+
+    <div class="field">
+      <%= f.text_field :sender, placeholder:"送り主名(配送の際に使用されます)", autocomplete: "off" %>
+    </div>
+
+    <div class="field">
+      <%= f.text_field :mobile, placeholder:"電話番号 (090 1234 5678)", autocomplete: "off" %>
     </div>
 
     <div class="field">

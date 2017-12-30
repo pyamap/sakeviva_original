@@ -11,18 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170926151647) do
+ActiveRecord::Schema.define(version: 20171230125119) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "addresses", force: :cascade do |t|
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
     t.integer  "user_id"
     t.string   "address"
-    t.boolean  "default_address",           null: false
-    t.integer  "tel",             limit: 8
+    t.boolean  "default_address", null: false
+    t.string   "tel"
     t.string   "recipient"
     t.integer  "postalcode"
     t.integer  "prefecture_id"
@@ -167,6 +167,8 @@ ActiveRecord::Schema.define(version: 20170926151647) do
     t.string   "provider"
     t.string   "image"
     t.string   "name"
+    t.string   "mobile"
+    t.string   "sender"
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
