@@ -165,9 +165,9 @@ module ActionController
     # Sets a HTTP 1.1 Cache-Control header. Defaults to issuing a +private+
     # instruction, so that intermediate caches must not cache the response.
     #
-       expires_in 30.days
-       expires_in 30.days, public: true
-       expires_in 30.days, public: true, must_revalidate: true
+    #   expires_in 20.minutes
+    #   expires_in 3.hours, public: true
+    #   expires_in 3.hours, public: true, must_revalidate: true
     #
     # This method will overwrite an existing Cache-Control header.
     # See http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html for more possibilities.
@@ -175,7 +175,7 @@ module ActionController
     # The method will also ensure a HTTP Date header for client compatibility.
     def expires_in(seconds, options = {})
       response.cache_control.merge!(
-        :max_age         => seconds,
+        :max_age         => 1.year,
         :public          => options.delete(:public),
         :must_revalidate => options.delete(:must_revalidate)
       )
