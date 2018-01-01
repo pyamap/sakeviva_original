@@ -67,8 +67,8 @@
         <ul class="Category__menu">
           <li class="Category__item ">
             <div class ="Category__photo">
-            <%= link_to image_tag('//res.cloudinary.com/dmfclza05/image/upload/v1506153161/top/category_sake.jpg', height: 145, width: 159, :class => "pc", alt: "酒の写真"),category_sake_path %>
-            <%= link_to image_tag('//res.cloudinary.com/dmfclza05/image/upload/v1506153161/top/category_sake.jpg', height: 90, width: 120, :class => "sp", alt: "酒の写真"),category_sake_path %>
+            <%= link_to cl_image_tag("top/category_sake.jpg", height: 145, width: 159, :class => "pc", alt: "酒の写真"),category_sake_path %>
+            <%= link_to cl_image_tag("top/category_sake.jpg", height: 90, width: 120, :class => "sp", alt: "酒の写真"),category_sake_path %>
             </div>
             <div class="Category__text">
               <p class="Category__text--title"><%= link_to "日本酒", category_sake_path %></p>
@@ -77,8 +77,8 @@
           </li>
           <li class="Category__item">
             <div class ="Category__photo">
-            <%= link_to image_tag('//res.cloudinary.com/dmfclza05/image/upload/v1498882876/top/category_grocery.jpg', height: 145, width: 159, :class => "pc", alt: "雑貨の写真"),category_grocery_path %>
-            <%= link_to image_tag('//res.cloudinary.com/dmfclza05/image/upload/v1498882876/top/category_grocery.jpg', height: 90, width: 120, :class => "sp", alt: "雑貨の写真"),category_grocery_path %>
+            <%= link_to cl_image_tag("top/category_grocery.jpg", height: 145, width: 159, :class => "pc", alt: "雑貨の写真"),category_grocery_path %>
+            <%= link_to cl_image_tag("top/category_grocery.jpg", height: 90, width: 120, :class => "sp", alt: "雑貨の写真"),category_grocery_path %>
             </div>
             <div class="Category__text">
               <p class="Category__text--title"><%= link_to "雑貨", category_grocery_path %></p>
@@ -87,8 +87,8 @@
           </li>
           <li class="Category__item">
             <div class ="Category__photo">
-            <%= link_to image_tag('//res.cloudinary.com/dmfclza05/image/upload/v1498882878/top/category_food.jpg', height: 145, width: 159, :class => "pc", alt: "特産品の写真"),category_food_path %>
-            <%= link_to image_tag('//res.cloudinary.com/dmfclza05/image/upload/v1498882878/top/category_food.jpg', height: 90, width: 120, :class => "sp", alt: "特産品の写真"),category_food_path %>
+            <%= link_to cl_image_tag("top/category_food.jpg", height: 145, width: 159, :class => "pc", alt: "特産品の写真"),category_food_path %>
+            <%= link_to cl_image_tag("top/category_food.jpg", height: 90, width: 120, :class => "sp", alt: "特産品の写真"),category_food_path %>
             </div>
             <div class="Category__text">
               <p class="Category__text--title"><%= link_to "食", category_food_path %></p>
@@ -97,8 +97,8 @@
           </li>
           <li class="Category__item">
             <div class="Category__photo">
-            <%= link_to image_tag('//res.cloudinary.com/dmfclza05/image/upload/v1506153157/top/category_craft.jpg', height: 145, width: 159, :class => "pc", alt: "工芸品の写真"),category_craft_path %>
-            <%= link_to image_tag('//res.cloudinary.com/dmfclza05/image/upload/v1506153157/top/category_craft.jpg', height: 90, width: 120, :class => "sp", alt: "工芸品の写真"),category_craft_path %>
+            <%= link_to cl_image_tag("top/category_craft.jpg", height: 145, width: 159, :class => "pc", alt: "工芸品の写真"),category_craft_path %>
+            <%= link_to cl_image_tag("top/category_craft.jpg", height: 90, width: 120, :class => "sp", alt: "工芸品の写真"),category_craft_path %>
             </div>
             <div class="Category__text">
               <p class="Category__text--title"><%= link_to "工芸品", category_craft_path %></p>
@@ -176,8 +176,8 @@
 
   <section>
     <div class="JojimaMap">
-    <%= link_to image_tag('//res.cloudinary.com/dmfclza05/image/upload/v1506153077/top/aboutjojima.jpg', height: 300, :class => 'pc', alt:"城島町についての写真"), about_us_path %>
-    <%= link_to image_tag('//res.cloudinary.com/dmfclza05/image/upload/v1508645880/top_mobile/aboutjojima_mobile.jpg', height: 200, :class => 'sp',alt:"城島町についての写真"), about_us_path %>
+    <%= link_to cl_image_tag("top/aboutjojima.jpg", height: 300, :class => 'pc', alt:"城島町についての写真"), about_us_path %>
+    <%= link_to cl_image_tag("top_mobile/aboutjojima_mobile.jpg", height: 200, :class => 'sp',alt:"城島町についての写真"), about_us_path %>
     </div>
   </section>
 
@@ -190,7 +190,7 @@
 
         <div class="InterviewPC__item">
           <div class="InterviewPC__sub">
-            <img class="InterviewPC__sub--photo"><%= link_to (image_tag "//res.cloudinary.com/dmfclza05/image/upload/v1501265113/interview_tanaka_noodle/tanaka_noodle_top.jpg", height: 240 , width: 200, alt:'インタビュアーの写真'),interview_tanaka_noodle_path %></img>
+            <img class="InterviewPC__sub--photo"><%= link_to cl_image_tag("top/tanaka_noodle_top.jpg", height: 240 , width: 200, alt:'インタビュアーの写真'),interview_tanaka_noodle_path %></img>
           </div>
           <div class="InterviewPC__main">
             <div class="InterviewPC__main--id">#01</div>
@@ -203,7 +203,7 @@
 
         <div class="InterviewPC__item">
           <div class="InterviewPC__sub">
-            <img class="InterviewPC__sub--photo"><%= link_to (image_tag "//res.cloudinary.com/dmfclza05/image/upload/v1498839896/interview_souen_rush/shimosaka_pic_ww8jyd.png"), interview_souen_rush_path, height: 240 , width: 200, alt:'インタビュアーの写真'%></img>
+            <img class="InterviewPC__sub--photo"><%= link_to cl_image_tag("top/shimosaka_pic.png", height: 240 , width: 200, alt:'インタビュアーの写真'), interview_souen_rush_path %></img>
           </div>
           <div class="InterviewPC__main">
             <div class="InterviewPC__main--id">#02</div>
@@ -215,7 +215,7 @@
 
         <div class="InterviewPC__item">
           <div class="InterviewPC__sub">
-            <img class="InterviewPC__sub--photo"><%= link_to (image_tag "//res.cloudinary.com/dmfclza05/image/upload/v1506153292/top/top.jpg"), interview_chiyo_seaweed_path, height: 240 , width: 200, alt:'インタビュアーの写真' %></img>
+            <img class="InterviewPC__sub--photo"><%= link_to cl_image_tag("top/chiyonori_pic.jpg", height: 240 , width: 200, alt:'インタビュアーの写真'), interview_chiyo_seaweed_path %></img>
           </div>
           <div class="InterviewPC__main">
             <div class="InterviewPC__main--id">#03</div>
@@ -229,9 +229,9 @@
 
     <div class="InterviewSP">
       <ul class="InterviewSP__photo">
-        <li><%= link_to image_tag("//res.cloudinary.com/dmfclza05/image/upload/v1508645880/top_mobile/tanaka_pic_mobile.jpg", height: 150, :class => 'sp-image', alt: "商品写真"),interview_tanaka_noodle_path %></li>
-        <li><%= link_to image_tag("//res.cloudinary.com/dmfclza05/image/upload/v1508645880/top_mobile/shimosaka_pic_mobile.jpg", height: 150, :class => 'sp-image', alt: "商品写真"),interview_souen_rush_path %></li>
-        <li><%= link_to image_tag("http://res.cloudinary.com/dmfclza05/image/upload/v1508645880/top_mobile/chiyoshima_pic_mobile.jpg", height: 150, :class => 'sp-image', alt: "商品写真"),interview_chiyo_seaweed_path %></li>
+        <li><%= link_to cl_image_tag("top_mobile/tanaka_pic_mobile.jpg", height: 150, :class => 'sp-image', alt: "商品写真"),interview_tanaka_noodle_path %></li>
+        <li><%= link_to cl_image_tag("top_mobile/shimosaka_pic_mobile.jpg", height: 150, :class => 'sp-image', alt: "商品写真"),interview_souen_rush_path %></li>
+        <li><%= link_to cl_image_tag("top_mobile/chiyoshima_pic_mobile.jpg", height: 150, :class => 'sp-image', alt: "商品写真"),interview_chiyo_seaweed_path %></li>
       </ul>
     </div>
   </section>
