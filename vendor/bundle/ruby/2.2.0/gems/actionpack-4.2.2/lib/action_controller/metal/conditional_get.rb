@@ -175,7 +175,7 @@ module ActionController
     # The method will also ensure a HTTP Date header for client compatibility.
     def expires_in(seconds, options = {})
       response.cache_control.merge!(
-        :max_age         => 1.year,
+        :max_age         => seconds,
         :public          => options.delete(:public),
         :must_revalidate => options.delete(:must_revalidate)
       )
