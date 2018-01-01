@@ -165,7 +165,7 @@ module ActionController
     # Sets a HTTP 1.1 Cache-Control header. Defaults to issuing a +private+
     # instruction, so that intermediate caches must not cache the response.
     #
-    expires_in 30.days
+    #   expires_in 20.minutes
     #   expires_in 3.hours, public: true
     #   expires_in 3.hours, public: true, must_revalidate: true
     #
