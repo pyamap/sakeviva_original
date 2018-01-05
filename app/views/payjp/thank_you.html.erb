@@ -3,8 +3,8 @@
 <div class="PurchasedNotice">
 	<h1>ご注文ありがとうございました!</h1>
   <div class="PurchasedNotice--photo">
-	 <%= image_tag ("//res.cloudinary.com/dmfclza05/image/upload/v1498882878/top/thank_you.jpg"), :height =>"360", :width =>"600", :class => "pc" %>
-   <%= image_tag ("//res.cloudinary.com/dmfclza05/image/upload/v1498882878/top/thank_you.jpg"), :class => "sp" %>
+	 <%= cl_image_tag("top/thank_you.jpg", :height =>"360", :width =>"600", :class => "pc") %>
+   <%= cl_image_tag("top/thank_you.jpg", :class => "sp") %>
   </div>
 	<p>配送状況はご自身の<%= link_to "ダッシュボード", user_orders_path %>から確認できます。</p>
 	<p>引き続き買い物をお続けになる場合は<%= link_to "こちら", root_path %></p>
