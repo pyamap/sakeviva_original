@@ -1,0 +1,164 @@
+2018-01-06 06:42:14,449:DEBUG:certbot.main:certbot version: 0.20.0
+2018-01-06 06:42:14,451:DEBUG:certbot.main:Arguments: ['--manual', '-d', 'shop.jo-jima.com', '--logs-dir', 'certbot', '--config-dir', 'certbot', '--work-dir', 'certbot']
+2018-01-06 06:42:14,452:DEBUG:certbot.main:Discovered plugins: PluginsRegistry(PluginEntryPoint#apache,PluginEntryPoint#manual,PluginEntryPoint#nginx,PluginEntryPoint#null,PluginEntryPoint#standalone,PluginEntryPoint#webroot)
+2018-01-06 06:42:14,495:DEBUG:certbot.log:Root logging level set at 20
+2018-01-06 06:42:14,496:INFO:certbot.log:Saving debug log to /Users/pyamap/Documents/original/sakeviva_original/certbot/letsencrypt.log
+2018-01-06 06:42:14,497:DEBUG:certbot.plugins.selection:Requested authenticator manual and installer None
+2018-01-06 06:42:14,501:DEBUG:certbot.plugins.selection:Single candidate plugin: * manual
+Description: Manual configuration or run your own shell scripts
+Interfaces: IAuthenticator, IPlugin
+Entry point: manual = certbot.plugins.manual:Authenticator
+Initialized: <certbot.plugins.manual.Authenticator object at 0x10b991eb8>
+Prep: True
+2018-01-06 06:42:14,503:DEBUG:certbot.plugins.selection:Selected authenticator <certbot.plugins.manual.Authenticator object at 0x10b991eb8> and installer None
+2018-01-06 06:42:14,503:INFO:certbot.plugins.selection:Plugins selected: Authenticator manual, Installer None
+2018-01-06 06:42:14,511:DEBUG:certbot.main:Picked account: <Account(RegistrationResource(body=Registration(key=JWKRSA(key=<ComparableRSAKey(<cryptography.hazmat.backends.openssl.rsa._RSAPublicKey object at 0x10c04ca58>)>), contact=('mailto:yukiyamashita1125@gmail.com',), agreement='https://letsencrypt.org/documents/LE-SA-v1.2-November-15-2017.pdf', status='valid'), uri='https://acme-v01.api.letsencrypt.org/acme/reg/27084625', new_authzr_uri='https://acme-v01.api.letsencrypt.org/acme/new-authz', terms_of_service='https://letsencrypt.org/documents/LE-SA-v1.2-November-15-2017.pdf'), a95c96972ab17516716c02b70f92ea13, Meta(creation_dt=datetime.datetime(2018, 1, 6, 6, 36, 21, tzinfo=<UTC>), creation_host='yukipyamashita.local'))>
+2018-01-06 06:42:14,533:DEBUG:acme.client:Sending GET request to https://acme-v01.api.letsencrypt.org/directory.
+2018-01-06 06:42:14,548:DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): acme-v01.api.letsencrypt.org
+2018-01-06 06:42:14,906:DEBUG:urllib3.connectionpool:https://acme-v01.api.letsencrypt.org:443 "GET /directory HTTP/1.1" 200 562
+2018-01-06 06:42:14,907:DEBUG:acme.client:Received response:
+HTTP 200
+Server: nginx
+Content-Type: application/json
+Content-Length: 562
+Replay-Nonce: q0xMRMbk-96zAXhlNwDCOjFeVWT0EUTZNVbZLHPxWS0
+X-Frame-Options: DENY
+Strict-Transport-Security: max-age=604800
+Expires: Sat, 06 Jan 2018 06:42:14 GMT
+Cache-Control: max-age=0, no-cache, no-store
+Pragma: no-cache
+Date: Sat, 06 Jan 2018 06:42:14 GMT
+Connection: keep-alive
+
+b'{\n  "i0yNsEQ-IQ4": "https://community.letsencrypt.org/t/adding-random-entries-to-the-directory/33417",\n  "key-change": "https://acme-v01.api.letsencrypt.org/acme/key-change",\n  "meta": {\n    "terms-of-service": "https://letsencrypt.org/documents/LE-SA-v1.2-November-15-2017.pdf"\n  },\n  "new-authz": "https://acme-v01.api.letsencrypt.org/acme/new-authz",\n  "new-cert": "https://acme-v01.api.letsencrypt.org/acme/new-cert",\n  "new-reg": "https://acme-v01.api.letsencrypt.org/acme/new-reg",\n  "revoke-cert": "https://acme-v01.api.letsencrypt.org/acme/revoke-cert"\n}'
+2018-01-06 06:42:14,909:INFO:certbot.main:Obtaining a new certificate
+2018-01-06 06:42:14,909:DEBUG:acme.client:Requesting fresh nonce
+2018-01-06 06:42:14,909:DEBUG:acme.client:Sending HEAD request to https://acme-v01.api.letsencrypt.org/acme/new-authz.
+2018-01-06 06:42:15,292:DEBUG:urllib3.connectionpool:https://acme-v01.api.letsencrypt.org:443 "HEAD /acme/new-authz HTTP/1.1" 405 0
+2018-01-06 06:42:15,293:DEBUG:acme.client:Received response:
+HTTP 405
+Server: nginx
+Content-Type: application/problem+json
+Content-Length: 91
+Allow: POST
+Replay-Nonce: 5CIoMBwwFfscOLN1s-oIszVJcpNnyAZIHJEc2asWHg8
+Expires: Sat, 06 Jan 2018 06:42:15 GMT
+Cache-Control: max-age=0, no-cache, no-store
+Pragma: no-cache
+Date: Sat, 06 Jan 2018 06:42:15 GMT
+Connection: keep-alive
+
+b''
+2018-01-06 06:42:15,293:DEBUG:acme.client:Storing nonce: 5CIoMBwwFfscOLN1s-oIszVJcpNnyAZIHJEc2asWHg8
+2018-01-06 06:42:15,302:DEBUG:acme.client:JWS payload:
+b'{\n  "identifier": {\n    "type": "dns",\n    "value": "shop.jo-jima.com"\n  },\n  "resource": "new-authz"\n}'
+2018-01-06 06:42:15,310:DEBUG:acme.client:Sending POST request to https://acme-v01.api.letsencrypt.org/acme/new-authz:
+{
+  "protected": "eyJhbGciOiAiUlMyNTYiLCAiandrIjogeyJuIjogInRKMkZzY1dFVjlUVll5MEZGS3J1eVlOWjJLRmRwY2Fsb21icm1NazdQX19aSXh4ZEliOGJGeEtESW13bDRJZGpybU9NaHp2Q0RpYUZTb213RGRkc0Z4a1pfZGZmbkVfWmhnd0R0LXhodzFSZm1jVHJDa3Itd0FYQUxIV2NCM0tUVXpOZFdtS3cxY1ZVT1ZJTVBCQWtsUDltbnFaTERoRlQwWGRMazBnNDNncDBXaDk1OEJyQlZhZzczQWZubm9ZdTlEa05QamhweUVJSlZRUTMwMlFkZEstXzJiT0hRbE5hYThEX2dlZG83S0tOM1FqVVFNWlVxX3hjSm95aVZVRkdULTI2OFhNSFhweW5qcHVJTUJmQUxJSjVxc1FNN1RxcWJqZkwzOFVvMWZfclNQRHFWbFVKeGZ0bmdzZ3habm5KaFVfaDlUM0dfNDNSVGs0OEhLX1FodyIsICJlIjogIkFRQUIiLCAia3R5IjogIlJTQSJ9LCAibm9uY2UiOiAiNUNJb01Cd3dGZnNjT0xOMXMtb0lzelZKY3BObnlBWklISkVjMmFzV0hnOCJ9",
+  "signature": "DyaN4R9AyCfZMLgJQ73IX-Lan6w8WvqxyR0hAySg_tFf0YzqdrIBIpUanU3gnXfijsB7LnsQouPhAXSjtgxtHDiniY4bPuPckoQ4RmOOW2-efqDDHy-wPNH3y3cWebgMZ2vPH1UL4-ezCJGOpO18BhyJPSvZCf20EINsbHGDs0rIgvGg0Ovv2HDW3-ljw6Iy4R5ckhlzuT83xCBVfsHnQxNPQj33Sx84qIGE4XBNKuDs5ruGNXQOvV8rYXbJplALfmHqHk5fc3maiTwjAorwEYAdQmxE2tKOpKZJ_vLKzO-3WRc-lOw8dqxMdzxug7vjf7viKiXulDI2FkacVIl3Ng",
+  "payload": "ewogICJpZGVudGlmaWVyIjogewogICAgInR5cGUiOiAiZG5zIiwKICAgICJ2YWx1ZSI6ICJzaG9wLmpvLWppbWEuY29tIgogIH0sCiAgInJlc291cmNlIjogIm5ldy1hdXRoeiIKfQ"
+}
+2018-01-06 06:42:15,922:DEBUG:urllib3.connectionpool:https://acme-v01.api.letsencrypt.org:443 "POST /acme/new-authz HTTP/1.1" 201 1004
+2018-01-06 06:42:15,923:DEBUG:acme.client:Received response:
+HTTP 201
+Server: nginx
+Content-Type: application/json
+Content-Length: 1004
+Boulder-Requester: 27084625
+Link: <https://acme-v01.api.letsencrypt.org/acme/new-cert>;rel="next"
+Location: https://acme-v01.api.letsencrypt.org/acme/authz/aGIG3f6F3pz4FXs6Ui7eRYt-8ExZGdMnXMNRMRJeTQ4
+Replay-Nonce: 9HLCdEE8NSmhn49Da-F-5HIWmCsMlBDGcsNJe_nFidk
+X-Frame-Options: DENY
+Strict-Transport-Security: max-age=604800
+Expires: Sat, 06 Jan 2018 06:42:15 GMT
+Cache-Control: max-age=0, no-cache, no-store
+Pragma: no-cache
+Date: Sat, 06 Jan 2018 06:42:15 GMT
+Connection: keep-alive
+
+b'{\n  "identifier": {\n    "type": "dns",\n    "value": "shop.jo-jima.com"\n  },\n  "status": "pending",\n  "expires": "2018-01-13T06:42:15.783925138Z",\n  "challenges": [\n    {\n      "type": "dns-01",\n      "status": "pending",\n      "uri": "https://acme-v01.api.letsencrypt.org/acme/challenge/aGIG3f6F3pz4FXs6Ui7eRYt-8ExZGdMnXMNRMRJeTQ4/2998336847",\n      "token": "BuWWlYqtKQTs1cytMjoxo2J_3wlX4VOB8kbhqPUf7nA"\n    },\n    {\n      "type": "http-01",\n      "status": "pending",\n      "uri": "https://acme-v01.api.letsencrypt.org/acme/challenge/aGIG3f6F3pz4FXs6Ui7eRYt-8ExZGdMnXMNRMRJeTQ4/2998336850",\n      "token": "VftQf4BfDSoabc-8IkwD3xnwQKX0vDs2tBgYGVPKvQE"\n    },\n    {\n      "type": "tls-sni-01",\n      "status": "pending",\n      "uri": "https://acme-v01.api.letsencrypt.org/acme/challenge/aGIG3f6F3pz4FXs6Ui7eRYt-8ExZGdMnXMNRMRJeTQ4/2998336851",\n      "token": "nEstgjXgdFLxANco7NmC2NsBmlnVmHDn0NAJKROu85Q"\n    }\n  ],\n  "combinations": [\n    [\n      0\n    ],\n    [\n      2\n    ],\n    [\n      1\n    ]\n  ]\n}'
+2018-01-06 06:42:15,923:DEBUG:acme.client:Storing nonce: 9HLCdEE8NSmhn49Da-F-5HIWmCsMlBDGcsNJe_nFidk
+2018-01-06 06:42:15,924:INFO:certbot.auth_handler:Performing the following challenges:
+2018-01-06 06:42:15,924:INFO:certbot.auth_handler:http-01 challenge for shop.jo-jima.com
+2018-01-06 06:42:19,290:INFO:certbot.auth_handler:Waiting for verification...
+2018-01-06 06:42:19,291:DEBUG:acme.client:JWS payload:
+b'{\n  "resource": "challenge",\n  "keyAuthorization": "VftQf4BfDSoabc-8IkwD3xnwQKX0vDs2tBgYGVPKvQE.rHjkRSQ3fQDxgpXbDZQ5HL76PtPh26ThfaPY2RC6K3U",\n  "type": "http-01"\n}'
+2018-01-06 06:42:19,296:DEBUG:acme.client:Sending POST request to https://acme-v01.api.letsencrypt.org/acme/challenge/aGIG3f6F3pz4FXs6Ui7eRYt-8ExZGdMnXMNRMRJeTQ4/2998336850:
+{
+  "protected": "eyJhbGciOiAiUlMyNTYiLCAiandrIjogeyJuIjogInRKMkZzY1dFVjlUVll5MEZGS3J1eVlOWjJLRmRwY2Fsb21icm1NazdQX19aSXh4ZEliOGJGeEtESW13bDRJZGpybU9NaHp2Q0RpYUZTb213RGRkc0Z4a1pfZGZmbkVfWmhnd0R0LXhodzFSZm1jVHJDa3Itd0FYQUxIV2NCM0tUVXpOZFdtS3cxY1ZVT1ZJTVBCQWtsUDltbnFaTERoRlQwWGRMazBnNDNncDBXaDk1OEJyQlZhZzczQWZubm9ZdTlEa05QamhweUVJSlZRUTMwMlFkZEstXzJiT0hRbE5hYThEX2dlZG83S0tOM1FqVVFNWlVxX3hjSm95aVZVRkdULTI2OFhNSFhweW5qcHVJTUJmQUxJSjVxc1FNN1RxcWJqZkwzOFVvMWZfclNQRHFWbFVKeGZ0bmdzZ3habm5KaFVfaDlUM0dfNDNSVGs0OEhLX1FodyIsICJlIjogIkFRQUIiLCAia3R5IjogIlJTQSJ9LCAibm9uY2UiOiAiOUhMQ2RFRThOU21objQ5RGEtRi01SElXbUNzTWxCREdjc05KZV9uRmlkayJ9",
+  "signature": "Yy3UsvRGhV9sVdQ9LtZ3RBeIhSTafsp5NKBswfKzo9NEGCf-_ytqtcC8SL7K1_Z8P1ZzHaYYGVdVlOr2q50NuaID3QOTbXlIPq-G6WyKR7LsPbpMiOZne2_M6R5n7gO1DsyI0dlXZG5u1upRCMmuI_1ZtwxWmlH4s4qcHR6hQKJoEhWnonQxS3mzZ6LD9BSCePJImt_6Y0pLVp-nhNToRe-4m-FJh55rv6M4NEoxQAhyKQ60rML-U61f_6cMqpO-IE5yVdRAuTJFb2xtUHiK196oRoP06DPhMV8gI_s_qZORPjEPNxM2FFXiMp3UmY4hXiSc0btcS5UN-wYsi-4giQ",
+  "payload": "ewogICJyZXNvdXJjZSI6ICJjaGFsbGVuZ2UiLAogICJrZXlBdXRob3JpemF0aW9uIjogIlZmdFFmNEJmRFNvYWJjLThJa3dEM3hud1FLWDB2RHMydEJnWUdWUEt2UUUuckhqa1JTUTNmUUR4Z3BYYkRaUTVITDc2UHRQaDI2VGhmYVBZMlJDNkszVSIsCiAgInR5cGUiOiAiaHR0cC0wMSIKfQ"
+}
+2018-01-06 06:42:19,874:DEBUG:urllib3.connectionpool:https://acme-v01.api.letsencrypt.org:443 "POST /acme/challenge/aGIG3f6F3pz4FXs6Ui7eRYt-8ExZGdMnXMNRMRJeTQ4/2998336850 HTTP/1.1" 202 336
+2018-01-06 06:42:19,882:DEBUG:acme.client:Received response:
+HTTP 202
+Server: nginx
+Content-Type: application/json
+Content-Length: 336
+Boulder-Requester: 27084625
+Link: <https://acme-v01.api.letsencrypt.org/acme/authz/aGIG3f6F3pz4FXs6Ui7eRYt-8ExZGdMnXMNRMRJeTQ4>;rel="up"
+Location: https://acme-v01.api.letsencrypt.org/acme/challenge/aGIG3f6F3pz4FXs6Ui7eRYt-8ExZGdMnXMNRMRJeTQ4/2998336850
+Replay-Nonce: k_G0O0vixgis3hhrVMwnqSbVbrqKMHuvbrF9V1A-ZU4
+Expires: Sat, 06 Jan 2018 06:42:19 GMT
+Cache-Control: max-age=0, no-cache, no-store
+Pragma: no-cache
+Date: Sat, 06 Jan 2018 06:42:19 GMT
+Connection: keep-alive
+
+b'{\n  "type": "http-01",\n  "status": "pending",\n  "uri": "https://acme-v01.api.letsencrypt.org/acme/challenge/aGIG3f6F3pz4FXs6Ui7eRYt-8ExZGdMnXMNRMRJeTQ4/2998336850",\n  "token": "VftQf4BfDSoabc-8IkwD3xnwQKX0vDs2tBgYGVPKvQE",\n  "keyAuthorization": "VftQf4BfDSoabc-8IkwD3xnwQKX0vDs2tBgYGVPKvQE.rHjkRSQ3fQDxgpXbDZQ5HL76PtPh26ThfaPY2RC6K3U"\n}'
+2018-01-06 06:42:19,883:DEBUG:acme.client:Storing nonce: k_G0O0vixgis3hhrVMwnqSbVbrqKMHuvbrF9V1A-ZU4
+2018-01-06 06:42:22,889:DEBUG:acme.client:Sending GET request to https://acme-v01.api.letsencrypt.org/acme/authz/aGIG3f6F3pz4FXs6Ui7eRYt-8ExZGdMnXMNRMRJeTQ4.
+2018-01-06 06:42:23,495:DEBUG:urllib3.connectionpool:https://acme-v01.api.letsencrypt.org:443 "GET /acme/authz/aGIG3f6F3pz4FXs6Ui7eRYt-8ExZGdMnXMNRMRJeTQ4 HTTP/1.1" 200 2132
+2018-01-06 06:42:23,496:DEBUG:acme.client:Received response:
+HTTP 200
+Server: nginx
+Content-Type: application/json
+Link: <https://acme-v01.api.letsencrypt.org/acme/new-cert>;rel="next"
+Replay-Nonce: yS6q9lUtAxOP-EmlpJIB0boGbuNltoSAG2WioUpnDdE
+X-Frame-Options: DENY
+Strict-Transport-Security: max-age=604800
+Content-Length: 2132
+Expires: Sat, 06 Jan 2018 06:42:23 GMT
+Cache-Control: max-age=0, no-cache, no-store
+Pragma: no-cache
+Date: Sat, 06 Jan 2018 06:42:23 GMT
+Connection: keep-alive
+
+b'{\n  "identifier": {\n    "type": "dns",\n    "value": "shop.jo-jima.com"\n  },\n  "status": "invalid",\n  "expires": "2018-01-13T06:42:15Z",\n  "challenges": [\n    {\n      "type": "dns-01",\n      "status": "pending",\n      "uri": "https://acme-v01.api.letsencrypt.org/acme/challenge/aGIG3f6F3pz4FXs6Ui7eRYt-8ExZGdMnXMNRMRJeTQ4/2998336847",\n      "token": "BuWWlYqtKQTs1cytMjoxo2J_3wlX4VOB8kbhqPUf7nA"\n    },\n    {\n      "type": "http-01",\n      "status": "invalid",\n      "error": {\n        "type": "urn:acme:error:unauthorized",\n        "detail": "Invalid response from http://shop.jo-jima.com/.well-known/acme-challenge/VftQf4BfDSoabc-8IkwD3xnwQKX0vDs2tBgYGVPKvQE: \\"\\u003c!DOCTYPE html\\u003e\\n\\u003chtml\\u003e\\n\\u003chead\\u003e\\n  \\u003ctitle\\u003eThe page you were looking for doesn\'t exist (404)\\u003c/title\\u003e\\n  \\u003cmeta name=\\"viewport\\" content\\"",\n        "status": 403\n      },\n      "uri": "https://acme-v01.api.letsencrypt.org/acme/challenge/aGIG3f6F3pz4FXs6Ui7eRYt-8ExZGdMnXMNRMRJeTQ4/2998336850",\n      "token": "VftQf4BfDSoabc-8IkwD3xnwQKX0vDs2tBgYGVPKvQE",\n      "keyAuthorization": "VftQf4BfDSoabc-8IkwD3xnwQKX0vDs2tBgYGVPKvQE.rHjkRSQ3fQDxgpXbDZQ5HL76PtPh26ThfaPY2RC6K3U",\n      "validationRecord": [\n        {\n          "url": "http://shop.jo-jima.com/.well-known/acme-challenge/VftQf4BfDSoabc-8IkwD3xnwQKX0vDs2tBgYGVPKvQE",\n          "hostname": "shop.jo-jima.com",\n          "port": "80",\n          "addressesResolved": [\n            "54.225.135.129",\n            "50.19.253.20",\n            "54.225.108.200",\n            "54.225.175.205",\n            "54.197.234.71",\n            "54.225.138.206",\n            "54.225.145.56",\n            "54.225.133.127"\n          ],\n          "addressUsed": "54.225.135.129",\n          "addressesTried": []\n        }\n      ]\n    },\n    {\n      "type": "tls-sni-01",\n      "status": "pending",\n      "uri": "https://acme-v01.api.letsencrypt.org/acme/challenge/aGIG3f6F3pz4FXs6Ui7eRYt-8ExZGdMnXMNRMRJeTQ4/2998336851",\n      "token": "nEstgjXgdFLxANco7NmC2NsBmlnVmHDn0NAJKROu85Q"\n    }\n  ],\n  "combinations": [\n    [\n      0\n    ],\n    [\n      2\n    ],\n    [\n      1\n    ]\n  ]\n}'
+2018-01-06 06:42:23,497:DEBUG:certbot.reporter:Reporting to user: The following errors were reported by the server:
+
+Domain: shop.jo-jima.com
+Type:   unauthorized
+Detail: Invalid response from http://shop.jo-jima.com/.well-known/acme-challenge/VftQf4BfDSoabc-8IkwD3xnwQKX0vDs2tBgYGVPKvQE: "<!DOCTYPE html>
+<html>
+<head>
+  <title>The page you were looking for doesn't exist (404)</title>
+  <meta name="viewport" content"
+
+To fix these errors, please make sure that your domain name was entered correctly and the DNS A/AAAA record(s) for that domain contain(s) the right IP address.
+2018-01-06 06:42:23,506:INFO:certbot.auth_handler:Cleaning up challenges
+2018-01-06 06:42:23,506:DEBUG:certbot.log:Exiting abnormally:
+Traceback (most recent call last):
+  File "/usr/local/bin/certbot", line 11, in <module>
+    load_entry_point('certbot==0.20.0', 'console_scripts', 'certbot')()
+  File "/usr/local/Cellar/certbot/0.20.0/libexec/lib/python3.6/site-packages/certbot/main.py", line 861, in main
+    return config.func(config, plugins)
+  File "/usr/local/Cellar/certbot/0.20.0/libexec/lib/python3.6/site-packages/certbot/main.py", line 786, in certonly
+    lineage = _get_and_save_cert(le_client, config, domains, certname, lineage)
+  File "/usr/local/Cellar/certbot/0.20.0/libexec/lib/python3.6/site-packages/certbot/main.py", line 85, in _get_and_save_cert
+    lineage = le_client.obtain_and_enroll_certificate(domains, certname)
+  File "/usr/local/Cellar/certbot/0.20.0/libexec/lib/python3.6/site-packages/certbot/client.py", line 357, in obtain_and_enroll_certificate
+    certr, chain, key, _ = self.obtain_certificate(domains)
+  File "/usr/local/Cellar/certbot/0.20.0/libexec/lib/python3.6/site-packages/certbot/client.py", line 318, in obtain_certificate
+    self.config.allow_subset_of_names)
+  File "/usr/local/Cellar/certbot/0.20.0/libexec/lib/python3.6/site-packages/certbot/auth_handler.py", line 81, in get_authorizations
+    self._respond(resp, best_effort)
+  File "/usr/local/Cellar/certbot/0.20.0/libexec/lib/python3.6/site-packages/certbot/auth_handler.py", line 138, in _respond
+    self._poll_challenges(chall_update, best_effort)
+  File "/usr/local/Cellar/certbot/0.20.0/libexec/lib/python3.6/site-packages/certbot/auth_handler.py", line 202, in _poll_challenges
+    raise errors.FailedChallenges(all_failed_achalls)
+certbot.errors.FailedChallenges: Failed authorization procedure. shop.jo-jima.com (http-01): urn:acme:error:unauthorized :: The client lacks sufficient authorization :: Invalid response from http://shop.jo-jima.com/.well-known/acme-challenge/VftQf4BfDSoabc-8IkwD3xnwQKX0vDs2tBgYGVPKvQE: "<!DOCTYPE html>
+<html>
+<head>
+  <title>The page you were looking for doesn't exist (404)</title>
+  <meta name="viewport" content"
