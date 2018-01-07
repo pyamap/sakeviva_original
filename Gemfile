@@ -51,6 +51,8 @@ gem 'premailer-rails'
 gem 'nokogiri'
 gem 'jquery-turbolinks'
 gem "responsive-nav-rails"
+gem 'rb-readline'
+gem 'sitemap_generator'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

@@ -92,8 +92,6 @@ Rails.application.routes.draw do
 
   resources :photos, only: [:create, :destroy]
 
-
-
   #match '*path' => 'application#error404', via: :all #ルーティングで定義されていないURLが指定された場合のエラー表示。
 
   # The priority is based upon order of creation: first created -> highest priority.
