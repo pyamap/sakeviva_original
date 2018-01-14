@@ -1,5 +1,5 @@
 # Set the host name for URL creation
-SitemapGenerator::Sitemap.default_host = "http://shop.jo-jima.com"
+SitemapGenerator::Sitemap.default_host = "https://shop.jo-jima.com"
 
 SitemapGenerator::Sitemap.create do
 
