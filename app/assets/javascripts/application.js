@@ -11,11 +11,11 @@
 // about supported directives.
 //
 //= require jquery
-//= require bootstrap-sprockets
-//= require toastr
-//= require jquery_ujs
-//= require turbolinks
 //= require jquery.turbolinks
+//= require jquery_ujs
+//= require bootstrap-sprockets
 //= require lightbox
+//= require toastr
 //= require responsive-nav
 //= require_tree .
+//= require turbolinks

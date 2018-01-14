@@ -1,12 +1,12 @@
 // By: Hans Fj�llemark and John Papa
 // https://github.com/CodeSeven/toastr
-// 
+//
 // Modified to support css styling instead of inline styling
 // Inspired by https://github.com/Srirangan/notifer.js/
 
 ;(function(window, $) {
     window.toastr = (function() {
-        var 
+        var
             defaults = {
                 tapToDismiss: true,
                 toastClass: 'toast',
@@ -65,7 +65,7 @@
             },
 
             notify = function(map) {
-                var 
+                var
                     options = getOptions(),
                     iconClass = map.iconClass || options.iconClass,
                     intervalId = null,
@@ -92,7 +92,7 @@
                 var fadeAway = function() {
                     if ($(':focus', $toastElement).length > 0)
                 		return
-                	
+
                     var fade = function() {
                         return $toastElement.fadeOut(options.fadeOut)
                     }

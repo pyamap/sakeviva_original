@@ -52,6 +52,7 @@ Rails.application.routes.draw do
   get "inquiry" => "inquiries#index"
   post "inquiry/confirm" => "inquiries#confirm"
   post "inquiry/thanks" => "inquiries#thanks"
+  get "users" => "users/registrations#create"
 
   namespace :admin do
     root to: "products#index"

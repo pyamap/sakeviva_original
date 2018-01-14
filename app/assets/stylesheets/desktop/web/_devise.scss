@@ -56,3 +56,15 @@ form#new_user.new_user {
 	margin: 0 auto 20px;
 }
 
+.ConfirmationInstruction {
+	margin: 200px auto 50px;
+	height: 250px;
+	width: 489px;
+	font-size: 18px;
+	color: $theme-color;
+
+	@include mq-sp {
+		width: 90%;
+		font-size: 14px;
+	}
+}
