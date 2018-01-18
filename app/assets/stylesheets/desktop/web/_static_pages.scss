@@ -539,22 +539,34 @@ section {
 	font-size: 22px;
 	color: $font-white;
 
+	@include mq-sp {
+		font-size: 16px;
+	}
+
+
 	&__first {
-		text-align: center;
+		text-align: left;
 		height: 700px;
 		margin-top: 70px;
 		background-image: image-url("pc/about_us/about_us_1.jpg");
 		background-size: cover;
 
-			p {
-				margin: 0 auto;
-				padding-top: 250px;
+		@include mq-sp {
+			margin-top: 0;
+		}
 
-			}
+		p {
+			margin: 0 auto;
+			padding: 150px 0 0 50px;
 
-			span{
-				margin-top: 20px;
+			@include mq-sp {
+				padding: 150px 15px 0 15px;
 			}
+		}
+
+		span{
+			margin-top: 20px;
+		}
 	}
 
 	&__second {
@@ -564,8 +576,11 @@ section {
 		background-size: cover;
 
 		p {
-			margin: 0 auto;
 			padding: 150px 0 0 50px;
+
+			@include mq-sp {
+				padding: 150px 15px 0 15px;
+			}
 		}
 	}
 
@@ -576,20 +591,31 @@ section {
 		background-size: cover;
 
 		p {
-			margin: 0 auto;
 			padding: 150px 0 0 50px;
+
+			@include mq-sp {
+				padding: 150px 15px 0 15px;
+			}
 		}
 	}
 
 	&__fourth {
 		height: 700px;
-		text-align: right;
+		text-align: left;
 		background-image: image-url("pc/about_us/about_us_4.jpg");
 		background-size: cover;
 
+		@include mq-sp {
+			text-align: left;
+		}
+
 		p {
 			margin: 0 auto;
-			padding: 250px 50px 0 0;
+			padding: 250px 0 0 50px;
+
+			@include mq-sp {
+				padding: 200px 15px 0 15px;
+			}
 		}
 	}
 }
