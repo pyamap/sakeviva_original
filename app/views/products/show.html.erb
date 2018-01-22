@@ -31,8 +31,8 @@
 			</ul>
 			<%= form_tag('/add_to_cart', :method => :post) do %>
 			<p class="ItemDetails__main--price">
-				<%= render partial: 'option_value', locals: {option_id: @options.first.id} %> (税込)
-			</p>
+				<%= render partial: 'option_value', locals: {option_id: @options.first.id} %>
+			(税込)</p>
 			<p>サイズ</p>
 			<div class="ItemDetails__main--option">
 				<%= select :option, :option_id, @options.map{|t| [t.title, t.id]} %>
