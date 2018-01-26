@@ -2,13 +2,15 @@
 <html lang="ja-jp">
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8">
 		<title>あしたの城島</title>
 		<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= stylesheet_link_tag 'responsive-nav' %>
+   		<%= stylesheet_link_tag 'responsive-nav' %>
 		<%= csrf_meta_tags %>
-  </meta>
+		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+		<%= javascript_include_tag 'responsive-nav' %>
+  	</meta>
   <%= favicon_link_tag('jojima-favicon.ico') %>
 </head>
 <body>
@@ -33,8 +35,6 @@
 	<footer>
 		<%= render 'partial/footer' %>
 	</footer>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'responsive-nav' %>
   <script>var nav = responsiveNav(".nav-collapse");</script>
 </body>
 </html>
