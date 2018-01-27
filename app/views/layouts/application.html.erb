@@ -9,8 +9,8 @@
    		<%= stylesheet_link_tag 'responsive-nav' %>
 		<%= csrf_meta_tags %>
   	</meta>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'responsive-nav' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true, :async => true %>
+  <%= javascript_include_tag 'responsive-nav', :async => true %>
 
   <%= favicon_link_tag('jojima-favicon.ico') %>
 </head>
