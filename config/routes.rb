@@ -57,6 +57,7 @@ Rails.application.routes.draw do
   namespace :admin do
     root to: "products#index"
     get "/manage-listing/:id/photos/" => "products#photos", as: "manage_listing_photos"
+    post "/status_update" => "products#status_update"
     resources :orders
     resources :products do
       collection {get "search"}

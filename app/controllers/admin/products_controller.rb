@@ -61,6 +61,12 @@ class Admin::ProductsController < Admin::Base
 		@product = Product.find(params[:id])
 	end
 
+	def status_update
+		@product = Product.find(params[:id])
+		@product.toggle!(:status)
+		redirect_to action: "index", notice: "商品ステータスを更新しました"
+	end
+
 	private
 	def product_params
 		params.require(:product).permit(:name, :description,:image, :image_cache, :theme_tag_id, :type_id, :shop_id, :price_id, :category_id, :brand_id, :info, :remove_image, options_attributes: [:id, :title, :product_id, :value, :_destroy ], images_attributes: [:id, :product_id, :image, :image_cache, :_destroy])

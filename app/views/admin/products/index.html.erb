@@ -10,6 +10,7 @@
 				<th>価格(円)</th>
 				<th class="description">商品説明</th>
 				<th>操作</th>
+				<th>ステータス</th>
 			</tr>
 		<% @products.each do |product| %>
 			<tr>
@@ -22,6 +23,7 @@
 					<%= link_to "編集", [:edit, :admin, product] %>
 					<%# button_to "削除",[:admin, product], method: :delete, confirm: "本当に削除しますか？" %>
 				</td>
+				<td class="status"><%= button_to product.status ? 'Live' : 'Unavailable', [:admin, :status_update, :id => product.id] %></td>
 			</tr>
 		<% end %>
 		</table>

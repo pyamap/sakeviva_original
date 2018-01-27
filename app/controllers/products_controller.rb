@@ -16,7 +16,7 @@ before_filter :current_cart
 		@product = Product.find(params[:id])
 		@options = @product.options
 		@images = @product.images.all
-		@recommended_products = Product.where(category_id: @product.category_id).order("RANDOM()").limit(4)
+		@recommended_products = Product.where(category_id: @product.category_id).order("RANDOM()").where(status: true).limit(4)
 	end
 
 	def new
@@ -45,7 +45,7 @@ before_filter :current_cart
 		(session[:selected_options] ||= []) && (session[:selected_options] << params[:option_id])
 		@cart.add_product(product,quantity,option)
 		session[:total_shipping_fee] = nil
-		redirect_to_current_cart("数量を増やしました")
+		redirect_to_current_cart("カートに商品を追加しました")
 	end
 
 	def empty_cart
