@@ -7,8 +7,10 @@ class PayjpController < ApplicationController
 	#before_action :ordered_product, only:[:index, :new, :pay]
 
 	def index
-		if params[:address] == nil
-			redirect_to addresses_path, alert: '住所を選択してください。'
+
+		if params[:address].nil?
+			redirect_to addresses_path, alert: "住所を選択してください"
+			return
 		end
 
 		unless session[:current_address].present?
