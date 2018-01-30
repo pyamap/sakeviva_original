@@ -1,0 +1,15 @@
+<%= stylesheet_link_tag "desktop/web/static_pages", :media => "all" %>
+
+<section class="MyPage">
+	<div class="MyPage__menu">
+    <ul class="MyPage__menu--list">
+      <li><%= link_to "注文履歴", mypage_order_path, :remote => true %></li>
+      <li><%= link_to "郵送先登録情報", mypage_address_path, :remote => true %><li>
+    </ul>
+	</div>
+  <div class="MyPage__details">
+  </div>
+  <div class="MyPage__address">
+  </div>
+
+</section>

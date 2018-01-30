@@ -1,0 +1,32 @@
+<%= stylesheet_link_tag "desktop/web/orders", :media => "all" %>
+
+<% if @orders.present? %>
+<div id="orders_list">
+  <% @orders.each do |order| %>
+  <div class="order_items">
+    <section class="order_pic">
+      <%= image_tag(order.product.image.url, :class => "pc", height: 210, width: 200, :alt => "商品写真") %>
+      <%= image_tag(order.product.image.url, :class => "sp", :alt => "商品写真") %>
+    </section>
+    <section class="details_list">
+      <ul>
+        <li>注文日：<%= order.created_at %></li>
+        <li>配送予定日：11月11日 </li>
+        <li><%= order.product.name %></li>
+        <li><%= order.product.value %>円 (税込)</li>
+      </ul>
+      <div class="delivery_statusSp">
+        <p><%= order.delivery.status %></p>
+      </div>
+      <p class="repurchase_button"><%= link_to "再購入", product_path(order.product.id) %></p>
+    </section>
+  </div>
+  <div class="delivery_statusPc">
+    <p><%= order.delivery.status %></p>
+  </div>
+  <% end %>
+<% else %>
+  <p class="no_order">まだご注文がありません。<%= link_to "商品一覧", root_path %>に戻る。</p>
+<% end %>
+</div>
+

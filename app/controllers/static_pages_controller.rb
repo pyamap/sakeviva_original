@@ -6,9 +6,25 @@ class StaticPagesController < ApplicationController
 		@new_products = Product.find([34,35,36,37])
 		@popular_products_pc = Product.find([34,35,36,37,38,39,40,41,42])
 		@popular_products_sp = Product.find([34,35,36,37])
-  end
+	end
 
   def about_us
+  end
+
+  def mypage
+  end
+
+  def mypage_order
+  	respond_to do |format|
+	  	format.js {render layout: false}
+  	end
+  end
+
+  def mypage_address
+  	@current_addresses=current_user.addresses
+  	respond_to do |format|
+  		format.js {render layout: false}
+  	end
   end
 
 	def interview_tanaka_noodle

@@ -54,6 +54,11 @@ Rails.application.routes.draw do
   post "inquiry/thanks" => "inquiries#thanks"
   get "users" => "users/registrations#create"
 
+  #管理画面
+  get "mypage" => "static_pages#mypage"
+  get "mypage_order" => "static_pages#mypage_order"
+  get "mypage_address" => "static_pages#mypage_address"
+
   namespace :admin do
     root to: "products#index"
     get "/manage-listing/:id/photos/" => "products#photos", as: "manage_listing_photos"

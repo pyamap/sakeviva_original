@@ -689,6 +689,21 @@ footer {
 	}
 }
 
+/*インタビューパネルスタイルここから*/
+.MyPage {
+	margin-top: 150px;
+	width: 90%;
+	display: flex;
+
+		&__menu {
+
+			&--list {
+				list-style-type: none;
+			}
+		}
+}
+
+/*インタビューパネルスタイルここまで*/
 
 
 
