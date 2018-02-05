@@ -30,6 +30,7 @@
 
   <div class="total_shipping_fee">送料 : <%=  number_to_currency(@total_shipping_fee) %></div>
   <div class="total_price">お支払合計金額 : <%=  number_to_currency(@total_price) %></div>
+  <div class="tax_disclaimer">※クレジットカード決済手数料3%を含みます。</div>
 
   <div class="payjp-button">お支払い
   <%= form_tag(action: :pay, method: :post) do %>

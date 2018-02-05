@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8">
 		<title>あしたの城島</title>
-		<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-   		<%= stylesheet_link_tag 'responsive-nav' %>
+		<%= stylesheet_link_tag 'application', media: 'all' %>
+   	<%= stylesheet_link_tag 'responsive-nav' %>
 		<%= csrf_meta_tags %>
-  	</meta>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'responsive-nav', :async => true %>
+  </meta>
   <%= favicon_link_tag('jojima-favicon.ico') %>
+  <%= javascript_include_tag 'application' %>
+  <%= javascript_include_tag 'responsive-nav' %>
 </head>
 <body>
 

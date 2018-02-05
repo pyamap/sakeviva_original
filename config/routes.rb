@@ -47,12 +47,15 @@ Rails.application.routes.draw do
   get "trade_law" => "terms#trade_law"
   get "privacy" => "terms#privacy"
   get "shipping_fee" => "terms#shipping_fee"
+  get "terms_of_service" => "terms#terms_of_service"
 
   #お問い合わせフォーム
   get "inquiry" => "inquiries#index"
   post "inquiry/confirm" => "inquiries#confirm"
   post "inquiry/thanks" => "inquiries#thanks"
   get "users" => "users/registrations#create"
+
+
 
   #管理画面
   get "mypage" => "static_pages#mypage"
@@ -98,6 +101,8 @@ Rails.application.routes.draw do
   end
 
   resources :photos, only: [:create, :destroy]
+
+
 
   #match '*path' => 'application#error404', via: :all #ルーティングで定義されていないURLが指定された場合のエラー表示。
 

@@ -141,7 +141,7 @@
 		.total_price{
 			width: 900px;
 			font-size: 20px;
-			margin: 10px auto 50px;
+			margin: 10px auto 15px;
 			text-align: right;
 
 			@include mq-sp {
@@ -149,6 +149,7 @@
 			}
 
 		}
+
 			p {
 				margin: 25px auto;
 				width: 600px;
@@ -159,6 +160,13 @@
 		    	text-align: left;
 		    	width: 90%;
 		    }
+			}
+
+			.tax_disclaimer {
+				width: 900px;
+				margin: 10px auto 50px;
+				text-align: right;
+				color: $theme-color;
 			}
 	}
 
