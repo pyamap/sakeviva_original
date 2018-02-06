@@ -239,7 +239,7 @@
 		@include mq-sp {
 			border-bottom: 1px solid gray;
 			margin: 0 15px;
-			padding-bottom: 15px;
+			height: 100px;
 		}
 
 		&:nth-child(even) {
@@ -264,9 +264,14 @@
 
 			@include mq-sp {
 				width: 30%;
+				margin: 5px;
 				float: left;
 				.pc { display: none !important;}
 				.sp { display: block !important;}
+
+				img {
+					margin: none;
+				}
 			}
 		}
 
@@ -275,7 +280,7 @@
 			height: 40px;
 
 			@include mq-sp {
-				width: 70%;
+				width: 65%;
 				float: right;
 				line-height: 40px;
 				margin: 10px 0;

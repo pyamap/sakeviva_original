@@ -118,17 +118,17 @@
       <p class="NewArrival__text">新商品、季節にあった商品をご紹介します。</p>
      <ul class="NewArrival__main">
      <% @new_products.each do |new_product| %>
-       <li class="NewArrival__item">
-          <div class="NewArrival__item--photo">
-          <%= link_to image_tag(new_product.image.url, height: 280, width: 210, :class => "pc", alt: "商品写真"),product_path(new_product.id) %>
-          <%= link_to image_tag(new_product.image.url, height: 90, width: 120, :class => "sp", alt: "商品写真"),product_path(new_product.id) %>
-          </div>
-          <div class="NewArrival__item--title"><%= link_to new_product.name, product_path(new_product.id) %></div>
-          <div class="NewArrival__item--price"><%= number_to_currency(new_product.options.first.value) %> (税込)</div>
-          <%= link_to product_path(new_product.id), :method => :get do %>
-            <i class="fa fa-angle-right" aria-hidden="true"></i>
-          <% end %>
-       </li>
+         <%= link_to product_path(new_product.id) do %>
+         <li class="NewArrival__item">
+            <div class="NewArrival__item--photo">
+            <%= image_tag(new_product.image.url, height: 280, width: 210, :class => "pc", alt: "商品写真") %>
+            <%= image_tag(new_product.image.url, height: 90, width: 120, :class => "sp", alt: "商品写真") %>
+            </div>
+            <div class="NewArrival__item--title"><%= new_product.name %></div>
+            <div class="NewArrival__item--price"><%= number_to_currency(new_product.options.first.value) %> (税込)</div>
+              <i class="fa fa-angle-right" aria-hidden="true"></i>
+         </li>
+         <% end %>
       <% end %>
       </ul>
       </div>
@@ -156,19 +156,19 @@
 
       <ul class="Popular__all_sp">
       <% @popular_products_sp.each do |popular_product| %>
-        <li class="Popular__item">
-          <div class="Popular__sub">
-            <img class="Popular__sub--photo"><%= link_to image_tag(popular_product.image.url, height: 90, width: 120, alt: "商品写真"), product_path(popular_product.id) %>
-            </img>
-          </div>
-          <div class="Popular__main">
-           <div class="Popular__main--title"><%= link_to popular_product.name, product_path(popular_product.id) %></div>
-           <div class="Popular__main--price"><%= number_to_currency(popular_product.options.first.value) %> (税込)</div>
-          </div>
-           <%= link_to product_path(popular_product.id), :method => :get do %>
-             <i class="fa fa-angle-right" aria-hidden="true"></i>
-           <% end %>
-         </li>
+        <%= link_to product_path(popular_product.id) do %>
+          <li class="Popular__item">
+            <div class="Popular__sub">
+              <img class="Popular__sub--photo"><%= image_tag(popular_product.image.url, height: 90, width: 120, alt: "商品写真") %>
+              </img>
+            </div>
+            <div class="Popular__main">
+             <div class="Popular__main--title"><%= popular_product.name %></div>
+             <div class="Popular__main--price"><%= number_to_currency(popular_product.options.first.value) %> (税込)</div>
+            </div>
+               <i class="fa fa-angle-right" aria-hidden="true"></i>
+           </li>
+         <% end %>
        <% end %>
        </ul>
     </div>
