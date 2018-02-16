@@ -1,4 +1,5 @@
 ﻿<%= stylesheet_link_tag "desktop/web/static_pages", :media => "all" %>
+<%= stylesheet_link_tag "desktop/web/product_list", :media => "all" %>
 
 <div id="jojima-top">
   <section>
@@ -116,22 +117,26 @@
     <div class="NewArrival">
       <h2 class="NewArrival__head">新入荷</h2>
       <p class="NewArrival__text">新商品、季節にあった商品をご紹介します。</p>
-     <ul class="NewArrival__main">
-     <% @new_products.each do |new_product| %>
-         <%= link_to product_path(new_product.id) do %>
-         <li class="NewArrival__item">
-            <div class="NewArrival__item--photo">
-            <%= image_tag(new_product.image.url, height: 280, width: 210, :class => "pc", alt: "商品写真") %>
-            <%= image_tag(new_product.image.url, height: 90, width: 120, :class => "sp", alt: "商品写真") %>
-            </div>
-            <div class="NewArrival__item--title"><%= new_product.name %></div>
-            <div class="NewArrival__item--price"><%= number_to_currency(new_product.options.first.value) %> (税込)</div>
-              <i class="fa fa-angle-right" aria-hidden="true"></i>
-         </li>
-         <% end %>
-      <% end %>
-      </ul>
+
+      <div class="NewArrivalPC">
+        <ul class="ProductList">
+        <% @new_products.each do |item| %>
+        <%= link_to product_path(item.id) do %>
+          <%= render 'partial/product_list_pc', item: item %>
+        <% end %>
+        <% end %>
+        </ul>
       </div>
+
+      <div class="NewArrivalSP">
+        <ul class="ProductList">
+          <% @new_products.each do |item| %>
+          <%= link_to product_path(item.id) do %>
+            <%= render 'partial/product_list_sp', item: item %>
+          <% end %>
+          <% end %>
+        </ul>
+    </div>
     </div>
   </section>
 
@@ -139,39 +144,34 @@
     <div class="Popular">
       <h2 class="Popular__head">注目の商品</h2>
       <p class="Popular__text">注目が集まっている商品です。いかがでしょうか？</p>
-      <ul class="Popular__all_pc">
-      <% @popular_products_pc.each do |popular_product| %>
-        <li class="Popular__item">
-          <div class="Popular__sub">
-            <img class="Popular__sub--photo"><%= link_to image_tag(popular_product.image.url, height: 80, width: 68, alt: "商品写真"), product_path(popular_product.id) %>
-            </img>
-          </div>
-           <div class="Popular__main">
-             <div class="Popular__main--title"><%= link_to popular_product.name, product_path(popular_product.id) %></div>
-             <div class="Popular__main--price"><%= number_to_currency(popular_product.options.first.value) %> (税込)</div>
-           </div>
-        </li>
-       <% end %>
-       </ul>
 
-      <ul class="Popular__all_sp">
-      <% @popular_products_sp.each do |popular_product| %>
-        <%= link_to product_path(popular_product.id) do %>
+      <div class="PopularPC">
+        <ul class="Popular__all_pc">
+        <% @popular_products_pc.each do |popular_product| %>
           <li class="Popular__item">
             <div class="Popular__sub">
-              <img class="Popular__sub--photo"><%= image_tag(popular_product.image.url, height: 90, width: 120, alt: "商品写真") %>
+              <img class="Popular__sub--photo"><%= link_to image_tag(popular_product.image.url, height: 80, width: 68, alt: "商品写真"), product_path(popular_product.id) %>
               </img>
             </div>
-            <div class="Popular__main">
-             <div class="Popular__main--title"><%= popular_product.name %></div>
-             <div class="Popular__main--price"><%= number_to_currency(popular_product.options.first.value) %> (税込)</div>
-            </div>
-               <i class="fa fa-angle-right" aria-hidden="true"></i>
-           </li>
+             <div class="Popular__main">
+               <div class="Popular__main--title"><%= link_to popular_product.name, product_path(popular_product.id) %></div>
+               <div class="Popular__main--price"><%= number_to_currency(popular_product.options.first.value) %> (税込)</div>
+             </div>
+          </li>
          <% end %>
-       <% end %>
-       </ul>
-    </div>
+         </ul>
+       </div>
+
+      <div class="PopularSP">
+        <ul class="ProductList">
+          <% @popular_products_sp.each do |item| %>
+          <%= link_to product_path(item.id) do %>
+            <%= render 'partial/product_list_sp', item: item %>
+          <% end %>
+          <% end %>
+        </ul>
+      </div>
+   </div>
   </section>
 
   <section>

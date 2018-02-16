@@ -1,2 +1,2 @@
-<%= number_to_currency(Option.all.find_by(id: option_id).value) %>
+<%= number_to_currency(Option.all.find_by(id: option_id).value) %> (税込)
 <%= hidden_field_tag :option_id, option_id %>

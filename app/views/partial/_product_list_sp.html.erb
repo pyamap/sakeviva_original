@@ -1,0 +1,13 @@
+<%= stylesheet_link_tag "desktop/web/product_list", :media => "all" %>
+
+<li class="ProductList__item">
+  <div class="ProductList__sub">
+    <%= image_tag(item.image.url, height: 100, width: 120, alt: "商品写真") %>
+  </div>
+  <div class="ProductList__main">
+   <div class="ProductList__main--title"><%= item.name %></div>
+   <div class="ProductList__main--price"><%= number_to_currency(item.options.first.value) %> (税込)</div>
+  </div>
+     <i class="fa fa-angle-right" aria-hidden="true"></i>
+ </li>
+

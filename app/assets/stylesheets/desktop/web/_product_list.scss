@@ -1,0 +1,72 @@
+//下の.ProductlistでPC版のスタイルを横4列で揃えてあげる。いっぽうでstatic_page.scssの配下にあるNew Arrivalのhead,text以外の要素はこちらに書いているので省いても大丈夫。
+
+ .ProductList {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 15px auto;
+  padding: 0;
+  list-style-type: none;
+
+    @include mq-sp {
+      width: 95%;
+      margin: 20px auto;
+      padding: 0;
+      flex-flow: column nowrap;
+      list-style-type: none;
+    }
+
+    &__item {
+      display: block;
+      margin: 20px;
+
+      @include mq-sp {
+        margin: 0 15px;
+        padding: 5px 0;
+        width: 95%;
+        border-bottom: 1px solid gray;
+        display: flex;
+      }
+
+      .fa {
+        position: absolute;
+        margin: 12% 83%;
+        font-size: 24px;
+
+        @include mq-pc {
+          display: none;
+        }
+      }
+    }
+
+    &__sub {
+      @include mq-sp {
+        width: 28%;
+        margin: 10px 0 10px 15px;
+      }
+    }
+
+    &__main {
+      margin: 10px auto;
+      text-align: center;
+      line-height: 25px;
+
+    @include mq-sp {
+      width: 50%;
+      margin: 10px auto;
+      float: right;
+      line-height: 25px;
+
+      &--title {
+      text-align: center;
+      margin: 10px 0;
+      }
+
+      &--price {
+      text-align: center;
+      margin: 0 10px;
+      }
+    }
+  }
+}
+
+

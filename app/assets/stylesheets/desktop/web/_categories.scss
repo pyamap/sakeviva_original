@@ -1,3 +1,4 @@
+@import "desktop/web/product_list";
 
 .category_visual {
 	margin: 0;
@@ -217,100 +218,13 @@
 .CategoryProduct {
 	width: 1000px;
 	margin: 25px auto;
-
-		@include mq-sp{
-			width: 100%;
-		}
-
-	&__main {
-		width: 1000px;
-		list-style: none;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-around;
-		margin: auto;
-		padding: 0;
-
-		@include mq-sp{
-			flex-direction: column;
-			width: 100%;
-		}
-
-		p {
-			font-size: 18px;
-			color: $theme-color;
-
-			@include mq-sp {
-				font-size: 14px;
-				margin: auto;
-			}
-		}
-	}
-
-	&__item {
-		text-align: center;
-		width: 220px;
-		margin: 15px 0 0 15px;
+	.CategoryProductPC { display: flex !important;}
+	.CategoryProductSP { display: none !important;}
 
 		@include mq-sp {
-			width: 95%;
-			border-bottom: 1px solid gray;
-			margin: 15px;
-			padding-bottom: 15px;
+			width: 100%;
+			.CategoryProductPC { display: none !important;}
+		  .CategoryProductSP { display: flex !important;}
 		}
-
-		@include mq-pc {
-			&:nth-child(even) {
-				margin-left: 0;
-			}
-
-			&:nth-child(2) {
-				margin-right: 0;
-			}
-		}
-
-		&--photo {
-			.pc { display: block !important; }
-			.sp { display: none !important; }
-
-			@include mq-sp {
-				.pc { display: none !important; }
-				.sp { display: block !important; }
-				width: 30%;
-				float: left;
-			}
-		}
-
-		&--title {
-			margin: auto;
-			height: 40px;
-
-			@include mq-sp {
-				width: 52%;
-				float: right;
-				line-height: 25px;
-				margin: 10px 40px 10px 0;
-			}
-		}
-
-		&--price {
-			@include mq-sp {
-				width: 70%;
-				float: right;
-				line-height: 30px;
-				margin: 0;
-			}
-		}
-
-		i.fa {
-			@include mq-pc {
-				display: none;
-			}
-
-			position: absolute;
-			margin: 10% 60%;
-			font-size: 24px;
-		}
-	}
 }
 

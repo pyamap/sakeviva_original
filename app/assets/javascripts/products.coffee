@@ -3,7 +3,7 @@ $(document).on 'change', '#option_option_id', ->
 		type: 'GET'
 		url: '/products/:id/option_value'
 		data: {
-			option_id: $(this).val() (税込)
+			option_id: $(this).val()
 		}
 	).done (data) ->
 		$('.ItemDetails__main--price').html(data)

@@ -1,3 +1,4 @@
+@import "desktop/web/product_list";
 /*ここからトップページのデザイン*/
 
 #jojima-top {
@@ -194,12 +195,14 @@
 
 	width: 100%;
 	margin: auto;
+	.NewArrivalPC { display: flex !important;}
+	.NewArrivalSP {	display: none !important;}
 
-	i.fa {//PCの際の表示は消す。
-		@include mq-pc {
-			display: none;
-		}
+	@include mq-sp {
+		.NewArrivalPC { display: none !important;}
+		.NewArrivalSP {	display: flex !important;}
 	}
+	//上はモジュールをPCとSPで出し分ける。
 
 	&__head {
 		display: block;
@@ -215,83 +218,6 @@
 	&__text {
 		text-align: center;
 		font-size: 16px;
-	}
-
-	&__main {
-		list-style: none;
-		display: flex;
-		justify-content: space-around;
-		margin: 20px 200px;
-		padding: 0;
-
-
-		@include mq-sp {
-			width: 100%;
-			margin: 20px 0;
-			flex-direction: column;
-		}
-	}
-
-	&__item {
-		text-align: center;
-		margin: 30px;
-
-		@include mq-sp {
-			border-bottom: 1px solid gray;
-			margin: 0 15px;
-			height: 100px;
-		}
-
-		&:nth-child(even) {
-			margin-left: 0;
-
-			@include mq-sp {
-				margin: 15px;
-			}
-	}
-
-		&:nth-child(2) {
-			margin-right: 0;
-
-			@include mq-sp{
-				margin: 15px;
-			}
-		}
-
-		&--photo {
-			.pc { display: block !important;}
-			.sp {	display: none !important;}
-
-			@include mq-sp {
-				width: 30%;
-				margin: 5px;
-				float: left;
-				.pc { display: none !important;}
-				.sp { display: block !important;}
-
-				img {
-					margin: none;
-				}
-			}
-		}
-
-		&--title {
-			margin: auto 10px;
-			height: 40px;
-
-			@include mq-sp {
-				width: 65%;
-				float: right;
-				line-height: 40px;
-				margin: 10px 0;
-			}
-		}
-
-		.fa {
-			position: absolute;
-			margin: -8% 25%;
-			font-size: 24px;
-		}
 	}
 }
 
@@ -313,8 +239,8 @@
 		font-size: 16px;
 	}
 
-	&__all_pc { display: flex !important;}
-	&__all_sp {	display: none !important;}
+	.PopularPC { display: flex !important;}
+	.PopularSP {	display: none !important;}
 	//注目の商品を16こと4こでhtmlで分けて、PC用に16このほうを表示する。
 
 
@@ -350,60 +276,9 @@
 	}
 
 		@include mq-sp {
-			&__all_pc { display: none !important;}
-			&__all_sp {	display: block !important;}
-			//注目の商品を16こと4こでhtmlで分けて、SP用に4このほうを表示する。
-			width: 100%;
-			margin: 20px 0;
-			flex-direction: column;
-
-			&__head {
-				display: block;
-				text-align: center;
-				padding: 20px 0 10px;
-				margin: 0;
-				}
-
-				&__text {
-				width : 100%;
-				margin: 5px;
-				text-align: center;
-				font-size: 15px;
-			}
-
-			&__all_sp{
-				padding: 0;
-			}
-
-			&__item {
-				margin: 0 15px;
-				padding: 15px 0;
-				width: 93%;
-				border-bottom: 1px solid gray;
-				background-color: white;
-			}
-
-			&__main {
-				width: 70%;
-				float: right;
-
-				&--title {
-				text-align: center;
-				line-height: 40px;
-				margin: 10px 0;
-				}
-
-				&--price {
-				text-align: center;
-				margin: 0 10px;
-				}
-			}
-			.fa {
-				position: absolute;
-				margin: 12% -7%;
-				font-size: 24px;
-			}
-	  }
+			.PopularPC { display: none !important;}
+			.PopularSP {display: flex !important;}
+		}
 
 }
 
