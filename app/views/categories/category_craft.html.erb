@@ -12,16 +12,30 @@
 	</div>
 </section>
 
-<section class="CategoryProduct">
-	<ul class="CategoryProduct__main">
-		<% @craft_products.all.each do |item| %>
-       <li class="CategoryProduct__item">
-          <div class="CategoryProduct__item--photo">
-          <%= link_to image_tag(item.image.url, height: 280, width: 210, alt: "商品写真"), product_path(item.id) %></div>
-          <div class="CategoryProduct__item--title"><%= link_to item.name, product_path(item.id) %></div>
-          <div class="CategoryProduct__item--price"><%= number_to_currency(item.options.first.value) %>(税込)</div>
-       </li>
-     <% end %>
-   </ul>
+<section>
+  <div class="CategoryProduct">
+    <% unless @craft_products.empty? %>
+      <div class="CategoryProductPC">
+        <ul class="ProductList">
+        <% @craft_products.all.each do |item| %>
+        <%= link_to product_path(item.id) do %>
+          <%= render 'partial/product_list_pc', item: item %>
+        <% end %>
+        <% end %>
+        </ul>
+      </div>
+
+      <div class="CategoryProductSP">
+        <ul class="ProductList">
+          <% @craft_products.all.each do |item| %>
+          <%= link_to product_path(item.id) do %>
+            <%= render 'partial/product_list_sp', item: item %>
+          <% end %>
+          <% end %>
+        </ul>
+      </div>
+   <% else %>
+     <p>検索結果に合う商品が見つかりませんでした。</p>
+   <% end %>
+  </div>
 </section>
-</div>

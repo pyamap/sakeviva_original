@@ -35,29 +35,29 @@
 </div>
 
 <section>
-<div class="CategoryProduct">
-  <% unless @sake_products.empty? %>
-    <div class="CategoryProductPC">
-      <ul class="ProductList">
-      <% @sake_products.all.each do |item| %>
-      <%= link_to product_path(item.id) do %>
-        <%= render 'partial/product_list_pc', item: item %>
-      <% end %>
-      <% end %>
-      </ul>
-    </div>
-
-    <div class="CategoryProductSP">
-      <ul class="ProductList">
+  <div class="CategoryProduct">
+    <% unless @sake_products.empty? %>
+      <div class="CategoryProductPC">
+        <ul class="ProductList">
         <% @sake_products.all.each do |item| %>
         <%= link_to product_path(item.id) do %>
-          <%= render 'partial/product_list_sp', item: item %>
+          <%= render 'partial/product_list_pc', item: item %>
         <% end %>
         <% end %>
-      </ul>
-    </div>
- <% else %>
-   <p>検索結果に合う商品が見つかりませんでした。</p>
- <% end %>
-</div>
+        </ul>
+      </div>
+
+      <div class="CategoryProductSP">
+        <ul class="ProductList">
+          <% @sake_products.all.each do |item| %>
+          <%= link_to product_path(item.id) do %>
+            <%= render 'partial/product_list_sp', item: item %>
+          <% end %>
+          <% end %>
+        </ul>
+      </div>
+   <% else %>
+     <p>検索結果に合う商品が見つかりませんでした。</p>
+   <% end %>
+  </div>
 </section>
