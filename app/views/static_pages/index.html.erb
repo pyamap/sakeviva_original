@@ -6,32 +6,27 @@
     <div class="Intro">
     <nav class="nav-collapse">
       <ul>
-       <!-- user_signed_in? はユーザがログインしているか調べるdeviseのHelperメソッド -->
-        <% if user_signed_in? %>
-          <!-- current_user は現在ログインしているUserオブジェクトを返すdeviseのHelperメソッド -->
-          <!-- *_path はUserモデルを作成したときに、
-            deviseにより自動で作成されてますので、rake routesで確認できます -->
-          <li>
-            <% if current_user.provider %>
-            <!-- facebookログインしているとき -->
-              <ul class="logininfo">
-                <li>
-                  <%= image_tag current_user.image, class: "img-circle profile-0" %>
-                  <%= link_to current_user.name, edit_user_registration_path %></p>
-                </li>
-              </ul>
-            <% else %>
-              <ul>
-            <!-- 通常ログインのとき -->
-                <li><%= link_to current_user.name, edit_user_registration_path %></li>
-              </ul>
-            <% end %>
-            <ul>
-              <li><%= link_to '注文履歴', user_orders_path, class: "Menu__item"%></li>
-              <li><%= link_to 'プロフィール変更', edit_user_registration_path, class: "Menu__item" %></li>
-              <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "Menu__item" %></li>
+        <li>
+          <% if current_user.provider %>
+          <%# facebookログインしているとき %>
+            <ul class="logininfo">
+              <li>
+                <%= image_tag current_user.image, class: "img-circle profile-0" %>
+                <%= link_to current_user.name, edit_user_registration_path %></p>
+              </li>
             </ul>
-         </li>
+          <% else %>
+            <ul>
+          <%#  通常ログインのとき %>
+              <li><%= link_to current_user.name, edit_user_registration_path %></li>
+            </ul>
+          <% end %>
+          <ul>
+            <li><%= link_to '注文履歴', user_orders_path, class: "Menu__item"%></li>
+            <li><%= link_to 'プロフィール変更', edit_user_registration_path, class: "Menu__item" %></li>
+            <li><%= link_to "ログアウト", destroy_user_session_path, class: "Menu__item" %></li>
+          </ul>
+       </li>
         <% else %>
          <li>
            <ul>
