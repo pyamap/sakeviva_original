@@ -6,6 +6,7 @@
     <div class="Intro">
     <nav class="nav-collapse">
       <ul>
+       <% if user_signed_in? %>
         <li>
           <% if current_user.provider %>
           <%# facebookログインしているとき %>
@@ -45,7 +46,6 @@
       <img class="Intro__main--logo">
         <%= image_tag '//res.cloudinary.com/dmfclza05/image/upload/v1498882875/top/logo.png',size:"140x70", alt: "logo image of sakeviva" %>
       </img>
-
     <% unless @cart.blank? %>
       <ul class="Intro__main--cart">
         <li>
@@ -56,7 +56,6 @@
         <li>(<%= link_to_unless_current "#{@cart.items.inject(0) {|sum, product| sum + product.quantity}}", current_cart_path %>)</li>
       </ul>
     <% end %>
-
     </div>
     <div class="Intro__sub">
       <div class="Category"></div>
@@ -107,6 +106,7 @@
     <p class="Intro__news">現在オープン準備中のためサイト閲覧のみでご購入頂けません。<br>明日の城島はもうすぐリリース予定です！楽しみにお待ちください！</p>
     </div>
   </div>
+  </section>
 
   <section>
     <div class="NewArrival">
@@ -166,7 +166,7 @@
           <% end %>
         </ul>
       </div>
-   </div>
+    </div>
   </section>
 
   <section>
@@ -182,7 +182,6 @@
     <div class="InterviewPC">
 
       <div class="InterviewPC__section">
-
         <div class="InterviewPC__item">
           <div class="InterviewPC__sub">
             <img class="InterviewPC__sub--photo"><%= link_to cl_image_tag("top/tanaka_noodle_top.jpg", height: 240 , width: 200, alt:'インタビュアーの写真'),interview_tanaka_noodle_path %></img>
