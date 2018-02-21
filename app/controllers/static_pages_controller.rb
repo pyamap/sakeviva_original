@@ -4,7 +4,7 @@ class StaticPagesController < ApplicationController
 
 	def index
 		@new_products = Product.find([31,35,36,46])
-		@popular_products_pc = Product.find([33,34,35,36,38,40,41,42,43])
+		@popular_products_pc = Product.find([33,34,35,36,40,41,42,43,45])
 		@popular_products_sp = Product.find([32,34,35,36])
 	end
 

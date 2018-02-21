@@ -180,12 +180,13 @@
 		height: 80px;
 		margin: 200px 200px 80px;
 		padding: 15px 20px;
-		line-height: 25px;
+		line-height: 50px;
 
 		@include mq-sp {
 			width: 90%;
 			height: 100%;
 			margin: 20px auto;
+			line-height: 25px;
 			border-radius: 10px;
 		}
 	}
@@ -193,12 +194,13 @@
 
 .NewArrival {
 
-	width: 100%;
+	width: 1080px;
 	margin: auto;
 	.NewArrivalPC { display: flex !important;}
 	.NewArrivalSP {	display: none !important;}
 
 	@include mq-sp {
+		width: 100%;
 		.NewArrivalPC { display: none !important;}
 		.NewArrivalSP {	display: flex !important;}
 	}
