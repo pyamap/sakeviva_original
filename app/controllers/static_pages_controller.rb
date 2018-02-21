@@ -3,9 +3,9 @@ class StaticPagesController < ApplicationController
 	before_filter :current_cart
 
 	def index
-		@new_products = Product.find([35,36,37,46])
+		@new_products = Product.find([31,35,36,46])
 		@popular_products_pc = Product.find([33,34,35,36,38,40,41,42,43])
-		@popular_products_sp = Product.find([34,35,36,37])
+		@popular_products_sp = Product.find([32,34,35,36])
 	end
 
   def about_us
