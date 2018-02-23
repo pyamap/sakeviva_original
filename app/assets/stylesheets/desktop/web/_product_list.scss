@@ -18,6 +18,7 @@
     &__item {
       display: block;
       margin: 20px;
+      width: 210px;
 
       @include mq-sp {
         margin: 0 15px;
