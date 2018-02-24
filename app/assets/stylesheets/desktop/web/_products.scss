@@ -177,20 +177,23 @@
 .RecommendedItems {
 	width: 1080px;
 	margin: auto;
+	.NewArrivalPC { display: flex !important;}
+	.NewArrivalSP {	display: none !important;}
 
 	@include mq-sp {
 		width: 100%;
+		.NewArrivalPC { display: none !important;}
+		.NewArrivalSP {	display: flex !important;}
 	}
 
 	h2 {
 		width: 930px;
-		text-align: left;
-		font-size: 18px;
+		text-align: center;
+		font-size: 20px;
 		margin: auto;
 
 		@include mq-sp {
 			width: 100%;
-			font-size: 20px;
 			text-align: center;
 		}
 	}

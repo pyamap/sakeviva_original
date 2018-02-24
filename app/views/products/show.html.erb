@@ -31,8 +31,7 @@
 			</ul>
 			<%= form_tag('/add_to_cart', :method => :post) do %>
 			<p class="ItemDetails__main--price">
-				<%= render partial: 'option_value', locals: {option_id: @options.first.id} %>
-			(税込)</p>
+				<%= render partial: 'option_value', locals: {option_id: @options.first.id} %></p>
 			<p>サイズ</p>
 			<div class="ItemDetails__main--option">
 				<%= select :option, :option_id, @options.map{|t| [t.title, t.id]} %>
@@ -52,22 +51,28 @@
 <section>
 	<div class="RecommendedItems">
 		<h2>こちらもおすすめ</h2>
-		<ul class="RecommendedItems__main">
-		<% @recommended_products.each do |recommended_product| %>
-	    <li class="RecommendedItems__item">
-	  	  <div class="RecommendedItems__item--photo">
-		  	  <%= link_to image_tag(recommended_product.image.url, height: 240, width: 210, :class => "pc", alt: "商品写真") %>
-		  	  <%= link_to image_tag(recommended_product.image.url, height: 90, width: 120, :class => "sp", alt: "商品写真") %>
-	  	  </div>
-	  	  <div class="RecommendedItems__item--title"><%= link_to recommended_product.name, product_path(recommended_product.id) %></div>
-	  	  <div class="RecommendedItems__item--price"><%= number_to_currency(recommended_product.value) %> (税込)</div>
-	      <%= link_to product_path(recommended_product.id), :method => :get do %>
-         <i class="fa fa-angle-right" aria-hidden="true"></i>
+
+		 <div class="NewArrivalPC">
+        <ul class="ProductList">
+        <% @recommended_products.each do |item| %>
+        <%= link_to product_path(item.id) do %>
+          <%= render 'partial/product_list_pc', item: item %>
         <% end %>
-	    </li>
-	  <% end %>
-	  </ul>
-	</section>
+        <% end %>
+        </ul>
+      </div>
+
+      <div class="NewArrivalSP">
+        <ul class="ProductList">
+          <% @recommended_products.each do |item| %>
+          <%= link_to product_path(item.id) do %>
+            <%= render 'partial/product_list_sp', item: item %>
+          <% end %>
+          <% end %>
+        </ul>
+      </div>
+   </div>>
+</section>
 
 
 

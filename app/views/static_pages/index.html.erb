@@ -65,40 +65,36 @@
             <%= link_to cl_image_tag("top/category_sake.jpg", height: 145, width: 159, :class => "pc", alt: "酒の写真"),category_sake_path %>
             <%= link_to cl_image_tag("top/category_sake.jpg", height: 90, width: 120, :class => "sp", alt: "酒の写真"),category_sake_path %>
             </div>
-            <div class="Category__text">
-              <p class="Category__text--title"><%= link_to "日本酒", category_sake_path %></p>
-              <p class="Category__text--subtitle"><%= link_to "城島町の日本酒", category_sake_path %></p>
-            </div>
+            <%= link_to category_sake_path do %>
+              <div class="Category__text">城島町の日本酒</div>
+            <% end %>
           </li>
           <li class="Category__item">
             <div class ="Category__photo">
             <%= link_to cl_image_tag("top/category_grocery.jpg", height: 145, width: 159, :class => "pc", alt: "雑貨の写真"),category_grocery_path %>
             <%= link_to cl_image_tag("top/category_grocery.jpg", height: 90, width: 120, :class => "sp", alt: "雑貨の写真"),category_grocery_path %>
             </div>
-            <div class="Category__text">
-              <p class="Category__text--title"><%= link_to "雑貨", category_grocery_path %></p>
-              <p class="Category__text--subtitle"><%= link_to "城島町の雑貨", category_grocery_path %></p>
-            </div>
+            <%= link_to category_grocery_path do %>
+              <div class="Category__text">城島町の雑貨</div>
+            <% end %>
           </li>
           <li class="Category__item">
             <div class ="Category__photo">
             <%= link_to cl_image_tag("top/category_food.jpg", height: 145, width: 159, :class => "pc", alt: "特産品の写真"),category_food_path %>
             <%= link_to cl_image_tag("top/category_food.jpg", height: 90, width: 120, :class => "sp", alt: "特産品の写真"),category_food_path %>
             </div>
-            <div class="Category__text">
-              <p class="Category__text--title"><%= link_to "食", category_food_path %></p>
-              <p class="Category__text--subtitle"><%= link_to "城島町の食", category_food_path %></p>
-            </div>
+            <%= link_to category_food_path do %>
+              <div class="Category__text">城島町の食</div>
+            <% end %>
           </li>
           <li class="Category__item">
             <div class="Category__photo">
             <%= link_to cl_image_tag("top/category_craft.jpg", height: 145, width: 159, :class => "pc", alt: "工芸品の写真"),category_craft_path %>
             <%= link_to cl_image_tag("top/category_craft.jpg", height: 90, width: 120, :class => "sp", alt: "工芸品の写真"),category_craft_path %>
             </div>
-            <div class="Category__text">
-              <p class="Category__text--title"><%= link_to "工芸品", category_craft_path %></p>
-              <p class="Category__text--subtitle"><%= link_to "工芸品", category_craft_path %></p>
-            </div>
+            <%= link_to category_craft_path do %>
+              <div class="Category__text">城島町の工芸品</div>
+            <% end %>
            </li>
           </ul>
        </div>
