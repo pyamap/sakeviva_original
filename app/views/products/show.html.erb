@@ -35,10 +35,12 @@
 			<p>サイズ</p>
 			<div class="ItemDetails__main--option">
 				<%= select :option, :option_id, @options.map{|t| [t.title, t.id]} %>
+				<i class="fa fa-angle-down" aria-hidden="true"></i>
 			</div>
 			<div class="ItemDetails__main--quantity">
 				<p>個数</p>
-				<%= select_tag 'quantity', options_for_select([1, 2, 3, 4, 5]) %>
+				<%= select_tag 'quantity', options_for_select([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) %>
+				<i class="fa fa-angle-down" aria-hidden="true"></i>
 			</div>
 				<%= hidden_field_tag :id, @product.id %>
 				<%= hidden_field_tag :shop_id, @product.shop_id %>

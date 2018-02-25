@@ -117,7 +117,7 @@
 
 			select {
 				-webkit-appearance:none;
-				width: 360px;
+				width: 200px;
 				height: 30px;
 				padding-left: 10px;
 
@@ -125,6 +125,16 @@
 					width: 100%;
 				}
 			}
+				i.fa.fa-angle-down {
+					position: absolute;
+					margin: 0.4% -2%;
+    			font-size: 21px;
+
+    			@include mq-sp {
+    				margin: -7% 64%;
+    				font-size: 22px;
+    			}
+				}
 		}
 
 		&--quantity {
@@ -134,6 +144,17 @@
 			width: 100px;
 			height: 30px;
 			padding-left: 10px;
+			}
+
+			i.fa.fa-angle-down {
+					position: absolute;
+					margin: 0.4% -2%;
+    			font-size: 21px;
+
+	  		@include mq-sp {
+					margin: 1% -7%;
+					font-size: 22px;
+	  		}
 			}
 		}
 
