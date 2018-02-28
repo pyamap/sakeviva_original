@@ -23,8 +23,8 @@ class PayjpController < ApplicationController
 		@current_address = session[:current_address]
 		@prefecture_id = @current_address.prefecture.id #実際に選んだ住所のprefecture_id
 		calculator #shipping_calculator内のcalculatorメソッドをコール
-		@total_price = (@cart.total_price + session[:total_shipping_fee])* 1.03
-
+		@total_price_tax = (@cart.total_price + session[:total_shipping_fee])* 1.03
+		@total_price = @total_price_tax.floor
 		#@quantity = params[:quantity]
 		#@total_price = "#{@order.product.value*@quantity.to_i}"
 	end
