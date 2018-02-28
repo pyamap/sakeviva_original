@@ -16,6 +16,7 @@
 
 	h2 {
 		font-size: 24px;
+		color: $theme-color;
 
 		@include mq-sp {
 			font-size: 20px;

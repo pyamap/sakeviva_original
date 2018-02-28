@@ -18,7 +18,7 @@ class PayjpController < ApplicationController
 		end
 		@user = current_user
 		if @user.sender.blank? || @user.mobile.blank?
-			redirect_to edit_user_registration_path
+			redirect_to edit_user_registration_path, alert: "配送に必要な情報を入力してください"
 		end
 		@current_address = session[:current_address]
 		@prefecture_id = @current_address.prefecture.id #実際に選んだ住所のprefecture_id
