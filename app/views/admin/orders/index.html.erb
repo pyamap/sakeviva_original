@@ -10,6 +10,7 @@
 				<th>ユーザー名</th>
 				<th>商品名</th>
 				<th>価格</th>
+				<th>数量</th>
 				<th>注文日</th>
 				<th>配送状況</th>
 			</tr>
@@ -19,6 +20,7 @@
 				<td><%= order.user.name %></td>
 				<td><%= order.product.name %></td>
 				<td><%= order.product.value %></td>
+				<td><%= order.quantity %></td>
 				<td><%= order.created_at %></td>
 				<td><%= order.delivery.status %></td>
 				<td><%= link_to "詳細", [:admin, order] %></td>
