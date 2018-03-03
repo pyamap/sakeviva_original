@@ -157,6 +157,15 @@ ul.side_bar_price_list {
             position: absolute;
             margin: 150px 0 0 30px;
           }
+
+          .Intro__main {
+             &--subcart {
+                display: flex;
+                list-style-type: none;
+                float: right;
+                margin: 5px 7% 0 0;
+            }
+          }
        }
     }//スマホメニューのスタイルここまで
 

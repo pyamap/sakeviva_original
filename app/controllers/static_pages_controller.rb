@@ -43,10 +43,4 @@ class StaticPagesController < ApplicationController
 
 	private
 
-	def find_cart
-		unless session[:cart]
-			session[:cart] = Cart.new
-		end
-		session[:cart]
-	end
 end

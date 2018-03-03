@@ -52,6 +52,58 @@
 		</div>
 	</header>
 
+	<% unless current_page?(root_path) %>
+		<header class="Header__account SpMenu">
+    <nav class="nav-collapse">
+      <ul>
+       <% if user_signed_in? %>
+        <li>
+          <% if current_user.provider %>
+          <%# facebookログインしているとき %>
+            <ul class="logininfo">
+              <li>
+                <%= image_tag current_user.image, class: "img-circle profile-0" %>
+                <%= link_to current_user.name, edit_user_registration_path %></p>
+              </li>
+            </ul>
+          <% else %>
+            <ul>
+          <%#  通常ログインのとき %>
+              <li><%= link_to current_user.name, edit_user_registration_path %></li>
+            </ul>
+          <% end %>
+          <ul>
+            <li><%= link_to '注文履歴', user_orders_path, class: "Menu__item"%></li>
+            <li><%= link_to 'プロフィール変更', edit_user_registration_path, class: "Menu__item" %></li>
+            <li><%= link_to "ログアウト", destroy_user_session_path, class: "Menu__item" %></li>
+          </ul>
+       </li>
+        <% else %>
+         <li>
+           <ul>
+             <li><%= link_to "アカウントを作成", new_user_registration_path, class: "Menu__item" %></li>
+             <li><%= link_to "ログイン", new_user_session_path, class: "Menu__item" %></li>
+           </ul>
+         </li>
+        <% end %>
+        <li class="nav1"><%= link_to "トップ", root_path %></li>
+        <li class="nav2"><%= link_to "城島町について", about_us_path %></li>
+        <li class="nav3"><%= link_to "お問い合わせ", inquiry_path%></li>
+        <li class="nav5"><%= link_to "出品者紹介", "#" %></li>
+      </ul>
+    </nav>
+    <img class="Intro__main--logo">
+        <%= link_to image_tag('//res.cloudinary.com/dmfclza05/image/upload/v1498882875/top/logo.png',size:"70x35", alt: "logo image of sakeviva"), root_path %>
+    </img>
+      <ul class="Intro__main--subcart">
+        <li>
+          <%= link_to_unless_current current_cart_path do %>
+            <%= fa_icon("shopping-cart 2x")%>
+          <% end %>
+        </li>
+      </ul>
+		</header>
+	<% end %>
 
 
 
