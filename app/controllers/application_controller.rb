@@ -20,7 +20,7 @@ class ApplicationController < ActionController::Base
   #end
 
   def current_cart
-      @cart = find_cart
+    @cart = find_cart
   end
 
   private

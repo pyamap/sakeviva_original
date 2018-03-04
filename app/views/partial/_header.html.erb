@@ -30,12 +30,13 @@
 			<ul class="Header__account--cart">
 				<li>
 				<%= link_to current_cart_path do %>
-					<%= fa_icon("shopping-cart 2x")%></li>
+					<%= fa_icon("shopping-cart 2x")%>
 				<% end %>
+				</li>
 				<% unless @cart.blank? %>
 			   	<li>(<%= link_to_unless_current "#{@cart.items.inject(0) {|sum, product| sum + product.quantity}}", current_cart_path %>)</li>
 				<% end %>
-				</ul>
+			</ul>
 		</ul>
 			<div class="Header__main">
 				<div class=Header__main--logo>
@@ -97,13 +98,18 @@
     </img>
       <ul class="Intro__main--subcart">
         <li>
-          <%= link_to_unless_current current_cart_path do %>
+          <%= link_to current_cart_path do %>
             <%= fa_icon("shopping-cart 2x")%>
           <% end %>
         </li>
+         <% unless @cart.blank? %>
+			   	<li>(2)</li>
+				<% end %>
       </ul>
 		</header>
 	<% end %>
+
+
 
 
 

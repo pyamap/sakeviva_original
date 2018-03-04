@@ -36,11 +36,4 @@ class StaticPagesController < ApplicationController
 	def interview_chiyo_seaweed
 	end
 
-	def current_cart
-		@total_shipping_fee = flash[:total_shipping_fee]
-    	@cart = find_cart
-	end
-
-	private
-
 end

@@ -1,5 +1,7 @@
 class CategoriesController < ApplicationController
 
+	before_filter :current_cart
+
 	def category_sake
 		@sake_products = Product.all.where(category_id: 1).where(status: true).order(:id)
 
