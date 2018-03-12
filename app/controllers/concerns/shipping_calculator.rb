@@ -50,7 +50,7 @@ module ShippingCalculator
     @delivery_fee_six = 0
     end
 
-    @total_shipping_fee = @delivery_fee_first + @delivery_fee_second + @delivery_fee_third + @delivery_fee_fourth + @delivery_fee_fifth + @delivery_fee_sixth
+    @total_shipping_fee = @delivery_fee_first + @delivery_fee_second + @delivery_fee_third + @delivery_fee_fourth
     session[:total_shipping_fee] = @total_shipping_fee
   end
 end
