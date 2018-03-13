@@ -103,8 +103,8 @@
           <% end %>
         </li>
          <% unless @cart.blank? %>
-			   	<li>(2)</li>
-				<% end %>
+			   	<li>(<%= link_to_unless_current "#{@cart.items.inject(0) {|sum, product| sum + product.quantity}}", current_cart_path %>)</li>
+				 <% end %>
       </ul>
 		</header>
 	<% end %>
