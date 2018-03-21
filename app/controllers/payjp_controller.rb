@@ -17,7 +17,7 @@ class PayjpController < ApplicationController
 			session[:current_address] = Address.find(params[:address])
 		end
 		@user = current_user
-		if @user.sender.blank? || @user.mobile.blank?
+		if @user.sender.blank? || @user.mobile.blank? || @user.sender_address.blank?
 			redirect_to edit_user_registration_path, alert: "配送に必要な情報を入力してください"
 		end
 		@current_address = session[:current_address]

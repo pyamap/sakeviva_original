@@ -9,7 +9,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # POST /resource
   def create
-    devise_parameter_sanitizer.permit(:sign_up) {|u| u.permit(:name, :email, :mobile, :sender, :password, :password_confirmation, :remember_me)}
+    devise_parameter_sanitizer.permit(:sign_up) {|u| u.permit(:name, :email, :mobile, :sender, :sender_address, :password, :password_confirmation, :remember_me)}
     super
   end
 
@@ -20,7 +20,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # PUT /resource
   def update
-    devise_parameter_sanitizer.permit(:account_update) {|u| u.permit(:name, :email, :mobile, :sender, :password, :password_confirmation, :remember_me)}
+    devise_parameter_sanitizer.permit(:account_update) {|u| u.permit(:name, :email, :mobile, :sender, :sender_address, :password, :password_confirmation, :remember_me)}
     super
   end
 

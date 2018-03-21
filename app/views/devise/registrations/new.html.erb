@@ -26,6 +26,10 @@
     </div>
 
     <div class="field">
+      <%= f.text_field :sender_address, placeholder: "送り主住所(配送の際に使用されます)", autocomplete: "off" %>
+    </div>
+
+    <div class="field">
       <!--
       <% if @minimum_password_length %>
       <em>(<%= @minimum_password_length %> characters minimum)</em>
