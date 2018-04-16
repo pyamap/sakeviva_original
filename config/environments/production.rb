@@ -87,4 +87,6 @@ Rails.application.configure do
   authentication:        'plain',
   enable_starttls_auto:  true
   }
+
+  GA.tracker = "UA-74728692-3" #明日の城島のGAのトラッキングID
 end
