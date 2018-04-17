@@ -31,10 +31,11 @@
 
 			background-image: url("//res.cloudinary.com/dmfclza05/image/upload/v1515156489/top_main.jpg");
 			background-size: 100% 100%;
-			width: 100%;
-			height: 600px;
+			width: 90%;
+			height: 500px;
 			text-align: center;
 			padding-top: 110px;
+			margin: auto;
 
 			@include mq-sp {
 				background-image: url("//res.cloudinary.com/dmfclza05/image/upload/v1515156489/top_main.jpg");
@@ -69,7 +70,8 @@
 
 	&__sub {
 		height: 100%;
-		margin: -90px 160px;
+		width: 820px;
+		margin: 0px auto;
 		padding: 0;
 
 		@include mq-sp {
@@ -81,6 +83,7 @@
 				&__menu {
 					list-style: none;
 					display: flex;
+					flex-wrap: wrap;
 					justify-content: space-around;
 					padding: 0;
 					margin: 10px auto;
@@ -96,10 +99,6 @@
 		  }
 
 			&__item {
-				border: 1px solid #72C1C8;
-				height: 220px;
-				width: 100%;
-				margin: 15px;
 
 					@include mq-sp {
 						height: 90px;
@@ -131,8 +130,12 @@
 
 			&__photo {
 				margin: 5px;
-				.pc { display: block !important; }
-				.sp { display: none !important; }
+
+				@include mq-pc {
+					background-color: #000;
+	  			.pc { display: block !important; }
+					.sp { display: none !important; }
+				}
 
 				@include mq-sp {
 					.pc { display: none !important; }
@@ -142,6 +145,12 @@
 					margin: 0;
 				}
 
+				img.pc {
+					:hover {
+						opacity: (0.5)
+					}
+				}
+
 				img.sp {
 					@include mq-sp {
 						border-radius: 10px;
@@ -149,20 +158,24 @@
 				}
 			}
 
+
 			&__text {
 				text-align: center;
 				float: right;
 				width: 100%;
 				line-height: 50px;
-				margin: 0 auto;
-				color: $theme-color;
-				font-size: 16px;
+				margin: -160px auto;
+				color: white;
+				font-size: 22px;
+				position: relative;
+				text-decoration: none;
 
 				@include mq-sp {
 					width: 70%;
 			    line-height: 90px;
 			    margin: 0px auto;
 			    color: white;
+			    font-size: 18px;
 				}
 			}
 		}
