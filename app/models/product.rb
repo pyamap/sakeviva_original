@@ -19,6 +19,7 @@ class Product < ActiveRecord::Base
 	has_one :order, dependent: :destroy
 	has_many :options, dependent: :destroy
 	accepts_nested_attributes_for :options, allow_destroy: true
+	has_many :users, through: :reviews
 
 	enum type: { 純米酒: 1, 本醸造: 2, 吟醸: 3, 大吟醸: 4, 焼酎: 5, 特別純米: 8, 純米大吟醸: 9, 純米吟醸: 10, その他: 11 } #絞り込み用
 	scope :get_by_type, ->(type) {where(type: type)}

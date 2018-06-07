@@ -17,6 +17,14 @@ before_filter :current_cart
 		@options = @product.options
 		@images = @product.images.all
 		@recommended_products = Product.where(category_id: @product.category_id).order("RANDOM()").where(status: true).limit(4)
+
+		@reviews = Review.where(product_id: @product.id)
+		if @reviews.blank?
+			@avg_rating = 0
+		else
+			@avg_rating = @reviews.average(:score)
+		end
+
 	end
 
 	def new

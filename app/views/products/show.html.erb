@@ -25,9 +25,13 @@
 			<% end %>
 
 			<ul class="ItemDetails__review">
+      <% if @avg_rating == 0 %>
 				<li>☆☆☆☆☆</li>
 				<li>レビューはまだありません</li>
-				<li></li>
+      <% else %>
+				<li><div class="review_rating" data-score=" <%= @avg_rating %>" ></div></li>
+        <li><%= @reviews.count %>レビュー</li>
+      <% end %>
 			</ul>
 			<%= form_tag('/add_to_cart', :method => :post) do %>
 			<p class="ItemDetails__main--price">
@@ -50,9 +54,35 @@
 	</div>
 </section>
 
+<% unless @reviews.blank? %>
+<section class="ProductReviews">
+  <div class="ProductReviews__title">
+    <h2><%= @reviews.count %>件のレビュー</h2>
+    <p class="review_rating" data-score=" <%= @avg_rating %>" ></p>
+  </div>
+    <% @reviews.each do |review| %>
+    <div class="ProductReviews__list">
+      <div class="ProductReviews__list--highlight">
+        <% if review.user.provider == "facebook" %>
+        <%= image_tag review.user.image, class: "img-circle profile-1" %>
+        <% else %>
+        <%= cl_image_tag("review_avator_iboesa.png", class: "img-circle profile-1") %>
+        <% end %>
+        <div>
+          <p><%= review.user.name %></p>
+          <p><%= review.title %></p>
+        </div>
+      </div>
+      <p class="review_rating" data-score=" <%= review.score %>" ></p>
+      <p class="review_comment"><%= review.comment %></p>
+    </div>
+    <% end %>
+</section>
+<% end %>
+
 <section>
 	<div class="RecommendedItems">
-		<h2>こちらもおすすめ</h2>
+		<h3>こちらもおすすめ</h3>
 
 		 <div class="NewArrivalPC">
         <ul class="ProductList">
@@ -77,6 +107,12 @@
 </section>
 
 
-
-
-
+<script>
+  $('.review_rating').raty({
+    readOnly: true,
+    score: function() {
+      return $(this).attr('data-score');
+    },
+    path: '/assets'
+  });
+</script>

@@ -15,6 +15,7 @@ class User < ActiveRecord::Base
   	has_many :addresses, dependent: :destroy
     has_many :orders, dependent: :destroy
     accepts_nested_attributes_for :addresses, allow_destroy: true
+    has_many :products, through: :reviews
 
   validates :password, length: {minimum: 5, maximum: 120}, on: :update, allow_blank: true
 
