@@ -74,7 +74,23 @@ module ShippingCalculator
     @delivery_fee_nineth = 0
     end
 
-    @total_shipping_fee = @delivery_fee_first + @delivery_fee_second + @delivery_fee_third + @delivery_fee_fourth + @delivery_fee_fifth + @delivery_fee_sixth + @delivery_fee_seventh + @delivery_fee_eighth + @delivery_fee_nineth
+    unless session[:unique_shop_ids][9].blank? then
+    @shop_id_tenth = session[:unique_shop_ids][9]
+    @shop_id_tenth.present?
+    @delivery_fee_tenth = Shipping.find_by("shop_id = ? and prefecture_id = ?", @shop_id_tenth, @prefecture_id).fee
+    else
+    @delivery_fee_tenth = 0
+    end
+
+    unless session[:unique_shop_ids][10].blank? then
+    @shop_id_eleventh = session[:unique_shop_ids][10]
+    @shop_id_eleventh.present?
+    @delivery_fee_eleventh = Shipping.find_by("shop_id = ? and prefecture_id = ?", @shop_id_eleventh, @prefecture_id).fee
+    else
+    @delivery_fee_eleventh = 0
+    end
+
+    @total_shipping_fee = @delivery_fee_first + @delivery_fee_second + @delivery_fee_third + @delivery_fee_fourth + @delivery_fee_fifth + @delivery_fee_sixth + @delivery_fee_seventh + @delivery_fee_eighth + @delivery_fee_nineth + @delivery_fee_tenth + @delivery_fee_eleventh
     session[:total_shipping_fee] = @total_shipping_fee
   end
 end

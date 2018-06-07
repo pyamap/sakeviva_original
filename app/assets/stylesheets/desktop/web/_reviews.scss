@@ -1,0 +1,104 @@
+// Place all the styles related to the reviews controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1 {
+  font-size:24px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 20px;
+  margin: 0 auto 10px auto;
+}
+
+.Reviews {
+  margin: 150px auto;
+  height: 100%;
+  width: 860px;
+  border: 1px solid $theme-color;
+
+  &__Intro {
+    width: 640px;
+    margin: 15px auto;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #CBCBC9;
+  }
+
+  &__main {
+    width: 640px;
+    margin: 15px auto;
+    padding-bottom: 20px;
+  }
+
+  &__List {
+    padding: 10px 0 20px 0;
+    display: flex;
+    border-bottom: 1px solid #CBCBC9;
+
+    &--photo {
+      width: 140px;
+    }
+
+    &--details {
+      margin: 10px 30px;
+
+      p {
+        margin-top: 10px;
+      }
+    }
+  }
+
+
+  &__Field {
+    padding: 10px 0 20px 0;
+    display: flex;
+    border-bottom: 1px solid #CBCBC9;
+
+    &--photo {
+      width: 140px;
+    }
+
+    &--details {
+      margin: 10px 30px;
+
+      p {
+        margin: 0;
+      }
+
+      input#review_title {
+        width: 480px;
+        height: 30px;
+        margin: 0 auto 10px auto;
+        padding: 3px 10px;
+        border-radius: 4px;
+        border: 1px solid #CBCBC9;
+      }
+
+      textarea#review_comment {
+        width: 480px;
+        height: 130px;
+        margin: 10px auto 0 auto;
+        padding: 3px 10px;
+        border-radius: 4px;
+        border: 1px solid #CBCBC9;
+      }
+
+      .small_btn {
+        text-align: right;
+        height: 60px;
+
+          input {
+          width: 80px;
+          height: 35px;
+          border-radius: 4px;
+          margin: 10px;
+        }
+      }
+    }
+  }
+
+}

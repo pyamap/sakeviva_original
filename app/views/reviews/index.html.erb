@@ -1,0 +1,86 @@
+<%= stylesheet_link_tag "desktop/web/reviews", :media => "all" %>
+
+<section class="Reviews">
+  <div class="Reviews__Intro">
+    <h1>レビュー</h1>
+    <p>あなたのレビューを城島の生産者たちが楽しみにしています！ 次に購入する人のためにもレビューを書いてみませんか？</p>
+    <p>・このお酒を買ってみようと思ったのは何故ですか？<br>このお酒を飲んでみてどうでしたか？<br>・どんなお食事やおつまみと合いますか？<br>・どんな人に薦めたいですか？</p>
+    <br>
+    <p>ここに書いたレビューはそのままサイトに反映されます。<br>
+（ただし、レビュー内容に誹謗中傷や 、不適切な表現があると弊社が判断した場合、投稿が削除される可能性もございますので予めご了承ください。）
+    </p>
+    </div>
+  <div class="Reviews__main">
+    <% @orders.each do |order| %>
+      <% unless order.review.nil? %>
+      <h2><%= order.product.name %></h2>
+        <div class="Reviews__List">
+          <div class="Reviews__List--photo">
+            <%= image_tag order.product.image.url, height: 180, width:140, alt: "注文品の写真" %>
+          </div>
+          <div class="Reviews__List--details">
+            <h3><%= order.review.title %></h3>
+            <div class="review_rating" data-score=" <%= order.review.score %>" ></div>
+            <p><%= order.review.comment %></p>
+          </div>
+        </div>
+      <% else %>
+      <h2><%= order.product.name %></h2>
+        <div class="Reviews__Field">
+          <div class="Reviews__Field--photo">
+            <%= image_tag order.product.image.url, height: 180, width:140, alt: "注文品の写真" %>
+          </div>
+          <div class="Reviews__Field--details">
+          <%= form_for @review, url: user_reviews_path do |review_form| %>
+           <% if @review.errors.any? %>
+              <div id="error_explanation">
+                <ul>
+                  <% @review.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+                  <% end %>
+                </ul>　　　　　　　　　　　　　　　　　
+              </div>
+            <% end %>
+            <p><%= review_form.text_field :title, :placeholder => "この商品で印象に残ったことや是非知ってほしいことを一言でどうぞ" %></p>
+            <div id="rating-form"></div>
+            <p class="review_area"><%= review_form.text_area :comment, :placeholder => "あなたのレビューを生産者や他のユーザーは心待ちにしています。是非レビューをお願いします。ここに書いたレビューはそのままサイトに反映されます。ただし、レビュー内容に誹謗中傷や 、不適切な表現があると弊社が判断した場合、投稿が削除される可能性もございますので予めご了承ください。" %></p>
+            <%= review_form.hidden_field :product_id, :value => order.product.id %>
+            <%= review_form.hidden_field :order_id, :value => order.id %>
+            <div class="small_btn"><%= review_form.submit "送信" %></div>
+          <% end %>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</section>
+
+<script>
+  $('#rating-form').raty({
+    path: '/assets/',
+    scoreName: 'review[score]'
+  });
+</script>
+
+<script>
+  $('.review_rating').raty({
+    readOnly: true,
+    score: function() {
+      return $(this).attr('data-score');
+    },
+    path: '/assets/'
+  });
+</script>
+
+<script type="text/javascript">
+  $(function () {
+    $("#review_title, #review_comment"),bind("change keyup",
+  function () {
+      if ($("#review_title").val() != "" && $("#review_comment").val() != "")
+          $(this).closest("form").find(":submit").removeAttr("disabled");
+      else
+          $(this).closest("form").find(":submit").attr("disabled", "disabled");
+     });
+       });
+</script>
+
