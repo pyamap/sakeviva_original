@@ -140,7 +140,7 @@
 				@include mq-sp {
 					.pc { display: none !important; }
 					.sp { display: block !important; }
-					width: 30%;
+					width: 40%;
 					float: left;
 					margin: 0;
 				}
@@ -165,7 +165,7 @@
 				text-decoration: none;
 
 				@include mq-sp {
-					width: 70%;
+					width: 60%;
 			    line-height: 90px;
 			    margin: 0px auto;
 			    color: white;

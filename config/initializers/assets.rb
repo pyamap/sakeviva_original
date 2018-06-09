@@ -19,6 +19,7 @@ Rails.application.config.assets.precompile += %w( desktop/web/terms.css )
 Rails.application.config.assets.precompile += %w( desktop/web/inquiry.css )
 Rails.application.config.assets.precompile += %w( toastr.css )
 Rails.application.config.assets.precompile += %w( responsive-nav.css )
+Rails.application.config.assets.precompile += %w( desktop/web/reviews.css )
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path
 

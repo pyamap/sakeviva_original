@@ -75,6 +75,7 @@ Rails.application.routes.draw do
   resource :user do
     resources :addresses
     resources :orders
+    resources :reviews
   end
 
   resources :addresses do
