@@ -21,7 +21,7 @@
       width: 210px;
 
       @include mq-sp {
-        margin: 0 15px;
+        margin: 0;
         padding: 5px 0;
         width: 95%;
         border-bottom: 1px solid gray;

@@ -201,6 +201,10 @@
 	height: 100%;
 	margin: 50px auto;
 
+	@include mq-sp {
+		width: 95%;
+	}
+
 	&__title {
 		display: flex;
 		padding-bottom: 10px;

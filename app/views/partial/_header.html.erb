@@ -78,6 +78,9 @@
           <% end %>
           <ul>
             <li><%= link_to '注文履歴', user_orders_path, class: "Menu__item"%></li>
+            <% if current_user.orders.present? %>
+            <li><%= link_to 'レビュー', user_reviews_path %></li>
+            <% end %>
             <li><%= link_to 'プロフィール変更', edit_user_registration_path, class: "Menu__item" %></li>
             <li><%= link_to "ログアウト", destroy_user_session_path, class: "Menu__item" %></li>
           </ul>
