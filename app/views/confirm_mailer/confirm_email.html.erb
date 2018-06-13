@@ -14,10 +14,10 @@
 		▼ご注文商品情報<br>
 		<% @order_items.each.with_index do |order_item, index| %>
 		================================================================<br>
-		【　商　　品　　名　】<%= Product.find(order_item["item_id"]).name %><br>
-		【　サイズ　】<%= Option.find(@selected_options[index]).title %><br>
-		【　価　格　(税込)　】<%= number_to_currency(Option.find(@selected_options[index]).value) %><br>
-		【　　数　　　量　　】<%= order_item[:item_quantity] %><br>
+		【　商　　品　　名　】<%= Product.find(order_item.id).name %><br>
+		【　サイズ　】<%= Option.find(order_item.option).title %><br>
+		【　価　格　(税込)　】<%= number_to_currency(Option.find(order_item.option).value) %><br>
+		【　　数　　　量　　】<%= order_item.quantity %><br>
 		================================================================<br>
 		<% end %>
 		【　　送　　　料　　】<%= number_to_currency(@total_shipping_fee) %><br>

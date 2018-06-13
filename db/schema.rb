@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180509162554) do
+ActiveRecord::Schema.define(version: 20180611160410) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -71,6 +71,7 @@ ActiveRecord::Schema.define(version: 20180509162554) do
     t.integer  "payment"
     t.integer  "review_id"
     t.boolean  "review_flag", default: false, null: false
+    t.integer  "option"
   end
 
   create_table "photos", force: :cascade do |t|

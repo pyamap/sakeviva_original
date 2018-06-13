@@ -31,6 +31,14 @@ class CartItem
 		@option.value
 	end
 
+	def option
+		@option.id
+	end
+
+	def option_name
+		@option.title
+	end
+
 	def subtotal_price #¥¢¥¤¥Æ¥à¤ÎÐ¡Ó‹¤ò³ö¤¹¥á¥½¥Ã¥É
 		@option.value * @quantity.to_i
 	end

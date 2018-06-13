@@ -8,7 +8,7 @@
 		}
 
 		.Cart{
-			width: 900px;
+			width: 950px;
 			margin: auto;
 
 			@include mq-sp {
@@ -20,7 +20,7 @@
 				padding: 0;
 				font-size: 18px;
 				border-bottom: 1px solid $theme-color;
-				margin: 0 auto;
+				margin: 30px auto 0;
 
 				@include mq-sp {
 					height: 225px;
@@ -31,7 +31,7 @@
 
 				li {
 					width: 180px;
-					margin: 10px 20px 10px 50px;
+					margin: 10px 20px 10px 40px;
 
 					@include mq-sp {
 						margin: 0 15px;
@@ -53,6 +53,14 @@
 
 				&--name {
 					@include mq-sp {
+						padding-top: 10px;
+						float: right;
+					}
+				}
+
+				&--option {
+					@include mq-sp {
+						padding-top: 10px;
 						float: right;
 					}
 				}

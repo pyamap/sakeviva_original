@@ -50,27 +50,27 @@ class PayjpController < ApplicationController
 
 		cart = @items
 
-		params[:items].each do |single_item|
+		@cart.items.each do |single_item|
 			@order = Order.new
-			@order.product = Product.find(single_item["item_id"])
-			@order.quantity = single_item[:item_quantity]
-			@order.user = User.find(params[:current_user])
+			@order.product = Product.find(single_item.id)
+			@order.option = single_item.option
+			@order.quantity = single_item.quantity
+			@order.user = current_user
 			@order.save
 		end
 
 		unique_order = @order
 		user = @order.user
+		option = @order.option
 		total_price = params[:total_price]
 		total_shipping_fee = params[:total_shipping_fee]
-		items = params[:items]
+		items = @cart.items
 		shipping_address = Address.find(params[:shipping_address])
-		selected_options = session[:selected_options]
 
-		ConfirmMailer.confirm_email(unique_order,user,shipping_address,total_price,total_shipping_fee,items,selected_options).deliver_now
+		ConfirmMailer.confirm_email(unique_order,user,shipping_address,total_price,total_shipping_fee,items).deliver_now
 		session[:cart] = nil
 		session[:total_shipping_fee] = nil
 		session[:total_price] = nil
-		session[:selected_options] = nil
 		session[:current_address] = nil
 		redirect_to "/thank_you"
 	end
