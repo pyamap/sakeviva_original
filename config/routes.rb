@@ -103,7 +103,8 @@ Rails.application.routes.draw do
 
   resources :photos, only: [:create, :destroy]
 
-
+  get '*path', controller: 'application', action: 'render_404'
+  get '*path', controller: 'application', action: 'render_500'
 
   #match '*path' => 'application#error404', via: :all #ルーティングで定義されていないURLが指定された場合のエラー表示。
 

@@ -1,7 +1,36 @@
 
-#error_explanation {
-	li {
-	font-size: 16px;
-	color: $color-sakura;
-	}
+.Error {
+  margin: 150px auto 150px;
+  width: 760px;
+  border: 1px solid $theme-color;
+
+  &__logo {
+    background-color: $theme-color;
+    width: 100px;
+    height: 45px;
+    margin: 30px auto;
+    text-align: center;
+  }
+
+  &__title {
+    color: $theme-color;
+    font-size: 20px;
+    margin: 20px auto;
+    text-align: center;
+  }
+
+  &__text {
+    width: 500px;
+    margin: auto;
+  }
+
+  &__link {
+    text-align: center;
+    margin: 50px;
+
+    a{
+      font-size: 18px;
+      color: $theme-color;
+    }
+  }
 }

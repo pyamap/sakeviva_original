@@ -18,7 +18,7 @@
         <tr><td>受け取り人 :</td><td style="text-align: center"><%= @current_address.recipient %></td></tr>
         <tr><td>郵便番号 :</td><td style="text-align: center"><%=  @current_address.postalcode %></td></tr>
         <tr><td>郵送先住所 :</td><td style="text-align: center"><%=  Prefecture.find(@current_address.prefecture_id).name %>県<%= @current_address.address %></td></tr>
-        <tr><td>電話番号 :</td><td style="text-align: center">0<%=  @current_address.tel %></td></tr>
+        <tr><td>電話番号 :</td><td style="text-align: center"><%=  @current_address.tel %></td></tr>
       </table>
   </section>
 

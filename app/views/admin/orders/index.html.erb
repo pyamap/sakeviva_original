@@ -19,7 +19,7 @@
 				<td><%= order.id %></td>
 				<td><%= order.user.name %></td>
 				<td><%= order.product.name %></td>
-				<td><%= order.product.value %></td>
+				<td><%= Option.find(order.option).value %></td>
 				<td><%= order.quantity %></td>
 				<td><%= order.created_at %></td>
 				<td><%= order.delivery.status %></td>
