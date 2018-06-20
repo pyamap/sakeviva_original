@@ -9,6 +9,7 @@
 				<th>注文ID</th>
 				<th>ユーザー名</th>
 				<th>商品名</th>
+				<th>オプション名</th>
 				<th>価格</th>
 				<th>数量</th>
 				<th>注文日</th>
@@ -19,7 +20,13 @@
 				<td><%= order.id %></td>
 				<td><%= order.user.name %></td>
 				<td><%= order.product.name %></td>
-				<td><%= Option.find(order.option).value %></td>
+				<% if order.option.present? %>
+					<td><%= Option.find(order.option).title %></td>
+					<td><%= Option.find(order.option).value %></td>
+				<%else%>
+					<td>記録がありません</td>
+					<td>記録がありません</td>
+				<% end %>
 				<td><%= order.quantity %></td>
 				<td><%= order.created_at %></td>
 				<td><%= order.delivery.status %></td>

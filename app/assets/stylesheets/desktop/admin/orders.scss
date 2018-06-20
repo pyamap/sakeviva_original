@@ -2,7 +2,7 @@
 
 /*Start of admin/orders/css*/
 .OrderList {
-	width: 820px;
+	width: 950px;
 	margin: 150px auto 100px;
 	background-color: white;
 	border: solid 1px $theme-color;
@@ -63,15 +63,15 @@
 			text-align: center;
 
 			&--detail{
-				font-weight: bold; 
-				font-size: 22px; 
+				font-weight: bold;
+				font-size: 22px;
 				margin-top: 10px;
 				color: #00FF3B;
 				letter-spacing: 3px;
 				text-align: center;
 			}
 
-		
+
 			input {
 			text-align: center;
 			border: solid 1px $color-sakura;
