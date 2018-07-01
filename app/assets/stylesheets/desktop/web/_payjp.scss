@@ -282,36 +282,35 @@
 			    	width: 90%;
 			    }
 				}
-		}
 
-		.payjp-button {
-			position: relative;
-			text-align: center;
-			background-color: #545454;
-			color: white;
-			width: 90%;
-			height: 50px;
-			line-height: 50px;
-			margin: auto;
-		}
+		  .payjp-button {
+				position: relative;
+				text-align: center;
+				background-color: #545454;
+				color: white;
+				width: 90%;
+				height: 50px;
+				line-height: 50px;
+				margin: auto;
+			}
 
-		.payjp-button:hover {
-				opacity: 0.8;
-		}
+			.payjp-button:hover {
+					opacity: 0.8;
+			}
 
+			#payjp_checkout_box {
 
-		#payjp_checkout_box {
+				opacity:0;
+				width: 250px;
+				height: 50px;
+				margin: auto auto 100px auto;
+				position: absolute;
+				top: 0px;
 
-			opacity:0;
-			width: 250px;
-			height: 50px;
-			margin: auto auto 100px auto;
-			position: absolute;
-			top: 0px;
-
-			input[type=button] {
-				width: 225px;
-				height: 40px;
+				input[type=button] {
+					width: 225px;
+					height: 40px;
+				}
 			}
 		}
 	}
