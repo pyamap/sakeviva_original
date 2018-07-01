@@ -1,230 +1,322 @@
 /*Confirmaiton Pageのスタイルここから*/
 	#confirmation_all {
-		margin: 200px auto 30px auto;
+		width: 1080px;
+		margin: 200px auto 30px ;
+		display: flex;
 
 		@include mq-sp {
+			font-size: 16px;
 			width: 95%;
 			margin: 50px auto 30px auto;
+			flex-direction: column;
 		}
 
-		.Cart{
-			width: 950px;
-			margin: auto;
+		.CartMain{
+			width: 700px;
+			margin: auto 100px auto auto;
 
 			@include mq-sp {
-				width: 100%;
+				width: 90%;
+				margin: auto;
 			}
 
+			.ProductInfo {
+				display: flex;
+				border-bottom: 2px solid $theme-color;
+			}
 
-			&__item{
-				padding: 0;
-				font-size: 18px;
-				border-bottom: 1px solid $theme-color;
-				margin: 30px auto 0;
-
-				@include mq-sp {
-					height: 225px;
-					width: 100%;
-					margin: 10px auto;
-					font-size: 18px;
-				}
-
-				li {
-					width: 180px;
-					margin: 10px 20px 10px 40px;
-
-					@include mq-sp {
-						margin: 0 15px;
-						width: 40%;
-					}
-				}
-
-			&--image{
+			&__image{
 				.pc { display: block !important; }
 				.sp { display: none !important; }
-				width: 150px;
+				height: 160px;
+				width: 120px;
+				margin: 30px 40px;
 
 				@include mq-sp {
+					height: 160px;
+					width: 120px;
 					margin: 30px 15px;
 				 	.pc { display: none !important; }
 					.sp { display: block !important; }
 				}
 			}
 
-				&--name {
+			&__item{
+				padding: 0;
+				font-size: 18px;
+				margin: 30px auto 0;
+				list-style-type: none;
+
+				@include mq-sp {
+					height: 160px;
+					width: 100%;
+					margin: 30px auto;
+					font-size: 16px;
+				}
+
+				li {
+					width: 400px;
+
 					@include mq-sp {
-						padding-top: 10px;
-						float: right;
+						margin: 5px 15px;
+						padding: 0 10px;
+						width: 90%;
+					}
+				}
+
+				&--name {
+					width: 250px;
+					margin: 10px 0 10px;
+
+					@include mq-sp {
+						text-align: left;
+						padding: 0;
 					}
 				}
 
 				&--option {
+					margin: 10px 0 10px 10px;
+
 					@include mq-sp {
-						padding-top: 10px;
-						float: right;
+						margin-top: 10px;
 					}
 				}
 
 				&--quantity {
 					border: none;
 					width: 30px;
+					margin: 10px 0 10px 10px;
 
 					@include mq-sp {
-						float: right;
-						height: 40px;
-						line-height: 40px;
+						margin: 10px;
 					}
 				}
 
 				&--subtotal {
+					margin: 10px;
+
 					@include mq-sp {
 						float: right;
-						height: 30px;
-						line-height: 30px;
+						text-align: right;
+						height: 40px;
+						line-height: 40px;
 					}
 				}
 			}
 
-		}
-
-		.Recipient {
-			width: 900px;
-			margin: 50px auto;
-
-
-			@include mq-sp {
-				width: 100%;
-				text-align: center;
-			}
-
-
-			&__item{
-				width:420px;
-				margin: 40px auto;
-				font-size: 18px;
+			.DeliveryInfo {
+				display: flex;
+				margin: 30px auto;
 
 				@include mq-sp {
-					width: 98%;
-					font-size: 16px;
-				}
-
-				td th {
-					margin: 10px auto;
-					padding: 50px auto;
+					flex-direction: column;
 				}
 			}
-		}
 
-		.Sender {
-			width: 900px;
-			margin: 50px auto;
-
-
-			@include mq-sp {
-				width: 100%;
-				text-align: center;
-			}
-
-
-			&__item{
-				width:420px;
-				margin: 40px auto;
-				font-size: 18px;
-
-				@include mq-sp {
-					width: 98%;
-					font-size: 16px;
-				}
-
-				td th {
-					margin: 10px auto;
-					padding: 50px auto;
-				}
-			}
-		}
-
-		.total_shipping_fee {
-			width: 900px;
-			font-size: 20px;
-			padding-top: 20px;
-			margin: 20px auto 10px;
-			text-align: right;
-			border-top: solid 1px $theme-color;
-
-			@include mq-sp {
-				width: 100%;
-				font-size: 18px;
-			}
-
-		}
-
-		.total_price{
-			width: 900px;
-			font-size: 20px;
-			margin: 10px auto 15px;
-			text-align: right;
-
-			@include mq-sp {
-				width: 100%;
-				font-size: 18px;
-			}
-
-		}
-
-			p {
-				margin: 25px auto;
-				width: 600px;
-				text-align: center;
-		    color: $theme-color;
-
-		    @include mq-sp {
-		    	text-align: left;
-		    	width: 90%;
-		    }
-			}
-
-			.tax_disclaimer {
-				width: 900px;
-				margin: 10px auto 50px;
-				text-align: right;
-				color: $theme-color;
+			&__sender {
+				width: 300px;
+				margin: 20px auto;
 
 				@include mq-sp {
 					width: 100%;
+					margin: 5px auto;
+				}
+
+				p {
+					height: 40px;
+					line-height: 40px;
+					width: 280px;
+					margin: 0 auto;
+					padding: 0 20px;
+					color: #242933;
+					font-size: 18px;
+					font-weight: bold;
+					border-bottom: 1px solid #BAC9CC;
+					background-color: #E5F0F2;
+
+					@include mq-sp {
+						width: auto;
+					}
+				}
+
+				&--info {
+					width: 280px;
+					list-style-type: none;
+					padding: 0;
+					margin: 20px auto;
+					border-bottom: 1px solid #BAC9CC;
+					background-color: #E5F0F2;
+
+					@include mq-sp {
+						width: auto;
+					}
+
+						li {
+							margin: 5px auto;
+							padding: 10px 20px;
+						}
 				}
 			}
+
+			&__recipient {
+				width: 300px;
+				margin: 20px auto;
+
+				@include mq-sp {
+					width: 100%;
+					margin: 5px auto;
+				}
+
+				p {
+					height: 40px;
+					line-height: 40px;
+					width: 280px;
+					margin: 0 auto;
+					padding: 0 20px;
+					color: #242933;
+					font-size: 18px;
+					font-weight: bold;
+					border-bottom: 1px solid #BAC9CC;
+					background-color: #E5F0F2;
+
+					@include mq-sp {
+						width: auto;
+					}
+				}
+
+				&--info {
+					width: 280px;
+					list-style-type: none;
+					padding: 0;
+					margin: 20px auto;
+					border-bottom: 1px solid #BAC9CC;
+					background-color: #E5F0F2;
+
+				@include mq-sp {
+					width: 100%;
+					margin: 20px 0;
+				}
+
+					li {
+						margin: 5px auto;
+						padding: 10px 20px;
+					}
+
+					li:nth-child(2) {
+						margin: 0 auto;
+						padding: 0 20px;
+					}
+					li:nth-child(3) {
+						margin: 0 auto;
+						padding: 0 20px 10px;
+					}
+
+				}
+
+			}
+
+		}
+
+		.CartSub {
+			background-color: #E5F0F2;
+			width: 300px;
+			height: 450px;
+
+			@include mq-sp {
+				margin: 0 auto;
+				width: 90%;
+			}
+
+			&__subtotal {
+				height: 130px;
+				margin: 15px;
+				border-bottom: 1px solid #BAC9CC;
+					dt {
+						width: 100px;
+						float: left;
+						margin: 10px;
+						padding-left: 25px;
+
+						@include mq-sp {
+							width: 40%;
+						}
+					}
+					dd {
+						width: 100px;
+						float: right;
+						text-align: right;
+						margin: 10px;
+						padding-right: 25px;
+
+						@include mq-sp {
+							width: 40%;
+						}
+					}
+			}
+
+			&__total {
+				height: 50px;
+				margin: 20px;
+				dt {
+					width: 125px;
+					float: left;
+					text-align: right;
+					font-size: 20px;
+
+				}
+				dd {
+					float: right;
+					margin-right: 30px;
+					font-size: 20px;
+					font-weight: bold;
+					color: $theme-color;
+				}
+			}
+
+				p {
+					margin: 30px 18px;
+			    color: $theme-color;
+
+			    @include mq-sp {
+			    	text-align: left;
+			    	width: 90%;
+			    }
+				}
+		}
+
+		.payjp-button {
+			position: relative;
+			text-align: center;
+			background-color: #545454;
+			color: white;
+			width: 90%;
+			height: 50px;
+			line-height: 50px;
+			margin: auto;
+		}
+
+		.payjp-button:hover {
+				opacity: 0.8;
+		}
+
+
+		#payjp_checkout_box {
+
+			opacity:0;
+			width: 250px;
+			height: 50px;
+			margin: auto auto 100px auto;
+			position: absolute;
+			top: 0px;
+
+			input[type=button] {
+				width: 225px;
+				height: 40px;
+			}
+		}
 	}
 
-.payjp-button {
-	position: relative;
-	text-align: center;
-	border: 1px solid $theme-color;
-	width: 250px;
-	height: 50px;
-	line-height: 50px;
-	margin: auto;
-}
 
-.payjp-button:hover {
-		background-color: $theme-color;
-		color: white;
-}
-
-
-#payjp_checkout_box {
-
-	opacity:0;
-	width: 250px;
-	height: 50px;
-	margin: auto auto 100px auto;
-	position: absolute;
-	top: 0px;
-
-	input[type=button] {
-		width: 225px;
-		height: 40px;
-	}
-}
 
 /*Confirmaiton Pageのスタイルここまで*/
 

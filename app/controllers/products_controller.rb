@@ -51,14 +51,14 @@ before_filter :current_cart
 		@options = product.options
 		option = @options.find_by(id: params[:option_id])
 		@cart.add_product(product,quantity,option)
-		session[:total_shipping_fee] = nil
+		cookies.delete(:total_shipping_fee)
 		redirect_to_current_cart("カートに商品を追加しました")
 	end
 
 	def empty_cart
 		session[:cart] = nil
-		session[:total_shipping_fee] = nil
-		session[:total_price] = nil
+		cookies.delete(:total_shipping_fee)
+		cookies.delete(:total_price)
 		redirect_to_current_cart("カートは空にしました")
 	end
 
@@ -73,13 +73,14 @@ before_filter :current_cart
 		product = Product.find(params[:id])
 		@cart = find_cart
 		@cart.delete_product(product)
+		cookies.delete(:total_shipping_fee)
 		redirect_to_current_cart ("商品をカートから削除しました")
 	end
 
 	def current_cart
 		@prefecture_id = flash[:prefecture_id]
 	  #shipping controllerからprefectureを受け取って、更新後も選択できる状態にしておく。
-		@total_shipping_fee = session[:total_shipping_fee]
+		@total_shipping_fee = cookies[:total_shipping_fee].to_i
 		#shipping controllerからtotal_shipping_feeを受け取って、更新後も選択できる状態にしておく。
     @cart = find_cart
 	end

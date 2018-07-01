@@ -41,7 +41,6 @@
     <% end %>
   <% else %>
   <p>カートは空です。</p>
-  <%= session[:total_shipping_fee] = nil %>
   <% end %>
 </section>
 
@@ -92,9 +91,9 @@
         </td>
       </tr>
     </table>
-    <% unless total_price == nil %>
+    <% unless @total_shipping_fee == 0 || @cart.total_price == 0 %>
       <div class="CheckOut__calculation--btn">
-        <%= link_to "レジへ進む", user_addresses_path(session[:total_price] = total_price) %>
+        <%= link_to "レジへ進む", user_addresses_path(cookies[:total_price] = total_price) %>
       </div>
     <% else %>
       <div class="CheckOut__calculation--nobtn">レジへ進む</div>

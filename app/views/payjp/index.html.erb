@@ -1,53 +1,73 @@
 <div id="confirmation_all">
-  <section class="Cart">
+  <section class="CartMain">
   <% for item in @cart.items %>
-      <ul class="Cart__item">
-        <li class="Cart__item--image">
-        <%= image_tag(item.image.url, height: 120, width: 100, :class =>'pc', alt: "酒の写真") %>
-        <%= image_tag(item.image.url, height: 210, width: 170, :class =>'sp', alt: "酒の写真") %></li>
-        <li class="Cart__item--name"><%= link_to "#{item.name}", item.product %></li>
-        <li class="Cart__item--option"><%= item.option_name %></li>
-        <li class="Cart__item--quantity">数量 : <%= item.quantity %></li>
-        <li class="Cart__item--subtotal"><%= number_to_currency(item.subtotal_price) %></li>
-      </ul>
+    <div class="ProductInfo">
+       <div class="CartMain__image">
+          <%= image_tag(item.image.url, height: 160, width: 120, :class =>'pc', alt: "酒の写真") %>
+          <%= image_tag(item.image.url, height: 160, width: 120, :class =>'sp', alt: "酒の写真") %>
+       </div>
+       <ul class="CartMain__item">
+         <li class="CartMain__item--name"><%= link_to "#{item.name}", item.product %></li>
+         <li class="CartMain__item--option"><%= item.option_name %></li>
+         <li class="CartMain__item--quantity">数量 : <%= item.quantity %></li>
+         <li class="CartMain__item--subtotal"><%= number_to_currency(item.subtotal_price) %></li>
+       </ul>
+    </div>
   <% end %>
+    <div class="DeliveryInfo">
+      <div class="CartMain__sender">
+        <p>お客様情報</p>
+        <ul class="CartMain__sender--info">
+          <li><%= @user.sender %> 様</li>
+          <li><%= @user.sender_address %></li>
+          <li><%= @user.mobile %></li>
+        </ul>
+      </div>
+      <div class="CartMain__recipient">
+        <p>配送先情報</p>
+        <ul class="CartMain__recipient--info">
+          <li><%= @current_address.recipient %> 様</li>
+          <li>〒<%= @current_address.postalcode %></li>
+          <li><%= Prefecture.find(@current_address.prefecture_id).name %><%= @current_address.address %></li>
+          <li><%= @current_address.tel %></li>
+        </ul>
+      </div>
+    </div>
   </section>
 
-  <section class="Recipient">
-      <table class="Recipient__item">
-        <tr><td>受け取り人 :</td><td style="text-align: center"><%= @current_address.recipient %></td></tr>
-        <tr><td>郵便番号 :</td><td style="text-align: center"><%=  @current_address.postalcode %></td></tr>
-        <tr><td>郵送先住所 :</td><td style="text-align: center"><%=  Prefecture.find(@current_address.prefecture_id).name %>県<%= @current_address.address %></td></tr>
-        <tr><td>電話番号 :</td><td style="text-align: center"><%=  @current_address.tel %></td></tr>
-      </table>
-  </section>
+  <section class="CartSub">
+    <dl class="CartSub__subtotal">
+      <dt>小計 : </dt>
+      <dd><%= number_to_currency(@cart.total_price) %></dd>
 
-  <section class="Sender">
-    <table class="Sender__item">
-      <tr><td>送り主:</td><td style="text-align: center"><%= @user.sender %></td></tr>
-      <tr><td>電話番号 :</td><td style="text-align: center"><%=  @user.mobile %></td></tr>
-      <tr><td>送り主住所 :</td><td style="text-align: center"><%=  @user.sender_address %></td></tr>
-    </table>
-  </section>
+      <dt>送料 : </dt>
+      <dd><%= number_to_currency(@total_shipping_fee) %></dd>
 
-  <div class="total_shipping_fee">送料 : <%=  number_to_currency(@total_shipping_fee) %></div>
-  <div class="total_price">お支払合計金額 : <%=  number_to_currency(@total_price) %></div>
-  <div class="tax_disclaimer">※クレジットカード決済手数料3%を含みます。</div>
+      <dt>手数料 : </dt>
+      <dd><%= number_to_currency(@total_price*0.0291)%></dd>
+    </dl>
 
-  <div class="payjp-button">お支払い
-  <%= form_tag(action: :pay, method: :post) do %>
-    <% if Rails.env == 'development' %>
-    <script src="https://checkout.pay.jp/" class="payjp-button" data-key="pk_test_881e6a718672d171e72ee9dc"></script>
-    <% else %>
-    <script src="https://checkout.pay.jp/" class="payjp-button" data-key="pk_live_bf15a30695f37bf032d9ae78"></script>
+    <dl class="CartSub__total">
+      <dt>合計</dt>
+      <dd><%= number_to_currency(@total_price) %></dd>
+    </dl>
+
+    <div class="payjp-button">お支払い
+    <%= form_tag(action: :pay, method: :post) do %>
+      <% if Rails.env == 'development' %>
+      <script src="https://checkout.pay.jp/" class="payjp-button" data-key="pk_test_881e6a718672d171e72ee9dc"></script>
+      <% else %>
+      <script src="https://checkout.pay.jp/" class="payjp-button" data-key="pk_live_bf15a30695f37bf032d9ae78"></script>
+      <% end %>
+       <%= hidden_field_tag :shipping_address, params[:address] %>
+       <%= hidden_field_tag :total_price, @total_price %>
+       <%= hidden_field_tag :total_shipping_fee, @total_shipping_fee %>
+       <%= hidden_field_tag :current_user, current_user.id %>
     <% end %>
-     <%= hidden_field_tag :shipping_address, params[:address] %>
-     <%= hidden_field_tag :total_price, @total_price %>
-     <%= hidden_field_tag :total_shipping_fee, @total_shipping_fee %>
-     <%= hidden_field_tag :current_user, current_user.id %>
-  <% end %>
-  </div>
-  <p>※銀行振込でのお支払をご希望のお客さまは「商品名」「サイズ」「数量」「お客様の氏名、ご住所」「送り先住所」を添えて、 jojimasakemedia@gmail.com までご連絡くださいませ。</p>
+    </div>
+
+    <p>※銀行振込でのお支払をご希望のお客さまは「商品名」「サイズ」「数量」「お客様の氏名、ご住所」「送り先住所」を添えて、 jojimasakemedia@gmail.com までご連絡くださいませ。</p>
+  </secion>
 </div>
 
 

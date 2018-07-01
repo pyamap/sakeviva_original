@@ -40,7 +40,7 @@
 		================================================================<br>
 		【　受取人 お名前  】<%= @shipping_address.recipient %><br>
 		【　郵　便　番　号　】<%= @shipping_address.postalcode %><br>
-		【　ご　　住　　所　】<%= @shipping_address.address %><br>
+		【　ご　　住　　所　】<%= @shipping_address.prefecture.name %><%= @shipping_address.address %><br>
 		【　受取人　電話番号　】<%= @shipping_address.tel %><br>
 		</div>
 

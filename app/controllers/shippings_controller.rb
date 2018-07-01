@@ -1,7 +1,7 @@
 class ShippingsController < ApplicationController
 	include ShippingCalculator #moduleでshipping_calculatorをimport
 	def shipping_fee
-		session[:unique_shop_ids] = params[":shop_id"].uniq.sort
+		cookies[:unique_shop_ids] = params[":shop_id"].uniq.sort
 		@prefecture_id = params[:prefecture][:prefecture_id]
 		calculator #shipping_calculator内のcalculatorメソッドをコール
 		flash[:prefecture_id] = @prefecture_id

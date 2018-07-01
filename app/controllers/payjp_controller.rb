@@ -13,17 +13,14 @@ class PayjpController < ApplicationController
 			return
 		end
 
-		unless session[:current_address].present?
-			session[:current_address] = Address.find(params[:address])
-		end
 		@user = current_user
 		if @user.sender.blank? || @user.mobile.blank? || @user.sender_address.blank?
 			redirect_to edit_user_registration_path, alert: "配送に必要な情報を入力してください"
 		end
-		@current_address = session[:current_address]
+		@current_address = Address.find(params[:address])
 		@prefecture_id = @current_address.prefecture.id #実際に選んだ住所のprefecture_id
 		calculator #shipping_calculator内のcalculatorメソッドをコール
-		@total_price_tax = (@cart.total_price + session[:total_shipping_fee])* 1.03
+		@total_price_tax = (@cart.total_price + cookies[:total_shipping_fee])* 1.03
 		@total_price = @total_price_tax.floor
 		#@quantity = params[:quantity]
 		#@total_price = "#{@order.product.value*@quantity.to_i}"
@@ -69,9 +66,9 @@ class PayjpController < ApplicationController
 
 		ConfirmMailer.confirm_email(unique_order,user,shipping_address,total_price,total_shipping_fee,items).deliver_now
 		session[:cart] = nil
-		session[:total_shipping_fee] = nil
-		session[:total_price] = nil
-		session[:current_address] = nil
+		cookies.delete(:total_shipping_fee)
+		cookies.delete(:total_price)
+		cookies.delete(:current_address)
 		redirect_to "/thank_you"
 	end
 

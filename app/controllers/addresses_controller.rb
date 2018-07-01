@@ -40,7 +40,7 @@ before_action :current_cart, :authenticate_user!
 		current_user.addresses.where.not(id: params[:id]).update_all(default_address: false)
 		@current_address.update_column(:default_address, true)
 		@current_address.save
-		redirect_to :action => "show", :product_id => params[:product_id], :quantity => params[:quantity]
+		redirect_to :action => "index"
 	end
 
 	def destroy
