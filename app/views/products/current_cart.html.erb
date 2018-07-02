@@ -1,7 +1,8 @@
 <%= stylesheet_link_tag "desktop/web/products", :media => "all" %>
 
 <section class="Cart">
-
+  <div class="StepNav"><%= cl_image_tag("step_nav/step_two.jpg", height: 55, width: 550, :class => 'pc', alt: "残りステップの画像") %></div>
+  <div class="StepNav"><%= cl_image_tag("step_nav/step_two.jpg", height: 35, :class => 'sp', alt: "残りステップの画像") %></div>
   <% unless @cart.items.empty? %>
     <p>カートの中身</p>
     <ul class="Cart__list">

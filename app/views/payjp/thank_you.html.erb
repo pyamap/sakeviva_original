@@ -1,6 +1,8 @@
 <%= stylesheet_link_tag "desktop/web/api", :media => "all" %>
 
 <div class="PurchasedNotice">
+  <div class="StepNav"><%= cl_image_tag("step_nav/step_five.jpg", height: 55, width: 550, :class => 'pc', alt: "残りステップの画像") %></div>
+  <div class="StepNav"><%= cl_image_tag("step_nav/step_five.jpg", height: 35, :class => 'sp', alt: "残りステップの画像") %></div>
 	<h1>ご注文ありがとうございました!</h1>
   <div class="PurchasedNotice--photo">
 	 <%= cl_image_tag("top/thank_you.jpg", :height =>"360", :width =>"600", :class => "pc") %>

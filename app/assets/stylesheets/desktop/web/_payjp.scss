@@ -1,7 +1,25 @@
 /*Confirmaiton Pageのスタイルここから*/
+	.StepNavigation {
+		text-align: center;
+		margin: 150px auto auto;
+		.pc { display: block !important;
+			 		margin: auto;
+				}
+		.sp { display: none !important; }
+
+		@include mq-sp {
+			margin: 50px auto;
+			.pc { display: none !important; }
+			.sp { display: block !important;
+						margin: auto;
+						width: 80vw;
+					}
+		}
+	}
+
 	#confirmation_all {
 		width: 1080px;
-		margin: 200px auto 30px ;
+		margin: 80px auto 30px ;
 		display: flex;
 
 		@include mq-sp {

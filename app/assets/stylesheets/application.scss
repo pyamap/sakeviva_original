@@ -107,6 +107,25 @@ a :hover{
 	height: 70px;
 }
 
+// 残りステップのナビの画像CSS
+.StepNav {
+	width: 100%;
+	margin: auto auto 50px;
+	.pc { display: block !important;
+		 		margin: auto;
+			}
+	.sp { display: none !important; }
+
+	@include mq-sp {
+		margin: 50px auto;
+		.pc { display: none !important; }
+		.sp { display: block !important;
+					margin: auto;
+					width: 80vw;
+				}
+	}
+}
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
