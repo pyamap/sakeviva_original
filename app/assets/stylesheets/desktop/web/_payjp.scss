@@ -1,11 +1,11 @@
 /*Confirmaiton Pageのスタイルここから*/
 	.StepNavigation {
 		text-align: center;
-		margin: 150px auto auto;
 		.pc { display: block !important;
-			 		margin: auto;
+			 		margin: 150px auto auto;;
 				}
-		.sp { display: none !important; }
+		.sp { display: none !important;
+				}
 
 		@include mq-sp {
 			margin: 50px auto;

@@ -4,7 +4,8 @@ Rails.application.routes.draw do
     confirmations: 'users/confirmations',
     sessions: 'users/sessions',
     registrations: 'users/registrations',
-    omniauth_callbacks: 'users/omniauth_callbacks'
+    omniauth_callbacks: 'users/omniauth_callbacks',
+    passwords: 'users/passwords'
   }
   #devise_for :users, path_names: { sign_in: "login", sign_out: "logout"},
 
