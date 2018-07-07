@@ -50,7 +50,6 @@ gem 'rails_12factor', group: :production
 gem 'premailer-rails'
 gem 'nokogiri'
 #gem 'jquery-turbolinks'
-gem "responsive-nav-rails"
 gem 'rb-readline'
 gem 'sitemap_generator'
 gem 'google-analytics-rails'

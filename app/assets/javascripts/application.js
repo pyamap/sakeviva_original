@@ -15,6 +15,6 @@
 //= require bootstrap-sprockets
 //= require lightbox
 //= require jquery.raty.js
+//= require jquery.slicknav.min.js
 //= require toastr
-//= require responsive-nav
 //= require_tree .

@@ -18,8 +18,8 @@ Rails.application.config.assets.precompile += %w( desktop/admin/orders.css )
 Rails.application.config.assets.precompile += %w( desktop/web/terms.css )
 Rails.application.config.assets.precompile += %w( desktop/web/inquiry.css )
 Rails.application.config.assets.precompile += %w( toastr.css )
-Rails.application.config.assets.precompile += %w( responsive-nav.css )
 Rails.application.config.assets.precompile += %w( desktop/web/reviews.css )
+Rails.application.config.assets.precompile += %w( slicknav.css )
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path
 
@@ -27,4 +27,4 @@ Rails.application.config.assets.precompile += %w( desktop/web/reviews.css )
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
 Rails.application.config.assets.precompile += %w( toastr.js )
-Rails.application.config.assets.precompile += %w( responsive-nav.js )
+Rails.application.config.assets.precompile += %w( slicknav.js )

@@ -40,6 +40,68 @@ ul.side_bar_price_list {
 
 /*ヘッダーのメニューここから*/
 
+ul#menu2 {
+  display: none;
+}
+
+
+.slicknav_menu {
+  background-color: rgba(121, 182, 182, 0.9);
+  display:none;
+  padding: 0 5px;
+  margin: 0;
+
+  @include mq-sp {
+   display:block;
+   position: absolute;
+
+     a {
+      text-align: left;
+      background-color: transparent;
+      color: white;
+     }
+
+    ul {
+      border-bottom: 1px solid white;
+      margin: none;
+    }
+
+    ul.logininfo {
+    width: 165px;
+    margin-left: 0;
+    border-bottom: none;
+      img {
+        float: left;
+        margin: 0 8px;
+      }
+
+      a {
+        margin: 0;
+      }
+    }
+
+    ul.logininfo {
+      margin: none;
+    }
+
+    ul.accountinfo {
+      margin: 0 10px;
+      padding-left: 20px;
+    }
+
+  }
+
+  .slicknav_nav {
+    clear: both;
+  }
+
+  .slicknav_btn {
+    float: left;
+  }
+}
+
+
+
 .Header {
 
   &__account.PcMenu { display: block !important;}
@@ -144,18 +206,6 @@ ul.side_bar_price_list {
           img {
             position: absolute;
             margin: 2px -8%;
-          }
-
-          a.nav-toggle {
-            display: block;
-            position: absolute;
-            margin: 0 0 0 30px;
-          }
-
-            a.nav-toggle.active {
-            display: block;
-            position: absolute;
-            margin: 200px 0 0 30px;
           }
 
           .Intro__main {

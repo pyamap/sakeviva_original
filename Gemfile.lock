@@ -234,7 +234,6 @@ GEM
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
       railties (>= 4.2.0, < 5.3)
-    responsive-nav-rails (1.0.39)
     rest-client (2.0.2)
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
@@ -328,7 +327,6 @@ DEPENDENCIES
   rails-erd
   rails_12factor
   rb-readline
-  responsive-nav-rails
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   seed-fu (~> 2.3)
