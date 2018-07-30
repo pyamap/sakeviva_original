@@ -13,7 +13,7 @@
 					<li class="radio_btn"><%= radio_button_tag :address, adrs.id %>郵送先として使う</li>
 					<li><%= adrs.recipient %></li>
 					<li>〒<%= adrs.postalcode %></li>
-					<li><%= adrs.prefecture&.name %>県 <%= adrs.address %></li>
+					<li><%= adrs.prefecture&.name %><%= adrs.address %></li>
 				</ul>
 				<ul class="AllAddresses__list--edit">
 					<li><%= link_to "編集", edit_user_address_path(id: adrs.id) %></li>

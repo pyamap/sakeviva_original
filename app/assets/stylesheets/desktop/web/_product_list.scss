@@ -21,16 +21,17 @@
       width: 210px;
 
       @include mq-sp {
-        margin: 0;
-        padding: 5px 0;
         width: 95%;
+        height: 161px;
+        margin: 0 auto;
+        padding: 5px 0;
         border-bottom: 1px solid gray;
         display: flex;
       }
 
       .fa {
         @include mq-sp {
-          margin: 12% 83%;
+          margin: 17% 83%;
           position: absolute;
           font-size: 24px;
         }
@@ -61,7 +62,7 @@
 
       &--title {
       text-align: center;
-      margin: 30px 0 10px;
+      margin: 30px auto 15px;
       }
 
       &--price {

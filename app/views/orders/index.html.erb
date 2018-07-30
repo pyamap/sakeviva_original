@@ -2,6 +2,7 @@
 
 <% if @orders.present? %>
 <div id="orders_list">
+<h1>注文履歴</h1>
 	<% @orders.each do |order| %>
 	<div class="order_items">
 		<section class="order_pic">
@@ -16,14 +17,11 @@
 				<li><%= order.product.name %></li>
 				<li><%= order.product.value %>円 (税込)</li>
 			</ul>
-			<div class="delivery_statusSp">
+			<div class="delivery_status">
 				<p><%= order.delivery.status %></p>
+				<p class="repurchase_button"><%= link_to "再購入", product_path(order.product.id) %></p>
 			</div>
-			<p class="repurchase_button"><%= link_to "再購入", product_path(order.product.id) %></p>
 		</section>
-	</div>
-	<div class="delivery_statusPc">
-		<p><%= order.delivery.status %></p>
 	</div>
 	<% end %>
 <% else %>

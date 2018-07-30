@@ -39,7 +39,7 @@ before_action :current_cart, :authenticate_user!
 		@current_address=Address.find(params[:id])
 		current_user.addresses.where.not(id: params[:id]).update_all(default_address: false)
 		@current_address.update_column(:default_address, true)
-		@current_address.save
+		@current_address.update(address_params)
 		redirect_to :action => "index"
 	end
 

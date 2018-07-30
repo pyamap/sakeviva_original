@@ -129,6 +129,14 @@
 			li {
 				padding-top: 3px;
 			}
+
+			li.radio_btn{
+				color: $theme-color;
+				margin: 5px auto;
+				 input {
+				 	margin: 4px 6px;
+				 }
+			}
 		}
 
 		&--edit {
